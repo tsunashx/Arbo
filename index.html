@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>翠林誌 - 數位樹木辨識圖鑑</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* 自訂平滑過渡與 line-clamp */
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-[#F4F6F0] text-stone-800 font-sans min-h-screen flex flex-col">
+
+  <!-- 頂部導覽列 -->
+  <header class="sticky top-0 z-40 bg-[#3E4A24] text-[#EBF0E3] shadow-md border-b border-[#2C3519]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        
+        <!-- Logo -->
+        <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('catalog')">
+          <div class="bg-[#EBF0E3] p-2 rounded-lg text-[#3E4A24]">
+            <i class="fa-solid fa-[#tree] fa-book-bookmark text-xl"></i>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold tracking-wide">翠林誌</h1>
+            <p class="text-[10px] text-[#8F9E75] font-bold">極簡版專業樹木圖鑑平台</p>
+          </div>
+        </div>
+
+        <!-- 桌面端導覽 -->
+        <nav class="hidden md:flex space-x-1">
+          <button onclick="switchTab('catalog')" id="nav-catalog" class="nav-btn flex items-center space-x-1.5 px-3 py-2 rounded-md text-sm font-semibold transition-all bg-[#556B2F] text-white">
+            <i class="fa-solid fa-book-open"></i><span>樹木圖鑑</span>
+          </button>
+          <button onclick="switchTab('knowledge')" id="nav-knowledge" class="nav-btn flex items-center space-x-1.5 px-3 py-2 rounded-md text-sm font-semibold transition-all text-[#C5D0B3] hover:text-white hover:bg-[#4E5D2E]">
+            <i class="fa-solid fa-graduation-cap"></i><span>知識筆記</span>
+          </button>
+          <button onclick="switchTab('compare')" id="nav-compare" class="nav-btn flex items-center space-x-1.5 px-3 py-2 rounded-md text-sm font-semibold transition-all text-[#C5D0B3] hover:text-white hover:bg-[#4E5D2E] relative">
+            <i class="fa-solid fa-layer-group"></i><span>特徵對比</span>
+            <span id="compare-badge-desktop" class="hidden bg-[#D4AF37] text-stone-900 text-xs px-1.5 py-0.2 rounded-full font-bold ml-1">0</span>
+          </button>
+          <button onclick="switchTab('quiz')" id="nav-quiz" class="nav-btn flex items-center space-x-1.5 px-3 py-2 rounded-md text-sm font-semibold transition-all text-[#C5D0B3] hover:text-white hover:bg-[#4E5D2E]">
+            <i class="fa-solid fa-award"></i><span>辨識挑戰</span>
+          </button>
+          <button onclick="switchTab('notes')" id="nav-notes" class="nav-btn flex items-center space-x-1.5 px-3 py-2 rounded-md text-sm font-semibold transition-all text-[#C5D0B3] hover:text-white hover:bg-[#4E5D2E]">
+            <i class="fa-solid fa-location-dot"></i><span>觀測手記</span>
+          </button>
+        </nav>
+
+        <!-- 工具列：匯入 / 匯出 JSON -->
+        <div class="flex items-center space-x-1.5">
+          <label class="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-[#4E5D2E] hover:bg-[#556B2F] text-white text-xs font-bold border border-[#556B2F] cursor-pointer">
+            <i class="fa-solid fa-upload text-amber-300"></i>
+            <span class="hidden sm:inline">匯入 JSON</span>
+            <input type="file" id="json-file-input" accept=".json" class="hidden" onchange="importJson(event)">
+          </label>
+          <button onclick="exportJson()" class="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-[#4E5D2E] hover:bg-[#556B2F] text-white text-xs font-bold border border-[#556B2F]">
+            <i class="fa-solid fa-download text-emerald-300"></i>
+            <span class="hidden sm:inline">匯出 JSON</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 手機端底部導覽 -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-[#3E4A24] border-t border-[#2C3519] grid grid-cols-5 z-40 shadow-lg">
+      <button onclick="switchTab('catalog')" id="mob-nav-catalog" class="mob-nav-btn flex flex-col items-center justify-center py-2 text-[#EBF0E3] bg-[#556B2F]">
+        <i class="fa-solid fa-book-open text-lg mb-0.5"></i><span class="text-[10px]">圖鑑</span>
+      </button>
+      <button onclick="switchTab('knowledge')" id="mob-nav-knowledge" class="mob-nav-btn flex flex-col items-center justify-center py-2 text-[#8F9E75]">
+        <i class="fa-solid fa-graduation-cap text-lg mb-0.5"></i><span class="text-[10px]">知識</span>
+      </button>
+      <button onclick="switchTab('compare')" id="mob-nav-compare" class="mob-nav-btn flex flex-col items-center justify-center py-2 text-[#8F9E75] relative">
+        <i class="fa-solid fa-layer-group text-lg mb-0.5"></i><span class="text-[10px]">對比</span>
+        <span id="compare-badge-mobile" class="hidden absolute top-1 right-2 bg-[#D4AF37] text-stone-900 text-[9px] px-1.5 py-0.2 rounded-full font-black shadow">0</span>
+      </button>
+      <button onclick="switchTab('quiz')" id="mob-nav-quiz" class="mob-nav-btn flex flex-col items-center justify-center py-2 text-[#8F9E75]">
+        <i class="fa-solid fa-award text-lg mb-0.5"></i><span class="text-[10px]">挑戰</span>
+      </button>
+      <button onclick="switchTab('notes')" id="mob-nav-notes" class="mob-nav-btn flex flex-col items-center justify-center py-2 text-[#8F9E75]">
+        <i class="fa-solid fa-location-dot text-lg mb-0.5"></i><span class="text-[10px]">手記</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 主內容區 -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16 md:mb-6">
+    
+    <!-- TAB 1: 樹木圖鑑 -->
+    <section id="tab-catalog" class="tab-content space-y-6">
+      <div class="bg-white p-4 rounded-xl shadow-sm border border-stone-200/80 flex flex-col md:flex-row gap-4 items-center justify-between">
+        <div class="relative w-full md:w-96">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-xs"></i>
+          <input type="text" id="search-input" oninput="renderCatalog()" placeholder="搜尋樹木名稱、科別..." class="w-full pl-9 pr-4 py-2 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-[#556B2F] text-xs">
+        </div>
+        <div class="w-full md:w-auto flex items-center space-x-2 overflow-x-auto py-1">
+          <i class="fa-solid fa-filter text-stone-400 text-xs shrink-0"></i>
+          <span class="text-xs text-stone-500 font-bold shrink-0">科別過濾：</span>
+          <div id="family-filters" class="flex space-x-1"></div>
+        </div>
+      </div>
+
+      <!-- 樹木卡片網格 -->
+      <div id="tree-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- TAB 2: 知識頁面 -->
+    <section id="tab-knowledge" class="tab-content hidden space-y-6 max-w-5xl mx-auto">
+      <div class="bg-gradient-to-r from-[#3E4A24] to-[#556B2F] text-white p-6 sm:p-8 rounded-2xl shadow-lg space-y-2">
+        <span class="bg-[#D4AF37] text-stone-950 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest inline-block">
+          KNOWLEDGE BASE
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold">樹木學與風險管理知識筆記</h2>
+        <p class="text-stone-200 text-xs sm:text-sm leading-relaxed max-w-2xl">
+          點選下方知識卡片，開啟專屬講堂與詳細文章內容。
+        </p>
+      </div>
+
+      <div id="knowledge-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    </section>
+
+    <!-- TAB 3: 特徵對比 -->
+    <section id="tab-compare" class="tab-content hidden space-y-6">
+      <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm flex justify-between items-center">
+        <div>
+          <h3 class="text-xl font-black text-[#3E4A24] flex items-center space-x-2">
+            <i class="fa-solid fa-layer-group text-[#556B2F]"></i>
+            <span>特寫相片與指標左右比對</span>
+          </h3>
+          <p class="text-stone-500 text-xs mt-1">選取最多 3 種樹木進行特寫相片與指標對照。</p>
+        </div>
+        <button onclick="clearCompare()" class="text-xs text-red-600 font-bold hover:underline">清空對比</button>
+      </div>
+
+      <div id="compare-table-container"></div>
+    </section>
+
+    <!-- TAB 4: 辨識挑戰 -->
+    <section id="tab-quiz" class="tab-content hidden max-w-2xl mx-auto space-y-6">
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 text-center">
+        <span class="bg-[#D4AF37] text-stone-950 text-[10px] font-black px-3 py-1 rounded-full uppercase">
+          微觀辨識挑戰賽
+        </span>
+        <h3 class="text-xl font-bold text-[#3E4A24] mt-2">學名與特徵挑戰題</h3>
+        <div class="mt-3 inline-flex items-center space-x-1.5 bg-[#F4F6F0] px-4 py-1.5 rounded-full border border-stone-200 text-xs font-bold text-[#556B2F]">
+          <span>得分：</span>
+          <span id="quiz-score" class="text-sm font-black">0</span>
+          <span class="text-stone-300">/</span>
+          <span id="quiz-total">0 題</span>
+        </div>
+      </div>
+
+      <div id="quiz-card" class="bg-white rounded-2xl border border-stone-200 p-6 space-y-5"></div>
+    </section>
+
+    <!-- TAB 5: 觀測手記 -->
+    <section id="tab-notes" class="tab-content hidden space-y-6 max-w-4xl mx-auto">
+      <div class="bg-white p-4 rounded-2xl border border-stone-200 shadow-sm flex items-center justify-between">
+        <div>
+          <h3 class="text-lg font-bold text-[#3E4A24]">野外觀察手記</h3>
+          <p class="text-xs text-stone-400">紀錄您在野外發現的樹木特寫照片與筆記</p>
+        </div>
+        <!-- 橄欖綠正方形加號按鈕 -->
+        <button onclick="toggleAddNoteForm()" class="w-10 h-10 bg-[#556B2F] hover:bg-[#3E4A24] text-white rounded-xl transition-all flex items-center justify-center shadow-md active:scale-95 shrink-0">
+          <i id="add-note-icon" class="fa-solid fa-plus text-lg transition-transform duration-300"></i>
+        </button>
+      </div>
+
+      <!-- 可折疊的新增手記表單 -->
+      <div id="add-note-form" class="hidden bg-white p-6 rounded-2xl border border-stone-200 shadow-md space-y-4">
+        <h4 class="text-sm font-extrabold text-[#3E4A24] border-b border-stone-100 pb-2">寫入全新觀察記錄</h4>
+        <form onsubmit="saveNote(event)" class="space-y-3.5 text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block font-bold text-stone-700 mb-1">觀測樹木 *</label>
+              <select id="note-tree-select" required class="w-full p-2.5 rounded-lg border border-stone-300 text-xs"></select>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="block font-bold text-stone-700 mb-1">日期</label>
+                <input type="date" id="note-date" class="w-full p-2 rounded-lg border border-stone-300">
+              </div>
+              <div>
+                <label class="block font-bold text-stone-700 mb-1">氣候</label>
+                <select id="note-weather" class="w-full p-2 rounded-lg border border-stone-300">
+                  <option value="Sunny">晴朗 ☀️</option>
+                  <option value="Cloudy">多雲 ☁️</option>
+                  <option value="Rainy">微雨 🌧️</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">詳細觀測地點</label>
+            <input type="text" id="note-location" placeholder="例：台大植物園、大安森林公園池畔" class="w-full p-2 rounded-lg border border-stone-300">
+          </div>
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">實地觀測相片 (選擇本機檔案)</label>
+            <input type="file" id="note-image-input" accept="image/*" onchange="previewNoteImage(event)" class="w-full border border-stone-300 p-2 rounded-lg text-xs bg-stone-50">
+            <div id="note-image-preview" class="hidden mt-2 h-32 w-full rounded-xl overflow-hidden border border-stone-300 relative">
+              <img id="note-preview-img" src="" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">野外特徵紀錄與心得 *</label>
+            <textarea id="note-content" rows="3" required placeholder="描述當天拍攝特寫時發現的特徵..." class="w-full p-2.5 rounded-lg border border-stone-300 leading-relaxed"></textarea>
+          </div>
+          <div class="flex justify-end space-x-2 pt-1">
+            <button type="button" onclick="toggleAddNoteForm()" class="px-4 py-2 rounded-lg bg-stone-200 text-stone-700 font-bold">取消</button>
+            <button type="submit" class="px-5 py-2 rounded-lg bg-[#556B2F] hover:bg-[#3E4A24] text-white font-bold">儲存手記</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- 手記清單 -->
+      <div id="notes-list" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+    </section>
+
+  </main>
+
+  <!-- POPUP MODAL 1: 樹木詳細資訊 Pop-up -->
+  <div id="tree-modal" class="hidden fixed inset-0 z-50 bg-stone-900/70 backdrop-blur-sm flex items-center justify-center p-3">
+    <div class="bg-white rounded-2xl max-w-5xl w-full max-h-[92vh] overflow-hidden shadow-2xl border border-stone-200 flex flex-col md:flex-row">
+      <div class="md:w-3/5 bg-stone-900 relative flex items-center justify-center min-h-[280px] md:min-h-0">
+        <img id="modal-main-img" src="" class="w-full h-full object-cover max-h-[45vh] md:max-h-full">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="absolute top-4 left-4 bg-stone-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl text-white">
+          <h4 id="modal-tree-name" class="text-base font-black flex items-center space-x-2"></h4>
+          <p id="modal-tree-latin" class="text-[11px] text-emerald-200 italic font-serif"></p>
+        </div>
+        <!-- 點擊標籤 hotspots -->
+        <div id="modal-hotspots-container"></div>
+      </div>
+
+      <div class="md:w-2/5 flex flex-col max-h-[50vh] md:max-h-full overflow-y-auto bg-white">
+        <div class="p-4 border-b border-stone-100 flex justify-between items-center bg-stone-50 sticky top-0 z-10">
+          <span class="text-xs font-black text-stone-500 tracking-wider uppercase">樹木考證詳細資訊</span>
+          <button onclick="closeTreeModal()" class="p-1 rounded-full hover:bg-stone-200 text-stone-500">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+        <div class="p-5 flex-grow space-y-5">
+          <div class="space-y-1 text-xs">
+            <p id="modal-description" class="text-stone-600 leading-relaxed font-normal bg-stone-50 p-3 rounded-xl border border-stone-100 mt-1"></p>
+          </div>
+
+          <!-- 生物指標 -->
+          <div class="grid grid-cols-3 gap-1.5 bg-[#F4F6F0] p-2.5 rounded-xl border border-stone-200/60 text-[11px]">
+            <div class="flex flex-col items-center text-center p-1.5 bg-white rounded-lg shadow-sm">
+              <i class="fa-solid fa-ruler-vertical text-[#556B2F] mb-0.5"></i>
+              <span class="text-[9px] text-stone-400 font-bold">樹高</span>
+              <span id="modal-height" class="font-extrabold text-[#3E4A24] text-[10px] mt-0.5"></span>
+            </div>
+            <div class="flex flex-col items-center text-center p-1.5 bg-white rounded-lg shadow-sm">
+              <i class="fa-solid fa-disease text-rose-500 mb-0.5"></i>
+              <span class="text-[9px] text-stone-400 font-bold">花期</span>
+              <span id="modal-bloom" class="font-extrabold text-[#3E4A24] text-[10px] mt-0.5"></span>
+            </div>
+            <div class="flex flex-col items-center text-center p-1.5 bg-white rounded-lg shadow-sm">
+              <i class="fa-solid fa-apple-whole text-amber-600 mb-0.5"></i>
+              <span class="text-[9px] text-stone-400 font-bold">果期</span>
+              <span id="modal-fruit" class="font-extrabold text-[#3E4A24] text-[10px] mt-0.5"></span>
+            </div>
+          </div>
+
+          <!-- 特寫區 -->
+          <div id="modal-hotspot-detail" class="bg-[#F4F6F0] p-4 rounded-xl border border-stone-200/60 space-y-3"></div>
+
+          <!-- 關鍵考證點 -->
+          <div class="bg-amber-50/70 p-3 rounded-xl border-l-4 border-amber-400 text-xs">
+            <span class="font-extrabold text-[#3E4A24] block text-[10px] mb-0.5">★ 關鍵考證點</span>
+            <p id="modal-special" class="text-stone-800 font-bold leading-relaxed"></p>
+          </div>
+
+          <!-- 個人自訂備註 (預設空白) -->
+          <div class="pt-3 border-t border-stone-100 space-y-2 bg-stone-50 p-3 rounded-xl border border-stone-200">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-[#3E4A24] flex items-center space-x-1">
+                <i class="fa-solid fa-tag text-[#556B2F]"></i>
+                <span>個人自訂備註 (寫入 JSON)</span>
+              </span>
+              <button onclick="toggleEditNote()" class="text-[10px] text-[#556B2F] font-bold hover:underline">編輯備註</button>
+            </div>
+            <div id="note-view-mode" class="text-xs text-stone-700 leading-relaxed font-medium italic"></div>
+            <div id="note-edit-mode" class="hidden space-y-2">
+              <textarea id="note-textarea" rows="3" class="w-full p-2 text-xs rounded border border-stone-300 focus:outline-none focus:ring-2 focus:ring-[#556B2F] bg-white leading-relaxed" placeholder="在此寫下您的個人觀察備註..."></textarea>
+              <div class="flex justify-end space-x-2">
+                <button onclick="toggleEditNote()" class="px-2.5 py-1 text-[10px] font-bold text-stone-500 bg-stone-200 rounded">取消</button>
+                <button onclick="saveUserNote()" class="px-3 py-1 text-[10px] font-bold text-white bg-[#556B2F] rounded">儲存</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-3 border-t border-stone-100 bg-stone-50 flex justify-end">
+          <button onclick="closeTreeModal()" class="bg-stone-200 text-stone-700 px-4 py-1.5 rounded-lg text-xs font-bold">關閉視窗</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP MODAL 2: 知識文章 Pop-up -->
+  <div id="article-modal" class="hidden fixed inset-0 z-50 bg-stone-900/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[88vh] overflow-y-auto shadow-2xl border border-stone-200 flex flex-col">
+      <div class="p-5 border-b border-stone-100 flex justify-between items-center bg-[#3E4A24] text-white sticky top-0 z-10">
+        <span id="article-modal-category" class="text-xs font-bold px-2.5 py-0.5 rounded-full"></span>
+        <button onclick="closeArticleModal()" class="p-1 rounded-full hover:bg-white/20 text-white">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div class="p-6 space-y-5">
+        <h2 id="article-modal-title" class="text-xl sm:text-2xl font-extrabold text-[#3E4A24]"></h2>
+        <div class="h-56 w-full bg-stone-100 rounded-xl overflow-hidden border border-stone-200">
+          <img id="article-modal-img" src="" class="w-full h-full object-cover">
+        </div>
+        <div id="article-modal-content" class="text-xs sm:text-sm text-stone-700 leading-relaxed whitespace-pre-line space-y-3 font-normal bg-stone-50 p-4 rounded-xl border border-stone-100"></div>
+      </div>
+      <div class="p-4 border-t border-stone-100 bg-stone-50 flex justify-end">
+        <button onclick="closeArticleModal()" class="bg-[#556B2F] hover:bg-[#3E4A24] text-white px-5 py-2 rounded-lg text-xs font-bold">關閉文章</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript 核心邏輯 -->
+  <script>
+    let treesData = [];
+    let knowledgeData = [];
+    let compareList = [];
+    let selectedFamily = 'All';
+    let currentTree = null;
+    let selectedHotspot = null;
+    let uploadedNoteImg = '';
+
+    // 初始化載入 JSON 資料庫
+    window.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const treesRes = await fetch('data/trees.json');
+        treesData = await treesRes.json();
+      } catch(e) {
+        console.warn("未找到外部 data/trees.json，使用內建預設數據");
+      }
+
+      try {
+        const knowRes = await fetch('data/knowledge.json');
+        knowledgeData = await knowRes.json();
+      } catch(e) {
+        console.warn("未找到外部 data/knowledge.json");
+      }
+
+      renderCatalog();
+      renderKnowledge();
+      populateTreeSelect();
+      renderNotes();
+    });
+
+    // 頁籤切換邏輯
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+
+      // 更新按鈕樣式
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('bg-[#556B2F]', 'text-white');
+        btn.classList.add('text-[#C5D0B3]');
+      });
+      const activeNav = document.getElementById(`nav-${tabId}`);
+      if(activeNav) {
+        activeNav.classList.add('bg-[#556B2F]', 'text-white');
+        activeNav.classList.remove('text-[#C5D0B3]');
+      }
+
+      document.querySelectorAll('.mob-nav-btn').forEach(btn => {
+        btn.classList.remove('bg-[#556B2F]', 'text-[#EBF0E3]');
+        btn.classList.add('text-[#8F9E75]');
+      });
+      const mobActiveNav = document.getElementById(`mob-nav-${tabId}`);
+      if(mobActiveNav) {
+        mobActiveNav.classList.add('bg-[#556B2F]', 'text-[#EBF0E3]');
+        mobActiveNav.classList.remove('text-[#8F9E75]');
+      }
+
+      if(tabId === 'compare') renderCompare();
+      if(tabId === 'quiz') startQuiz();
+    }
+
+    // 渲染圖鑑頁面
+    function renderCatalog() {
+      const search = document.getElementById('search-input').value.toLowerCase();
+      const grid = document.getElementById('tree-grid');
+      grid.innerHTML = '';
+
+      // 提取科別列表
+      const families = ['All', ...new Set(treesData.map(t => t.family))];
+      const familyContainer = document.getElementById('family-filters');
+      familyContainer.innerHTML = families.map(f => `
+        <button onclick="filterFamily('${f}')" class="px-3 py-1 rounded-full text-xs font-semibold shrink-0 transition-all ${selectedFamily === f ? 'bg-[#556B2F] text-white' : 'bg-[#EBF0E3] text-[#556B2F] hover:bg-[#DCE4D0]'}">
+          ${f === 'All' ? '全部科別' : f}
+        </button>
+      `).join('');
+
+      // 過濾數據
+      const filtered = treesData.filter(t => {
+        const matchSearch = t.name.toLowerCase().includes(search) || t.family.toLowerCase().includes(search) || t.description.toLowerCase().includes(search);
+        const matchFamily = selectedFamily === 'All' || t.family === selectedFamily;
+        return matchSearch && matchFamily;
+      });
+
+      filtered.forEach(tree => {
+        const isCompared = compareList.some(c => c.id === tree.id);
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-2xl border border-stone-200/80 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col justify-between group";
+        card.innerHTML = `
+          <div>
+            <div class="h-48 w-full bg-stone-200 relative overflow-hidden cursor-pointer" onclick="openTreeModal('${tree.id}')">
+              <img src="${tree.mainImage}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=500&q=80'">
+              <span class="absolute top-3 left-3 bg-[#EBF0E3] text-[#3E4A24] px-2.5 py-0.5 rounded-full text-[10px] font-black shadow-sm">${tree.family}</span>
+            </div>
+            <div class="p-4 space-y-2">
+              <h3 class="text-xl font-extrabold text-[#3E4A24] cursor-pointer" onclick="openTreeModal('${tree.id}')">${tree.name}</h3>
+              <p class="text-xs text-stone-600 leading-relaxed line-clamp-2">${tree.description}</p>
+            </div>
+          </div>
+          <div class="bg-stone-50 border-t border-stone-100 p-3.5 flex items-center justify-between">
+            <button onclick="openTreeModal('${tree.id}')" class="bg-[#556B2F] hover:bg-[#3E4A24] text-white px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center space-x-1 shadow-sm">
+              <i class="fa-solid fa-circle-info text-xs"></i><span>詳細資訊</span>
+            </button>
+            <button onclick="toggleCompare('${tree.id}')" class="text-xs font-bold px-3 py-1.5 rounded-lg border transition-all ${isCompared ? 'bg-[#D4AF37] border-[#B58900] text-stone-900 font-extrabold' : 'bg-white border-stone-200 text-stone-600 hover:bg-stone-100'}">
+              ${isCompared ? '已選對比' : '加入對比'}
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function filterFamily(fam) {
+      selectedFamily = fam;
+      renderCatalog();
+    }
+
+    // 對比功能邏輯
+    function toggleCompare(id) {
+      const tree = treesData.find(t => t.id === id);
+      const index = compareList.findIndex(c => c.id === id);
+      if (index > -1) {
+        compareList.splice(index, 1);
+      } else {
+        if (compareList.length >= 3) {
+          alert("最多只能同時對比 3 種樹木！");
+          return;
+        }
+        compareList.push(tree);
+      }
+
+      // 更新數字 Badge 位置 (正確定位在對比按鈕)
+      const desktopBadge = document.getElementById('compare-badge-desktop');
+      const mobileBadge = document.getElementById('compare-badge-mobile');
+      
+      if (compareList.length > 0) {
+        desktopBadge.innerText = compareList.length;
+        desktopBadge.classList.remove('hidden');
+        mobileBadge.innerText = compareList.length;
+        mobileBadge.classList.remove('hidden');
+      } else {
+        desktopBadge.classList.add('hidden');
+        mobileBadge.classList.add('hidden');
+      }
+
+      renderCatalog();
+    }
+
+    function clearCompare() {
+      compareList = [];
+      document.getElementById('compare-badge-desktop').classList.add('hidden');
+      document.getElementById('compare-badge-mobile').classList.add('hidden');
+      renderCompare();
+    }
+
+    // 渲染特徵對比表格
+    function renderCompare() {
+      const container = document.getElementById('compare-table-container');
+      if (compareList.length === 0) {
+        container.innerHTML = `
+          <div class="bg-white rounded-2xl border border-dashed border-stone-300 py-16 text-center px-4">
+            <i class="fa-solid fa-layer-group text-stone-300 text-4xl mb-3"></i>
+            <p class="text-xs text-stone-400 mb-4">請在樹木圖鑑中點擊「加入對比」。</p>
+            <button onclick="switchTab('catalog')" class="bg-[#556B2F] text-white text-xs font-bold px-4 py-2 rounded-lg">前往樹木圖鑑</button>
+          </div>
+        `;
+        return;
+      }
+
+      let html = `
+        <div class="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse table-fixed min-w-[800px]">
+              <thead>
+                <tr class="bg-[#556B2F] text-white text-xs">
+                  <th class="p-4 w-44 font-bold">對比特徵項目</th>
+                  ${compareList.map(t => `
+                    <th class="p-4 border-l border-white/10">
+                      <div class="flex justify-between items-center">
+                        <div>
+                          <span class="font-bold text-sm block">${t.name}</span>
+                          <span class="text-[10px] text-emerald-200 italic font-serif">${t.latinName}</span>
+                        </div>
+                        <button onclick="toggleCompare('${t.id}'); renderCompare();" class="text-white/60 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+                      </div>
+                    </th>
+                  `).join('')}
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-stone-100 text-xs">
+                <tr>
+                  <td class="p-4 bg-stone-50 font-bold text-[#3E4A24]">主生態照片</td>
+                  ${compareList.map(t => `<td class="p-4 border-l border-stone-100"><div class="h-32 rounded-lg overflow-hidden bg-stone-100"><img src="${t.mainImage}" class="w-full h-full object-cover"></div></td>`).join('')}
+                </tr>
+                <tr>
+                  <td class="p-4 bg-stone-50 font-bold text-[#3E4A24]">樹幹與樹皮</td>
+                  ${compareList.map(t => {
+                    const spot = t.hotspots?.find(h => h.type === 'bark');
+                    return `<td class="p-4 border-l border-stone-100 space-y-2"><div class="h-24 rounded-lg overflow-hidden bg-stone-100 border border-stone-200"><img src="${spot?.img}" class="w-full h-full object-cover"></div><p class="font-bold text-[#3E4A24]">${spot?.name}</p><p class="text-stone-600 text-[11px] leading-relaxed">${t.bark}</p></td>`;
+                  }).join('')}
+                </tr>
+                <tr>
+                  <td class="p-4 bg-stone-50 font-bold text-[#3E4A24]">葉片與葉脈</td>
+                  ${compareList.map(t => {
+                    const spot = t.hotspots?.find(h => h.type === 'leaves');
+                    return `<td class="p-4 border-l border-stone-100 space-y-2"><div class="h-24 rounded-lg overflow-hidden bg-stone-100 border border-stone-200"><img src="${spot?.img}" class="w-full h-full object-cover"></div><p class="font-bold text-[#3E4A24]">${spot?.name}</p><p class="text-stone-600 text-[11px] leading-relaxed">${t.leaves}</p></td>`;
+                  }).join('')}
+                </tr>
+                <tr>
+                  <td class="p-4 bg-stone-50 font-bold text-[#3E4A24]">花朵與果實</td>
+                  ${compareList.map(t => {
+                    const spot = t.hotspots?.find(h => h.type === 'flowers');
+                    return `<td class="p-4 border-l border-stone-100 space-y-2"><div class="h-24 rounded-lg overflow-hidden bg-stone-100 border border-stone-200"><img src="${spot?.img}" class="w-full h-full object-cover"></div><p class="font-bold text-[#3E4A24]">${spot?.name}</p><p class="text-stone-600 text-[11px] leading-relaxed">${t.flowers}</p></td>`;
+                  }).join('')}
+                </tr>
+                <tr>
+                  <td class="p-4 bg-stone-50 font-bold text-[#3E4A24]">樹高與花果期</td>
+                  ${compareList.map(t => `<td class="p-4 border-l border-stone-100 space-y-1 text-[11px]"><p class="font-bold text-stone-800">📏 樹高：${t.height}</p><p class="text-stone-600">🌸 花期：${t.bloomPeriod}</p><p class="text-stone-600">🍎 果期：${t.fruitPeriod}</p></td>`).join('')}
+                </tr>
+                <tr class="bg-amber-50/20">
+                  <td class="p-4 bg-amber-50/40 font-bold text-[#3E4A24]">★ 特別辨識標記</td>
+                  ${compareList.map(t => `<td class="p-4 border-l border-stone-200 font-bold text-stone-800">${t.special}</td>`).join('')}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `;
+      container.innerHTML = html;
+    }
+
+    // 樹木詳細 Pop-up 開啟與互動
+    function openTreeModal(id) {
+      currentTree = treesData.find(t => t.id === id);
+      document.getElementById('modal-tree-name').innerHTML = `<span>${currentTree.name}</span><span class="bg-[#556B2F] text-xs px-2 py-0.5 rounded-full font-bold ml-2">${currentTree.family}</span>`;
+      document.getElementById('modal-tree-latin').innerText = currentTree.latinName;
+      document.getElementById('modal-main-img').src = currentTree.mainImage;
+      document.getElementById('modal-description').innerText = currentTree.description;
+      document.getElementById('modal-height').innerText = currentTree.height;
+      document.getElementById('modal-bloom').innerText = currentTree.bloomPeriod;
+      document.getElementById('modal-fruit').innerText = currentTree.fruitPeriod;
+      document.getElementById('modal-special').innerText = currentTree.special;
+
+      // 備註區域 (預設空白)
+      document.getElementById('note-view-mode').innerHTML = currentTree.userNotes ? currentTree.userNotes : `<span class="text-stone-400 font-normal">（預設空白，點擊編輯備註...）</span>`;
+      document.getElementById('note-textarea').value = currentTree.userNotes || '';
+
+      // 熱點 (Hotspots)
+      const hotspotContainer = document.getElementById('modal-hotspots-container');
+      hotspotContainer.innerHTML = (currentTree.hotspots || []).map(spot => `
+        <button onclick="selectHotspot('${spot.id}')" style="left:${spot.x}%; top:${spot.y}%;" class="absolute -translate-x-1/2 -translate-y-1/2 z-20 group">
+          <div class="flex items-center justify-center w-7 h-7 rounded-full border-2 bg-white border-red-500 text-red-600 text-[10px] font-black shadow-lg">
+            ${spot.type === 'bark' ? '幹' : spot.type === 'leaves' ? '葉' : '花'}
+          </div>
+        </button>
+      `).join('');
+
+      if(currentTree.hotspots && currentTree.hotspots.length > 0) {
+        selectHotspot(currentTree.hotspots[0].id);
+      }
+
+      document.getElementById('tree-modal').classList.remove('hidden');
+    }
+
+    function selectHotspot(spotId) {
+      const spot = currentTree.hotspots.find(h => h.id === spotId);
+      const detail = document.getElementById('modal-hotspot-detail');
+      detail.innerHTML = `
+        <div class="flex items-center justify-between">
+          <span class="bg-[#556B2F] text-white text-[10px] font-black px-2.5 py-0.5 rounded">
+            ${spot.type === 'bark' ? '樹皮部位特寫' : spot.type === 'leaves' ? '葉脈結構特寫' : '花卉果實特寫'}
+          </span>
+          <h5 class="font-extrabold text-sm text-[#3E4A24]">${spot.name}</h5>
+        </div>
+        <div class="h-36 w-full bg-stone-300 rounded-lg overflow-hidden border border-stone-200">
+          <img src="${spot.img}" class="w-full h-full object-cover">
+        </div>
+        <p class="text-xs text-stone-700 leading-relaxed font-medium bg-white p-2.5 rounded-lg border border-stone-100">${spot.desc}</p>
+      `;
+    }
+
+    function closeTreeModal() {
+      document.getElementById('tree-modal').classList.add('hidden');
+    }
+
+    function toggleEditNote() {
+      document.getElementById('note-view-mode').classList.toggle('hidden');
+      document.getElementById('note-edit-mode').classList.toggle('hidden');
+    }
+
+    function saveUserNote() {
+      const val = document.getElementById('note-textarea').value;
+      currentTree.userNotes = val;
+      document.getElementById('note-view-mode').innerHTML = val ? val : `<span class="text-stone-400 font-normal">（預設空白，點擊編輯備註...）</span>`;
+      toggleEditNote();
+      alert(`已儲存「${currentTree.name}」的自訂備註！`);
+    }
+
+    // 知識頁面渲染
+    function renderKnowledge() {
+      const grid = document.getElementById('knowledge-grid');
+      grid.innerHTML = knowledgeData.map(art => `
+        <div onclick="openArticleModal('${art.id}')" class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between group space-y-3">
+          <div class="space-y-2">
+            <span class="text-[10px] font-black px-2.5 py-0.5 rounded border inline-block ${art.colorStyle}">
+              ${art.category}
+            </span>
+            <h3 class="font-extrabold text-base text-[#3E4A24] group-hover:text-[#556B2F] transition-colors">${art.title}</h3>
+            <p class="text-xs text-stone-600 leading-relaxed font-normal line-clamp-2">${art.summary}</p>
+          </div>
+          <div class="pt-2 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-[#556B2F]">
+            <span>閱讀完整文章</span>
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openArticleModal(id) {
+      const art = knowledgeData.find(a => a.id === id);
+      document.getElementById('article-modal-category').innerText = art.category;
+      document.getElementById('article-modal-category').className = `text-xs font-bold px-2.5 py-0.5 rounded-full ${art.colorStyle}`;
+      document.getElementById('article-modal-title').innerText = art.title;
+      document.getElementById('article-modal-img').src = art.image;
+      document.getElementById('article-modal-content').innerText = art.content;
+      document.getElementById('article-modal').classList.remove('hidden');
+    }
+
+    function closeArticleModal() {
+      document.getElementById('article-modal').classList.add('hidden');
+    }
+
+    // 野外手記控制與上傳相片
+    function toggleAddNoteForm() {
+      const form = document.getElementById('add-note-form');
+      const icon = document.getElementById('add-note-icon');
+      form.classList.toggle('hidden');
+      icon.classList.toggle('rotate-45');
+    }
+
+    function populateTreeSelect() {
+      const select = document.getElementById('note-tree-select');
+      select.innerHTML = '<option value="">-- 請選擇圖鑑樹木 --</option>' + 
+        treesData.map(t => `<option value="${t.name}">${t.name} (${t.latinName})</option>`).join('');
+    }
+
+    function previewNoteImage(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        uploadedNoteImg = e.target.result;
+        document.getElementById('note-preview-img').src = uploadedNoteImg;
+        document.getElementById('note-image-preview').classList.remove('hidden');
+      };
+      reader.readAsDataURL(file);
+    }
+
+    let notesList = [];
+    function saveNote(e) {
+      e.preventDefault();
+      const treeName = document.getElementById('note-tree-select').value;
+      const date = document.getElementById('note-date').value;
+      const weather = document.getElementById('note-weather').value;
+      const location = document.getElementById('note-location').value;
+      const content = document.getElementById('note-content').value;
+
+      notesList.unshift({
+        id: Date.now(),
+        treeName, date, weather, location, content, image: uploadedNoteImg
+      });
+
+      renderNotes();
+      toggleAddNoteForm();
+      alert("觀測手記已成功儲存！");
+    }
+
+    function renderNotes() {
+      const container = document.getElementById('notes-list');
+      if(notesList.length === 0) {
+        container.innerHTML = `<div class="col-span-full py-12 text-center text-stone-400 text-xs">尚無手記。點擊上方橄欖綠加號按鈕新增！</div>`;
+        return;
+      }
+      container.innerHTML = notesList.map(n => `
+        <div class="bg-white p-4 rounded-2xl border border-stone-200/80 shadow-sm space-y-3 relative">
+          <div class="flex items-center space-x-2">
+            <span class="font-bold text-base text-[#3E4A24]">${n.treeName}</span>
+            <span class="text-[10px] text-stone-400 font-bold">${n.date} @ ${n.location || '未標註'}</span>
+          </div>
+          ${n.image ? `<div class="h-44 w-full rounded-xl overflow-hidden bg-stone-100 border"><img src="${n.image}" class="w-full h-full object-cover"></div>` : ''}
+          <p class="text-xs text-stone-700 leading-relaxed bg-stone-50 p-3 rounded-xl border border-stone-100 font-medium">${n.content}</p>
+        </div>
+      `).join('');
+    }
+
+    // 辨識挑戰題目生成
+    let quizCurrent = null;
+    function startQuiz() {
+      if(treesData.length < 3) return;
+      const correct = treesData[Math.floor(Math.random() * treesData.length)];
+      const distractors = treesData.filter(t => t.id !== correct.id).sort(() => 0.5 - Math.random()).slice(0, 3);
+      const choices = [correct, ...distractors].sort(() => 0.5 - Math.random());
+
+      quizCurrent = { correct, choices };
+      const card = document.getElementById('quiz-card');
+      card.innerHTML = `
+        <h4 class="text-sm font-black text-stone-800 leading-relaxed">哪一種樹木其學名為：「${correct.latinName}」？</h4>
+        <div class="p-3 bg-amber-50 border-l-4 border-amber-400 text-xs font-bold text-stone-800">💡 考證線索： ${correct.special}</div>
+        <div class="space-y-2">
+          ${choices.map(c => `
+            <button onclick="checkQuiz('${c.id}')" class="w-full p-3.5 rounded-xl border border-stone-200 text-left text-xs font-bold hover:bg-stone-50 flex justify-between items-center">
+              <span>${c.name} (${c.family})</span>
+            </button>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    let score = 0, total = 0;
+    function checkQuiz(id) {
+      total++;
+      if(id === quizCurrent.correct.id) {
+        score++;
+        alert("✔ 恭喜答對！");
+      } else {
+        alert(`✘ 答錯了！正確答案是：${quizCurrent.correct.name}`);
+      }
+      document.getElementById('quiz-score').innerText = score;
+      document.getElementById('quiz-total').innerText = `${total} 題`;
+      startQuiz();
+    }
+
+    // 匯入與匯出 JSON 資料庫
+    function exportJson() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(treesData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `trees_database_${new Date().toISOString().split('T')[0]}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    }
+
+    function importJson(event) {
+      const file = event.target.files[0];
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const parsed = JSON.parse(e.target.result);
+          if(Array.isArray(parsed)) {
+            treesData = parsed;
+            renderCatalog();
+            populateTreeSelect();
+            alert("成功匯入全新 JSON 樹木資料庫！");
+          }
+        } catch(err) {
+          alert("JSON 檔案解析失敗，請確認格式。");
+        }
+      };
+      reader.readAsText(file);
+    }
+  </script>
+</body>
+</html>

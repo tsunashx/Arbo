@@ -1,0 +1,186 @@
+[
+{
+"id": "tree-1",
+"family": "桑科",
+"name": "細葉榕",
+"latinName": "Ficus microcarpa L.f.",
+"height": "15 - 25 米",
+"bloomPeriod": "5月 - 7月 (隱頭花序)",
+"fruitPeriod": "8月 - 11月 (成熟紫黑)",
+"shape": "樹冠廣闊開展，可達20米以上，遮蔭極佳",
+"bark": "灰色，多氣生根，老樹常形成壯觀的支柱根",
+"leaves": "葉橢圓形，革質，全緣，羽狀脈，表面光滑亮麗",
+"flowers": "隱頭果，成對，無總梗，熟時紫黑色，是鳥類最愛",
+"special": "★ 氣生根及隱頭果",
+"description": "都市最常見的遮蔭大樹。其最大特徵為懸掛的氣生根，接觸地面後會逐漸變粗，形成強大的支柱根，使其具有橫向無限蔓延的生命力與極佳的抗風能力。",
+"userNotes": "",
+"mainImage": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1200&q=80",
+"hotspots": [
+{
+"id": "hot-bark",
+"type": "bark",
+"name": "懸垂氣生根",
+"x": 45,
+"y": 75,
+"desc": "從枝幹垂下的褐色線狀氣生根，接觸地面吸收水分與養分後，會木質化成為穩固的「支柱根」。",
+"img": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=500&q=80"
+},
+{
+"id": "hot-leaf",
+"type": "leaves",
+"name": "革質全緣葉",
+"x": 65,
+"y": 30,
+"desc": "葉片呈現橢圓形，邊緣平滑（全緣），厚實革質，表面具有強烈蠟質光澤。",
+"img": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=500&q=80"
+},
+{
+"id": "hot-flower",
+"type": "flowers",
+"name": "隱頭果實",
+"x": 30,
+"y": 45,
+"desc": "無花果實直接成對生長在小枝上，外觀呈球形。花藏於果內，需要榕果小蜂協助授粉。",
+"img": "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=500&q=80"
+}
+]
+},
+{
+"id": "tree-2",
+"family": "桑科",
+"name": "垂葉榕",
+"latinName": "Ficus benjamina L.",
+"height": "10 - 20 米",
+"bloomPeriod": "4月 - 6月",
+"fruitPeriod": "9月 - 11月 (熟時橘紅)",
+"shape": "樹冠橫向蔓延，枝條柔軟自然下垂，極具動感姿態",
+"bark": "灰色，樹皮平滑，具有少量氣根",
+"leaves": "葉卵狀橢圓形，葉尾長尖，薄革質，具有顯著滴水尖",
+"flowers": "隱頭果，成對，熟時呈橙紅至紅黃色",
+"special": "★ 枝條及葉尾柔軟下垂",
+"description": "常綠大喬木，枝條天生下垂，微風吹拂時搖曳生姿。葉片末端具有明顯的長尾尖（滴水尖），便於雨水快速排乾保持葉面乾燥，光合作用效率高。",
+"userNotes": "",
+"mainImage": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80",
+"hotspots": [
+{
+"id": "hot-bark",
+"type": "bark",
+"name": "下垂細長枝條",
+"x": 35,
+"y": 65,
+"desc": "小枝條極其柔軟，受重力自然下垂，樹冠呈現層次豐富的傘狀結構。",
+"img": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+},
+{
+"id": "hot-leaf",
+"type": "leaves",
+"name": "尾狀滴水尖",
+"x": 75,
+"y": 40,
+"desc": "葉尾突然收縮呈長尾狀。雨天時雨水能順著這個長尖匯集並迅速滴落。",
+"img": "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=500&q=80"
+},
+{
+"id": "hot-flower",
+"type": "flowers",
+"name": "橙黃隱頭果",
+"x": 55,
+"y": 35,
+"desc": "隱頭果成熟時由綠色轉為鮮豔的橘紅色，直接附著在下垂枝條上。",
+"img": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=500&q=80"
+}
+]
+},
+{
+"id": "tree-3",
+"family": "樟科",
+"name": "樟樹",
+"latinName": "Cinnamomum camphora (L.) J.Presl",
+"height": "20 - 30 米",
+"bloomPeriod": "4月 - 5月 (黃綠色小花)",
+"fruitPeriod": "8月 - 11月 (熟時墨黑)",
+"shape": "樹冠圓滿呈球形，枝葉繁茂，極為雄偉",
+"bark": "灰褐色，老樹皮具有深且長的縱向條狀裂紋",
+"leaves": "葉卵形，薄革質，具有顯著的離基三出脈，揉碎有樟腦香氣",
+"flowers": "漿果球形，熟時紫黑色，小枝上有細白花",
+"special": "★ 樟腦味及離基三出脈",
+"description": "長壽且極具藥用、建材價值的鄉土樹種。全株含揮發性油，揉碎葉片便能聞到經典的防蟲樟腦氣味。樹皮具有代表性的直裂紋，為良好行道樹。",
+"userNotes": "",
+"mainImage": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80",
+"hotspots": [
+{
+"id": "hot-bark",
+"type": "bark",
+"name": "縱深裂樹皮",
+"x": 48,
+"y": 80,
+"desc": "隨年歲增長，灰褐色樹皮會產生深邃、不規則的縱向條狀深溝裂。",
+"img": "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=500&q=80"
+},
+{
+"id": "hot-leaf",
+"type": "leaves",
+"name": "離基三出脈",
+"x": 62,
+"y": 28,
+"desc": "葉片基部略上方，會有兩條側脈與中肋同時向葉尖延伸，形成「離基三出脈」。",
+"img": "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?auto=format&fit=crop&w=500&q=80"
+},
+{
+"id": "hot-flower",
+"type": "flowers",
+"name": "紫黑油亮漿果",
+"x": 32,
+"y": 45,
+"desc": "漿果呈小圓球狀，熟透後轉為油亮墨黑色，基部有杯狀果托包覆。",
+"img": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=500&q=80"
+}
+]
+},
+{
+"id": "tree-4",
+"family": "樟科",
+"name": "陰香",
+"latinName": "Cinnamomum burmannii (C.Vill.) Blume",
+"height": "10 - 15 米",
+"bloomPeriod": "3月 - 4月",
+"fruitPeriod": "9月 - 12月",
+"shape": "樹冠傘形，生長迅速，枝條密集",
+"bark": "灰褐至紅褐色，樹皮長期保持相對光滑，無深溝裂",
+"leaves": "葉卵形，離基三出脈，揉碎散發肉桂般的辛甜香氣",
+"flowers": "漿果橢圓形，熟時為紫黑色，外觀與樟樹極似",
+"special": "★ 樹皮平滑帶肉桂味",
+"description": "外觀常與樟樹混淆，但陰香的樹皮更平滑且偏紅褐色，揉碎葉片散發的是肉桂般的辛辣甜香。其小枝常呈紅色，可作為分辨線索。",
+"userNotes": "",
+"mainImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+"hotspots": [
+{
+"id": "hot-bark",
+"type": "bark",
+"name": "光滑紅褐色皮",
+"x": 50,
+"y": 70,
+"desc": "樹皮平滑，無樟樹特有的縱向深裂溝紋，剝開帶淡紅褐色。",
+"img": "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&w=500&q=80"
+},
+{
+"id": "hot-leaf",
+"type": "leaves",
+"name": "紅色嫩小枝",
+"x": 72,
+"y": 35,
+"desc": "新抽出的嫩枝條往往呈現極其亮眼的紫紅色，葉背常呈粉綠色。",
+"img": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=500&q=80"
+},
+{
+"id": "hot-flower",
+"type": "flowers",
+"name": "橢圓形核果",
+"x": 28,
+"y": 50,
+"desc": "果實為橢圓狀，頂端宿存的花被齒呈切口狀，與球形樟果不同。",
+"img": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=500&q=80"
+}
+]
+}
+]
