@@ -340,77 +340,100 @@
     let currentTree = null;
     let selectedHotspot = null;
     let uploadedNoteImg = '';
+    let notesList = [];
 
- // 1. 載入資料 (優先讀取 localStorage)
+// 初始化載入：優先讀取 localStorage，若無才讀取 json 檔
 window.addEventListener('DOMContentLoaded', async () => {
-  // 讀取樹木資料
+  // 1. 載入樹木資料
   const localTrees = localStorage.getItem('treesData');
   if (localTrees) {
     treesData = JSON.parse(localTrees);
+    console.log("已從 localStorage 載入樹木資料");
   } else {
     try {
       const treesRes = await fetch('data/trees.json');
       treesData = await treesRes.json();
-      // 存入 localStorage 當作初始資料
       localStorage.setItem('treesData', JSON.stringify(treesData));
     } catch(e) {
-      console.warn("未找到外部 data/trees.json");
+      console.warn("未找到 data/trees.json，使用預設資料");
     }
   }
 
-  // 讀取觀測手記資料
+  // 2. 載入觀測手記
   const localNotes = localStorage.getItem('notesList');
   if (localNotes) {
     notesList = JSON.parse(localNotes);
+    console.log("已從 localStorage 載入觀測手記");
+  } else {
+    notesList = [];
   }
 
-  // 讀取知識庫
+  // 3. 載入知識庫
   try {
     const knowRes = await fetch('data/knowledge.json');
     knowledgeData = await knowRes.json();
   } catch(e) {
-    console.warn("未找到外部 data/knowledge.json");
+    console.warn("未找到 data/knowledge.json");
   }
 
+  // 渲染畫面
   renderCatalog();
   renderKnowledge();
   populateTreeSelect();
   renderNotes();
 });
 
-// 2. 當使用者修改「個人自訂備註」時儲存
+// ----------------------------------------------------
+// 儲存功能的關鍵點：新增/修改資料時寫入 localStorage
+// ----------------------------------------------------
+
+// 儲存樹木自訂備註
 function saveUserNote() {
+  if (!currentTree) return;
   const val = document.getElementById('note-textarea').value;
   currentTree.userNotes = val;
-  document.getElementById('note-view-mode').innerHTML = val ? val : `<span class="text-stone-400 font-normal">（預設空白，點擊編輯備註...）</span>`;
+  
+  // 更新畫面
+  const noteView = document.getElementById('note-view-mode');
+  if (noteView) {
+    noteView.innerHTML = val ? val : `<span class="text-stone-400 font-normal">（預設空白，點擊編輯備註...）</span>`;
+  }
   toggleEditNote();
 
-  // 更新並寫入 localStorage
+  // 存入 localStorage
   localStorage.setItem('treesData', JSON.stringify(treesData));
   alert(`已儲存「${currentTree.name}」的自訂備註！`);
 }
 
-// 3. 當使用者新增「野外手記」時儲存
+// 儲存新增的觀測手記
 function saveNote(e) {
-  e.preventDefault();
+  if (e) e.preventDefault();
   const treeName = document.getElementById('note-tree-select').value;
   const date = document.getElementById('note-date').value;
   const weather = document.getElementById('note-weather').value;
   const location = document.getElementById('note-location').value;
   const content = document.getElementById('note-content').value;
 
-  notesList.unshift({
+  const newNote = {
     id: Date.now(),
-    treeName, date, weather, location, content, image: uploadedNoteImg
-  });
+    treeName, 
+    date, 
+    weather, 
+    location, 
+    content, 
+    image: typeof uploadedNoteImg !== 'undefined' ? uploadedNoteImg : null
+  };
 
-  // 寫入 localStorage
+  notesList.unshift(newNote);
+
+  // 存入 localStorage
   localStorage.setItem('notesList', JSON.stringify(notesList));
 
   renderNotes();
   toggleAddNoteForm();
   alert("觀測手記已成功儲存！");
 }
+
 
 
     // 頁籤切換邏輯
