@@ -1,0 +1,9 @@
+/* 文字截斷（2行） */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 若你有其他自訂樣式，也可以繼續加在下面 */

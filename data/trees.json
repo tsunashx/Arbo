@@ -14,7 +14,7 @@
 "special": "★ 氣生根及隱頭果",
 "description": "都市最常見的遮蔭大樹。其最大特徵為懸掛的氣生根，接觸地面後會逐漸變粗，形成強大的支柱根，使其具有橫向無限蔓延的生命力與極佳的抗風能力。",
 "userNotes": "",
-"mainImage": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1200&q=80",
+"mainImage": "sources/桑科/tree-1_細葉榕/細葉榕.jpg",
 "hotspots": [
 {
 "id": "hot-bark",
@@ -23,7 +23,7 @@
 "x": 45,
 "y": 75,
 "desc": "從枝幹垂下的褐色線狀氣生根，接觸地面吸收水分與養分後，會木質化成為穩固的「支柱根」。",
-"img": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=500&q=80"
+"img": "sources/桑科/tree-1_細葉榕/細葉榕-bark.jpg"
 },
 {
 "id": "hot-leaf",
@@ -32,7 +32,7 @@
 "x": 65,
 "y": 30,
 "desc": "葉片呈現橢圓形，邊緣平滑（全緣），厚實革質，表面具有強烈蠟質光澤。",
-"img": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=500&q=80"
+"img": "sources/桑科/tree-1_細葉榕/細葉榕-leaves.jpg"
 },
 {
 "id": "hot-flower",
@@ -41,7 +41,7 @@
 "x": 30,
 "y": 45,
 "desc": "無花果實直接成對生長在小枝上，外觀呈球形。花藏於果內，需要榕果小蜂協助授粉。",
-"img": "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=500&q=80"
+"img": "sources/桑科/tree-1_細葉榕/細葉榕-flowers.jpeg"
 }
 ]
 },
@@ -87,7 +87,7 @@
 "x": 55,
 "y": 35,
 "desc": "隱頭果成熟時由綠色轉為鮮豔的橘紅色，直接附著在下垂枝條上。",
-"img": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=500&q=80"
+"img": "sources/桑科/tree-2_垂葉榕/垂葉榕-flowers.jpg"
 }
 ]
 },
