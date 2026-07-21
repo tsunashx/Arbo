@@ -4,12 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>翠林誌 - 數位樹木辨識圖鑑</title>
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* 自訂平滑過渡與 line-clamp */
     .line-clamp-2 {
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -20,15 +17,13 @@
 </head>
 <body class="bg-[#F4F6F0] text-stone-800 font-sans min-h-screen flex flex-col">
 
-  <!-- 頂部導覽列 -->
   <header class="sticky top-0 z-40 bg-[#3E4A24] text-[#EBF0E3] shadow-md border-b border-[#2C3519]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         
-        <!-- Logo -->
         <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('catalog')">
           <div class="bg-[#EBF0E3] p-2 rounded-lg text-[#3E4A24]">
-            <i class="fa-solid fa-[#tree] fa-book-bookmark text-xl"></i>
+            <i class="fa-solid fa-tree text-xl"></i>
           </div>
           <div>
             <h1 class="text-xl font-bold tracking-wide">翠林誌</h1>
@@ -36,7 +31,6 @@
           </div>
         </div>
 
-        <!-- 桌面端導覽 -->
         <nav class="hidden md:flex space-x-1">
           <button onclick="switchTab('catalog')" id="nav-catalog" class="nav-btn flex items-center space-x-1.5 px-3 py-2 rounded-md text-sm font-semibold transition-all bg-[#556B2F] text-white">
             <i class="fa-solid fa-book-open"></i><span>樹木圖鑑</span>
@@ -56,7 +50,6 @@
           </button>
         </nav>
 
-        <!-- 工具列：匯入 / 匯出 JSON -->
         <div class="flex items-center space-x-1.5">
           <label class="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-[#4E5D2E] hover:bg-[#556B2F] text-white text-xs font-bold border border-[#556B2F] cursor-pointer">
             <i class="fa-solid fa-upload text-amber-300"></i>
@@ -72,7 +65,6 @@
       </div>
     </div>
 
-    <!-- 手機端底部導覽 -->
     <div class="md:hidden fixed bottom-0 left-0 right-0 bg-[#3E4A24] border-t border-[#2C3519] grid grid-cols-5 z-40 shadow-lg">
       <button onclick="switchTab('catalog')" id="mob-nav-catalog" class="mob-nav-btn flex flex-col items-center justify-center py-2 text-[#EBF0E3] bg-[#556B2F]">
         <i class="fa-solid fa-book-open text-lg mb-0.5"></i><span class="text-[10px]">圖鑑</span>
@@ -93,10 +85,8 @@
     </div>
   </header>
 
-  <!-- 主內容區 -->
   <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16 md:mb-6">
     
-    <!-- TAB 1: 樹木圖鑑 -->
     <section id="tab-catalog" class="tab-content space-y-6">
       <div class="bg-white p-4 rounded-xl shadow-sm border border-stone-200/80 flex flex-col md:flex-row gap-4 items-center justify-between">
         <div class="relative w-full md:w-96">
@@ -110,11 +100,9 @@
         </div>
       </div>
 
-      <!-- 樹木卡片網格 -->
       <div id="tree-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
-    <!-- TAB 2: 知識頁面 -->
     <section id="tab-knowledge" class="tab-content hidden space-y-6 max-w-5xl mx-auto">
       <div class="bg-gradient-to-r from-[#3E4A24] to-[#556B2F] text-white p-6 sm:p-8 rounded-2xl shadow-lg space-y-2">
         <span class="bg-[#D4AF37] text-stone-950 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest inline-block">
@@ -129,7 +117,6 @@
       <div id="knowledge-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
     </section>
 
-    <!-- TAB 3: 特徵對比 -->
     <section id="tab-compare" class="tab-content hidden space-y-6">
       <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm flex justify-between items-center">
         <div>
@@ -145,7 +132,6 @@
       <div id="compare-table-container"></div>
     </section>
 
-    <!-- TAB 4: 辨識挑戰 -->
     <section id="tab-quiz" class="tab-content hidden max-w-2xl mx-auto space-y-6">
       <div class="bg-white p-6 rounded-2xl border border-stone-200 text-center">
         <span class="bg-[#D4AF37] text-stone-950 text-[10px] font-black px-3 py-1 rounded-full uppercase">
@@ -163,20 +149,17 @@
       <div id="quiz-card" class="bg-white rounded-2xl border border-stone-200 p-6 space-y-5"></div>
     </section>
 
-    <!-- TAB 5: 觀測手記 -->
     <section id="tab-notes" class="tab-content hidden space-y-6 max-w-4xl mx-auto">
       <div class="bg-white p-4 rounded-2xl border border-stone-200 shadow-sm flex items-center justify-between">
         <div>
           <h3 class="text-lg font-bold text-[#3E4A24]">野外觀察手記</h3>
-          <p class="text-xs text-stone-400">紀錄您在野外發現的樹木特寫照片與筆記</p>
+          <p class="text-xs text-stone-400">紀錄您在野外發現的樹木特寫照片與筆記（自動儲存於此裝置）</p>
         </div>
-        <!-- 橄欖綠正方形加號按鈕 -->
         <button onclick="toggleAddNoteForm()" class="w-10 h-10 bg-[#556B2F] hover:bg-[#3E4A24] text-white rounded-xl transition-all flex items-center justify-center shadow-md active:scale-95 shrink-0">
           <i id="add-note-icon" class="fa-solid fa-plus text-lg transition-transform duration-300"></i>
         </button>
       </div>
 
-      <!-- 可折疊的新增手記表單 -->
       <div id="add-note-form" class="hidden bg-white p-6 rounded-2xl border border-stone-200 shadow-md space-y-4">
         <h4 class="text-sm font-extrabold text-[#3E4A24] border-b border-stone-100 pb-2">寫入全新觀察記錄</h4>
         <form onsubmit="saveNote(event)" class="space-y-3.5 text-xs">
@@ -222,13 +205,11 @@
         </form>
       </div>
 
-      <!-- 手記清單 -->
       <div id="notes-list" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
     </section>
 
   </main>
 
-  <!-- POPUP MODAL 1: 樹木詳細資訊 Pop-up -->
   <div id="tree-modal" class="hidden fixed inset-0 z-50 bg-stone-900/70 backdrop-blur-sm flex items-center justify-center p-3">
     <div class="bg-white rounded-2xl max-w-5xl w-full max-h-[92vh] overflow-hidden shadow-2xl border border-stone-200 flex flex-col md:flex-row">
       <div class="md:w-3/5 bg-stone-900 relative flex items-center justify-center min-h-[280px] md:min-h-0">
@@ -238,7 +219,6 @@
           <h4 id="modal-tree-name" class="text-base font-black flex items-center space-x-2"></h4>
           <p id="modal-tree-latin" class="text-[11px] text-emerald-200 italic font-serif"></p>
         </div>
-        <!-- 點擊標籤 hotspots -->
         <div id="modal-hotspots-container"></div>
       </div>
 
@@ -254,7 +234,6 @@
             <p id="modal-description" class="text-stone-600 leading-relaxed font-normal bg-stone-50 p-3 rounded-xl border border-stone-100 mt-1"></p>
           </div>
 
-          <!-- 生物指標 -->
           <div class="grid grid-cols-3 gap-1.5 bg-[#F4F6F0] p-2.5 rounded-xl border border-stone-200/60 text-[11px]">
             <div class="flex flex-col items-center text-center p-1.5 bg-white rounded-lg shadow-sm">
               <i class="fa-solid fa-ruler-vertical text-[#556B2F] mb-0.5"></i>
@@ -273,21 +252,18 @@
             </div>
           </div>
 
-          <!-- 特寫區 -->
           <div id="modal-hotspot-detail" class="bg-[#F4F6F0] p-4 rounded-xl border border-stone-200/60 space-y-3"></div>
 
-          <!-- 關鍵考證點 -->
           <div class="bg-amber-50/70 p-3 rounded-xl border-l-4 border-amber-400 text-xs">
             <span class="font-extrabold text-[#3E4A24] block text-[10px] mb-0.5">★ 關鍵考證點</span>
             <p id="modal-special" class="text-stone-800 font-bold leading-relaxed"></p>
           </div>
 
-          <!-- 個人自訂備註 (預設空白) -->
           <div class="pt-3 border-t border-stone-100 space-y-2 bg-stone-50 p-3 rounded-xl border border-stone-200">
             <div class="flex items-center justify-between">
               <span class="text-xs font-bold text-[#3E4A24] flex items-center space-x-1">
                 <i class="fa-solid fa-tag text-[#556B2F]"></i>
-                <span>個人自訂備註 (寫入 JSON)</span>
+                <span>個人自訂備註 (自動儲存於本機)</span>
               </span>
               <button onclick="toggleEditNote()" class="text-[10px] text-[#556B2F] font-bold hover:underline">編輯備註</button>
             </div>
@@ -296,7 +272,7 @@
               <textarea id="note-textarea" rows="3" class="w-full p-2 text-xs rounded border border-stone-300 focus:outline-none focus:ring-2 focus:ring-[#556B2F] bg-white leading-relaxed" placeholder="在此寫下您的個人觀察備註..."></textarea>
               <div class="flex justify-end space-x-2">
                 <button onclick="toggleEditNote()" class="px-2.5 py-1 text-[10px] font-bold text-stone-500 bg-stone-200 rounded">取消</button>
-                <button onclick="saveUserNote()" class="px-3 py-1 text-[10px] font-bold text-white bg-[#556B2F] rounded">儲存</button>
+                <button onclick="saveUserNote()" class="px-3 py-1 text-[10px] font-bold text-white bg-[#556B2F] rounded">儲存備註</button>
               </div>
             </div>
           </div>
@@ -309,7 +285,6 @@
     </div>
   </div>
 
-  <!-- POPUP MODAL 2: 知識文章 Pop-up -->
   <div id="article-modal" class="hidden fixed inset-0 z-50 bg-stone-900/70 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[88vh] overflow-y-auto shadow-2xl border border-stone-200 flex flex-col">
       <div class="p-5 border-b border-stone-100 flex justify-between items-center bg-[#3E4A24] text-white sticky top-0 z-10">
@@ -331,30 +306,48 @@
     </div>
   </div>
 
-  <!-- JavaScript 核心邏輯 -->
   <script>
     let treesData = [];
     let knowledgeData = [];
     let compareList = [];
     let selectedFamily = 'All';
     let currentTree = null;
-    let selectedHotspot = null;
     let uploadedNoteImg = '';
+    let notesList = [];
 
-    // 初始化載入 JSON 資料庫
+    // 初始化載入
     window.addEventListener('DOMContentLoaded', async () => {
+      // 1. 讀取 JSON 資料庫（可適應 root 或 data/ 目錄）
       try {
-        const treesRes = await fetch('data/trees.json');
+        const treesRes = await fetch('data/trees.json').catch(() => fetch('trees.json'));
         treesData = await treesRes.json();
       } catch(e) {
-        console.warn("未找到外部 data/trees.json，使用內建預設數據");
+        console.warn("未找到 trees.json 資料檔");
       }
 
       try {
-        const knowRes = await fetch('data/knowledge.json');
+        const knowRes = await fetch('data/knowledge.json').catch(() => fetch('knowledge.json'));
         knowledgeData = await knowRes.json();
       } catch(e) {
-        console.warn("未找到外部 data/knowledge.json");
+        console.warn("未找到 knowledge.json 資料檔");
+      }
+
+      // 2. 載入本機已儲存的樹木個人備註
+      treesData.forEach(tree => {
+        const localNote = localStorage.getItem(`tree_note_${tree.id}`);
+        if (localNote !== null) {
+          tree.userNotes = localNote;
+        }
+      });
+
+      // 3. 載入本機已儲存的觀測手記
+      const savedNotes = localStorage.getItem('field_notes_list');
+      if (savedNotes) {
+        try {
+          notesList = JSON.parse(savedNotes);
+        } catch(e) {
+          notesList = [];
+        }
       }
 
       renderCatalog();
@@ -368,7 +361,6 @@
       document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
       document.getElementById(`tab-${tabId}`).classList.remove('hidden');
 
-      // 更新按鈕樣式
       document.querySelectorAll('.nav-btn').forEach(btn => {
         btn.classList.remove('bg-[#556B2F]', 'text-white');
         btn.classList.add('text-[#C5D0B3]');
@@ -399,7 +391,6 @@
       const grid = document.getElementById('tree-grid');
       grid.innerHTML = '';
 
-      // 提取科別列表
       const families = ['All', ...new Set(treesData.map(t => t.family))];
       const familyContainer = document.getElementById('family-filters');
       familyContainer.innerHTML = families.map(f => `
@@ -408,7 +399,6 @@
         </button>
       `).join('');
 
-      // 過濾數據
       const filtered = treesData.filter(t => {
         const matchSearch = t.name.toLowerCase().includes(search) || t.family.toLowerCase().includes(search) || t.description.toLowerCase().includes(search);
         const matchFamily = selectedFamily === 'All' || t.family === selectedFamily;
@@ -462,7 +452,6 @@
         compareList.push(tree);
       }
 
-      // 更新數字 Badge 位置 (正確定位在對比按鈕)
       const desktopBadge = document.getElementById('compare-badge-desktop');
       const mobileBadge = document.getElementById('compare-badge-mobile');
       
@@ -565,6 +554,13 @@
     // 樹木詳細 Pop-up 開啟與互動
     function openTreeModal(id) {
       currentTree = treesData.find(t => t.id === id);
+      
+      // 開啟時優先讀取 localStorage 備註
+      const storedNote = localStorage.getItem(`tree_note_${currentTree.id}`);
+      if (storedNote !== null) {
+        currentTree.userNotes = storedNote;
+      }
+
       document.getElementById('modal-tree-name').innerHTML = `<span>${currentTree.name}</span><span class="bg-[#556B2F] text-xs px-2 py-0.5 rounded-full font-bold ml-2">${currentTree.family}</span>`;
       document.getElementById('modal-tree-latin').innerText = currentTree.latinName;
       document.getElementById('modal-main-img').src = currentTree.mainImage;
@@ -574,11 +570,9 @@
       document.getElementById('modal-fruit').innerText = currentTree.fruitPeriod;
       document.getElementById('modal-special').innerText = currentTree.special;
 
-      // 備註區域 (預設空白)
       document.getElementById('note-view-mode').innerHTML = currentTree.userNotes ? currentTree.userNotes : `<span class="text-stone-400 font-normal">（預設空白，點擊編輯備註...）</span>`;
       document.getElementById('note-textarea').value = currentTree.userNotes || '';
 
-      // 熱點 (Hotspots)
       const hotspotContainer = document.getElementById('modal-hotspots-container');
       hotspotContainer.innerHTML = (currentTree.hotspots || []).map(spot => `
         <button onclick="selectHotspot('${spot.id}')" style="left:${spot.x}%; top:${spot.y}%;" class="absolute -translate-x-1/2 -translate-y-1/2 z-20 group">
@@ -621,12 +615,17 @@
       document.getElementById('note-edit-mode').classList.toggle('hidden');
     }
 
+    // 關鍵修改：將個人的樹木備註持久化寫入 localStorage
     function saveUserNote() {
       const val = document.getElementById('note-textarea').value;
       currentTree.userNotes = val;
+      
+      // 寫入本機儲存空間
+      localStorage.setItem(`tree_note_${currentTree.id}`, val);
+
       document.getElementById('note-view-mode').innerHTML = val ? val : `<span class="text-stone-400 font-normal">（預設空白，點擊編輯備註...）</span>`;
       toggleEditNote();
-      alert(`已儲存「${currentTree.name}」的自訂備註！`);
+      alert(`已成功儲存「${currentTree.name}」的自訂備註於您的裝置中！`);
     }
 
     // 知識頁面渲染
@@ -689,7 +688,7 @@
       reader.readAsDataURL(file);
     }
 
-    let notesList = [];
+    // 關鍵修改：將新增的野外觀察手記寫入 localStorage
     function saveNote(e) {
       e.preventDefault();
       const treeName = document.getElementById('note-tree-select').value;
@@ -698,27 +697,57 @@
       const location = document.getElementById('note-location').value;
       const content = document.getElementById('note-content').value;
 
-      notesList.unshift({
+      const newNote = {
         id: Date.now(),
         treeName, date, weather, location, content, image: uploadedNoteImg
-      });
+      };
+
+      notesList.unshift(newNote);
+
+      // 儲存至本機
+      try {
+        localStorage.setItem('field_notes_list', JSON.stringify(notesList));
+      } catch(e) {
+        console.warn("照片檔案可能過大超出 localStorage 限制，建議壓縮照片。");
+      }
 
       renderNotes();
       toggleAddNoteForm();
-      alert("觀測手記已成功儲存！");
+      
+      // 清空輸入框
+      document.getElementById('note-content').value = '';
+      document.getElementById('note-location').value = '';
+      document.getElementById('note-image-input').value = '';
+      document.getElementById('note-image-preview').classList.add('hidden');
+      uploadedNoteImg = '';
+
+      alert("觀測手記已成功儲存於您的本機裝置！");
+    }
+
+    // 刪除手記功能
+    function deleteNote(id) {
+      if(!confirm("確定要刪除這筆觀察手記嗎？")) return;
+      notesList = notesList.filter(n => n.id !== id);
+      localStorage.setItem('field_notes_list', JSON.stringify(notesList));
+      renderNotes();
     }
 
     function renderNotes() {
       const container = document.getElementById('notes-list');
       if(notesList.length === 0) {
-        container.innerHTML = `<div class="col-span-full py-12 text-center text-stone-400 text-xs">尚無手記。點擊上方橄欖綠加號按鈕新增！</div>`;
+        container.innerHTML = `<div class="col-span-full py-12 text-center text-stone-400 text-xs">尚無手記。點擊上方加號按鈕新增！</div>`;
         return;
       }
       container.innerHTML = notesList.map(n => `
-        <div class="bg-white p-4 rounded-2xl border border-stone-200/80 shadow-sm space-y-3 relative">
-          <div class="flex items-center space-x-2">
-            <span class="font-bold text-base text-[#3E4A24]">${n.treeName}</span>
-            <span class="text-[10px] text-stone-400 font-bold">${n.date} @ ${n.location || '未標註'}</span>
+        <div class="bg-white p-4 rounded-2xl border border-stone-200/80 shadow-sm space-y-3 relative group">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="font-bold text-base text-[#3E4A24]">${n.treeName}</span>
+              <span class="text-[10px] text-stone-400 font-bold">${n.date || '未註明日期'} @ ${n.location || '未標註地點'}</span>
+            </div>
+            <button onclick="deleteNote(${n.id})" class="text-stone-300 hover:text-red-500 text-xs p-1">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
           </div>
           ${n.image ? `<div class="h-44 w-full rounded-xl overflow-hidden bg-stone-100 border"><img src="${n.image}" class="w-full h-full object-cover"></div>` : ''}
           <p class="text-xs text-stone-700 leading-relaxed bg-stone-50 p-3 rounded-xl border border-stone-100 font-medium">${n.content}</p>
@@ -763,7 +792,7 @@
       startQuiz();
     }
 
-    // 匯入與匯出 JSON 資料庫
+    // 匯出 / 匯入 JSON
     function exportJson() {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(treesData, null, 2));
       const downloadAnchor = document.createElement('a');
