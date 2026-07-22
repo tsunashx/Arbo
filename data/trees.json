@@ -555,7 +555,7 @@
     "id": "tree-13",
     "family": "錦葵科",
     "name": "黃槿",
-    "latinName": "Talipariti tiliaceum (L.) Fryxell",
+    "latinName": "Hibiscus tiliaceus",
     "height": "4 - 10 米",
     "bloomPeriod": "7月 - 8月 (常年有花)",
     "fruitPeriod": "8月 - 12月",
@@ -566,7 +566,7 @@
     "special": "★ 心形葉片與一日變色黃花",
     "description": "常見的海岸防風與護岸樹種，極為耐鹽抗風。其心形的大型革質葉片在民間常被用作蒸糕點的墊底材料（俗稱「糕仔葉」）。花朵朝開黃色，暮謝轉為橙紅。",
     "userNotes": "",
-    "mainImage": "images/malvaceae/talipariti tiliaceum/talipariti tiliaceum-main.jpg",
+    "mainImage": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-main.jpg",
     "hotspots": [
       {
         "id": "hot-bark",
@@ -575,7 +575,7 @@
         "x": 48,
         "y": 70,
         "desc": "樹皮韌皮纖維發達，古時可用於編織繩索。",
-        "img": "images/malvaceae/talipariti tiliaceum/talipariti tiliaceum-bark.jpg"
+        "img": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-bark.jpg"
       },
       {
         "id": "hot-leaf",
@@ -584,7 +584,7 @@
         "x": 60,
         "y": 35,
         "desc": "葉片呈顯著的大心形，葉背密布白色茸毛，觸感厚實。",
-        "img": "images/malvaceae/talipariti tiliaceum/talipariti tiliaceum-leaves.jpg"
+        "img": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-leaves.jpg"
       },
       {
         "id": "hot-flower",
@@ -593,7 +593,7 @@
         "x": 35,
         "y": 45,
         "desc": "鮮黃色花朵中心具暗紫紅色斑塊；果實為木質絨毛卵形蒴果。",
-        "img": "images/malvaceae/talipariti tiliaceum/talipariti tiliaceum-flowers.jpg"
+        "img": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-flowers.jpeg"
       }
     ]
   },
@@ -639,7 +639,7 @@
         "x": 30,
         "y": 50,
         "desc": "果實成熟時呈鮮豔朱紅色星狀開裂，內部顯露出漆黑有光澤的種子。",
-        "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-fruit.jpg"
+        "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-fruit.jpeg"
       }
     ]
   }

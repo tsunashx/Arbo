@@ -161,9 +161,16 @@
 
     function clearCompare() {
       compareList = [];
-      document.getElementById('compare-badge-desktop').classList.add('hidden');
-      document.getElementById('compare-badge-mobile').classList.add('hidden');
+      
+      // 隱藏頂部標籤數量提示
+      const desktopBadge = document.getElementById('compare-badge-desktop');
+      const mobileBadge = document.getElementById('compare-badge-mobile');
+      if (desktopBadge) desktopBadge.classList.add('hidden');
+      if (mobileBadge) mobileBadge.classList.add('hidden');
+
+      // 關鍵：同時更新對比頁面與圖鑑頁面的 UI 狀態
       renderCompare();
+      renderCatalog();
     }
 
     // 渲染特徵對比表格
