@@ -642,5 +642,235 @@
         "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-fruit.jpeg"
       }
     ]
+  },
+  {
+    "id": "tree-15",
+    "family": "桃金娘科",
+    "name": "白千層",
+    "latinName": "Melaleuca cajuputi subsp. cumingiana",
+    "height": "10 - 20 米",
+    "bloomPeriod": "11月 - 次年1月",
+    "fruitPeriod": "次年3月 - 5月",
+    "shape": "樹冠呈狹圓錐形或不規則形，枝條稍下垂",
+    "bark": "灰白色，木栓質，層層剝落如海綿及紙張",
+    "leaves": "互生，披針形，革質，具3-7條縱向平行脈，揉碎有芳香味",
+    "flowers": "穗狀花序頂生，形如瓶刷，白色或淡黃色，雄蕊多數",
+    "special": "★ 層狀海綿樹皮與瓶刷狀白花",
+    "description": "極具特色的樹種，其樹皮多層且鬆軟如海綿，可輕易一層層剝下。葉片富含精油，揉碎後散發獨特香氣。花朵密集如白色的洗瓶刷。",
+    "userNotes": "",
+    "mainImage": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "海綿狀千層樹皮",
+        "x": 50,
+        "y": 75,
+        "desc": "樹皮灰白色，鬆軟富有彈性，由許多海綿狀薄層重疊組成，可剝落。",
+        "img": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "縱脈芳香葉",
+        "x": 65,
+        "y": 30,
+        "desc": "葉片呈披針形，具有數條極為顯著的縱向平行主脈，富含桉樹油香氣。",
+        "img": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "瓶刷狀穗狀花序",
+        "x": 30,
+        "y": 45,
+        "desc": "花序生於枝頂，白色雄蕊伸長形成如洗瓶刷般的造型，花後枝條繼續生長。",
+        "img": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-flowers.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-16",
+    "family": "桃金娘科",
+    "name": "串錢柳",
+    "latinName": "Callistemon viminalis (Sol. ex Gaertn.) G.Don",
+    "height": "6 - 10 米",
+    "bloomPeriod": "3月 - 5月",
+    "fruitPeriod": "6月 - 8月",
+    "shape": "樹冠不規則，枝條細長柔軟且顯著下垂如柳樹",
+    "bark": "深褐色，粗糙，有厚裂紋",
+    "leaves": "互生，線形或狹披針形，堅硬，揉碎有香氣",
+    "flowers": "穗狀花序生於枝頂，鮮紅色，雄蕊長而密集，形似紅瓶刷",
+    "special": "★ 下垂枝條、紅瓶刷花與串珠狀木質果",
+    "description": "樹姿如柳樹般柔美下垂，春季開滿鮮紅色的瓶刷狀花朵。花謝後結出環繞枝條密生的木質球形蒴果，歷久不落，形似串串古錢，因而得名「串錢柳」。",
+    "userNotes": "",
+    "mainImage": "images/myrtaceae/callistemon viminalis/callistemon viminalis-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "深褐縱裂粗糙皮",
+        "x": 48,
+        "y": 70,
+        "desc": "主幹樹皮深褐色，具有深縱裂紋，質感較為粗糙。",
+        "img": "images/myrtaceae/callistemon viminalis/callistemon viminalis-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "下垂線狀葉",
+        "x": 62,
+        "y": 35,
+        "desc": "葉片狹長如線形，隨細長柔軟的枝條自然下垂，隨風飄逸。",
+        "img": "images/myrtaceae/callistemon viminalis/callistemon viminalis-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "鮮紅瓶刷與串錢果",
+        "x": 35,
+        "y": 45,
+        "desc": "鮮紅色雄蕊極為醒目；杯狀木質蒴果緊密環繞枝條生長，狀如串錢。",
+        "img": "images/myrtaceae/callistemon viminalis/callistemon viminalis-flowers.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-17",
+    "family": "棕櫚科",
+    "name": "大王椰子",
+    "latinName": "Roystonea regia (H.B.K.) O.F.Cook",
+    "height": "15 - 25 米",
+    "bloomPeriod": "3月 - 4月",
+    "fruitPeriod": "10月 - 12月",
+    "shape": "單幹直立，高大雄偉，樹幹中部或基部常膨大呈酒瓶狀",
+    "bark": "灰色，平滑，具顯著的環狀葉痕",
+    "leaves": "羽状複葉，簇生於幹頂，葉鞘綠色膨大且包栓幹頂",
+    "flowers": "肉穗花序生於葉鞘基部下方，花小，白色",
+    "special": "★ 瓶狀膨大樹幹與葉痕環紋",
+    "description": "高大雄偉的棕櫚科植物，常栽培為景觀樹或大道樹。樹幹光滑呈現灰白色，帶有環狀的舊葉脫落痕跡。樹幹中部常顯著膨大，氣勢磅礡。",
+    "userNotes": "",
+    "mainImage": "images/arecaceae/roystonea regia/roystonea regia-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "膨大灰白樹幹與葉痕",
+        "x": 50,
+        "y": 80,
+        "desc": "樹幹呈灰白色，平滑且帶有均勻的環狀葉痕，樹幹常有局部膨大現象。",
+        "img": "images/arecaceae/roystonea regia/roystonea regia-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "大型羽狀複葉",
+        "x": 60,
+        "y": 25,
+        "desc": "葉片巨大，羽狀全裂，四面伸展，基部具光滑濃綠色的圓筒狀葉鞘。",
+        "img": "images/arecaceae/roystonea regia/roystonea regia-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "幹莖下垂肉穗花序",
+        "x": 40,
+        "y": 45,
+        "desc": "花序從綠色葉鞘下方的樹幹直接抽出，分枝多且下垂，結暗紫色近球形核果。",
+        "img": "images/arecaceae/roystonea regia/roystonea regia-flowers.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-18",
+    "family": "棕櫚科",
+    "name": "假檳榔",
+    "latinName": "Archontophoenix alexandrae (F.Muell.) H.Wendl. & Drude",
+    "height": "10 - 20 米",
+    "bloomPeriod": "4月 - 7月",
+    "fruitPeriod": "8月 - 11月",
+    "shape": "單幹直立，纖細挺拔，樹冠優美",
+    "bark": "灰褐色，具緊密而清晰的環狀葉痕",
+    "leaves": "羽狀複葉，葉片背部常帶有銀白色粉末，葉鞘綠色呈筒狀包裹幹頂",
+    "flowers": "肉穗花序生於葉鞘基部，分枝多而下垂，花白色或淡紫色",
+    "special": "★ 纖細樹幹、葉背銀白與鮮紅小核果",
+    "description": "樹形比大王椰子更為纖細優雅。羽狀葉背常帶有銀白色，迎風翻飛時十分美觀。成熟果實呈鮮艷的紅色，成串垂掛於綠色葉鞘下方。",
+    "userNotes": "",
+    "mainImage": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "纖細環紋樹幹",
+        "x": 48,
+        "y": 75,
+        "desc": "樹幹較直且均勻，表面留有密集而平行的環狀葉脫落痕跡。",
+        "img": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "雙色羽狀葉（背銀白）",
+        "x": 62,
+        "y": 30,
+        "desc": "羽狀葉正面濃綠，背面帶有獨特的銀白色微毛或粉霜。",
+        "img": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "成串鮮紅球形核果",
+        "x": 35,
+        "y": 50,
+        "desc": "花序生於光滑綠色葉鞘下方，成熟時結出大量亮紅色的球形小核果。",
+        "img": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-flowers.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-19",
+    "family": "棕櫚科",
+    "name": "蒲葵",
+    "latinName": "Livistona chinensis (Jacq.) R.Br. ex Mart.",
+    "height": "5 - 15 米",
+    "bloomPeriod": "4月 - 5月",
+    "fruitPeriod": "10月 - 12月",
+    "shape": "單幹直立，頂端簇生大型掌狀葉，呈球形樹冠",
+    "bark": "灰色，粗糙，環狀葉痕極為密集，常殘留棕色網狀纖維（棕衣）",
+    "leaves": "掌狀深裂，葉片近圓形，裂片頂端深裂且顯著下垂",
+    "flowers": "肉穗花序生於葉腋間，分枝多，花小，淡黃色",
+    "special": "★ 掌狀下垂扇葉與古風葵扇原料",
+    "description": "經典的本土棕櫚植物。其巨大的扇形掌狀葉，葉片尖端會自然柔軟下垂，造型優雅。傳統上常用其葉片製作葵扇（蒲扇），幹基纖維可作繩索。",
+    "userNotes": "",
+    "mainImage": "images/arecaceae/livistona chinensis/livistona chinensis-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "殘留棕衣灰褐幹",
+        "x": 50,
+        "y": 75,
+        "desc": "樹幹灰色，常殘留枯死葉柄基部及棕褐色網狀纖維（棕衣）。",
+        "img": "images/arecaceae/livistona chinensis/livistona chinensis-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "掌狀下垂大扇葉",
+        "x": 65,
+        "y": 30,
+        "desc": "葉片呈大型掌狀深裂，裂片先端呈2裂且顯著折垂，葉柄邊緣具倒刺。",
+        "img": "images/arecaceae/livistona chinensis/livistona chinensis-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "藍綠色橢圓核果",
+        "x": 30,
+        "y": 45,
+        "desc": "肉穗花序生於葉柄間；成熟果實為橢圓形核果，呈現暗藍綠色或黑紫色。",
+        "img": "images/arecaceae/livistona chinensis/livistona chinensis-flowers.jpg"
+      }
+    ]
   }
 ]
