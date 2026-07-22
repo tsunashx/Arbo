@@ -207,7 +207,7 @@
         "x": 50,
         "y": 70,
         "desc": "樹皮切開後流出的汁液氧化會呈血紅色，隨後凝固保護傷口。",
-        "img": "images/euphorbiaceae/macaranga tanarius/macaranga tanarius-bark.jpg"
+        "img": "images/euphorbiaceae/macaranga tanarius/macaranga tanarius-bark.jpeg"
       },
       {
         "id": "hot-leaf",
@@ -216,7 +216,7 @@
         "x": 60,
         "y": 35,
         "desc": "葉柄連接在葉片的背面中心而非基部，像盾牌一樣，脈絡呈放射狀。",
-        "img": "images/euphorbiaceae/macaranga tanarius/macaranga tanarius-leaves.jpeg"
+        "img": "images/euphorbiaceae/macaranga tanarius/macaranga tanarius-leaves.jpg"
       },
       {
         "id": "hot-flower",
@@ -225,7 +225,7 @@
         "x": 35,
         "y": 45,
         "desc": "果實為球形蒴果，表面密生軟刺，成熟時開裂釋放黑色種子。",
-        "img": "images/euphorbiaceae/macaranga tanarius/macaranga tanarius-fruit.jpg"
+        "img": "images/euphorbiaceae/macaranga tanarius/macaranga tanarius-fruit.jpeg"
       }
     ]
   },
@@ -290,7 +290,7 @@
     "special": "★ 掌狀三裂葉與刺球狀頭狀果",
     "description": "著名的秋季觀賞樹種。雖然常被誤認為槭樹（楓樹），但楓香葉片為互生且多為3裂。樹脂具有甜香味，古時可用作香料或藥材。",
     "userNotes": "",
-    "mainImage": "images/altingiaceae/liquidambar formosana/liquidambar formosana-main.jpg",
+    "mainImage": "images/altingiaceae/liquidambar formosana/liquidambar formosana-main.jpeg",
     "hotspots": [
       {
         "id": "hot-bark",
@@ -317,7 +317,7 @@
         "x": 35,
         "y": 45,
         "desc": "頭狀果序呈刺球狀，由多個帶喙的蒴果聚合而成，成熟後乾裂懸掛枝頭。",
-        "img": "images/altingiaceae/liquidambar formosana/liquidambar formosana-fruit.jpg"
+        "img": "images/altingiaceae/liquidambar formosana/liquidambar formosana-fruit.jpeg"
       }
     ]
   },
@@ -354,7 +354,7 @@
         "x": 62,
         "y": 35,
         "desc": "每組葉柄上長有三片小葉（三出複葉），邊緣有細鋸齒，老葉掉落前變紅。",
-        "img": "images/phyllanthaceae/bischofia javanica/bischofia javanica-leaves.jpg"
+        "img": "images/phyllanthaceae/bischofia javanica/bischofia javanica-leaves.jpeg"
       },
       {
         "id": "hot-flower",
@@ -366,6 +366,281 @@
         "img": "images/phyllanthaceae/bischofia javanica/bischofia javanica-fruit.jpg"
       }
     ]
+  },
+  {
+    "id": "tree-9",
+    "family": "豆科",
+    "name": "鳳凰木",
+    "latinName": "Delonix regia (Bojer ex Hook.) Raf.",
+    "height": "10 - 20 米",
+    "bloomPeriod": "5月 - 7月",
+    "fruitPeriod": "8月 - 10月",
+    "shape": "樹冠寬廣開展呈傘形，極具遮蔭效果",
+    "bark": "灰褐色，粗糙，微有縱裂，無刺",
+    "leaves": "二回羽狀複葉，小葉細小呈長橢圓形，羽片對生",
+    "flowers": "總狀花序，花大鮮紅色，具5片花瓣，上方1片有黃白色斑紋",
+    "special": "★ 鮮紅傘形花海與刀劍狀大莢果",
+    "description": "著名的觀賞樹種，夏季開花時滿樹鮮紅，極為壯觀，常被譽為「世上色彩最鮮艷的樹木之一」。其果實為大型木質化的扁平莢果，垂掛枝頭可歷時很久。",
+    "userNotes": "",
+    "mainImage": "images/fabaceae/delonix regia/delonix regia-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰褐平滑樹皮",
+        "x": 45,
+        "y": 75,
+        "desc": "樹幹粗壯，皮孔明顯，老時樹皮呈不規則微裂。",
+        "img": "images/fabaceae/delonix regia/delonix regia-bark.jpeg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "羽狀細緻複葉",
+        "x": 65,
+        "y": 30,
+        "desc": "二回羽狀複葉極為細緻，夜晚或陰雨天時小葉會折疊閉合。",
+        "img": "images/fabaceae/delonix regia/delonix regia-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "鮮紅大花與大莢果",
+        "x": 30,
+        "y": 45,
+        "desc": "花朵鮮紅奪目；結出長達50厘米以上的木質黑色刀劍狀莢果。",
+        "img": "images/fabaceae/delonix regia/delonix regia-flowers.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "tree-10",
+    "family": "豆科",
+    "name": "水黃皮",
+    "latinName": "Millettia pinnata (L.) Panigrahi",
+    "height": "8 - 15 米",
+    "bloomPeriod": "5月 - 6月",
+    "fruitPeriod": "8月 - 10月",
+    "shape": "樹冠呈圓球形，枝葉濃密",
+    "bark": "灰褐色，光滑或帶淺裂紋",
+    "leaves": "奇數羽狀複葉，小葉卵形或橢圓形，革質光滑，富光澤",
+    "flowers": "腋生總狀花序，花冠蝶形，粉紫色或淡紫色",
+    "special": "★ 抗風耐鹽與木質刀狀莢果",
+    "description": "優良的海岸防風樹種，野生於海岸邊或近海河岸。葉片光亮，花朵為淡粉紫色蝶形花。果實為堅硬的木質扁平莢果，能漂浮於水面隨水流傳播。",
+    "userNotes": "",
+    "mainImage": "images/fabaceae/millettia pinnata/millettia pinnata-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰褐光滑樹皮",
+        "x": 50,
+        "y": 75,
+        "desc": "樹幹平滑，老時稍微呈淺縱裂，具極強抗風及耐鹽能力。",
+        "img": "images/fabaceae/millettia pinnata/millettia pinnata-bark.jpeg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "光亮革質複葉",
+        "x": 60,
+        "y": 35,
+        "desc": "羽狀複葉，葉片表面具光澤，揉碎後常帶有一種特殊的氣味。",
+        "img": "images/fabaceae/millettia pinnata/millettia pinnata-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "粉紫蝶形花束",
+        "x": 35,
+        "y": 45,
+        "desc": "成串的粉紫色蝶形花朵生於葉腋，盛開時帶有淡淡清香。",
+        "img": "images/fabaceae/millettia pinnata/millettia pinnata-flowers.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-11",
+    "family": "千屈菜科",
+    "name": "大花紫薇",
+    "latinName": "Lagerstroemia speciosa (L.) Pers.",
+    "height": "7 - 15 米",
+    "bloomPeriod": "5月 - 7月",
+    "fruitPeriod": "9月 - 11月",
+    "shape": "樹冠呈圓頂形，枝條稍下垂",
+    "bark": "灰色或灰褐色，較為平滑，老時常呈薄片狀剝落",
+    "leaves": "單葉對生，長橢圓形或卵狀長橢圓形，革質，邊緣平滑",
+    "flowers": "頂生圓錐花序，花大，波浪狀皺褶花瓣，紫色至紫紅色",
+    "special": "★ 皺褶紫花與球形木質蒴果",
+    "description": "常見的落葉大喬木，夏季開極其艷麗的紫色大花。花瓣邊緣呈現獨特的波浪皺縮狀。冬季落葉前，葉片會轉為鮮豔的紅黃色，極具季節觀賞價值。",
+    "userNotes": "",
+    "mainImage": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰褐平滑斑駁樹皮",
+        "x": 48,
+        "y": 70,
+        "desc": "樹皮相對平滑，老時會呈小片狀脫落，露出新皮。",
+        "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "革質大葉與紅葉變色",
+        "x": 62,
+        "y": 35,
+        "desc": "葉片大而厚實，冬季掉落前會由綠轉為亮紅或紅褐色。",
+        "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-leaves.jpeg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "波浪紫花與球形果",
+        "x": 30,
+        "y": 50,
+        "desc": "花瓣如皺紙般彎曲，花謝後結出堅硬的球形木質蒴果。",
+        "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-flowers.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "tree-12",
+    "family": "錦葵科",
+    "name": "木棉",
+    "latinName": "Bombax ceiba L.",
+    "height": "10 - 25 米",
+    "bloomPeriod": "3月 - 4月 (先花後葉)",
+    "fruitPeriod": "5月 - 6月 (裂開飄棉)",
+    "shape": "樹幹高大挺拔，呈明顯圓錐形或塔形，分枝輪生平展",
+    "bark": "灰白色，幼樹及枝條幹上密生瘤狀硬刺",
+    "leaves": "掌狀複葉，小葉 5 - 7 片，長圓形，紙質",
+    "flowers": "花大，肉質，5片橙紅或紅色花瓣，先花後葉盛開",
+    "special": "★ 樹幹瘤刺、英雄紅花與棉絮飄飛",
+    "description": "又稱「英雄樹」。春季先開花後長葉，滿樹橙紅色的肉質大花極具震撼力。果實成熟開裂後會釋放大量白色棉絮，包裹著種子隨風飄散。",
+    "userNotes": "",
+    "mainImage": "images/malvaceae/bombax ceiba/bombax ceiba-main.jpeg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "防禦性圓椎瘤刺",
+        "x": 50,
+        "y": 75,
+        "desc": "樹幹生有顯著的硬質圓錐狀瘤刺，隨樹齡增長會逐漸平滑。",
+        "img": "images/malvaceae/bombax ceiba/bombax ceiba-bark.jpeg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "掌狀複葉",
+        "x": 65,
+        "y": 30,
+        "desc": "花謝後才抽出掌狀複葉，5-7片小葉如掌狀向外放射。",
+        "img": "images/malvaceae/bombax ceiba/bombax ceiba-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "肉質紅花與棉蒴果",
+        "x": 30,
+        "y": 45,
+        "desc": "花朵厚重呈鮮艷橙紅色；果實成熟會裂開並散發大量白色綿毛。",
+        "img": "images/malvaceae/bombax ceiba/bombax ceiba-flowers.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-13",
+    "family": "錦葵科",
+    "name": "黃槿",
+    "latinName": "Talipariti tiliaceum (L.) Fryxell",
+    "height": "4 - 10 米",
+    "bloomPeriod": "7月 - 8月 (常年有花)",
+    "fruitPeriod": "8月 - 12月",
+    "shape": "樹冠開展，常呈圓形或不規則多分枝狀",
+    "bark": "灰白色或灰褐色，粗糙，多纖維且具縱裂",
+    "leaves": "心形，近圓形，革質，全緣或有微鋸齒，背面密生灰白色星狀毛",
+    "flowers": "鐘狀花，黃色，花心中央呈深紫紅色，黃昏時會轉為橙紅色並凋謝",
+    "special": "★ 心形葉片與一日變色黃花",
+    "description": "常見的海岸防風與護岸樹種，極為耐鹽抗風。其心形的大型革質葉片在民間常被用作蒸糕點的墊底材料（俗稱「糕仔葉」）。花朵朝開黃色，暮謝轉為橙紅。",
+    "userNotes": "",
+    "mainImage": "images/malvaceae/talipariti tiliaceum/talipariti tiliaceum-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "多纖維灰褐樹皮",
+        "x": 48,
+        "y": 70,
+        "desc": "樹皮韌皮纖維發達，古時可用於編織繩索。",
+        "img": "images/malvaceae/talipariti tiliaceum/talipariti tiliaceum-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "掌狀脈大心形葉",
+        "x": 60,
+        "y": 35,
+        "desc": "葉片呈顯著的大心形，葉背密布白色茸毛，觸感厚實。",
+        "img": "images/malvaceae/talipariti tiliaceum/talipariti tiliaceum-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "紫心黃花與卵形蒴果",
+        "x": 35,
+        "y": 45,
+        "desc": "鮮黃色花朵中心具暗紫紅色斑塊；果實為木質絨毛卵形蒴果。",
+        "img": "images/malvaceae/talipariti tiliaceum/talipariti tiliaceum-flowers.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-14",
+    "family": "錦葵科",
+    "name": "假蘋婆",
+    "latinName": "Sterculia lanceolata Cav.",
+    "height": "5 - 15 米",
+    "bloomPeriod": "4月 - 6月",
+    "fruitPeriod": "7月 - 9月",
+    "shape": "樹冠圓球形，枝葉茂密",
+    "bark": "灰色或灰褐色，平滑，不易開裂",
+    "leaves": "單葉互生，長圓狀披針形，革質，全緣，網脈明顯",
+    "flowers": "圓錐花序，花小，無花瓣，萼片淡紅色或淡粉色，呈星狀開展",
+    "special": "★ 鮮紅蓇葖果與鳳眼狀黑籽",
+    "description": "原生常綠小至中喬木。夏季結出鮮紅色的星狀蓇葖果，成熟時裂開露出如黑珍珠般的黑色種子，掛在紅色的果皮內，對比鮮明，極具觀賞價值。",
+    "userNotes": "",
+    "mainImage": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰色平滑樹皮",
+        "x": 48,
+        "y": 75,
+        "desc": "樹幹質地平滑，呈灰色，分枝多且細長。",
+        "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "披針形革質葉",
+        "x": 62,
+        "y": 30,
+        "desc": "葉片呈長披針形，葉端漸尖，邊緣平滑，質感革質。",
+        "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "鮮紅星狀裂果與黑籽",
+        "x": 30,
+        "y": 50,
+        "desc": "果實成熟時呈鮮豔朱紅色星狀開裂，內部顯露出漆黑有光澤的種子。",
+        "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-fruit.jpg"
+      }
+    ]
   }
-
 ]

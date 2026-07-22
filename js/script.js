@@ -86,7 +86,7 @@
       const familyContainer = document.getElementById('family-filters');
       familyContainer.innerHTML = families.map(f => `
         <button onclick="filterFamily('${f}')" class="px-3 py-1 rounded-full text-xs font-semibold shrink-0 transition-all ${selectedFamily === f ? 'bg-[#556B2F] text-white' : 'bg-[#EBF0E3] text-[#556B2F] hover:bg-[#DCE4D0]'}">
-          ${f === 'All' ? '全部科別' : f}
+          ${f === 'All' ? '全部' : f}
         </button>
       `).join('');
 
@@ -104,7 +104,7 @@
           <div>
             <div class="h-48 w-full bg-stone-200 relative overflow-hidden cursor-pointer" onclick="openTreeModal('${tree.id}')">
               <img src="${tree.mainImage}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=500&q=80'">
-              <span class="absolute top-3 left-3 bg-[#EBF0E3] text-[#3E4A24] px-2.5 py-0.5 rounded-full text-[10px] font-black shadow-sm">${tree.family}</span>
+              <span class="absolute top-3 left-3 bg-[#EBF0E3] text-[#3E4A24] px-2.5 py-0.5 rounded-full text-xs font-black shadow-sm">${tree.family}</span>
             </div>
             <div class="p-4 space-y-2">
               <h3 class="text-xl font-extrabold text-[#3E4A24] cursor-pointer" onclick="openTreeModal('${tree.id}')">${tree.name}</h3>
