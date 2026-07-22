@@ -872,5 +872,235 @@
         "img": "images/arecaceae/livistona chinensis/livistona chinensis-flowers.jpg"
       }
     ]
+  },
+  {
+    "id": "tree-20",
+    "family": "使君子科",
+    "name": "欖仁",
+    "latinName": "Terminalia catappa L.",
+    "height": "10 - 25 米",
+    "bloomPeriod": "3月 - 7月",
+    "fruitPeriod": "7月 - 12月",
+    "shape": "主幹挺直，枝條輪生水平開展，樹冠呈明顯層次分明的平頂傘形",
+    "bark": "灰褐色，老時呈縱裂或不規則薄片狀剝落",
+    "leaves": "倒卵形，巨大，革質，簇生於枝端；秋冬季變紅或紫紅色後脫落",
+    "flowers": "腋生穗狀花序，花小，無花瓣，黃綠色",
+    "special": "★ 輪生平展枝條、紅葉與橄欖狀堅果",
+    "description": "典型的海岸樹種，耐鹽抗風。枝條呈層狀水平開展，樹型如層塔。冬季落葉前，葉片會轉為極為鮮豔的紫紅色。果實呈橄欖狀，外果皮具纖維質，可漂浮於海面傳播。",
+    "userNotes": "",
+    "mainImage": "images/combretaceae/terminalia catappa/terminalia catappa-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰褐粗糙縱裂皮",
+        "x": 48,
+        "y": 75,
+        "desc": "樹幹挺直，樹皮呈灰褐色，老樹幹表面有深淺不一的縱向溝裂。",
+        "img": "images/combretaceae/terminalia catappa/terminalia catappa-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "巨大倒卵形紅變葉",
+        "x": 65,
+        "y": 30,
+        "desc": "葉片極大且集中於枝端，基部心形或帶一對腺點，秋冬季節轉為滿樹紅葉。",
+        "img": "images/combretaceae/terminalia catappa/terminalia catappa-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "橄欖狀扁平核果",
+        "x": 30,
+        "y": 45,
+        "desc": "果實呈扁平橄欖形，邊緣有肋脊，成熟時由黃綠轉為暗紫色，內果皮堅硬。",
+        "img": "images/combretaceae/terminalia catappa/terminalia catappa-fruit.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-21",
+    "family": "使君子科",
+    "name": "小葉欖仁",
+    "latinName": "Terminalia neotaliala Capuron",
+    "height": "8 - 15 米",
+    "bloomPeriod": "4月 - 6月",
+    "fruitPeriod": "7月 - 9月",
+    "shape": "主幹細長挺直，枝條輪生水平開展，樹型極為柔美富層次感",
+    "bark": "淺灰褐色，平滑，具淺縱裂紋",
+    "leaves": "小葉倒卵形，極小，4-6片簇生於短枝端，薄革質，全緣",
+    "flowers": "穗狀花序，花極小，淡綠色或黃綠色，不甚顯眼",
+    "special": "★ 寶塔狀分層樹姿與極小簇生葉",
+    "description": "極受歡迎的園景樹與行道樹。與欖仁樹同屬，但葉片極小且更為緻密。主幹輪生枝條分層極為規律，遠看如一棟棟層層疊疊的綠色寶塔，樹姿優雅透光。",
+    "userNotes": "",
+    "mainImage": "images/combretaceae/terminalia mantaly/terminalia mantaly-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰白光滑小皮孔",
+        "x": 50,
+        "y": 80,
+        "desc": "樹幹相對細長且直立，樹皮較光滑，帶有細小的白色皮孔。",
+        "img": "images/combretaceae/terminalia mantaly/terminalia mantaly-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "緻密簇生小葉",
+        "x": 60,
+        "y": 25,
+        "desc": "小葉如倒卵形，長僅2-5厘米，數片簇生，柔細密生，使樹冠呈現透光輕盈感。",
+        "img": "images/combretaceae/terminalia mantaly/terminalia mantaly-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "小型紡錘狀核果",
+        "x": 35,
+        "y": 45,
+        "desc": "果實為極小的紡錘形核果，成熟時呈黑褐色，結實量大。",
+        "img": "images/combretaceae/terminalia mantaly/terminalia mantaly-fruit.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-22",
+    "family": "木麻黃科",
+    "name": "木麻黃",
+    "latinName": "Casuarina equisetifolia L.",
+    "height": "10 - 30 米",
+    "bloomPeriod": "4月 - 5月",
+    "fruitPeriod": "7月 - 10月",
+    "shape": "樹冠呈圓錐形或不規則疏散狀，枝條細長下垂如松針",
+    "bark": "黑褐色，粗糙，呈狹長薄片狀縱裂與剝落",
+    "leaves": "退化為極小的鱗片狀，環生於綠色木質化的細軟小枝節上（輪生）",
+    "flowers": "單性花，雄花序穗狀頂生，雌花序球形生於側枝",
+    "special": "★ 針狀綠色小枝與松果狀木質球果",
+    "description": "強健的防風固沙樹種，極度耐鹽、耐旱、耐貧瘠。外表看似松樹，但看似「松針」的結構其實是其特化的綠色小枝，真正的葉片已退化為節上的微小鱗片。",
+    "userNotes": "",
+    "mainImage": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "黑褐縱裂剝落皮",
+        "x": 48,
+        "y": 70,
+        "desc": "樹皮厚重粗糙，深黑褐色，呈長條片狀不規則縱向開裂剝落。",
+        "img": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "節狀綠色小枝與退化鱗葉",
+        "x": 62,
+        "y": 35,
+        "desc": "細長圓柱狀的小枝具多個關節，具光合作用功能；葉片退化為每節上的小齒狀鱗片。",
+        "img": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "球果狀木質果實",
+        "x": 30,
+        "y": 50,
+        "desc": "果序呈小松果狀的木質球果，橢圓形，成熟時苞片張開釋放帶翅小堅果。",
+        "img": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-fruit.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-23",
+    "family": "白花菜科",
+    "name": "樹頭菜",
+    "latinName": "Crateva unilocularis Buch.-Ham.",
+    "height": "8 - 15 米",
+    "bloomPeriod": "3月 - 5月 (先花後葉或同時)",
+    "fruitPeriod": "8月 - 10月",
+    "shape": "樹冠呈圓球形，枝葉茂密",
+    "bark": "灰褐色，平滑，皮孔顯著",
+    "leaves": "三出複葉，小葉卵形或披針形，紙質，全緣，網脈明顯",
+    "flowers": "傘房花序頂生，花大，初開時白色，後轉為淡黃色，雄蕊紫紅色極長且突出",
+    "special": "★ 白黃雙色花與長紫紅雄蕊",
+    "description": "春季常見的開花喬木。花朵盛開時極為濃密，花色會由最初的純白漸變為奶油黃，配合大量如絲般長長伸出的紫紅色雄蕊，如同許多蝴蝶翩翩起舞。",
+    "userNotes": "",
+    "mainImage": "images/capparaceae/crateva unilocularis/crateva unilocularis-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰褐色顯著皮孔",
+        "x": 50,
+        "y": 75,
+        "desc": "樹幹平滑，呈灰色或灰褐色，散佈著許多橫向或散生的白色小皮孔。",
+        "img": "images/capparaceae/crateva unilocularis/crateva unilocularis-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "掌狀三出複葉",
+        "x": 65,
+        "y": 30,
+        "desc": "每條葉柄頂端長有三片小葉（三出複葉），薄紙質，葉背脈絡清晰。",
+        "img": "images/capparaceae/crateva unilocularis/crateva unilocularis-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "長絲紫蕊雙色花",
+        "x": 30,
+        "y": 45,
+        "desc": "花朵會由白轉黃，數十條紫紅色的長雄蕊向外噴灑伸展，極具視覺特色。",
+        "img": "images/capparaceae/crateva unilocularis/crateva unilocularis-flowers.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-24",
+    "family": "紫葳科",
+    "name": "火焰樹",
+    "latinName": "Spathodea campanulata P.Beauv.",
+    "height": "10 - 20 米",
+    "bloomPeriod": "1月 - 5月",
+    "fruitPeriod": "6月 - 8月",
+    "shape": "樹冠寬廣，呈圓頂形或傘形",
+    "bark": "灰褐色，淺縱裂，樹幹基部常有顯著板根",
+    "leaves": "奇數羽狀複葉，小葉卵狀橢圓形，葉背基部具1-2個腺體",
+    "flowers": "頂生總狀花序，花冠大型，鐘狀，鮮艷橙紅色，邊緣帶黃色波浪邊",
+    "special": "★ 橙紅鬱金香大花與含水花苞",
+    "description": "著名的熱帶觀賞樹種。花朵大而繁密，呈鮮豔的緋紅或橙紅色，遠看如樹頂燃燒的火焰。花蕾在開花前呈彎曲的舟形，內部積聚水份，擠壓時會噴出水滴。",
+    "userNotes": "",
+    "mainImage": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "淺裂灰褐幹與板根",
+        "x": 48,
+        "y": 80,
+        "desc": "樹幹粗壯直立，基部常形成突出的板根以支撐巨大樹體。",
+        "img": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "奇數羽狀複葉",
+        "x": 62,
+        "y": 30,
+        "desc": "葉片較大，羽状全裂，小葉對生，表面深綠光滑，背面脈上被毛。",
+        "img": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "火焰鐘狀花與蓄水苞",
+        "x": 35,
+        "y": 45,
+        "desc": "花朵如大型鬱金香，橙紅色帶黃邊；未開的花苞呈月牙狀且儲有水份。",
+        "img": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-flowers.jpg"
+      }
+    ]
   }
 ]
