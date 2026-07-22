@@ -14,7 +14,7 @@
 "special": "★ 氣生根及隱頭果",
 "description": "都市最常見的遮蔭大樹。其最大特徵為懸掛的氣生根，接觸地面後會逐漸變粗，形成強大的支柱根，使其具有橫向無限蔓延的生命力與極佳的抗風能力。",
 "userNotes": "",
-"mainImage": "images/moraceae/tree-1_ficus microcarpa/ficus microcarpa-main.jpg",
+"mainImage": "images/moraceae/ficus microcarpa/ficus microcarpa-main.jpg",
 "hotspots": [
 {
 "id": "hot-bark",
@@ -23,7 +23,7 @@
 "x": 45,
 "y": 75,
 "desc": "從枝幹垂下的褐色線狀氣生根，接觸地面吸收水分與養分後，會木質化成為穩固的「支柱根」。",
-"img": "images/moraceae/tree-1_ficus microcarpa/ficus microcarpa-bark.jpg"
+"img": "images/moraceae/ficus microcarpa/ficus microcarpa-bark.jpg"
 },
 {
 "id": "hot-leaf",
@@ -32,7 +32,7 @@
 "x": 65,
 "y": 30,
 "desc": "葉片呈現橢圓形，邊緣平滑（全緣），厚實革質，表面具有強烈蠟質光澤。",
-"img": "images/moraceae/tree-1_ficus microcarpa/ficus microcarpa-leaves.jpg"
+"img": "images/moraceae/ficus microcarpa/ficus microcarpa-leaves.jpg"
 },
 {
 "id": "hot-flower",
@@ -41,7 +41,7 @@
 "x": 30,
 "y": 45,
 "desc": "無花果實直接成對生長在小枝上，外觀呈球形。花藏於果內，需要榕果小蜂協助授粉。",
-"img": "images/moraceae/tree-1_ficus microcarpa/ficus microcarpa-flowers.jpeg"
+"img": "images/moraceae/ficus microcarpa/ficus microcarpa-flowers.jpeg"
 }
 ]
 },
@@ -60,7 +60,7 @@
 "special": "★ 枝條及葉尾柔軟下垂",
 "description": "常綠大喬木，枝條天生下垂，微風吹拂時搖曳生姿。葉片末端具有明顯的長尾尖（滴水尖），便於雨水快速排乾保持葉面乾燥，光合作用效率高。",
 "userNotes": "",
-"mainImage": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80",
+"mainImage": "images/moraceae/ficus benjamina/ficus benjamina-main.jpg",
 "hotspots": [
 {
 "id": "hot-bark",
@@ -69,7 +69,7 @@
 "x": 35,
 "y": 65,
 "desc": "小枝條極其柔軟，受重力自然下垂，樹冠呈現層次豐富的傘狀結構。",
-"img": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+"img": "images/moraceae/ficus benjamina/ficus benjamina-bark.jpg"
 },
 {
 "id": "hot-leaf",
@@ -78,7 +78,7 @@
 "x": 75,
 "y": 40,
 "desc": "葉尾突然收縮呈長尾狀。雨天時雨水能順著這個長尖匯集並迅速滴落。",
-"img": "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=500&q=80"
+"img": "images/moraceae/ficus benjamina/ficus benjamina-leaves.jpg"
 },
 {
 "id": "hot-flower",
@@ -87,7 +87,7 @@
 "x": 55,
 "y": 35,
 "desc": "隱頭果成熟時由綠色轉為鮮豔的橘紅色，直接附著在下垂枝條上。",
-"img": "sources/桑科/tree-2_垂葉榕/垂葉榕-flowers.jpg"
+"img": "images/moraceae/ficus benjamina/ficus benjamina-flowers.jpg"
 }
 ]
 },
@@ -106,7 +106,7 @@
 "special": "★ 樟腦味及離基三出脈",
 "description": "長壽且極具藥用、建材價值的鄉土樹種。全株含揮發性油，揉碎葉片便能聞到經典的防蟲樟腦氣味。樹皮具有代表性的直裂紋，為良好行道樹。",
 "userNotes": "",
-"mainImage": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80",
+"mainImage": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-main.jpeg",
 "hotspots": [
 {
 "id": "hot-bark",
@@ -115,7 +115,7 @@
 "x": 48,
 "y": 80,
 "desc": "隨年歲增長，灰褐色樹皮會產生深邃、不規則的縱向條狀深溝裂。",
-"img": "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=500&q=80"
+"img": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-bark.jpeg"
 },
 {
 "id": "hot-leaf",
@@ -124,7 +124,7 @@
 "x": 62,
 "y": 28,
 "desc": "葉片基部略上方，會有兩條側脈與中肋同時向葉尖延伸，形成「離基三出脈」。",
-"img": "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?auto=format&fit=crop&w=500&q=80"
+"img": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-leaves.jpg"
 },
 {
 "id": "hot-flower",
@@ -133,7 +133,7 @@
 "x": 32,
 "y": 45,
 "desc": "漿果呈小圓球狀，熟透後轉為油亮墨黑色，基部有杯狀果托包覆。",
-"img": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=500&q=80"
+"img": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-flowers.jpeg"
 }
 ]
 },
@@ -152,7 +152,7 @@
 "special": "★ 樹皮平滑帶肉桂味",
 "description": "外觀常與樟樹混淆，但陰香的樹皮更平滑且偏紅褐色，揉碎葉片散發的是肉桂般的辛辣甜香。其小枝常呈紅色，可作為分辨線索。",
 "userNotes": "",
-"mainImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+"mainImage": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-main.jpeg",
 "hotspots": [
 {
 "id": "hot-bark",
@@ -161,7 +161,7 @@
 "x": 50,
 "y": 70,
 "desc": "樹皮平滑，無樟樹特有的縱向深裂溝紋，剝開帶淡紅褐色。",
-"img": "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&w=500&q=80"
+"img": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-bark.jpg"
 },
 {
 "id": "hot-leaf",
@@ -170,7 +170,7 @@
 "x": 72,
 "y": 35,
 "desc": "新抽出的嫩枝條往往呈現極其亮眼的紫紅色，葉背常呈粉綠色。",
-"img": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=500&q=80"
+"img": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-leaves.jpg"
 },
 {
 "id": "hot-flower",
@@ -179,8 +179,193 @@
 "x": 28,
 "y": 50,
 "desc": "果實為橢圓狀，頂端宿存的花被齒呈切口狀，與球形樟果不同。",
-"img": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=500&q=80"
+"img": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-flowers.jpg"
 }
 ]
-}
+},
+  {
+    "id": "tree-5",
+    "family": "大戟科",
+    "name": "血桐",
+    "latinName": "Macaranga tanarius (L.) Müll.Arg.",
+    "height": "5 - 10 米",
+    "bloomPeriod": "3月 - 5月",
+    "fruitPeriod": "6月 - 8月",
+    "shape": "樹冠呈傘形，分枝較少且平展",
+    "bark": "灰褐色，光滑，受傷或切斷時會流出鮮紅色的汁液",
+    "leaves": "盾狀著生，葉片大，近圓形或卵形，具長柄",
+    "flowers": "雌雄異株，無花瓣，花序為圓錐狀",
+    "special": "★ 盾狀葉及紅色汁液",
+    "description": "常見的先鋒樹種，生長迅速。樹幹被割破後流出的乳汁氧化會變成血紅色，因而得名「血桐」。其巨大且特殊的盾狀葉片是極佳的辨認特徵。",
+    "userNotes": "",
+    "mainImage": "images/euphorbiaceae/macaranga tanarius/macaranga tanarius-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "傷口流紅汁",
+        "x": 50,
+        "y": 70,
+        "desc": "樹皮切開後流出的汁液氧化會呈血紅色，隨後凝固保護傷口。",
+        "img": "images/euphorbiaceae/macaranga tanarius/macaranga tanarius-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "典型盾狀葉",
+        "x": 60,
+        "y": 35,
+        "desc": "葉柄連接在葉片的背面中心而非基部，像盾牌一樣，脈絡呈放射狀。",
+        "img": "images/euphorbiaceae/macaranga tanarius/macaranga tanarius-leaves.jpeg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "刺狀球形蒴果",
+        "x": 35,
+        "y": 45,
+        "desc": "果實為球形蒴果，表面密生軟刺，成熟時開裂釋放黑色種子。",
+        "img": "images/euphorbiaceae/macaranga tanarius/macaranga tanarius-fruit.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-6",
+    "family": "大戟科",
+    "name": "石栗",
+    "latinName": "Aleurites moluccanus (L.) Willd.",
+    "height": "10 - 20 米",
+    "bloomPeriod": "4月 - 6月",
+    "fruitPeriod": "10月 - 12月",
+    "shape": "樹冠圓球形或呈開展狀，樹姿優美",
+    "bark": "灰褐色，淺縱裂，新梢及嫩葉密被銀白色星狀毛",
+    "leaves": "葉形多變，幼葉常為掌狀3-5裂，成葉為卵形，基部有兩顆腺體",
+    "flowers": "聚傘花序，花小，白色，具香氣",
+    "special": "★ 葉基腺體及堅硬核果",
+    "description": "都市常見的行道樹，樹冠濃密。遠看新葉常帶有銀白色的粉末感。果實極為堅硬，內部種子含油量極高，古時常被用來點燈照明。",
+    "userNotes": "",
+    "mainImage": "images/euphorbiaceae/aleurites moluccanus/aleurites moluccanus-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰褐色淺裂皮",
+        "x": 48,
+        "y": 75,
+        "desc": "老樹幹樹皮灰褐色，呈不規則淺縱裂，樹枝常向上平展。",
+        "img": "images/euphorbiaceae/aleurites moluccanus/aleurites moluccanus-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "兩顆紅色腺點",
+        "x": 65,
+        "y": 40,
+        "desc": "葉柄連接葉片基部處有兩顆顯著的杯狀杯狀腺體，能分泌蜜汁吸引螞蟻。",
+        "img": "images/euphorbiaceae/aleurites moluccanus/aleurites moluccanus-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "石狀堅硬核果",
+        "x": 30,
+        "y": 50,
+        "desc": "果實近球形或核桃狀，外殼極為堅硬如石頭，成熟時由青綠轉為褐色。",
+        "img": "images/euphorbiaceae/aleurites moluccanus/aleurites moluccanus-fruit.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-7",
+    "family": "蕈樹科",
+    "name": "楓香",
+    "latinName": "Liquidambar formosana Hance",
+    "height": "15 - 30 米",
+    "bloomPeriod": "3月 - 4月",
+    "fruitPeriod": "9月 - 11月",
+    "shape": "樹冠呈圓錐形或高大金字塔形",
+    "bark": "灰褐色，老時呈深溝縱裂",
+    "leaves": "掌狀3裂，邊緣有鋸齒，搓揉後有芳香氣味，秋冬變紅",
+    "flowers": "雌雄同株，頭狀花序，無花瓣",
+    "special": "★ 掌狀三裂葉與刺球狀頭狀果",
+    "description": "著名的秋季觀賞樹種。雖然常被誤認為槭樹（楓樹），但楓香葉片為互生且多為3裂。樹脂具有甜香味，古時可用作香料或藥材。",
+    "userNotes": "",
+    "mainImage": "images/altingiaceae/liquidambar formosana/liquidambar formosana-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "深溝縱裂樹皮",
+        "x": 50,
+        "y": 80,
+        "desc": "樹幹挺直，老樹皮呈現顯著的灰色深縱裂紋，質地堅硬。",
+        "img": "images/altingiaceae/liquidambar formosana/liquidambar formosana-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "互生掌狀三裂",
+        "x": 60,
+        "y": 30,
+        "desc": "葉片呈掌狀3裂（偶見5裂），互生於枝條上，秋季降溫時會轉為紅黃色。",
+        "img": "images/altingiaceae/liquidambar formosana/liquidambar formosana-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "刺球狀聚合果",
+        "x": 35,
+        "y": 45,
+        "desc": "頭狀果序呈刺球狀，由多個帶喙的蒴果聚合而成，成熟後乾裂懸掛枝頭。",
+        "img": "images/altingiaceae/liquidambar formosana/liquidambar formosana-fruit.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-8",
+    "family": "葉下珠科",
+    "name": "秋楓",
+    "latinName": "Bischofia javanica Blume",
+    "height": "15 - 25 米",
+    "bloomPeriod": "4月 - 5月",
+    "fruitPeriod": "8月 - 10月",
+    "shape": "樹冠寬廣濃密，呈圓頭形，遮蔭良好",
+    "bark": "紅褐色至灰褐色，老時薄片狀剝落",
+    "leaves": "三出複葉，小葉卵形或橢圓形，鋸齒緣",
+    "flowers": "雌雄異株，圓錐花序，花小，黃綠色",
+    "special": "★ 三出複葉及褐色漿果",
+    "description": "常綠或半落葉大喬木，生命力強健。其顯著特徵為三出複葉，落葉前葉片會轉為鮮紅色。漿果結實纍纍，是鳥類與哺乳動物重要的冬糧。",
+    "userNotes": "",
+    "mainImage": "images/phyllanthaceae/bischofia javanica/bischofia javanica-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "紅褐色鱗片狀裂皮",
+        "x": 48,
+        "y": 70,
+        "desc": "樹皮呈紅褐色或灰褐色，老樹幹會呈現不規則薄片狀剝落。",
+        "img": "images/phyllanthaceae/bischofia javanica/bischofia javanica-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "三出複葉具鋸齒",
+        "x": 62,
+        "y": 35,
+        "desc": "每組葉柄上長有三片小葉（三出複葉），邊緣有細鋸齒，老葉掉落前變紅。",
+        "img": "images/phyllanthaceae/bischofia javanica/bischofia javanica-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "成串球形漿果",
+        "x": 30,
+        "y": 50,
+        "desc": "果實為球形漿果，成熟時呈淡褐色或黑褐色，成串下垂，深受鳥類喜愛。",
+        "img": "images/phyllanthaceae/bischofia javanica/bischofia javanica-fruit.jpg"
+      }
+    ]
+  }
+
 ]

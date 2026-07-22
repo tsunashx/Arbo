@@ -242,7 +242,7 @@
       container.innerHTML = html;
     }
 
-    // 樹木詳細 Pop-up 開啟與互動
+// 樹木詳細 Pop-up 開啟與互動
     function openTreeModal(id) {
       currentTree = treesData.find(t => t.id === id);
       
@@ -264,24 +264,46 @@
       document.getElementById('note-view-mode').innerHTML = currentTree.userNotes ? currentTree.userNotes : `<span class="text-stone-400 font-normal">（預設空白，點擊編輯備註...）</span>`;
       document.getElementById('note-textarea').value = currentTree.userNotes || '';
 
-      const hotspotContainer = document.getElementById('modal-hotspots-container');
-      hotspotContainer.innerHTML = (currentTree.hotspots || []).map(spot => `
-        <button onclick="selectHotspot('${spot.id}')" style="left:${spot.x}%; top:${spot.y}%;" class="absolute -translate-x-1/2 -translate-y-1/2 z-20 group">
-          <div class="flex items-center justify-center w-7 h-7 rounded-full border-2 bg-white border-red-500 text-red-600 text-[10px] font-black shadow-lg">
-            ${spot.type === 'bark' ? '幹' : spot.type === 'leaves' ? '葉' : '花'}
-          </div>
-        </button>
-      `).join('');
-
+      // 開啟時預設選取第一個熱點並渲染按鈕
       if(currentTree.hotspots && currentTree.hotspots.length > 0) {
         selectHotspot(currentTree.hotspots[0].id);
+      } else {
+        renderHotspotButtons(null);
       }
 
       document.getElementById('tree-modal').classList.remove('hidden');
     }
 
+    // 獨立出來的熱點按鈕渲染邏輯（動態判斷選取狀態）
+    function renderHotspotButtons(activeSpotId) {
+      const hotspotContainer = document.getElementById('modal-hotspots-container');
+      hotspotContainer.innerHTML = (currentTree.hotspots || []).map(spot => {
+        const isActive = spot.id === activeSpotId;
+        
+        // 根據是否被選中切換樣式
+        const colorStyle = isActive 
+          ? 'bg-red-500 border-red-500 text-white'       // 被選中：紅底 / 紅邊 / 白字
+          : 'bg-white border-red-500 text-red-600';     // 未選中：白底 / 紅邊 / 紅字
+
+        return `
+          <button onclick="selectHotspot('${spot.id}')" style="left:${spot.x}%; top:${spot.y}%;" class="absolute -translate-x-1/2 -translate-y-1/2 z-20 group">
+            <div class="flex items-center justify-center w-7 h-7 rounded-full border-2 ${colorStyle} text-[10px] font-black shadow-lg transition-all duration-300 group-hover:scale-110">
+              ${spot.type === 'bark' ? '幹' : spot.type === 'leaves' ? '葉' : '花'}
+            </div>
+          </button>
+        `;
+      }).join('');
+    }
+
+    // 點擊熱點時：更新右側詳細資訊 + 重新渲染按鈕狀態
     function selectHotspot(spotId) {
+      // 1. 重新渲染按鈕狀態
+      renderHotspotButtons(spotId);
+
+      // 2. 更新右側面板詳細內容
       const spot = currentTree.hotspots.find(h => h.id === spotId);
+      if(!spot) return;
+
       const detail = document.getElementById('modal-hotspot-detail');
       detail.innerHTML = `
         <div class="flex items-center justify-between">
