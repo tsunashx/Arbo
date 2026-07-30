@@ -12,7 +12,7 @@
 "leaves": "葉橢圓形，革質，全緣，羽狀脈，表面光滑亮麗",
 "flowers": "隱頭果，成對，無總梗，熟時紫黑色，是鳥類最愛",
 "special": "★ 氣生根及隱頭果",
-"description": "都市最常見的遮蔭大樹。其最大特徵為懸掛的氣生根，接觸地面後會逐漸變粗，形成強大的支柱根，使其具有橫向無限蔓延的生命力與極佳的抗風能力。",
+"description": "**榕樹**（又稱萬年青）是香港的原生物種，也是本地風水林的常見樹種之一，能為鳥類及其他野生動物提供食物與棲息地。榕樹樹冠廣闊，因此被廣泛種植於都市中，是最常見的遮蔭大樹。\n\n它最大的特徵是懸掛於枝幹上的**氣生根**——這些氣根接觸地面後會逐漸木質化並變粗，形成堅固的**支柱根**，宛如新的樹幹般支撐樹冠，使榕樹具備向外無限蔓延的生命力與極佳的抗風能力。\n\n此外，榕樹與榕小蜂擁有獨特的**互利共生**關係：榕樹必須依靠榕小蜂授粉才能結果，而榕果內的癭花則為榕小蜂提供了產卵與育幼的場所。\n\n榕樹雖然生命力頑強，但其氣根容易鑽入建築物縫隙生長，可能破壞結構安全。同時，榕樹亦有機會感染有害木層孔菌（Phellinus noxius）而引致褐根病，危害樹木健康與結構穩定。香港種植榕樹的歷史源遠流長，目前共有 223 株榕樹被列入《古樹名木冊》。",
 "userNotes": "",
 "mainImage": "images/moraceae/ficus microcarpa/ficus microcarpa-main.jpg",
 "hotspots": [
@@ -1237,7 +1237,7 @@
         "x": 35,
         "y": 45,
         "desc": "花朵小而呈紫紅色；果實為帶翅膀的雙翅果，能如螺旋槳般隨風飛散。",
-        "img": "images/aceraceae/acer palmatum/acer palmatum-flowers.jpg"
+        "img": "images/aceraceae/acer palmatum/acer palmatum-fruit.jpg"
       }
     ]
   },
@@ -1283,7 +1283,7 @@
         "x": 40,
         "y": 45,
         "desc": "球果體積較大，呈球形或卵圓形，苞片尖端帶有尖刺，成熟時木質化。",
-        "img": "images/araucariaceae/araucaria columnaris/araucaria columnaris-flowers.jpg"
+        "img": "images/araucariaceae/araucaria columnaris/araucaria columnaris-fruit.jpg"
       }
     ]
   },
