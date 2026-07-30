@@ -1102,5 +1102,235 @@
         "img": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-flowers.jpg"
       }
     ]
+  },
+  {
+    "id": "tree-25",
+    "family": "桑科",
+    "name": "黃葛樹",
+    "latinName": "Ficus virens Ait.",
+    "height": "15 - 20 米",
+    "bloomPeriod": "4月 - 5月",
+    "fruitPeriod": "8月 - 11月",
+    "shape": "樹冠龐大，呈廣展的圓頭形或傘形",
+    "bark": "灰色或灰褐色，平滑或具微細裂紋，老樹常有板根及氣生根",
+    "leaves": "單葉互生，橢圓形或長橢圓形，革質，全緣，新葉常呈現紅色或淡紅色",
+    "flowers": "隱頭花序 (榕果)，球形，成對或單生於葉腋",
+    "special": "★ 龐大樹冠與不定時換葉紅新芽",
+    "description": "大型半落葉喬木，樹冠極為龐大，遮蔭效果極佳。生命力極強，常附生於岩石或牆壁上 (牆樹)。換葉期不固定，發新芽時滿樹嫩紅，極具觀賞價值。",
+    "userNotes": "",
+    "mainImage": "images/moraceae/ficus virens/ficus virens-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰色平滑皮具板根",
+        "x": 48,
+        "y": 75,
+        "desc": "樹皮灰色，較平滑；老樹幹基部常發展出發達的板根與支柱根。",
+        "img": "images/moraceae/ficus virens/ficus virens-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "橢圓革質葉與紅芽",
+        "x": 62,
+        "y": 30,
+        "desc": "葉片光滑革質；每年換葉時舊葉脫落，新芽迅速抽出並呈現顯眼之亮紅色。",
+        "img": "images/moraceae/ficus virens/ficus virens-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "球形隱頭榕果",
+        "x": 35,
+        "y": 45,
+        "desc": "花朵隱於榕果內；果實近球形，成熟時由綠轉為紫紅色或黃白色。",
+        "img": "images/moraceae/ficus virens/ficus virens-fruit.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-26",
+    "family": "桑科",
+    "name": "青果榕",
+    "latinName": "Ficus varicosa Jacq.",
+    "height": "10 - 15 米",
+    "bloomPeriod": "4月 - 6月",
+    "fruitPeriod": "8月 - 12月",
+    "shape": "樹冠開展，枝葉茂密",
+    "bark": "灰褐色，平滑，具顯著縱向皮孔",
+    "leaves": "單葉互生，倒卵狀橢圓形或長圓形，革質，邊緣全緣，葉背脈網明顯",
+    "flowers": "隱頭花序，榕果大，簇生於老樹幹或大枝條上 (幹生花現象)",
+    "special": "★ 幹生花現象與老莖結大榕果",
+    "description": "常綠喬木，最具特色的特徵為顯著的「幹生花」與「幹生果」現象，大型的榕果直接密密麻麻地結主幹與大枝條上，呈現獨特的熱帶雨林生態景觀。",
+    "userNotes": "",
+    "mainImage": "images/moraceae/ficus variegata/ficus variegata-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰褐色具皮孔樹皮",
+        "x": 48,
+        "y": 75,
+        "desc": "樹幹質感相對平滑，呈灰色或灰褐色，表面帶有許多圓形或縱向的小皮孔。",
+        "img": "images/moraceae/ficus variegata/ficus variegata-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "倒卵狀革質大葉",
+        "x": 62,
+        "y": 30,
+        "desc": "葉片較大，呈現倒卵狀橢圓形，質感厚革質，表面光滑深綠。",
+        "img": "images/moraceae/ficus variegata/ficus variegata-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "幹生密集大榕果",
+        "x": 35,
+        "y": 50,
+        "desc": "榕果體積較大，直接密集簇生於老樹幹及主枝上，成熟時呈黃綠色或淡紅色。",
+        "img": "images/moraceae/ficus variegata/ficus variegata-fruit.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-27",
+    "family": "槭樹科",
+    "name": "掌葉槭",
+    "latinName": "Acer palmatum Thunb.",
+    "height": "4 - 8 米",
+    "bloomPeriod": "4月 - 5月",
+    "fruitPeriod": "9月 - 10月",
+    "shape": "樹冠圓球形或傘形，枝條纖細平展",
+    "bark": "灰褐色或紫褐色，平滑，小枝光滑",
+    "leaves": "掌狀5-9深裂，裂片披針形，邊緣有銳鋸齒，秋冬季轉為鮮紅色",
+    "flowers": "傘房花序，花小，紫紅色；雙翅果呈「人」字形張開",
+    "special": "★ 掌狀深裂葉與秋冬紅葉",
+    "description": "落葉小喬木，為極受歡迎的觀賞樹種。葉片呈現精緻的掌狀深裂，秋冬季節隨著氣溫下降會轉為極為濃郁鮮艷的紅葉，為四季變化明顯的代表植物。",
+    "userNotes": "",
+    "mainImage": "images/aceraceae/acer palmatum/acer palmatum-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰褐色平滑樹皮",
+        "x": 48,
+        "y": 75,
+        "desc": "樹皮光滑，呈現灰褐色，小枝細長且常帶有紫紅色光澤。",
+        "img": "images/aceraceae/acer palmatum/acer palmatum-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "掌狀深裂鋸齒葉",
+        "x": 62,
+        "y": 30,
+        "desc": "葉片呈掌狀5至9深裂，裂片邊緣帶有尖銳鋸齒，秋冬季滿樹變紅。",
+        "img": "images/aceraceae/acer palmatum/acer palmatum-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "翅果與紫紅小花",
+        "x": 35,
+        "y": 45,
+        "desc": "花朵小而呈紫紅色；果實為帶翅膀的雙翅果，能如螺旋槳般隨風飛散。",
+        "img": "images/aceraceae/acer palmatum/acer palmatum-flowers.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-28",
+    "family": "南洋杉科",
+    "name": "柱狀南洋杉",
+    "latinName": "Araucaria columnaris (Forster) Hook.",
+    "height": "20 - 40 米",
+    "bloomPeriod": "11月 - 12月",
+    "fruitPeriod": "次年8月 - 10月",
+    "shape": "樹幹極直，樹冠呈極為狹長的圓柱形或塔形",
+    "bark": "暗褐色或黑褐色，厚實，呈橫向薄片狀剝落",
+    "leaves": "針狀或鱗片狀，螺旋狀密生於枝條上，鑽形，質感硬實",
+    "flowers": "雌雄異株，雄球花穗狀，雌球花近球形，球果大且具刺",
+    "special": "★ 狹長筆直柱狀樹型與刺狀球果",
+    "description": "樹形極其特殊的常綠針葉大喬木，樹幹極為挺拔筆直，整體樹冠呈非常狹窄的柱狀。遠看如一根根豎立的綠色柱子或巨型塔樓，視覺辨識度極高。",
+    "userNotes": "",
+    "mainImage": "images/araucariaceae/araucaria columnaris/araucaria columnaris-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "暗橫向剝落皮",
+        "x": 50,
+        "y": 80,
+        "desc": "樹皮呈暗褐色至黑褐色，質感較厚，常呈現環狀或橫向的薄片狀剝落。",
+        "img": "images/araucariaceae/araucaria columnaris/araucaria columnaris-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "螺旋密生硬鑽葉",
+        "x": 60,
+        "y": 25,
+        "desc": "葉片小而呈硬質的鑽形或鱗片狀，緊密且螺旋狀地包覆著細長的分枝。",
+        "img": "images/araucariaceae/araucaria columnaris/araucaria columnaris-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "木質帶刺大球果",
+        "x": 40,
+        "y": 45,
+        "desc": "球果體積較大，呈球形或卵圓形，苞片尖端帶有尖刺，成熟時木質化。",
+        "img": "images/araucariaceae/araucaria columnaris/araucaria columnaris-flowers.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-29",
+    "family": "大戟科",
+    "name": "白楸",
+    "latinName": "Mallotus paniculatus (Lam.) Muell. Arg.",
+    "height": "5 - 15 米",
+    "bloomPeriod": "6月 - 8月",
+    "fruitPeriod": "9月 - 11月",
+    "shape": "樹冠不規則，枝葉較為疏散",
+    "bark": "灰褐色，淺縱裂，新梢及葉背面被星狀絨毛",
+    "leaves": "單葉互生，菱狀卵形或掌狀3裂，葉背密白至黃褐色絨毛",
+    "flowers": "圓錐花序頂生，花小，無花瓣，密被絨毛；蒴果具軟刺",
+    "special": "★ 葉背密集白絨毛與帶軟刺蒴果",
+    "description": "原生先鋒樹種，常見於二次生林與路旁。其顯著特徵為葉片背面密佈白色或黃白色的星狀絨毛，當微風吹拂時，樹冠會呈現綠白相間、翻浪般的特殊視覺效果。",
+    "userNotes": "",
+    "mainImage": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "灰褐淺裂絨毛皮",
+        "x": 48,
+        "y": 75,
+        "desc": "樹皮灰褐色，表面有細淺縱裂，嫩枝與幼芽處密生白色的星狀短絨毛。",
+        "img": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "葉背白毛菱狀葉",
+        "x": 62,
+        "y": 30,
+        "desc": "葉片呈菱狀卵形 (或微3裂)，表面綠色，葉背則全被白絨毛覆蓋，對比強烈。",
+        "img": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "星狀毛刺球蒴果",
+        "x": 35,
+        "y": 50,
+        "desc": "花序呈大形圓錐狀；果實為球形蒴果，表面密生軟刺與白色星狀絨毛。",
+        "img": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-flowers.jpg"
+      }
+    ]
   }
 ]

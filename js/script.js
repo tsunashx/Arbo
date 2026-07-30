@@ -1,14 +1,15 @@
-    let treesData = [];
+let treesData = [];
     let knowledgeData = [];
     let compareList = [];
     let selectedFamily = 'All';
     let currentTree = null;
     let uploadedNoteImg = '';
     let notesList = [];
+    let quizData = []; // 宣告全域變數
 
-    // 初始化載入
+    // 初始化載入（合併在同一個DOMContentLoaded中）
     window.addEventListener('DOMContentLoaded', async () => {
-      // 1. 讀取 JSON 資料庫（可適應 root 或 data/ 目錄）
+      // 1. 讀取樹木資料庫
       try {
         const treesRes = await fetch('data/trees.json').catch(() => fetch('trees.json'));
         treesData = await treesRes.json();
@@ -16,12 +17,33 @@
         console.warn("未找到 trees.json 資料檔");
       }
 
+      // 2. 讀取科普知識庫
       try {
         const knowRes = await fetch('data/knowledge.json').catch(() => fetch('knowledge.json'));
         knowledgeData = await knowRes.json();
       } catch(e) {
         console.warn("未找到 knowledge.json 資料檔");
       }
+
+      // 3. 讀取專屬試題庫
+      try {
+        const quizRes = await fetch('data/quiz.json').catch(() => fetch('quiz.json'));
+        quizData = await quizRes.json();
+        console.log("quiz.json 載入成功，共有 ", quizData.length, " 題");
+      } catch(e) {
+        console.warn("未找到 quiz.json 試題庫檔");
+      }
+      window.addEventListener('DOMContentLoaded', async () => {
+  // ...你原本的 treesRes, knowRes 載入邏輯 ...
+
+  // 載入專屬試題庫
+  try {
+    const quizRes = await fetch('data/quiz.json').catch(() => fetch('quiz.json'));
+    quizData = await quizRes.json();
+  } catch(e) {
+    console.warn("未找到 quiz.json 試題庫檔");
+  }
+});
 
       // 2. 載入本機已儲存的樹木個人備註
       treesData.forEach(tree => {
@@ -91,7 +113,16 @@
       `).join('');
 
       const filtered = treesData.filter(t => {
-        const matchSearch = t.name.toLowerCase().includes(search) || t.family.toLowerCase().includes(search) || t.description.toLowerCase().includes(search);
+        // 補上 JSON 中的特徵欄位（例如 bark, leaves, flowers, special, shape 等）
+        const matchSearch = t.name?.toLowerCase().includes(search) ||
+                    t.family?.toLowerCase().includes(search) ||
+                    t.latinName?.toLowerCase().includes(search) ||
+                    t.description?.toLowerCase().includes(search) ||
+                    t.bark?.toLowerCase().includes(search) ||
+                    t.leaves?.toLowerCase().includes(search) ||
+                    t.flowers?.toLowerCase().includes(search) ||
+                    t.special?.toLowerCase().includes(search) ||
+                    t.shape?.toLowerCase().includes(search);
         const matchFamily = selectedFamily === 'All' || t.family === selectedFamily;
         return matchSearch && matchFamily;
       });
@@ -475,40 +506,123 @@
       `).join('');
     }
 
-    // 辨識挑戰題目生成
-    let quizCurrent = null;
-    function startQuiz() {
-      if(treesData.length < 3) return;
-      const correct = treesData[Math.floor(Math.random() * treesData.length)];
-      const distractors = treesData.filter(t => t.id !== correct.id).sort(() => 0.5 - Math.random()).slice(0, 3);
-      const choices = [correct, ...distractors].sort(() => 0.5 - Math.random());
+let quizCurrent = null;
+    let score = 0, total = 0;
 
-      quizCurrent = { correct, choices };
+    // 辨識挑戰題目生成（多樣化題庫）
+    function startQuiz() {
+      // 確保資料已載入
+      if (!treesData || treesData.length < 4) return;
+
+      // 1. 先宣告基礎的 3 種題型陣列
+      const questionGenerators = [
+        // 題型 1：看學名猜樹名 (trees.json)
+        () => {
+          const correct = getRandomTree();
+          const choices = getTreeChoices(correct);
+          return {
+            title: `哪一種樹木的拉丁學名為：「<i class="italic font-serif">${correct.latinName}</i>」？`,
+            choices: choices.map(c => ({ id: c.id, text: `${c.name} (${c.family})` })),
+            correctId: correct.id,
+            correctName: correct.name
+          };
+        },
+
+        // 題型 2：看特別特徵猜樹名 (trees.json)
+        () => {
+          const correct = getRandomTree();
+          const choices = getTreeChoices(correct);
+          return {
+            title: `以下哪種樹木具有「<span class="text-amber-700">${correct.special}</span>」的顯著辨識特徵？`,
+            choices: choices.map(c => ({ id: c.id, text: c.name })),
+            correctId: correct.id,
+            correctName: correct.name
+          };
+        },
+
+        // 題型 3：看葉片/樹皮特徵猜樹名 (trees.json)
+        () => {
+          const correct = getRandomTree();
+          const choices = getTreeChoices(correct);
+          // 隨機選葉子或樹皮
+          const isLeaf = Math.random() > 0.5;
+          const featureType = isLeaf ? '葉片特徵' : '樹皮特徵';
+          const featureDesc = isLeaf ? correct.leaves : correct.bark;
+
+          return {
+            title: `根據描述：「<span class="text-stone-700 font-normal">${featureDesc}</span>」，這是哪種樹木的${featureType}？`,
+            choices: choices.map(c => ({ id: c.id, text: c.name })),
+            correctId: correct.id,
+            correctName: correct.name
+          };
+        }
+      ];
+
+      // 2. 陣列宣告完後，再用 if 判斷是否把「題型 4」加入陣列中
+      if (typeof quizData !== 'undefined' && quizData && quizData.length > 0) {
+        questionGenerators.push(() => {
+          // 隨機抽出一題
+          const q = quizData[Math.floor(Math.random() * quizData.length)];
+          
+          // 將選項隨機打亂（這樣每次考選項順序不同）
+          const shuffledChoices = [...q.choices].sort(() => 0.5 - Math.random());
+
+          return {
+            title: `<span class="bg-[#556B2F] text-white text-[10px] font-bold px-2 py-0.5 rounded mr-1.5">精選考題</span>${q.title}`,
+            choices: shuffledChoices,
+            correctId: q.correctId,
+            correctName: q.correctName
+          };
+        });
+      }
+
+      // 3. 隨機抽選一種題型並執行
+      const randomGen = questionGenerators[Math.floor(Math.random() * questionGenerators.length)];
+      quizCurrent = randomGen();
+
+      // 4. 渲染題目至畫面
       const card = document.getElementById('quiz-card');
       card.innerHTML = `
-        <h4 class="text-sm font-black text-stone-800 leading-relaxed">哪一種樹木其學名為：「${correct.latinName}」？</h4>
-        <div class="p-3 bg-amber-50 border-l-4 border-amber-400 text-xs font-bold text-stone-800">💡 考證線索： ${correct.special}</div>
-        <div class="space-y-2">
-          ${choices.map(c => `
-            <button onclick="checkQuiz('${c.id}')" class="w-full p-3.5 rounded-xl border border-stone-200 text-left text-xs font-bold hover:bg-stone-50 flex justify-between items-center">
-              <span>${c.name} (${c.family})</span>
+        <h4 class="text-sm font-black text-stone-800 leading-relaxed">${quizCurrent.title}</h4>
+        <div class="space-y-2 mt-4">
+          ${quizCurrent.choices.map(c => `
+            <button onclick="checkQuiz('${c.id}')" class="w-full p-3.5 rounded-xl border border-stone-200 text-left text-xs font-bold hover:bg-stone-50 hover:border-[#556B2F] transition-all flex justify-between items-center group">
+              <span>${c.text}</span>
+              <i class="fa-solid fa-chevron-right text-stone-300 group-hover:text-[#556B2F] text-[10px]"></i>
             </button>
           `).join('')}
         </div>
       `;
     }
 
-    let score = 0, total = 0;
-    function checkQuiz(id) {
+    // 輔助函式：隨機抓一種樹
+    function getRandomTree() {
+      return treesData[Math.floor(Math.random() * treesData.length)];
+    }
+
+    // 輔助函式：抓取 1 正確 + 3 干擾樹木選項
+    function getTreeChoices(correctTree) {
+      const distractors = treesData.filter(t => t.id !== correctTree.id).sort(() => 0.5 - Math.random()).slice(0, 3);
+      return [correctTree, ...distractors].sort(() => 0.5 - Math.random());
+    }
+
+    // 檢查答案
+    function checkQuiz(selectedId) {
       total++;
-      if(id === quizCurrent.correct.id) {
+      if (selectedId === quizCurrent.correctId) {
         score++;
         alert("✔ 恭喜答對！");
       } else {
-        alert(`✘ 答錯了！正確答案是：${quizCurrent.correct.name}`);
+        alert(`✘ 答錯了！正確答案是：${quizCurrent.correctName}`);
       }
-      document.getElementById('quiz-score').innerText = score;
-      document.getElementById('quiz-total').innerText = `${total} 題`;
+      
+      // 更新計分板
+      const scoreEl = document.getElementById('quiz-score');
+      const totalEl = document.getElementById('quiz-total');
+      if (scoreEl) scoreEl.innerText = score;
+      if (totalEl) totalEl.innerText = `${total} 題`;
+
+      // 載入下一題
       startQuiz();
     }
 
