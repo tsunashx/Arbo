@@ -101,11 +101,18 @@
     </div>
 
     <!-- 第二行：科別過濾器 -->
-    <div class="w-full flex items-center space-x-2 overflow-x-auto py-1 border-b border-stone-100 pb-1">
-      <i class="fa-solid fa-filter text-stone-400 text-xs shrink-0"></i>
-      <span class="text-xs text-stone-500 font-bold shrink-0">科別</span>
-      <div id="family-filters" class="flex space-x-1 shrink-0"></div>
-    </div>
+<div class="w-full flex items-center py-1 border-b border-stone-100 pb-1.5 overflow-hidden">
+  
+  <!-- 左側固定的標題區塊 (sticky left-0) -->
+  <div class="sticky left-0 z-10 flex items-center space-x-1.5 bg-white pr-2.5 shrink-0">
+    <i class="fa-solid fa-filter text-stone-400 text-xs"></i>
+    <span class="text-xs text-stone-500 font-bold">科別</span>
+  </div>
+
+  <!-- 【關鍵修正】加上 min-w-0 與 flex-1，讓橫向滾動容器能正確被限制在剩餘寬度內 -->
+  <div id="family-filters" class="flex-1 min-w-0 flex items-center space-x-1 overflow-x-auto pl-1"></div>
+
+</div>
 
     <!-- 第三行：進階篩選觸發按鈕與重置 -->
     <div class="w-full flex justify-between items-center pt-1">
