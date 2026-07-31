@@ -1,201 +1,201 @@
 [
-{
-"id": "tree-1",
-"family": "桑科",
-"name": "細葉榕",
-"latinName": "Ficus microcarpa L.f.",
-"height": "15 - 25 米",
-"bloomPeriod": "5月 - 7月 (隱頭花序)",
-"fruitPeriod": "8月 - 11月 (成熟紫黑)",
-"shape": "樹冠廣闊開展，可達20米以上，遮蔭極佳",
-"bark": "灰色，多氣生根，老樹常形成壯觀的支柱根",
-"leaves": "葉橢圓形，革質，全緣，羽狀脈，表面光滑亮麗",
-"flowers": "隱頭果，成對，無總梗，熟時紫黑色，是鳥類最愛",
-"special": "★ 氣生根及隱頭果",
-"description": "**榕樹**（又稱萬年青）是香港的原生物種，也是本地風水林的常見樹種之一，能為鳥類及其他野生動物提供食物與棲息地。榕樹樹冠廣闊，因此被廣泛種植於都市中，是最常見的遮蔭大樹。\n\n它最大的特徵是懸掛於枝幹上的**氣生根**——這些氣根接觸地面後會逐漸木質化並變粗，形成堅固的**支柱根**，宛如新的樹幹般支撐樹冠，使榕樹具備向外無限蔓延的生命力與極佳的抗風能力。\n\n此外，榕樹與榕小蜂擁有獨特的**互利共生**關係：榕樹必須依靠榕小蜂授粉才能結果，而榕果內的癭花則為榕小蜂提供了產卵與育幼的場所。\n\n榕樹雖然生命力頑強，但其氣根容易鑽入建築物縫隙生長，可能破壞結構安全。同時，榕樹亦有機會感染有害木層孔菌（Phellinus noxius）而引致褐根病，危害樹木健康與結構穩定。香港種植榕樹的歷史源遠流長，目前共有 223 株榕樹被列入《古樹名木冊》。",
-"userNotes": "",
-"mainImage": "images/moraceae/ficus microcarpa/ficus microcarpa-main.jpg",
-"hotspots": [
-{
-"id": "hot-bark",
-"type": "bark",
-"name": "懸垂氣生根",
-"x": 45,
-"y": 75,
-"desc": "從枝幹垂下的褐色線狀氣生根，接觸地面吸收水分與養分後，會木質化成為穩固的「支柱根」。",
-"img": "images/moraceae/ficus microcarpa/ficus microcarpa-bark.jpg"
-},
-{
-"id": "hot-leaf",
-"type": "leaves",
-"name": "革質全緣葉",
-"x": 65,
-"y": 30,
-"desc": "葉片呈現橢圓形，邊緣平滑（全緣），厚實革質，表面具有強烈蠟質光澤。",
-"img": "images/moraceae/ficus microcarpa/ficus microcarpa-leaves.jpg"
-},
-{
-"id": "hot-flower",
-"type": "flowers",
-"name": "隱頭果實",
-"x": 30,
-"y": 45,
-"desc": "無花果實直接成對生長在小枝上，外觀呈球形。花藏於果內，需要榕果小蜂協助授粉。",
-"img": "images/moraceae/ficus microcarpa/ficus microcarpa-flowers.jpeg"
-}
-]
-},
-{
-"id": "tree-2",
-"family": "桑科",
-"name": "垂葉榕",
-"latinName": "Ficus benjamina L.",
-"height": "10 - 20 米",
-"bloomPeriod": "4月 - 6月",
-"fruitPeriod": "9月 - 11月 (熟時橘紅)",
-"shape": "樹冠橫向蔓延，枝條柔軟自然下垂，極具動感姿態",
-"bark": "灰色，樹皮平滑，具有少量氣根",
-"leaves": "葉卵狀橢圓形，葉尾長尖，薄革質，具有顯著滴水尖",
-"flowers": "隱頭果，成對，熟時呈橙紅至紅黃色",
-"special": "★ 枝條及葉尾柔軟下垂",
-"description": "常綠大喬木，枝條天生下垂，微風吹拂時搖曳生姿。葉片末端具有明顯的長尾尖（滴水尖），便於雨水快速排乾保持葉面乾燥，光合作用效率高。",
-"userNotes": "",
-"mainImage": "images/moraceae/ficus benjamina/ficus benjamina-main.jpg",
-"hotspots": [
-{
-"id": "hot-bark",
-"type": "bark",
-"name": "下垂細長枝條",
-"x": 35,
-"y": 65,
-"desc": "小枝條極其柔軟，受重力自然下垂，樹冠呈現層次豐富的傘狀結構。",
-"img": "images/moraceae/ficus benjamina/ficus benjamina-bark.jpg"
-},
-{
-"id": "hot-leaf",
-"type": "leaves",
-"name": "尾狀滴水尖",
-"x": 75,
-"y": 40,
-"desc": "葉尾突然收縮呈長尾狀。雨天時雨水能順著這個長尖匯集並迅速滴落。",
-"img": "images/moraceae/ficus benjamina/ficus benjamina-leaves.jpg"
-},
-{
-"id": "hot-flower",
-"type": "flowers",
-"name": "橙黃隱頭果",
-"x": 55,
-"y": 35,
-"desc": "隱頭果成熟時由綠色轉為鮮豔的橘紅色，直接附著在下垂枝條上。",
-"img": "images/moraceae/ficus benjamina/ficus benjamina-flowers.jpg"
-}
-]
-},
-{
-"id": "tree-3",
-"family": "樟科",
-"name": "樟樹",
-"latinName": "Cinnamomum camphora (L.) J.Presl",
-"height": "20 - 30 米",
-"bloomPeriod": "4月 - 5月 (黃綠色小花)",
-"fruitPeriod": "8月 - 11月 (熟時墨黑)",
-"shape": "樹冠圓滿呈球形，枝葉繁茂，極為雄偉",
-"bark": "灰褐色，老樹皮具有深且長的縱向條狀裂紋",
-"leaves": "葉卵形，薄革質，具有顯著的離基三出脈，揉碎有樟腦香氣",
-"flowers": "漿果球形，熟時紫黑色，小枝上有細白花",
-"special": "★ 樟腦味及離基三出脈",
-"description": "長壽且極具藥用、建材價值的鄉土樹種。全株含揮發性油，揉碎葉片便能聞到經典的防蟲樟腦氣味。樹皮具有代表性的直裂紋，為良好行道樹。",
-"userNotes": "",
-"mainImage": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-main.jpeg",
-"hotspots": [
-{
-"id": "hot-bark",
-"type": "bark",
-"name": "縱深裂樹皮",
-"x": 48,
-"y": 80,
-"desc": "隨年歲增長，灰褐色樹皮會產生深邃、不規則的縱向條狀深溝裂。",
-"img": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-bark.jpeg"
-},
-{
-"id": "hot-leaf",
-"type": "leaves",
-"name": "離基三出脈",
-"x": 62,
-"y": 28,
-"desc": "葉片基部略上方，會有兩條側脈與中肋同時向葉尖延伸，形成「離基三出脈」。",
-"img": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-leaves.jpg"
-},
-{
-"id": "hot-flower",
-"type": "flowers",
-"name": "紫黑油亮漿果",
-"x": 32,
-"y": 45,
-"desc": "漿果呈小圓球狀，熟透後轉為油亮墨黑色，基部有杯狀果托包覆。",
-"img": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-flowers.jpeg"
-}
-]
-},
-{
-"id": "tree-4",
-"family": "樟科",
-"name": "陰香",
-"latinName": "Cinnamomum burmannii (C.Vill.) Blume",
-"height": "10 - 15 米",
-"bloomPeriod": "3月 - 4月",
-"fruitPeriod": "9月 - 12月",
-"shape": "樹冠傘形，生長迅速，枝條密集",
-"bark": "灰褐至紅褐色，樹皮長期保持相對光滑，無深溝裂",
-"leaves": "葉卵形，離基三出脈，揉碎散發肉桂般的辛甜香氣",
-"flowers": "漿果橢圓形，熟時為紫黑色，外觀與樟樹極似",
-"special": "★ 樹皮平滑帶肉桂味",
-"description": "外觀常與樟樹混淆，但陰香的樹皮更平滑且偏紅褐色，揉碎葉片散發的是肉桂般的辛辣甜香。其小枝常呈紅色，可作為分辨線索。",
-"userNotes": "",
-"mainImage": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-main.jpeg",
-"hotspots": [
-{
-"id": "hot-bark",
-"type": "bark",
-"name": "光滑紅褐色皮",
-"x": 50,
-"y": 70,
-"desc": "樹皮平滑，無樟樹特有的縱向深裂溝紋，剝開帶淡紅褐色。",
-"img": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-bark.jpg"
-},
-{
-"id": "hot-leaf",
-"type": "leaves",
-"name": "紅色嫩小枝",
-"x": 72,
-"y": 35,
-"desc": "新抽出的嫩枝條往往呈現極其亮眼的紫紅色，葉背常呈粉綠色。",
-"img": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-leaves.jpg"
-},
-{
-"id": "hot-flower",
-"type": "flowers",
-"name": "橢圓形核果",
-"x": 28,
-"y": 50,
-"desc": "果實為橢圓狀，頂端宿存的花被齒呈切口狀，與球形樟果不同。",
-"img": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-flowers.jpg"
-}
-]
-},
+  {
+    "id": "tree-1",
+    "family": "桑科",
+    "name": "榕樹",
+    "engName": "Chinese Banyan, Small-fruited Fig",
+    "latinName": "Ficus microcarpa L.f.",
+    "species": "原生物種",
+    "behavior": "常綠喬木",
+    "height": "15 - 25 米",
+    "bloomPeriod": "5月 - 7月 (隱頭花序)",
+    "fruitPeriod": "8月 - 11月 (成熟紫黑)",
+    "special": "★ 氣生根及隱頭果",
+    "keywords": ["榕樹", "細葉榕", "正榕", "氣生根", "隱頭果", "桑科", "Ficus", "banyan", "革質", "全緣"],
+    "description": "又稱正榕，細葉榕，是香港的原生物種，也是本地風水林的常見樹種之一，能為鳥類及其他野生動物提供食物與棲息地。\n\n榕樹樹冠廣闊，因此被廣泛種植於都市中，是最常見的遮蔭大樹。它最大的特徵是懸掛於枝幹上的氣生根——這些氣根接觸地面後會逐漸木質化並變粗，形成堅固的「支柱根」，宛如新的樹幹般支撐樹冠，使榕樹具備向外無限蔓延的生命力與極佳的抗風能力。\n\n此外，榕樹與榕小蜂擁有獨特的互利共生關係：榕樹必須依靠榕小蜂授粉才能結果，而榕果內的癭花則為榕小蜂提供了產卵與育幼的場所。\n\n榕樹雖然生命力頑強，但其氣根容易鑽入建築物縫隙生長，可能破壞結構安全。同時，榕樹亦有機會感染有害木層孔菌（Phellinus noxius）而引致「褐根病」，危害樹木健康與結構穩定。\n\n香港種植榕樹的歷史源遠流長，目前共有 223 株榕樹被列入《古樹名木冊》。",
+    "userNotes": "",
+    "mainImage": "images/moraceae/ficus microcarpa/ficus microcarpa-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "懸垂氣生根",
+        "x": 45,
+        "y": 75,
+        "desc": "從枝幹垂下的褐色線狀氣生根，接觸地面吸收水分與養分後，會木質化成為穩固的「支柱根」。",
+        "img": "images/moraceae/ficus microcarpa/ficus microcarpa-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "革質全緣葉",
+        "x": 65,
+        "y": 30,
+        "desc": "葉片呈現橢圓形，邊緣平滑（全緣），厚實革質，表面具有強烈蠟質光澤。",
+        "img": "images/moraceae/ficus microcarpa/ficus microcarpa-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "隱頭果實",
+        "x": 30,
+        "y": 45,
+        "desc": "無花果實直接成對生長在小枝上，外觀呈球形。花藏於果內，需要榕果小蜂協助授粉。",
+        "img": "images/moraceae/ficus microcarpa/ficus microcarpa-flowers.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "tree-2",
+    "family": "桑科",
+    "name": "垂葉榕",
+    "engName": "Weeping Fig",
+    "latinName": "Ficus benjamina L.",
+    "species": "外來物種",
+    "behavior": "常綠喬木",
+    "height": "10 - 20 米",
+    "bloomPeriod": "4月 - 6月",
+    "fruitPeriod": "9月 - 11月 (熟時橘紅)",
+    "special": "★ 枝條及葉尾柔軟下垂",
+    "keywords": ["垂葉榕", "垂枝榕", "白榕", "滴水尖", "隱頭果", "桑科", "Ficus", "weeping fig"],
+    "description": "常綠大喬木，枝條天生下垂，微風吹拂時搖曳生姿。葉片末端具有明顯的長尾尖（滴水尖），便於雨水快速排乾保持葉面乾燥，光合作用效率高。",
+    "userNotes": "",
+    "mainImage": "images/moraceae/ficus benjamina/ficus benjamina-main.jpg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "下垂細長枝條",
+        "x": 35,
+        "y": 65,
+        "desc": "小枝條極其柔軟，受重力自然下垂，樹冠呈現層次豐富的傘狀結構。",
+        "img": "images/moraceae/ficus benjamina/ficus benjamina-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "尾狀滴水尖",
+        "x": 75,
+        "y": 40,
+        "desc": "葉尾突然收縮呈長尾狀。雨天時雨水能順著這個長尖匯集並迅速滴落。",
+        "img": "images/moraceae/ficus benjamina/ficus benjamina-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "橙黃隱頭果",
+        "x": 55,
+        "y": 35,
+        "desc": "隱頭果成熟時由綠色轉為鮮豔的橘紅色，直接附著在下垂枝條上。",
+        "img": "images/moraceae/ficus benjamina/ficus benjamina-flowers.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tree-3",
+    "family": "樟科",
+    "name": "樟樹",
+    "engName": "Camphor Tree",
+    "latinName": "Cinnamomum camphora (L.) J.Presl",
+    "species": "原生物種",
+    "behavior": "常綠喬木",
+    "height": "20 - 30 米",
+    "bloomPeriod": "4月 - 5月 (黃綠色小花)",
+    "fruitPeriod": "8月 - 11月 (熟時墨黑)",
+    "special": "★ 樟腦味及離基三出脈",
+    "keywords": ["樟樹", "香樟", "樟腦", "離基三出脈", "樟精油", "樟科", "Cinnamomum", "camphor tree"],
+    "description": "長壽且極具藥用、建材價值的鄉土樹種。全株含揮發性油，揉碎葉片便能聞到經典的防蟲樟腦氣味。樹皮具有代表性的直裂紋，為良好行道樹。",
+    "userNotes": "",
+    "mainImage": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-main.jpeg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "縱深裂樹皮",
+        "x": 48,
+        "y": 80,
+        "desc": "隨年歲增長，灰褐色樹皮會產生深邃、不規則的縱向條狀深溝裂。",
+        "img": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-bark.jpeg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "離基三出脈",
+        "x": 62,
+        "y": 28,
+        "desc": "葉片基部略上方，會有兩條側脈與中肋同時向葉尖延伸，形成「離基三出脈」。",
+        "img": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "紫黑油亮漿果",
+        "x": 32,
+        "y": 45,
+        "desc": "漿果呈小圓球狀，熟透後轉為油亮墨黑色，基部有杯狀果托包覆。",
+        "img": "images/lauraceae/cinnamomum camphora/cinnamomum camphora-flowers.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "tree-4",
+    "family": "樟科",
+    "name": "陰香",
+    "engName": "Burmann's Cinnamon",
+    "latinName": "Cinnamomum burmannii (C.Vill.) Blume",
+    "species": "外來物種",
+    "behavior": "常綠喬木",
+    "height": "10 - 15 米",
+    "bloomPeriod": "3月 - 4月",
+    "fruitPeriod": "9月 - 12月",
+    "special": "★ 樹皮平滑帶肉桂味",
+    "keywords": ["陰香", "假樟樹", "山肉桂", "離基三出脈", "樟科", "Cinnamomum", "burmann's cinnamon"],
+    "description": "外觀常與樟樹混淆，但陰香的樹皮更平滑且偏紅褐色，揉碎葉片散發的是肉桂般的辛辣甜香。其小枝常呈紅色，可作為分辨線索。",
+    "userNotes": "",
+    "mainImage": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-main.jpeg",
+    "hotspots": [
+      {
+        "id": "hot-bark",
+        "type": "bark",
+        "name": "光滑紅褐色皮",
+        "x": 50,
+        "y": 70,
+        "desc": "樹皮平滑，無樟樹特有的縱向深裂溝紋，剝開帶淡紅褐色。",
+        "img": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-bark.jpg"
+      },
+      {
+        "id": "hot-leaf",
+        "type": "leaves",
+        "name": "紅色嫩小枝",
+        "x": 72,
+        "y": 35,
+        "desc": "新抽出的嫩枝條往往呈現極其亮眼的紫紅色，葉背常呈粉綠色。",
+        "img": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-leaves.jpg"
+      },
+      {
+        "id": "hot-flower",
+        "type": "flowers",
+        "name": "橢圓形核果",
+        "x": 28,
+        "y": 50,
+        "desc": "果實為橢圓狀，頂端宿存的花被齒呈切口狀，與球形樟果不同。",
+        "img": "images/lauraceae/cinnamomum burmannii/cinnamomum burmannii-flowers.jpg"
+      }
+    ]
+  },
   {
     "id": "tree-5",
     "family": "大戟科",
     "name": "血桐",
+    "engName": "Elephant's Ear, Macaranga",
     "latinName": "Macaranga tanarius (L.) Müll.Arg.",
+    "species": "原生物種",
+    "behavior": "常綠喬木",
     "height": "5 - 10 米",
     "bloomPeriod": "3月 - 5月",
     "fruitPeriod": "6月 - 8月",
-    "shape": "樹冠呈傘形，分枝較少且平展",
-    "bark": "灰褐色，光滑，受傷或切斷時會流出鮮紅色的汁液",
-    "leaves": "盾狀著生，葉片大，近圓形或卵形，具長柄",
-    "flowers": "雌雄異株，無花瓣，花序為圓錐狀",
     "special": "★ 盾狀葉及紅色汁液",
+    "keywords": ["血桐", "盾狀葉", "紅色樹液", "大葉片", "大戟科", "Macaranga", "elephant's ear"],
     "description": "常見的先鋒樹種，生長迅速。樹幹被割破後流出的乳汁氧化會變成血紅色，因而得名「血桐」。其巨大且特殊的盾狀葉片是極佳的辨認特徵。",
     "userNotes": "",
     "mainImage": "images/euphorbiaceae/macaranga tanarius/macaranga tanarius-main.jpg",
@@ -233,16 +233,16 @@
     "id": "tree-6",
     "family": "大戟科",
     "name": "石栗",
+    "engName": "Candlenut",
     "latinName": "Aleurites moluccanus (L.) Willd.",
+    "species": "外來物種",
+    "behavior": "常綠喬木",
     "height": "10 - 20 米",
     "bloomPeriod": "4月 - 6月",
     "fruitPeriod": "10月 - 12月",
-    "shape": "樹冠圓球形或呈開展狀，樹姿優美",
-    "bark": "灰褐色，淺縱裂，新梢及嫩葉密被銀白色星狀毛",
-    "leaves": "葉形多變，幼葉常為掌狀3-5裂，成葉為卵形，基部有兩顆腺體",
-    "flowers": "聚傘花序，花小，白色，具香氣",
     "special": "★ 葉基腺體及堅硬核果",
-    "description": "都市常見的行道樹，樹冠濃密。遠看新葉常帶有銀白色的粉末感。果實極為堅硬，內部種子含油量極高，古時常被用來點燈照明。",
+    "keywords": ["石栗", "油桃", "燭果", "星狀毛", "杯狀腺體", "大戟科", "Aleurites", "candlenut"],
+    "description": "都市常見的行道樹，樹冠濃密呈圓球形。遠看新梢與嫩葉常帶有銀白色的星狀毛粉末感。葉形多變，幼葉常為掌狀3-5裂，成葉為卵形。果實極為堅硬如石，內部種子含油量極高，古時常被用來點燈照明。",
     "userNotes": "",
     "mainImage": "images/euphorbiaceae/aleurites moluccanus/aleurites moluccanus-main.jpg",
     "hotspots": [
@@ -261,7 +261,7 @@
         "name": "兩顆紅色腺點",
         "x": 65,
         "y": 40,
-        "desc": "葉柄連接葉片基部處有兩顆顯著的杯狀杯狀腺體，能分泌蜜汁吸引螞蟻。",
+        "desc": "葉柄連接葉片基部處有兩顆顯著的杯狀腺體，能分泌蜜汁吸引螞蟻。",
         "img": "images/euphorbiaceae/aleurites moluccanus/aleurites moluccanus-leaves.jpg"
       },
       {
@@ -280,15 +280,15 @@
     "family": "蕈樹科",
     "name": "楓香",
     "latinName": "Liquidambar formosana Hance",
+    "engName": "Formosan Sweetgum",
+    "species": "原生物種",
+    "behavior": "落葉喬木",
     "height": "15 - 30 米",
     "bloomPeriod": "3月 - 4月",
     "fruitPeriod": "9月 - 11月",
-    "shape": "樹冠呈圓錐形或高大金字塔形",
-    "bark": "灰褐色，老時呈深溝縱裂",
-    "leaves": "掌狀3裂，邊緣有鋸齒，搓揉後有芳香氣味，秋冬變紅",
-    "flowers": "雌雄同株，頭狀花序，無花瓣",
     "special": "★ 掌狀三裂葉與刺球狀頭狀果",
-    "description": "著名的秋季觀賞樹種。雖然常被誤認為槭樹（楓樹），但楓香葉片為互生且多為3裂。樹脂具有甜香味，古時可用作香料或藥材。",
+    "keywords": ["楓香", "楓樹", "香樹", "掌狀裂葉", "刺球果", "蕈樹科", "Liquidambar", "sweetgum"],
+    "description": "著名的秋季觀賞樹種，樹冠呈圓錐形或高大金字塔形。雖然常被誤認為槭樹（楓樹），但楓香葉片為互生且多為掌狀3裂，搓揉後有芳香氣味，秋冬降溫時葉片會轉紅。樹脂具有甜香味，古時可用作香料或藥材。",
     "userNotes": "",
     "mainImage": "images/altingiaceae/liquidambar formosana/liquidambar formosana-main.jpeg",
     "hotspots": [
@@ -317,7 +317,7 @@
         "x": 35,
         "y": 45,
         "desc": "頭狀果序呈刺球狀，由多個帶喙的蒴果聚合而成，成熟後乾裂懸掛枝頭。",
-        "img": "images/altingiaceae/liquidambar formosana/liquidambar formosana-fruit.jpeg"
+        "img": "images/altingiaceae/liquidambar formosana/liquidambar formosana-fruit.jpg"
       }
     ]
   },
@@ -325,16 +325,16 @@
     "id": "tree-8",
     "family": "葉下珠科",
     "name": "秋楓",
+    "engName": "Java Cedar, Bishop Tree",
     "latinName": "Bischofia javanica Blume",
+    "species": "原生物種",
+    "behavior": "常綠喬木",
     "height": "15 - 25 米",
     "bloomPeriod": "4月 - 5月",
     "fruitPeriod": "8月 - 10月",
-    "shape": "樹冠寬廣濃密，呈圓頭形，遮蔭良好",
-    "bark": "紅褐色至灰褐色，老時薄片狀剝落",
-    "leaves": "三出複葉，小葉卵形或橢圓形，鋸齒緣",
-    "flowers": "雌雄異株，圓錐花序，花小，黃綠色",
     "special": "★ 三出複葉及褐色漿果",
-    "description": "常綠或半落葉大喬木，生命力強健。其顯著特徵為三出複葉，落葉前葉片會轉為鮮紅色。漿果結實纍纍，是鳥類與哺乳動物重要的冬糧。",
+    "keywords": ["秋楓", "茄苳", "三出複葉", "加冬", "重陽木", "葉下珠科", "Bischofia", "bishop tree"],
+    "description": "常綠或半落葉大喬木，生命力強健，樹冠寬廣濃密呈圓頭形，遮蔭良好。其顯著特徵為三出複葉，鋸齒緣，落葉前葉片會轉為鮮紅色。紅褐色樹皮老時呈薄片狀剝落。漿果結實纍纍，是鳥類與哺乳動物重要的冬糧。",
     "userNotes": "",
     "mainImage": "images/phyllanthaceae/bischofia javanica/bischofia javanica-main.jpg",
     "hotspots": [
@@ -354,7 +354,7 @@
         "x": 62,
         "y": 35,
         "desc": "每組葉柄上長有三片小葉（三出複葉），邊緣有細鋸齒，老葉掉落前變紅。",
-        "img": "images/phyllanthaceae/bischofia javanica/bischofia javanica-leaves.jpeg"
+        "img": "images/phyllanthaceae/bischofia javanica/bischofia javanica-leaves.jpg"
       },
       {
         "id": "hot-flower",
@@ -371,16 +371,16 @@
     "id": "tree-9",
     "family": "豆科",
     "name": "鳳凰木",
+    "engName": "Royal Poinciana, Flame Tree",
     "latinName": "Delonix regia (Bojer ex Hook.) Raf.",
+    "species": "外來物種",
+    "behavior": "落葉喬木",
     "height": "10 - 20 米",
     "bloomPeriod": "5月 - 7月",
     "fruitPeriod": "8月 - 10月",
-    "shape": "樹冠寬廣開展呈傘形，極具遮蔭效果",
-    "bark": "灰褐色，粗糙，微有縱裂，無刺",
-    "leaves": "二回羽狀複葉，小葉細小呈長橢圓形，羽片對生",
-    "flowers": "總狀花序，花大鮮紅色，具5片花瓣，上方1片有黃白色斑紋",
     "special": "★ 鮮紅傘形花海與刀劍狀大莢果",
-    "description": "著名的觀賞樹種，夏季開花時滿樹鮮紅，極為壯觀，常被譽為「世上色彩最鮮艷的樹木之一」。其果實為大型木質化的扁平莢果，垂掛枝頭可歷時很久。",
+    "keywords": ["鳳凰木", "金鳳花", "火樹", "二回羽状複葉", "大莢果", "豆科", "Delonix", "flame tree"],
+    "description": "著名的觀賞樹種，樹冠寬廣開展呈傘形，極具遮蔭效果。夏季開花時滿樹鮮紅，極為壯觀，常被譽為「世上色彩最鮮艷的樹木之一」。其葉片為細緻的二回羽狀複葉，果實為大型木質化的扁平莢果，垂掛枝頭可歷時很久。",
     "userNotes": "",
     "mainImage": "images/fabaceae/delonix regia/delonix regia-main.jpg",
     "hotspots": [
@@ -391,7 +391,7 @@
         "x": 45,
         "y": 75,
         "desc": "樹幹粗壯，皮孔明顯，老時樹皮呈不規則微裂。",
-        "img": "images/fabaceae/delonix regia/delonix regia-bark.jpeg"
+        "img": "images/fabaceae/delonix regia/delonix regia-bark.jpg"
       },
       {
         "id": "hot-leaf",
@@ -409,7 +409,7 @@
         "x": 30,
         "y": 45,
         "desc": "花朵鮮紅奪目；結出長達50厘米以上的木質黑色刀劍狀莢果。",
-        "img": "images/fabaceae/delonix regia/delonix regia-flowers.jpeg"
+        "img": "images/fabaceae/delonix regia/delonix regia-flowers.jpg"
       }
     ]
   },
@@ -417,16 +417,16 @@
     "id": "tree-10",
     "family": "豆科",
     "name": "水黃皮",
+    "engName": "Pongam Oiltree, Indian Beech",
     "latinName": "Millettia pinnata (L.) Panigrahi",
+    "species": "原生物種",
+    "behavior": "常綠喬木",
     "height": "8 - 15 米",
     "bloomPeriod": "5月 - 6月",
     "fruitPeriod": "8月 - 10月",
-    "shape": "樹冠呈圓球形，枝葉濃密",
-    "bark": "灰褐色，光滑或帶淺裂紋",
-    "leaves": "奇數羽狀複葉，小葉卵形或橢圓形，革質光滑，富光澤",
-    "flowers": "腋生總狀花序，花冠蝶形，粉紫色或淡紫色",
     "special": "★ 抗風耐鹽與木質刀狀莢果",
-    "description": "優良的海岸防風樹種，野生於海岸邊或近海河岸。葉片光亮，花朵為淡粉紫色蝶形花。果實為堅硬的木質扁平莢果，能漂浮於水面隨水流傳播。",
+    "keywords": ["水黃皮", "九重吹", "水流豆", "羽狀複葉", "耐鹽防風", "豆科", "Millettia", "pongam"],
+    "description": "優良的海岸防風樹種，野生於海岸邊或近海河岸，樹冠呈圓球形，枝葉濃密。奇數羽状複葉革質光滑，富光澤。花朵為淡粉紫色蝶形花。果實為堅硬的木質扁平莢果，能漂浮於水面隨水流傳播。",
     "userNotes": "",
     "mainImage": "images/fabaceae/millettia pinnata/millettia pinnata-main.jpg",
     "hotspots": [
@@ -437,7 +437,7 @@
         "x": 50,
         "y": 75,
         "desc": "樹幹平滑，老時稍微呈淺縱裂，具極強抗風及耐鹽能力。",
-        "img": "images/fabaceae/millettia pinnata/millettia pinnata-bark.jpeg"
+        "img": "images/fabaceae/millettia pinnata/millettia pinnata-bark.jpg"
       },
       {
         "id": "hot-leaf",
@@ -463,16 +463,16 @@
     "id": "tree-11",
     "family": "千屈菜科",
     "name": "大花紫薇",
+    "engName": "Queen's Crape Myrtle",
     "latinName": "Lagerstroemia speciosa (L.) Pers.",
+    "species": "外來物種",
+    "behavior": "落葉喬木",
     "height": "7 - 15 米",
     "bloomPeriod": "5月 - 7月",
     "fruitPeriod": "9月 - 11月",
-    "shape": "樹冠呈圓頂形，枝條稍下垂",
-    "bark": "灰色或灰褐色，較為平滑，老時常呈薄片狀剝落",
-    "leaves": "單葉對生，長橢圓形或卵狀長橢圓形，革質，邊緣平滑",
-    "flowers": "頂生圓錐花序，花大，波浪狀皺褶花瓣，紫色至紫紅色",
     "special": "★ 皺褶紫花與球形木質蒴果",
-    "description": "常見的落葉大喬木，夏季開極其艷麗的紫色大花。花瓣邊緣呈現獨特的波浪皺縮狀。冬季落葉前，葉片會轉為鮮豔的紅黃色，極具季節觀賞價值。",
+    "keywords": ["大花紫薇", "洋紫薇", "百日紅", "波浪花瓣", "木質蒴果", "千屈菜科", "Lagerstroemia", "crape myrtle"],
+    "description": "常見的落葉大喬木，樹冠呈圓頂形，夏季開極其艷麗的紫色大花。花瓣邊緣呈現獨特的波浪皺縮狀。單葉對生，革質，冬季落葉前，葉片會轉為鮮豔的紅黃色，極具季節觀賞價值。花謝後結出堅硬的球形木質蒴果。",
     "userNotes": "",
     "mainImage": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-main.jpg",
     "hotspots": [
@@ -492,7 +492,7 @@
         "x": 62,
         "y": 35,
         "desc": "葉片大而厚實，冬季掉落前會由綠轉為亮紅或紅褐色。",
-        "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-leaves.jpeg"
+        "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-leaves.jpg"
       },
       {
         "id": "hot-flower",
@@ -501,7 +501,7 @@
         "x": 30,
         "y": 50,
         "desc": "花瓣如皺紙般彎曲，花謝後結出堅硬的球形木質蒴果。",
-        "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-flowers.jpeg"
+        "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-flowers.jpg"
       }
     ]
   },
@@ -509,18 +509,18 @@
     "id": "tree-12",
     "family": "錦葵科",
     "name": "木棉",
+    "engName": "Kapok, Red Cotton Tree",
     "latinName": "Bombax ceiba L.",
+    "species": "原生物種",
+    "behavior": "落葉喬木",
     "height": "10 - 25 米",
     "bloomPeriod": "3月 - 4月 (先花後葉)",
     "fruitPeriod": "5月 - 6月 (裂開飄棉)",
-    "shape": "樹幹高大挺拔，呈明顯圓錐形或塔形，分枝輪生平展",
-    "bark": "灰白色，幼樹及枝條幹上密生瘤狀硬刺",
-    "leaves": "掌狀複葉，小葉 5 - 7 片，長圓形，紙質",
-    "flowers": "花大，肉質，5片橙紅或紅色花瓣，先花後葉盛開",
     "special": "★ 樹幹瘤刺、英雄紅花與棉絮飄飛",
-    "description": "又稱「英雄樹」。春季先開花後長葉，滿樹橙紅色的肉質大花極具震撼力。果實成熟開裂後會釋放大量白色棉絮，包裹著種子隨風飄散。",
+    "keywords": ["木棉", "英雄樹", "斑芝樹", "吉貝", "掌狀複葉", "瘤刺", "錦葵科", "Bombax", "kapok"],
+    "description": "又稱「英雄樹」，樹幹高大挺拔，呈明顯圓錐形，分枝輪生平展。春季先開花後長葉，滿樹橙紅色的肉質大花極具震撼力。葉片為5-7片的掌狀複葉。果實成熟開裂後會釋放大量白色棉絮，包裹著種子隨風飄散。",
     "userNotes": "",
-    "mainImage": "images/malvaceae/bombax ceiba/bombax ceiba-main.jpeg",
+    "mainImage": "images/malvaceae/bombax ceiba/bombax ceiba-main.jpg",
     "hotspots": [
       {
         "id": "hot-bark",
@@ -529,7 +529,7 @@
         "x": 50,
         "y": 75,
         "desc": "樹幹生有顯著的硬質圓錐狀瘤刺，隨樹齡增長會逐漸平滑。",
-        "img": "images/malvaceae/bombax ceiba/bombax ceiba-bark.jpeg"
+        "img": "images/malvaceae/bombax ceiba/bombax ceiba-bark.jpg"
       },
       {
         "id": "hot-leaf",
@@ -546,7 +546,7 @@
         "name": "肉質紅花與棉蒴果",
         "x": 30,
         "y": 45,
-        "desc": "花朵厚重呈鮮艷橙紅色；果實成熟會裂開並散發大量白色綿毛。",
+        "desc": "花朵厚重呈鮮豔橙紅色；果實成熟會裂開並散發大量白色綿毛。",
         "img": "images/malvaceae/bombax ceiba/bombax ceiba-flowers.jpg"
       }
     ]
@@ -555,16 +555,16 @@
     "id": "tree-13",
     "family": "錦葵科",
     "name": "黃槿",
+    "engName": "Sea Hibiscus, Coast Hibiscus",
     "latinName": "Hibiscus tiliaceus",
+    "species": "原生物種",
+    "behavior": "常綠喬木",
     "height": "4 - 10 米",
     "bloomPeriod": "7月 - 8月 (常年有花)",
     "fruitPeriod": "8月 - 12月",
-    "shape": "樹冠開展，常呈圓形或不規則多分枝狀",
-    "bark": "灰白色或灰褐色，粗糙，多纖維且具縱裂",
-    "leaves": "心形，近圓形，革質，全緣或有微鋸齒，背面密生灰白色星狀毛",
-    "flowers": "鐘狀花，黃色，花心中央呈深紫紅色，黃昏時會轉為橙紅色並凋謝",
     "special": "★ 心形葉片與一日變色黃花",
-    "description": "常見的海岸防風與護岸樹種，極為耐鹽抗風。其心形的大型革質葉片在民間常被用作蒸糕點的墊底材料（俗稱「糕仔葉」）。花朵朝開黃色，暮謝轉為橙紅。",
+    "keywords": ["黃槿", "糕仔葉", "海麻", "心形葉", "一日花", "錦葵科", "Hibiscus", "sea hibiscus"],
+    "description": "常見的海岸防風與護岸樹種，極為耐鹽抗風，樹冠開展。其心形的大型革質葉片，背面密生灰白色星狀毛，民間常被用作蒸糕點的墊底材料（俗稱「糕仔葉」）。花朵朝開黃色（花心深紫紅），暮謝轉為橙紅並凋謝。",
     "userNotes": "",
     "mainImage": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-main.jpg",
     "hotspots": [
@@ -593,7 +593,7 @@
         "x": 35,
         "y": 45,
         "desc": "鮮黃色花朵中心具暗紫紅色斑塊；果實為木質絨毛卵形蒴果。",
-        "img": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-flowers.jpeg"
+        "img": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-flowers.jpg"
       }
     ]
   },
@@ -601,16 +601,16 @@
     "id": "tree-14",
     "family": "錦葵科",
     "name": "假蘋婆",
+    "engName": "Scarlet Sterculia",
     "latinName": "Sterculia lanceolata Cav.",
+    "species": "原生物種",
+    "behavior": "常綠喬木",
     "height": "5 - 15 米",
     "bloomPeriod": "4月 - 6月",
     "fruitPeriod": "7月 - 9月",
-    "shape": "樹冠圓球形，枝葉茂密",
-    "bark": "灰色或灰褐色，平滑，不易開裂",
-    "leaves": "單葉互生，長圓狀披針形，革質，全緣，網脈明顯",
-    "flowers": "圓錐花序，花小，無花瓣，萼片淡紅色或淡粉色，呈星狀開展",
     "special": "★ 鮮紅蓇葖果與鳳眼狀黑籽",
-    "description": "原生常綠小至中喬木。夏季結出鮮紅色的星狀蓇葖果，成熟時裂開露出如黑珍珠般的黑色種子，掛在紅色的果皮內，對比鮮明，極具觀賞價值。",
+    "keywords": ["假蘋婆", "七姐果", "雞冠木", "星狀裂果", "蓇葖果", "錦葵科", "Sterculia", "scarlet sterculia"],
+    "description": "原生常綠小至中喬木，樹冠圓球形，樹皮灰色平滑。單葉互生呈長圓狀披針形。夏季結出鮮紅色的星狀蓇葖果，成熟時裂開露出如黑珍珠般的漆黑種子，掛在紅色的果皮內，對比鮮明，極具觀賞價值。",
     "userNotes": "",
     "mainImage": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-main.jpg",
     "hotspots": [
@@ -639,7 +639,7 @@
         "x": 30,
         "y": 50,
         "desc": "果實成熟時呈鮮豔朱紅色星狀開裂，內部顯露出漆黑有光澤的種子。",
-        "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-fruit.jpeg"
+        "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-fruit.jpg"
       }
     ]
   },
@@ -647,16 +647,16 @@
     "id": "tree-15",
     "family": "桃金娘科",
     "name": "白千層",
+    "engName": "Cajeput Tree, Paperbark",
     "latinName": "Melaleuca cajuputi subsp. cumingiana",
+    "species": "外來物種",
+    "behavior": "常綠喬木",
     "height": "10 - 20 米",
     "bloomPeriod": "11月 - 次年1月",
     "fruitPeriod": "次年3月 - 5月",
-    "shape": "樹冠呈狹圓錐形或不規則形，枝條稍下垂",
-    "bark": "灰白色，木栓質，層層剝落如海綿及紙張",
-    "leaves": "互生，披針形，革質，具3-7條縱向平行脈，揉碎有芳香味",
-    "flowers": "穗狀花序頂生，形如瓶刷，白色或淡黃色，雄蕊多數",
     "special": "★ 層狀海綿樹皮與瓶刷狀白花",
-    "description": "極具特色的樹種，其樹皮多層且鬆軟如海綿，可輕易一層層剝下。葉片富含精油，揉碎後散發獨特香氣。花朵密集如白色的洗瓶刷。",
+    "keywords": ["白千層", "脫皮樹", "千層皮", "瓶刷花", "平行脈", "桃金娘科", "Melaleuca", "paperbark"],
+    "description": "極具特色的常綠樹種，樹冠呈狹圓錐形。其樹皮灰白色、多層且鬆軟如海綿，可輕易一層層剝下。披針形葉片具3-7條平行主脈，富含精油，揉碎後散發獨特香氣。花朵密集生於枝頂，形如白色的洗瓶刷。",
     "userNotes": "",
     "mainImage": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-main.jpg",
     "hotspots": [
@@ -686,650 +686,6 @@
         "y": 45,
         "desc": "花序生於枝頂，白色雄蕊伸長形成如洗瓶刷般的造型，花後枝條繼續生長。",
         "img": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-flowers.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-16",
-    "family": "桃金娘科",
-    "name": "串錢柳",
-    "latinName": "Callistemon viminalis (Sol. ex Gaertn.) G.Don",
-    "height": "6 - 10 米",
-    "bloomPeriod": "3月 - 5月",
-    "fruitPeriod": "6月 - 8月",
-    "shape": "樹冠不規則，枝條細長柔軟且顯著下垂如柳樹",
-    "bark": "深褐色，粗糙，有厚裂紋",
-    "leaves": "互生，線形或狹披針形，堅硬，揉碎有香氣",
-    "flowers": "穗狀花序生於枝頂，鮮紅色，雄蕊長而密集，形似紅瓶刷",
-    "special": "★ 下垂枝條、紅瓶刷花與串珠狀木質果",
-    "description": "樹姿如柳樹般柔美下垂，春季開滿鮮紅色的瓶刷狀花朵。花謝後結出環繞枝條密生的木質球形蒴果，歷久不落，形似串串古錢，因而得名「串錢柳」。",
-    "userNotes": "",
-    "mainImage": "images/myrtaceae/callistemon viminalis/callistemon viminalis-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "深褐縱裂粗糙皮",
-        "x": 48,
-        "y": 70,
-        "desc": "主幹樹皮深褐色，具有深縱裂紋，質感較為粗糙。",
-        "img": "images/myrtaceae/callistemon viminalis/callistemon viminalis-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "下垂線狀葉",
-        "x": 62,
-        "y": 35,
-        "desc": "葉片狹長如線形，隨細長柔軟的枝條自然下垂，隨風飄逸。",
-        "img": "images/myrtaceae/callistemon viminalis/callistemon viminalis-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "鮮紅瓶刷與串錢果",
-        "x": 35,
-        "y": 45,
-        "desc": "鮮紅色雄蕊極為醒目；杯狀木質蒴果緊密環繞枝條生長，狀如串錢。",
-        "img": "images/myrtaceae/callistemon viminalis/callistemon viminalis-flowers.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-17",
-    "family": "棕櫚科",
-    "name": "大王椰子",
-    "latinName": "Roystonea regia (H.B.K.) O.F.Cook",
-    "height": "15 - 25 米",
-    "bloomPeriod": "3月 - 4月",
-    "fruitPeriod": "10月 - 12月",
-    "shape": "單幹直立，高大雄偉，樹幹中部或基部常膨大呈酒瓶狀",
-    "bark": "灰色，平滑，具顯著的環狀葉痕",
-    "leaves": "羽状複葉，簇生於幹頂，葉鞘綠色膨大且包栓幹頂",
-    "flowers": "肉穗花序生於葉鞘基部下方，花小，白色",
-    "special": "★ 瓶狀膨大樹幹與葉痕環紋",
-    "description": "高大雄偉的棕櫚科植物，常栽培為景觀樹或大道樹。樹幹光滑呈現灰白色，帶有環狀的舊葉脫落痕跡。樹幹中部常顯著膨大，氣勢磅礡。",
-    "userNotes": "",
-    "mainImage": "images/arecaceae/roystonea regia/roystonea regia-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "膨大灰白樹幹與葉痕",
-        "x": 50,
-        "y": 80,
-        "desc": "樹幹呈灰白色，平滑且帶有均勻的環狀葉痕，樹幹常有局部膨大現象。",
-        "img": "images/arecaceae/roystonea regia/roystonea regia-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "大型羽狀複葉",
-        "x": 60,
-        "y": 25,
-        "desc": "葉片巨大，羽狀全裂，四面伸展，基部具光滑濃綠色的圓筒狀葉鞘。",
-        "img": "images/arecaceae/roystonea regia/roystonea regia-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "幹莖下垂肉穗花序",
-        "x": 40,
-        "y": 45,
-        "desc": "花序從綠色葉鞘下方的樹幹直接抽出，分枝多且下垂，結暗紫色近球形核果。",
-        "img": "images/arecaceae/roystonea regia/roystonea regia-flowers.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-18",
-    "family": "棕櫚科",
-    "name": "假檳榔",
-    "latinName": "Archontophoenix alexandrae (F.Muell.) H.Wendl. & Drude",
-    "height": "10 - 20 米",
-    "bloomPeriod": "4月 - 7月",
-    "fruitPeriod": "8月 - 11月",
-    "shape": "單幹直立，纖細挺拔，樹冠優美",
-    "bark": "灰褐色，具緊密而清晰的環狀葉痕",
-    "leaves": "羽狀複葉，葉片背部常帶有銀白色粉末，葉鞘綠色呈筒狀包裹幹頂",
-    "flowers": "肉穗花序生於葉鞘基部，分枝多而下垂，花白色或淡紫色",
-    "special": "★ 纖細樹幹、葉背銀白與鮮紅小核果",
-    "description": "樹形比大王椰子更為纖細優雅。羽狀葉背常帶有銀白色，迎風翻飛時十分美觀。成熟果實呈鮮艷的紅色，成串垂掛於綠色葉鞘下方。",
-    "userNotes": "",
-    "mainImage": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "纖細環紋樹幹",
-        "x": 48,
-        "y": 75,
-        "desc": "樹幹較直且均勻，表面留有密集而平行的環狀葉脫落痕跡。",
-        "img": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "雙色羽狀葉（背銀白）",
-        "x": 62,
-        "y": 30,
-        "desc": "羽狀葉正面濃綠，背面帶有獨特的銀白色微毛或粉霜。",
-        "img": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "成串鮮紅球形核果",
-        "x": 35,
-        "y": 50,
-        "desc": "花序生於光滑綠色葉鞘下方，成熟時結出大量亮紅色的球形小核果。",
-        "img": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-flowers.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-19",
-    "family": "棕櫚科",
-    "name": "蒲葵",
-    "latinName": "Livistona chinensis (Jacq.) R.Br. ex Mart.",
-    "height": "5 - 15 米",
-    "bloomPeriod": "4月 - 5月",
-    "fruitPeriod": "10月 - 12月",
-    "shape": "單幹直立，頂端簇生大型掌狀葉，呈球形樹冠",
-    "bark": "灰色，粗糙，環狀葉痕極為密集，常殘留棕色網狀纖維（棕衣）",
-    "leaves": "掌狀深裂，葉片近圓形，裂片頂端深裂且顯著下垂",
-    "flowers": "肉穗花序生於葉腋間，分枝多，花小，淡黃色",
-    "special": "★ 掌狀下垂扇葉與古風葵扇原料",
-    "description": "經典的本土棕櫚植物。其巨大的扇形掌狀葉，葉片尖端會自然柔軟下垂，造型優雅。傳統上常用其葉片製作葵扇（蒲扇），幹基纖維可作繩索。",
-    "userNotes": "",
-    "mainImage": "images/arecaceae/livistona chinensis/livistona chinensis-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "殘留棕衣灰褐幹",
-        "x": 50,
-        "y": 75,
-        "desc": "樹幹灰色，常殘留枯死葉柄基部及棕褐色網狀纖維（棕衣）。",
-        "img": "images/arecaceae/livistona chinensis/livistona chinensis-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "掌狀下垂大扇葉",
-        "x": 65,
-        "y": 30,
-        "desc": "葉片呈大型掌狀深裂，裂片先端呈2裂且顯著折垂，葉柄邊緣具倒刺。",
-        "img": "images/arecaceae/livistona chinensis/livistona chinensis-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "藍綠色橢圓核果",
-        "x": 30,
-        "y": 45,
-        "desc": "肉穗花序生於葉柄間；成熟果實為橢圓形核果，呈現暗藍綠色或黑紫色。",
-        "img": "images/arecaceae/livistona chinensis/livistona chinensis-flowers.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-20",
-    "family": "使君子科",
-    "name": "欖仁",
-    "latinName": "Terminalia catappa L.",
-    "height": "10 - 25 米",
-    "bloomPeriod": "3月 - 7月",
-    "fruitPeriod": "7月 - 12月",
-    "shape": "主幹挺直，枝條輪生水平開展，樹冠呈明顯層次分明的平頂傘形",
-    "bark": "灰褐色，老時呈縱裂或不規則薄片狀剝落",
-    "leaves": "倒卵形，巨大，革質，簇生於枝端；秋冬季變紅或紫紅色後脫落",
-    "flowers": "腋生穗狀花序，花小，無花瓣，黃綠色",
-    "special": "★ 輪生平展枝條、紅葉與橄欖狀堅果",
-    "description": "典型的海岸樹種，耐鹽抗風。枝條呈層狀水平開展，樹型如層塔。冬季落葉前，葉片會轉為極為鮮豔的紫紅色。果實呈橄欖狀，外果皮具纖維質，可漂浮於海面傳播。",
-    "userNotes": "",
-    "mainImage": "images/combretaceae/terminalia catappa/terminalia catappa-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "灰褐粗糙縱裂皮",
-        "x": 48,
-        "y": 75,
-        "desc": "樹幹挺直，樹皮呈灰褐色，老樹幹表面有深淺不一的縱向溝裂。",
-        "img": "images/combretaceae/terminalia catappa/terminalia catappa-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "巨大倒卵形紅變葉",
-        "x": 65,
-        "y": 30,
-        "desc": "葉片極大且集中於枝端，基部心形或帶一對腺點，秋冬季節轉為滿樹紅葉。",
-        "img": "images/combretaceae/terminalia catappa/terminalia catappa-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "橄欖狀扁平核果",
-        "x": 30,
-        "y": 45,
-        "desc": "果實呈扁平橄欖形，邊緣有肋脊，成熟時由黃綠轉為暗紫色，內果皮堅硬。",
-        "img": "images/combretaceae/terminalia catappa/terminalia catappa-fruit.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-21",
-    "family": "使君子科",
-    "name": "小葉欖仁",
-    "latinName": "Terminalia neotaliala Capuron",
-    "height": "8 - 15 米",
-    "bloomPeriod": "4月 - 6月",
-    "fruitPeriod": "7月 - 9月",
-    "shape": "主幹細長挺直，枝條輪生水平開展，樹型極為柔美富層次感",
-    "bark": "淺灰褐色，平滑，具淺縱裂紋",
-    "leaves": "小葉倒卵形，極小，4-6片簇生於短枝端，薄革質，全緣",
-    "flowers": "穗狀花序，花極小，淡綠色或黃綠色，不甚顯眼",
-    "special": "★ 寶塔狀分層樹姿與極小簇生葉",
-    "description": "極受歡迎的園景樹與行道樹。與欖仁樹同屬，但葉片極小且更為緻密。主幹輪生枝條分層極為規律，遠看如一棟棟層層疊疊的綠色寶塔，樹姿優雅透光。",
-    "userNotes": "",
-    "mainImage": "images/combretaceae/terminalia mantaly/terminalia mantaly-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "灰白光滑小皮孔",
-        "x": 50,
-        "y": 80,
-        "desc": "樹幹相對細長且直立，樹皮較光滑，帶有細小的白色皮孔。",
-        "img": "images/combretaceae/terminalia mantaly/terminalia mantaly-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "緻密簇生小葉",
-        "x": 60,
-        "y": 25,
-        "desc": "小葉如倒卵形，長僅2-5厘米，數片簇生，柔細密生，使樹冠呈現透光輕盈感。",
-        "img": "images/combretaceae/terminalia mantaly/terminalia mantaly-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "小型紡錘狀核果",
-        "x": 35,
-        "y": 45,
-        "desc": "果實為極小的紡錘形核果，成熟時呈黑褐色，結實量大。",
-        "img": "images/combretaceae/terminalia mantaly/terminalia mantaly-fruit.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-22",
-    "family": "木麻黃科",
-    "name": "木麻黃",
-    "latinName": "Casuarina equisetifolia L.",
-    "height": "10 - 30 米",
-    "bloomPeriod": "4月 - 5月",
-    "fruitPeriod": "7月 - 10月",
-    "shape": "樹冠呈圓錐形或不規則疏散狀，枝條細長下垂如松針",
-    "bark": "黑褐色，粗糙，呈狹長薄片狀縱裂與剝落",
-    "leaves": "退化為極小的鱗片狀，環生於綠色木質化的細軟小枝節上（輪生）",
-    "flowers": "單性花，雄花序穗狀頂生，雌花序球形生於側枝",
-    "special": "★ 針狀綠色小枝與松果狀木質球果",
-    "description": "強健的防風固沙樹種，極度耐鹽、耐旱、耐貧瘠。外表看似松樹，但看似「松針」的結構其實是其特化的綠色小枝，真正的葉片已退化為節上的微小鱗片。",
-    "userNotes": "",
-    "mainImage": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "黑褐縱裂剝落皮",
-        "x": 48,
-        "y": 70,
-        "desc": "樹皮厚重粗糙，深黑褐色，呈長條片狀不規則縱向開裂剝落。",
-        "img": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "節狀綠色小枝與退化鱗葉",
-        "x": 62,
-        "y": 35,
-        "desc": "細長圓柱狀的小枝具多個關節，具光合作用功能；葉片退化為每節上的小齒狀鱗片。",
-        "img": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "球果狀木質果實",
-        "x": 30,
-        "y": 50,
-        "desc": "果序呈小松果狀的木質球果，橢圓形，成熟時苞片張開釋放帶翅小堅果。",
-        "img": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-fruit.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-23",
-    "family": "白花菜科",
-    "name": "樹頭菜",
-    "latinName": "Crateva unilocularis Buch.-Ham.",
-    "height": "8 - 15 米",
-    "bloomPeriod": "3月 - 5月 (先花後葉或同時)",
-    "fruitPeriod": "8月 - 10月",
-    "shape": "樹冠呈圓球形，枝葉茂密",
-    "bark": "灰褐色，平滑，皮孔顯著",
-    "leaves": "三出複葉，小葉卵形或披針形，紙質，全緣，網脈明顯",
-    "flowers": "傘房花序頂生，花大，初開時白色，後轉為淡黃色，雄蕊紫紅色極長且突出",
-    "special": "★ 白黃雙色花與長紫紅雄蕊",
-    "description": "春季常見的開花喬木。花朵盛開時極為濃密，花色會由最初的純白漸變為奶油黃，配合大量如絲般長長伸出的紫紅色雄蕊，如同許多蝴蝶翩翩起舞。",
-    "userNotes": "",
-    "mainImage": "images/capparaceae/crateva unilocularis/crateva unilocularis-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "灰褐色顯著皮孔",
-        "x": 50,
-        "y": 75,
-        "desc": "樹幹平滑，呈灰色或灰褐色，散佈著許多橫向或散生的白色小皮孔。",
-        "img": "images/capparaceae/crateva unilocularis/crateva unilocularis-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "掌狀三出複葉",
-        "x": 65,
-        "y": 30,
-        "desc": "每條葉柄頂端長有三片小葉（三出複葉），薄紙質，葉背脈絡清晰。",
-        "img": "images/capparaceae/crateva unilocularis/crateva unilocularis-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "長絲紫蕊雙色花",
-        "x": 30,
-        "y": 45,
-        "desc": "花朵會由白轉黃，數十條紫紅色的長雄蕊向外噴灑伸展，極具視覺特色。",
-        "img": "images/capparaceae/crateva unilocularis/crateva unilocularis-flowers.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-24",
-    "family": "紫葳科",
-    "name": "火焰樹",
-    "latinName": "Spathodea campanulata P.Beauv.",
-    "height": "10 - 20 米",
-    "bloomPeriod": "1月 - 5月",
-    "fruitPeriod": "6月 - 8月",
-    "shape": "樹冠寬廣，呈圓頂形或傘形",
-    "bark": "灰褐色，淺縱裂，樹幹基部常有顯著板根",
-    "leaves": "奇數羽狀複葉，小葉卵狀橢圓形，葉背基部具1-2個腺體",
-    "flowers": "頂生總狀花序，花冠大型，鐘狀，鮮艷橙紅色，邊緣帶黃色波浪邊",
-    "special": "★ 橙紅鬱金香大花與含水花苞",
-    "description": "著名的熱帶觀賞樹種。花朵大而繁密，呈鮮豔的緋紅或橙紅色，遠看如樹頂燃燒的火焰。花蕾在開花前呈彎曲的舟形，內部積聚水份，擠壓時會噴出水滴。",
-    "userNotes": "",
-    "mainImage": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "淺裂灰褐幹與板根",
-        "x": 48,
-        "y": 80,
-        "desc": "樹幹粗壯直立，基部常形成突出的板根以支撐巨大樹體。",
-        "img": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "奇數羽狀複葉",
-        "x": 62,
-        "y": 30,
-        "desc": "葉片較大，羽状全裂，小葉對生，表面深綠光滑，背面脈上被毛。",
-        "img": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "火焰鐘狀花與蓄水苞",
-        "x": 35,
-        "y": 45,
-        "desc": "花朵如大型鬱金香，橙紅色帶黃邊；未開的花苞呈月牙狀且儲有水份。",
-        "img": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-flowers.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-25",
-    "family": "桑科",
-    "name": "黃葛樹",
-    "latinName": "Ficus virens Ait.",
-    "height": "15 - 20 米",
-    "bloomPeriod": "4月 - 5月",
-    "fruitPeriod": "8月 - 11月",
-    "shape": "樹冠龐大，呈廣展的圓頭形或傘形",
-    "bark": "灰色或灰褐色，平滑或具微細裂紋，老樹常有板根及氣生根",
-    "leaves": "單葉互生，橢圓形或長橢圓形，革質，全緣，新葉常呈現紅色或淡紅色",
-    "flowers": "隱頭花序 (榕果)，球形，成對或單生於葉腋",
-    "special": "★ 龐大樹冠與不定時換葉紅新芽",
-    "description": "大型半落葉喬木，樹冠極為龐大，遮蔭效果極佳。生命力極強，常附生於岩石或牆壁上 (牆樹)。換葉期不固定，發新芽時滿樹嫩紅，極具觀賞價值。",
-    "userNotes": "",
-    "mainImage": "images/moraceae/ficus virens/ficus virens-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "灰色平滑皮具板根",
-        "x": 48,
-        "y": 75,
-        "desc": "樹皮灰色，較平滑；老樹幹基部常發展出發達的板根與支柱根。",
-        "img": "images/moraceae/ficus virens/ficus virens-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "橢圓革質葉與紅芽",
-        "x": 62,
-        "y": 30,
-        "desc": "葉片光滑革質；每年換葉時舊葉脫落，新芽迅速抽出並呈現顯眼之亮紅色。",
-        "img": "images/moraceae/ficus virens/ficus virens-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "球形隱頭榕果",
-        "x": 35,
-        "y": 45,
-        "desc": "花朵隱於榕果內；果實近球形，成熟時由綠轉為紫紅色或黃白色。",
-        "img": "images/moraceae/ficus virens/ficus virens-fruit.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-26",
-    "family": "桑科",
-    "name": "青果榕",
-    "latinName": "Ficus varicosa Jacq.",
-    "height": "10 - 15 米",
-    "bloomPeriod": "4月 - 6月",
-    "fruitPeriod": "8月 - 12月",
-    "shape": "樹冠開展，枝葉茂密",
-    "bark": "灰褐色，平滑，具顯著縱向皮孔",
-    "leaves": "單葉互生，倒卵狀橢圓形或長圓形，革質，邊緣全緣，葉背脈網明顯",
-    "flowers": "隱頭花序，榕果大，簇生於老樹幹或大枝條上 (幹生花現象)",
-    "special": "★ 幹生花現象與老莖結大榕果",
-    "description": "常綠喬木，最具特色的特徵為顯著的「幹生花」與「幹生果」現象，大型的榕果直接密密麻麻地結主幹與大枝條上，呈現獨特的熱帶雨林生態景觀。",
-    "userNotes": "",
-    "mainImage": "images/moraceae/ficus variegata/ficus variegata-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "灰褐色具皮孔樹皮",
-        "x": 48,
-        "y": 75,
-        "desc": "樹幹質感相對平滑，呈灰色或灰褐色，表面帶有許多圓形或縱向的小皮孔。",
-        "img": "images/moraceae/ficus variegata/ficus variegata-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "倒卵狀革質大葉",
-        "x": 62,
-        "y": 30,
-        "desc": "葉片較大，呈現倒卵狀橢圓形，質感厚革質，表面光滑深綠。",
-        "img": "images/moraceae/ficus variegata/ficus variegata-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "幹生密集大榕果",
-        "x": 35,
-        "y": 50,
-        "desc": "榕果體積較大，直接密集簇生於老樹幹及主枝上，成熟時呈黃綠色或淡紅色。",
-        "img": "images/moraceae/ficus variegata/ficus variegata-fruit.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-27",
-    "family": "槭樹科",
-    "name": "掌葉槭",
-    "latinName": "Acer palmatum Thunb.",
-    "height": "4 - 8 米",
-    "bloomPeriod": "4月 - 5月",
-    "fruitPeriod": "9月 - 10月",
-    "shape": "樹冠圓球形或傘形，枝條纖細平展",
-    "bark": "灰褐色或紫褐色，平滑，小枝光滑",
-    "leaves": "掌狀5-9深裂，裂片披針形，邊緣有銳鋸齒，秋冬季轉為鮮紅色",
-    "flowers": "傘房花序，花小，紫紅色；雙翅果呈「人」字形張開",
-    "special": "★ 掌狀深裂葉與秋冬紅葉",
-    "description": "落葉小喬木，為極受歡迎的觀賞樹種。葉片呈現精緻的掌狀深裂，秋冬季節隨著氣溫下降會轉為極為濃郁鮮艷的紅葉，為四季變化明顯的代表植物。",
-    "userNotes": "",
-    "mainImage": "images/aceraceae/acer palmatum/acer palmatum-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "灰褐色平滑樹皮",
-        "x": 48,
-        "y": 75,
-        "desc": "樹皮光滑，呈現灰褐色，小枝細長且常帶有紫紅色光澤。",
-        "img": "images/aceraceae/acer palmatum/acer palmatum-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "掌狀深裂鋸齒葉",
-        "x": 62,
-        "y": 30,
-        "desc": "葉片呈掌狀5至9深裂，裂片邊緣帶有尖銳鋸齒，秋冬季滿樹變紅。",
-        "img": "images/aceraceae/acer palmatum/acer palmatum-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "翅果與紫紅小花",
-        "x": 35,
-        "y": 45,
-        "desc": "花朵小而呈紫紅色；果實為帶翅膀的雙翅果，能如螺旋槳般隨風飛散。",
-        "img": "images/aceraceae/acer palmatum/acer palmatum-fruit.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-28",
-    "family": "南洋杉科",
-    "name": "柱狀南洋杉",
-    "latinName": "Araucaria columnaris (Forster) Hook.",
-    "height": "20 - 40 米",
-    "bloomPeriod": "11月 - 12月",
-    "fruitPeriod": "次年8月 - 10月",
-    "shape": "樹幹極直，樹冠呈極為狹長的圓柱形或塔形",
-    "bark": "暗褐色或黑褐色，厚實，呈橫向薄片狀剝落",
-    "leaves": "針狀或鱗片狀，螺旋狀密生於枝條上，鑽形，質感硬實",
-    "flowers": "雌雄異株，雄球花穗狀，雌球花近球形，球果大且具刺",
-    "special": "★ 狹長筆直柱狀樹型與刺狀球果",
-    "description": "樹形極其特殊的常綠針葉大喬木，樹幹極為挺拔筆直，整體樹冠呈非常狹窄的柱狀。遠看如一根根豎立的綠色柱子或巨型塔樓，視覺辨識度極高。",
-    "userNotes": "",
-    "mainImage": "images/araucariaceae/araucaria columnaris/araucaria columnaris-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "暗橫向剝落皮",
-        "x": 50,
-        "y": 80,
-        "desc": "樹皮呈暗褐色至黑褐色，質感較厚，常呈現環狀或橫向的薄片狀剝落。",
-        "img": "images/araucariaceae/araucaria columnaris/araucaria columnaris-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "螺旋密生硬鑽葉",
-        "x": 60,
-        "y": 25,
-        "desc": "葉片小而呈硬質的鑽形或鱗片狀，緊密且螺旋狀地包覆著細長的分枝。",
-        "img": "images/araucariaceae/araucaria columnaris/araucaria columnaris-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "木質帶刺大球果",
-        "x": 40,
-        "y": 45,
-        "desc": "球果體積較大，呈球形或卵圓形，苞片尖端帶有尖刺，成熟時木質化。",
-        "img": "images/araucariaceae/araucaria columnaris/araucaria columnaris-fruit.jpg"
-      }
-    ]
-  },
-  {
-    "id": "tree-29",
-    "family": "大戟科",
-    "name": "白楸",
-    "latinName": "Mallotus paniculatus (Lam.) Muell. Arg.",
-    "height": "5 - 15 米",
-    "bloomPeriod": "6月 - 8月",
-    "fruitPeriod": "9月 - 11月",
-    "shape": "樹冠不規則，枝葉較為疏散",
-    "bark": "灰褐色，淺縱裂，新梢及葉背面被星狀絨毛",
-    "leaves": "單葉互生，菱狀卵形或掌狀3裂，葉背密白至黃褐色絨毛",
-    "flowers": "圓錐花序頂生，花小，無花瓣，密被絨毛；蒴果具軟刺",
-    "special": "★ 葉背密集白絨毛與帶軟刺蒴果",
-    "description": "原生先鋒樹種，常見於二次生林與路旁。其顯著特徵為葉片背面密佈白色或黃白色的星狀絨毛，當微風吹拂時，樹冠會呈現綠白相間、翻浪般的特殊視覺效果。",
-    "userNotes": "",
-    "mainImage": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "灰褐淺裂絨毛皮",
-        "x": 48,
-        "y": 75,
-        "desc": "樹皮灰褐色，表面有細淺縱裂，嫩枝與幼芽處密生白色的星狀短絨毛。",
-        "img": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "葉背白毛菱狀葉",
-        "x": 62,
-        "y": 30,
-        "desc": "葉片呈菱狀卵形 (或微3裂)，表面綠色，葉背則全被白絨毛覆蓋，對比強烈。",
-        "img": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "星狀毛刺球蒴果",
-        "x": 35,
-        "y": 50,
-        "desc": "花序呈大形圓錐狀；果實為球形蒴果，表面密生軟刺與白色星狀絨毛。",
-        "img": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-flowers.jpg"
       }
     ]
   }

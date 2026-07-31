@@ -6,4 +6,42 @@
   overflow: hidden;
 }
 
-/* 若你有其他自訂樣式，也可以繼續加在下面 */
+/* 一般關鍵字按鈕（無厚重外框，預設極簡風格） */
+.kw-btn {
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.5rem;
+  background-color: #f5f5f4; /* stone-100 */
+  color: #44403c; /* stone-700 */
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  user-select: none; /* 避免連續點擊時選取到文字 */
+}
+
+.kw-btn:hover {
+  background-color: #e7e5e4; /* stone-200 */
+}
+
+.kw-btn.active {
+  background-color: #556B2F !important;
+  color: #ffffff !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* 微微的陰影增加質感 */
+}
+
+/* 花色圓形按鈕 */
+.color-btn {
+  padding: 2px;
+  border-radius: 9999px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.color-btn.active {
+  /* 選取時：外圍一圈主色框 + 1.5px 白色留白間隙 (更高質感) */
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #556B2F; 
+}

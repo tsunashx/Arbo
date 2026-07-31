@@ -89,24 +89,56 @@
 
   <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16 md:mb-6">
     
-    <section id="tab-catalog" class="tab-content space-y-6">
-  <div class="bg-white p-4 rounded-xl shadow-sm border border-stone-200/80 flex flex-col gap-3">
-    <!-- 第一行：搜尋框（w-full 佔滿整行） -->
+<section id="tab-catalog" class="tab-content space-y-6">
+  
+  <!-- 篩選與搜尋控制面板區塊 -->
+  <div class="bg-white p-4 rounded-2xl shadow-sm border border-stone-200/60 flex flex-col gap-3">
+    
+    <!-- 第一行：搜尋框 -->
     <div class="relative w-full">
-      <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-xs"></i>
-      <input type="text" id="search-input" oninput="renderCatalog()" placeholder="搜尋樹木名稱、科別、特徵..." class="w-full pl-9 pr-4 py-2 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-[#556B2F] text-xs">
+      <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 text-xs"></i>
+      <input type="text" id="search-input" oninput="renderCatalog()" placeholder="搜尋樹木名稱、科別、特徵..." class="w-full pl-9 pr-4 py-2 rounded-xl bg-stone-50 border border-stone-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#556B2F] text-xs transition-all">
     </div>
 
-    <!-- 第二行：科別過濾器（佔下一行，可橫向滾動） -->
-    <div class="w-full flex items-center space-x-2 overflow-x-auto py-1">
+    <!-- 第二行：科別過濾器 -->
+    <div class="w-full flex items-center space-x-2 overflow-x-auto py-1 border-b border-stone-100 pb-1">
       <i class="fa-solid fa-filter text-stone-400 text-xs shrink-0"></i>
-      <span class="text-xs text-stone-500 font-bold shrink-0">科別過濾：</span>
+      <span class="text-xs text-stone-500 font-bold shrink-0">科別</span>
       <div id="family-filters" class="flex space-x-1 shrink-0"></div>
     </div>
+
+    <!-- 第三行：進階篩選觸發按鈕與重置 -->
+    <div class="w-full flex justify-between items-center pt-1">
+      <button onclick="toggleFeatureModal()" class="flex items-center space-x-2 px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-100 hover:bg-[#556B2F] hover:text-white text-stone-700 transition-all shadow-xs">
+        <i class="fa-solid fa-sliders"></i>
+        <span>進階特徵篩選</span>
+        <span id="feature-count-badge" class="hidden bg-rose-500 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold ml-0.5">0</span>
+      </button>
+
+      <button onclick="clearFeatureFilters()" class="text-xs text-rose-600 hover:text-rose-700 font-bold flex items-center gap-1">
+        <i class="fa-solid fa-rotate-left"></i> 重置條件
+      </button>
+    </div>
+
   </div>
 
-      <div id="tree-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-    </section>
+  <!-- 樹木卡片渲染容器 -->
+  <div id="tree-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+</section>
+
+<section id="tab-knowledge" class="tab-content hidden space-y-6 max-w-5xl mx-auto">
+  <div class="bg-gradient-to-r from-[#3E4A24] to-[#556B2F] text-white p-6 sm:p-8 rounded-2xl shadow-lg space-y-2">
+    <span class="bg-[#D4AF37] text-stone-950 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest inline-block">
+      KNOWLEDGE BASE
+    </span>
+    <h2 class="text-2xl sm:text-3xl font-extrabold">樹木學與風險管理知識筆記</h2>
+    <p class="text-stone-200 text-xs sm:text-sm leading-relaxed max-w-2xl">
+      點選下方知識卡片，開啟專屬講堂與詳細文章內容。
+    </p>
+  </div>
+
+  <div id="knowledge-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+</section>
 
     <section id="tab-knowledge" class="tab-content hidden space-y-6 max-w-5xl mx-auto">
       <div class="bg-gradient-to-r from-[#3E4A24] to-[#556B2F] text-white p-6 sm:p-8 rounded-2xl shadow-lg space-y-2">
@@ -310,5 +342,228 @@
     </div>
   </div>
   <script src="js/script.js"></script>
+  <!-- 特徵篩選 Pop-up Window 彈窗 -->
+<div id="feature-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-all">
+  
+  <!-- 半透明背景遮罩 -->
+  <div onclick="toggleFeatureModal()" class="fixed inset-0 bg-stone-900/40 backdrop-blur-xs transition-opacity"></div>
+
+  <!-- 彈窗主體卡片：【關鍵】固定高度 (例如 h-[550px] 或 h-[80vh]) + flex-col -->
+  <div class="relative w-full max-w-2xl h-[550px] max-h-[85vh] bg-white rounded-2xl shadow-2xl border border-stone-100 flex flex-col overflow-hidden z-10 animate-in fade-in zoom-in-95 duration-200">
+    
+    <!-- 1. 固定頂部 Header (不隨滾動移動) -->
+    <div class="px-6 py-4 border-b border-stone-100 flex items-center justify-between bg-stone-50/80 shrink-0">
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-5 bg-[#556B2F] rounded-full"></div>
+        <h3 class="font-black text-stone-800 text-sm sm:text-base">植物特徵篩選 (Feature Filters)</h3>
+      </div>
+      <button onclick="toggleFeatureModal()" class="text-stone-400 hover:text-stone-700 w-8 h-8 rounded-full hover:bg-stone-200/50 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-base"></i>
+      </button>
+    </div>
+
+    <!-- 2. 中間內容區：【關鍵】flex-1 + overflow-y-auto (內部獨立上下滾動) -->
+    <div class="p-6 overflow-y-auto flex-1 space-y-4 text-xs divide-y divide-stone-100 custom-scrollbar">
+      <!-- 1. 物種來源與習性 -->
+      <details class="group pb-2 transition-all" open>
+        <summary class="flex items-center justify-between py-1 cursor-pointer font-black text-stone-800 hover:text-[#556B2F] transition-colors select-none">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-globe text-[#556B2F]"></i>
+            <span>一、物種來源與習性 (Species & Behavior)</span>
+          </span>
+          <i class="fa-solid fa-chevron-down text-stone-400 group-open:rotate-180 transition-transform duration-200 text-xs"></i>
+        </summary>
+        
+        <div class="pt-3 grid grid-cols-2 gap-4">
+          <div>
+            <div class="text-[11px] font-bold text-stone-400 mb-1.5">來源 (Species)</div>
+            <div class="flex flex-wrap gap-1.5">
+              <button onclick="toggleKeywordFilter('原生')" class="kw-btn">原生物種</button>
+              <button onclick="toggleKeywordFilter('外來')" class="kw-btn">外來物種</button>
+            </div>
+          </div>
+          <div>
+            <div class="text-[11px] font-bold text-stone-400 mb-1.5">葉性 (Behavior)</div>
+            <div class="flex flex-wrap gap-1.5">
+              <button onclick="toggleKeywordFilter('常綠')" class="kw-btn">常綠喬木</button>
+              <button onclick="toggleKeywordFilter('落葉')" class="kw-btn">落葉喬木</button>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2. 葉片系統特徵 -->
+      <details class="group pt-3 pb-2 transition-all">
+        <summary class="flex items-center justify-between py-1 cursor-pointer font-black text-stone-800 hover:text-[#556B2F] transition-colors select-none">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-leaf text-[#556B2F]"></i>
+            <span>二、葉片系統特徵 (Leaf Characteristics)</span>
+          </span>
+          <i class="fa-solid fa-chevron-down text-stone-400 group-open:rotate-180 transition-transform duration-200 text-xs"></i>
+        </summary>
+        
+        <div class="pt-3 space-y-3">
+          <div>
+            <div class="text-[11px] font-bold text-stone-400 mb-1.5">1. 組合類型 (Leaf Type)</div>
+            <div class="flex flex-wrap gap-1.5">
+              <button onclick="toggleKeywordFilter('單葉')" class="kw-btn">單葉</button>
+              <button onclick="toggleKeywordFilter('羽狀複葉')" class="kw-btn">羽狀複葉</button>
+              <button onclick="toggleKeywordFilter('二回羽狀')" class="kw-btn">二回羽狀</button>
+              <button onclick="toggleKeywordFilter('掌狀複葉')" class="kw-btn">掌狀複葉</button>
+              <button onclick="toggleKeywordFilter('三出複葉')" class="kw-btn">三出複葉</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="text-[11px] font-bold text-stone-400 mb-1.5 pt-1">2. 葉形與質地 (Shape & Texture)</div>
+            <div class="flex flex-wrap gap-1.5">
+              <button onclick="toggleKeywordFilter('心形')" class="kw-btn">心形</button>
+              <button onclick="toggleKeywordFilter('橢圓形')" class="kw-btn">橢圓/卵形</button>
+              <button onclick="toggleKeywordFilter('披針形')" class="kw-btn">披針/長條形</button>
+              <button onclick="toggleKeywordFilter('掌狀裂葉')" class="kw-btn">掌狀裂葉</button>
+              <button onclick="toggleKeywordFilter('針狀')" class="kw-btn">針狀/鱗狀</button>
+              <button onclick="toggleKeywordFilter('扇形')" class="kw-btn">扇形</button>
+              <button onclick="toggleKeywordFilter('菱形')" class="kw-btn">菱形/三角形</button>
+              <button onclick="toggleKeywordFilter('革質')" class="kw-btn">革質(厚光滑)</button>
+              <button onclick="toggleKeywordFilter('紙質')" class="kw-btn">紙質(薄)</button>
+              <button onclick="toggleKeywordFilter('絨毛')" class="kw-btn">毛質/絨毛</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="text-[11px] font-bold text-stone-400 mb-1.5 pt-1">3. 葉序與葉緣 (Arrangement & Margin)</div>
+            <div class="flex flex-wrap gap-1.5">
+              <button onclick="toggleKeywordFilter('互生')" class="kw-btn">互生</button>
+              <button onclick="toggleKeywordFilter('對生')" class="kw-btn">對生</button>
+              <button onclick="toggleKeywordFilter('輪生')" class="kw-btn">輪生</button>
+              <button onclick="toggleKeywordFilter('簇生')" class="kw-btn">簇生</button>
+              <button onclick="toggleKeywordFilter('全緣')" class="kw-btn">全緣(平滑)</button>
+              <button onclick="toggleKeywordFilter('鋸齒緣')" class="kw-btn">鋸齒緣</button>
+              <button onclick="toggleKeywordFilter('鈍鋸齒')" class="kw-btn">鈍鋸齒緣</button>
+              <button onclick="toggleKeywordFilter('波浪緣')" class="kw-btn">波浪緣</button>
+              <button onclick="toggleKeywordFilter('深裂')" class="kw-btn">深裂緣</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="text-[11px] font-bold text-stone-400 mb-1.5 pt-1">4. 葉脈脈型 (Venation)</div>
+            <div class="flex flex-wrap gap-1.5">
+              <button onclick="toggleKeywordFilter('羽狀脈')" class="kw-btn">羽狀脈</button>
+              <button onclick="toggleKeywordFilter('掌狀脈')" class="kw-btn">掌狀脈</button>
+              <button onclick="toggleKeywordFilter('三出脈')" class="kw-btn">三出脈</button>
+              <button onclick="toggleKeywordFilter('平行脈')" class="kw-btn">平行脈</button>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- 3. 樹幹與樹皮結構 -->
+      <details class="group pt-3 pb-2 transition-all">
+        <summary class="flex items-center justify-between py-1 cursor-pointer font-black text-stone-800 hover:text-[#556B2F] transition-colors select-none">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-tree text-[#556B2F]"></i>
+            <span>三、樹幹與樹皮結構 (Trunk & Bark)</span>
+          </span>
+          <i class="fa-solid fa-chevron-down text-stone-400 group-open:rotate-180 transition-transform duration-200 text-xs"></i>
+        </summary>
+        
+        <div class="pt-3">
+          <div class="flex flex-wrap gap-1.5">
+            <button onclick="toggleKeywordFilter('光滑')" class="kw-btn">光滑型</button>
+            <button onclick="toggleKeywordFilter('縱裂')" class="kw-btn">縱裂型</button>
+            <button onclick="toggleKeywordFilter('剝落')" class="kw-btn">鱗片/塊狀剝落</button>
+            <button onclick="toggleKeywordFilter('皮孔')" class="kw-btn">皮孔明顯</button>
+            <button onclick="toggleKeywordFilter('環紋')" class="kw-btn">環紋明顯</button>
+            <button onclick="toggleKeywordFilter('刺狀')" class="kw-btn">刺狀突起</button>
+            <button onclick="toggleKeywordFilter('氣生根')" class="kw-btn">氣生根/板根</button>
+            <button onclick="toggleKeywordFilter('乳汁')" class="kw-btn">乳汁/汁液分泌</button>
+          </div>
+        </div>
+      </details>
+
+      <!-- 4. 花朵與果實特徵 -->
+      <details class="group pt-3 pb-2 transition-all">
+        <summary class="flex items-center justify-between py-1 cursor-pointer font-black text-stone-800 hover:text-[#556B2F] transition-colors select-none">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-apple-whole text-[#556B2F]"></i>
+            <span>四、花朵與果實特徵 (Flowers & Fruits)</span>
+          </span>
+          <i class="fa-solid fa-chevron-down text-stone-400 group-open:rotate-180 transition-transform duration-200 text-xs"></i>
+        </summary>
+        
+        <div class="pt-3 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-[11px] font-bold text-stone-400 shrink-0">花色選擇：</span>
+            <div class="flex items-center gap-2.5">
+              <button onclick="toggleKeywordFilter('白花')" title="白/奶油色" class="color-btn group">
+                <span class="w-5 h-5 rounded-full bg-white border border-stone-300 block transition-transform group-hover:scale-110"></span>
+              </button>
+              <button onclick="toggleKeywordFilter('黃花')" title="黃/橙色" class="color-btn group">
+                <span class="w-5 h-5 rounded-full bg-amber-400 block transition-transform group-hover:scale-110"></span>
+              </button>
+              <button onclick="toggleKeywordFilter('紅花')" title="紅/粉紅色" class="color-btn group">
+                <span class="w-5 h-5 rounded-full bg-rose-500 block transition-transform group-hover:scale-110"></span>
+              </button>
+              <button onclick="toggleKeywordFilter('紫花')" title="紫/藍色" class="color-btn group">
+                <span class="w-5 h-5 rounded-full bg-purple-500 block transition-transform group-hover:scale-110"></span>
+              </button>
+              <button onclick="toggleKeywordFilter('綠花')" title="綠色/不明顯" class="color-btn group">
+                <span class="w-5 h-5 rounded-full bg-emerald-600 block transition-transform group-hover:scale-110"></span>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <div class="text-[11px] font-bold text-stone-400 mb-1.5 pt-1">果實與氣味類型</div>
+            <div class="flex flex-wrap gap-1.5">
+              <button onclick="toggleKeywordFilter('漿果')" class="kw-btn">漿果/核果</button>
+              <button onclick="toggleKeywordFilter('豆莢')" class="kw-btn">豆莢/角果</button>
+              <button onclick="toggleKeywordFilter('翅果')" class="kw-btn">翅果</button>
+              <button onclick="toggleKeywordFilter('毬果')" class="kw-btn">毬果</button>
+              <button onclick="toggleKeywordFilter('蒴果')" class="kw-btn">蒴果</button>
+              <button onclick="toggleKeywordFilter('濃郁香味')" class="kw-btn">濃郁香味</button>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- 5. 整體樹型姿態 -->
+      <details class="group pt-3 pb-2 transition-all">
+        <summary class="flex items-center justify-between py-1 cursor-pointer font-black text-stone-800 hover:text-[#556B2F] transition-colors select-none">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-mountain-sun text-[#556B2F]"></i>
+            <span>五、整體樹型姿態 (Tree Form)</span>
+          </span>
+          <i class="fa-solid fa-chevron-down text-stone-400 group-open:rotate-180 transition-transform duration-200 text-xs"></i>
+        </summary>
+        
+        <div class="pt-3">
+          <div class="flex flex-wrap gap-1.5">
+            <button onclick="toggleKeywordFilter('傘形')" class="kw-btn">傘形/廣卵形</button>
+            <button onclick="toggleKeywordFilter('圓錐形')" class="kw-btn">圓錐/塔形</button>
+            <button onclick="toggleKeywordFilter('柱形')" class="kw-btn">柱形/狹長</button>
+            <button onclick="toggleKeywordFilter('下垂')" class="kw-btn">下垂狀</button>
+          </div>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- 彈窗底部 Footer -->
+    <div class="px-6 py-3.5 border-t border-stone-100 bg-stone-50/50 flex justify-between items-center">
+      <button onclick="clearFeatureFilters()" class="text-xs text-stone-500 hover:text-rose-600 font-bold underline transition-colors">
+        清空選取條件
+      </button>
+      
+      <button 
+        onclick="toggleFeatureModal()" 
+        class="px-6 py-2 bg-[#3E4A24] hover:bg-[#2c3519] text-white text-xs font-bold rounded-xl shadow-md active:scale-95 transition-all flex items-center gap-2">
+        <i class="fa-solid fa-check text-xs"></i>
+        <span>套用篩選結果</span>
+      </button>
+    </div>
+
+  </div>
+</div>
 </body>
 </html>
