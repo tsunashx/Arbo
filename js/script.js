@@ -174,9 +174,9 @@ function updateKeywordUI() {
       }
     } else {
       if (isSelected) {
-        btn.className = "kw-btn cursor-pointer select-none px-2.5 py-1 rounded-md text-xs font-semibold bg-[#556B2F] text-white transition-all shadow-xs active";
+        btn.className = "kw-btn cursor-pointer select-none px-2.5 py-1 rounded-full text-xs font-semibold bg-[#556B2F] text-white transition-all shadow-xs active";
       } else {
-        btn.className = "kw-btn cursor-pointer select-none px-2.5 py-1 rounded-md text-xs font-medium bg-stone-100 text-stone-600 hover:bg-stone-200 transition-all";
+        btn.className = "kw-btn cursor-pointer select-none px-2.5 py-1 rounded-full text-xs font-medium bg-stone-100 text-stone-600 hover:bg-stone-200 transition-all";
       }
     }
   });
@@ -198,8 +198,6 @@ function renderCatalog() {
   const search = searchInput ? searchInput.value.toLowerCase().trim() : '';
   const grid = document.getElementById('tree-grid');
   if (!grid) return;
-  
-  grid.innerHTML = '';
 
   // 1. 渲染科別選單
   const families = ['All', ...new Set(treesData.map(t => t.family).filter(Boolean))];
@@ -212,43 +210,37 @@ function renderCatalog() {
     `).join('');
   }
 
-  // 2. 進行三重過濾
+  // 2. 進行三重過濾 (搜尋 + 科別 + 特徵)
   const filtered = treesData.filter(t => {
     const treeKeywords = Array.isArray(t.keywords) ? t.keywords : [];
     
-    const matchSearch = !search || treeKeywords.some(kw => 
-      typeof kw === 'string' && kw.toLowerCase().includes(search)
-    );
+    // 搜尋比對
+    const matchSearch = !search || 
+      t.name?.toLowerCase().includes(search) || 
+      t.latinName?.toLowerCase().includes(search) ||
+      treeKeywords.some(kw => typeof kw === 'string' && kw.toLowerCase().includes(search));
 
+    // 科別比對
     const matchFamily = selectedFamily === 'All' || t.family === selectedFamily;
 
-    const fullTextContent = [
-      ...treeKeywords,
-      t.name,
-      t.engName,
-      t.latinName,
-      t.species,
-      t.behavior,
-      t.description,
-      t.special,
-      t.leaves,
-      t.bark,
-      t.flowers
-    ].filter(Boolean).join(' ');
-
+    // 特徵關鍵字嚴格比對
     const matchKeywords = selectedKeywords.every(kw => {
-      if (t.species && t.species.includes(kw)) return true;
-      if (t.behavior && t.behavior.includes(kw)) return true;
+      if (kw === '常綠') return t.behavior && t.behavior.includes('常綠');
+      if (kw === '落葉') return t.behavior && t.behavior.includes('落葉');
+      if (kw === '原生') return t.species && t.species.includes('原生');
+      if (kw === '外來') return t.species && t.species.includes('外來');
 
       const inKeywords = treeKeywords.some(tk => typeof tk === 'string' && (tk.includes(kw) || kw.includes(tk)));
       if (inKeywords) return true;
 
-      if (kw === '常綠' && (fullTextContent.includes('常綠') || fullTextContent.includes('不落葉'))) return true;
-      if (kw === '落葉' && (fullTextContent.includes('落葉') || fullTextContent.includes('半落葉'))) return true;
-      if (kw === '原生' && (fullTextContent.includes('原生') || fullTextContent.includes('特有種'))) return true;
-      if (kw === '外來' && (fullTextContent.includes('外來') || fullTextContent.includes('歸化') || fullTextContent.includes('栽培'))) return true;
-      if (kw === '針狀' && (fullTextContent.includes('針狀') || fullTextContent.includes('鱗狀'))) return true;
-      if (kw === '剝落' && (fullTextContent.includes('剝落') || fullTextContent.includes('紙皮'))) return true;
+      const fullTextContent = [
+        t.name,
+        t.description,
+        t.special,
+        t.leaves,
+        t.bark,
+        t.flowers
+      ].filter(Boolean).join(' ');
 
       return fullTextContent.includes(kw);
     });
@@ -256,10 +248,22 @@ function renderCatalog() {
     return matchSearch && matchFamily && matchKeywords;
   });
 
-  // 3. 渲染符合條件的卡片
-  filtered.forEach(tree => {
+  // 3. 無符合條件的處理
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div class="col-span-full py-16 text-center text-stone-400">
+        <i class="fa-solid fa-tree text-4xl mb-3 text-stone-300"></i>
+        <p class="text-xs">沒有找到符合條件的樹木</p>
+      </div>
+    `;
+    return;
+  }
+
+  // 4. 渲染符合條件的卡片 HTML
+  grid.innerHTML = filtered.map(tree => {
     const isCompared = compareList.some(c => c.id === tree.id);
 
+    // 原生/外來 標籤（圓角 rounded-full）
     let speciesClass = 'bg-stone-100 text-stone-700 border border-stone-200';
     if (tree.species) {
       if (tree.species.includes('原生')) {
@@ -269,6 +273,7 @@ function renderCatalog() {
       }
     }
 
+    // 常綠/落葉 標籤（圓角 rounded-full）
     let behaviorClass = 'bg-stone-100 text-stone-700 border border-stone-200';
     if (tree.behavior) {
       if (tree.behavior.includes('常綠')) {
@@ -278,37 +283,38 @@ function renderCatalog() {
       }
     }
 
-    const card = document.createElement('div');
-    card.className = "bg-white rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col justify-between group";
-    card.innerHTML = `
-      <div>
-        <div class="h-48 w-full bg-stone-200 relative overflow-hidden cursor-pointer" onclick="typeof openTreeModal === 'function' && openTreeModal('${tree.id}')">
-          <img src="${tree.mainImage}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=500&q=80'">
-          
-          <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 max-w-[85%]">
-            ${tree.family ? `<span class="bg-[#EBF0E3] text-[#3E4A24] px-2.5 py-0.5 rounded-full text-xs font-black shadow-xs">${tree.family}</span>` : ''}
-            ${tree.species ? `<span class="${speciesClass} px-2.5 py-0.5 rounded-full text-xs font-bold shadow-xs">${tree.species}</span>` : ''}
-            ${tree.behavior ? `<span class="${behaviorClass} px-2.5 py-0.5 rounded-full text-xs font-bold shadow-xs">${tree.behavior}</span>` : ''}
+    return `
+      <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="h-44 w-full relative overflow-hidden bg-stone-100">
+            <img src="${tree.mainImage}" class="w-full h-full object-cover">
+            
+            <!-- 左上角 Tag 區塊 (包含 科別、原生/外來、常綠/落葉) -->
+            <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 max-w-[85%]">
+              ${tree.family ? `<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-stone-800/75 text-white backdrop-blur-xs">${tree.family}</span>` : ''}
+              ${tree.species ? `<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full border ${speciesClass}">${tree.species}</span>` : ''}
+              ${tree.behavior ? `<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full border ${behaviorClass}">${tree.behavior}</span>` : ''}
+            </div>
+          </div>
+          <div class="p-4 space-y-2">
+            <h3 class="font-extrabold text-base text-[#3E4A24] flex items-center justify-between">
+              <span>${tree.name}</span>
+              <span class="text-xs font-normal text-stone-400 font-serif italic">${tree.latinName || ''}</span>
+            </h3>
+            <p class="text-xs text-stone-600 line-clamp-2">${tree.description || ''}</p>
           </div>
         </div>
-        <div class="p-4 space-y-2">
-          <h3 class="text-xl font-extrabold text-[#3E4A24] cursor-pointer" onclick="typeof openTreeModal === 'function' && openTreeModal('${tree.id}')">${tree.name}</h3>
-          ${tree.engName ? `<p class="text-xs italic text-stone-400 font-medium">${tree.engName}</p>` : ''}
-          <p class="text-xs text-stone-600 leading-relaxed line-clamp-2">${tree.description || ''}</p>
+        <div class="p-4 pt-0 flex gap-2">
+          <button onclick="openTreeModal('${tree.id}')" class="flex-1 bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-bold py-2 rounded-lg transition-colors">考證詳細</button>
+          <button onclick="toggleCompare('${tree.id}')" class="bg-[#556B2F] text-white text-xs font-bold px-3 py-2 rounded-lg hover:bg-[#3E4A24] transition-colors">
+            ${isCompared ? '取消對比' : '加入對比'}
+          </button>
         </div>
       </div>
-      <div class="bg-stone-50 border-t border-stone-100 p-3.5 flex items-center justify-between">
-        <button onclick="typeof openTreeModal === 'function' && openTreeModal('${tree.id}')" class="bg-[#556B2F] hover:bg-[#3E4A24] text-white px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center space-x-1 shadow-xs">
-          <i class="fa-solid fa-circle-info text-xs"></i><span>詳細資訊</span>
-        </button>
-        <button onclick="typeof toggleCompare === 'function' && toggleCompare('${tree.id}')" class="text-xs font-bold px-3 py-1.5 rounded-lg border transition-all ${isCompared ? 'bg-[#D4AF37] border-[#B58900] text-stone-900 font-extrabold' : 'bg-white border-stone-200 text-stone-600 hover:bg-stone-100'}">
-          ${isCompared ? '已選對比' : '加入對比'}
-        </button>
-      </div>
     `;
-    grid.appendChild(card);
-  });
+  }).join('');
 }
+
 // 對比功能邏輯
 function toggleCompare(id) {
   const tree = treesData.find(t => t.id === id);
@@ -358,6 +364,8 @@ function clearCompare() {
 // 渲染特徵對比表格
 function renderCompare() {
   const container = document.getElementById('compare-table-container');
+  if (!container) return;
+
   if (compareList.length === 0) {
     container.innerHTML = `
       <div class="bg-white rounded-2xl border border-dashed border-stone-300 py-16 text-center px-4">
@@ -416,8 +424,22 @@ function renderCompare() {
               }).join('')}
             </tr>
             <tr>
-              <td class="p-4 bg-stone-50 font-bold text-[#3E4A24]">樹高與花果期</td>
-              ${compareList.map(t => `<td class="p-4 border-l border-stone-100 space-y-1 text-[11px]"><p class="font-bold text-stone-800">📏 樹高：${t.height}</p><p class="text-stone-600">🌸 花期：${t.bloomPeriod}</p><p class="text-stone-600">🍎 果期：${t.fruitPeriod}</p></td>`).join('')}
+              <td class="p-4 bg-stone-50 font-bold text-[#3E4A24] w-36">樹高與花果期</td>
+              ${compareList.map(t => `
+                <td class="p-4 border-l border-stone-100 space-y-2">
+                  <p class="font-bold text-stone-800 text-xs">📏 樹高：${t.height || '暫無數據'}</p>
+                  
+                  <div class="space-y-1">
+                    <span class="text-[11px] font-bold text-stone-600 block">🌸 花期：</span>
+                    ${renderMonthGrid(t.bloomMonths, 'bg-stone-400')}
+                  </div>
+
+                  <div class="space-y-1">
+                    <span class="text-[11px] font-bold text-stone-600 block">🍎 果期：</span>
+                    ${renderMonthGrid(t.fruitMonths, 'bg-emerald-600')}
+                  </div>
+                </td>
+              `).join('')}
             </tr>
             <tr class="bg-amber-50/20">
               <td class="p-4 bg-amber-50/40 font-bold text-[#3E4A24]">★ 特別辨識標記</td>
@@ -431,35 +453,103 @@ function renderCompare() {
   container.innerHTML = html;
 }
 
-// 樹木詳細 Pop-up 開啟與互動
+// 2. 極簡共用花果期表格渲染函數
+function renderSeasonGrid(bloomMonths = [], fruitMonths = []) {
+  const months = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+
+  return `
+    <div class="w-full text-[10px]">
+      <!-- 月份標題列 -->
+      <div class="grid grid-cols-[36px_1fr] items-center mb-1">
+        <div></div>
+        <div class="grid grid-cols-12 text-center text-stone-400 font-medium">
+          ${months.map(m => `<div>${m}<span class="text-[8px]">月</span></div>`).join('')}
+        </div>
+      </div>
+
+      <!-- 花期列 -->
+      <div class="grid grid-cols-[36px_1fr] items-center gap-1 mb-2">
+        <span class="font-bold text-stone-700 text-xs">花期</span>
+        <div class="grid grid-cols-12 border border-stone-200 rounded overflow-hidden bg-stone-50 h-5">
+          ${months.map((_, idx) => {
+            const isActive = Array.isArray(bloomMonths) && bloomMonths.includes(idx + 1);
+            return `<div class="border-r last:border-r-0 border-stone-200/60 ${isActive ? 'bg-stone-500' : ''}"></div>`;
+          }).join('')}
+        </div>
+      </div>
+
+      <!-- 果期列 -->
+      <div class="grid grid-cols-[36px_1fr] items-center gap-1">
+        <span class="font-bold text-stone-700 text-xs">果期</span>
+        <div class="grid grid-cols-12 border border-stone-200 rounded overflow-hidden bg-stone-50 h-5">
+          ${months.map((_, idx) => {
+            const isActive = Array.isArray(fruitMonths) && fruitMonths.includes(idx + 1);
+            return `<div class="border-r last:border-r-0 border-stone-200/60 ${isActive ? 'bg-emerald-600' : ''}"></div>`;
+          }).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function openTreeModal(id) {
+  // 取得樹木資料
   currentTree = treesData.find(t => t.id === id);
   if (!currentTree) return;
   
+  // 1. 讀取 LocalStorage 備註
   const storedNote = localStorage.getItem(`tree_note_${currentTree.id}`);
   if (storedNote !== null) {
     currentTree.userNotes = storedNote;
   }
 
-  document.getElementById('modal-tree-name').innerHTML = `<span>${currentTree.name}</span><span class="bg-[#556B2F] text-xs px-2 py-0.5 rounded-full font-bold ml-2">${currentTree.family}</span>`;
-  document.getElementById('modal-tree-latin').innerText = currentTree.latinName;
-  document.getElementById('modal-main-img').src = currentTree.mainImage;
-  document.getElementById('modal-description').innerText = currentTree.description;
-  document.getElementById('modal-height').innerText = currentTree.height;
-  document.getElementById('modal-bloom').innerText = currentTree.bloomPeriod;
-  document.getElementById('modal-fruit').innerText = currentTree.fruitPeriod;
-  document.getElementById('modal-special').innerText = currentTree.special;
+  // 2. 填入文字資訊 (補回 modal-special)
+  const nameElem = document.getElementById('modal-tree-name');
+  if (nameElem) nameElem.innerHTML = `<span>${currentTree.name}</span><span class="bg-[#556B2F] text-xs px-2 py-0.5 rounded-full font-bold ml-2">${currentTree.family || ''}</span>`;
+  
+  const latinElem = document.getElementById('modal-tree-latin');
+  if (latinElem) latinElem.innerText = currentTree.latinName || '';
 
-  document.getElementById('note-view-mode').innerHTML = currentTree.userNotes ? currentTree.userNotes : `<span class="text-stone-400 font-normal">（預設空白，點擊編輯備註...）</span>`;
-  document.getElementById('note-textarea').value = currentTree.userNotes || '';
+  const imgElem = document.getElementById('modal-main-img');
+  if (imgElem) imgElem.src = currentTree.mainImage || '';
 
-  if(currentTree.hotspots && currentTree.hotspots.length > 0) {
+  const descElem = document.getElementById('modal-description');
+  if (descElem) descElem.innerText = currentTree.description || '';
+
+  // 🌟 補回：特別辨識標記
+  const specialElem = document.getElementById('modal-special');
+  if (specialElem) specialElem.innerText = currentTree.special || '無特殊標記';
+
+  const heightElem = document.getElementById('modal-height');
+  if (heightElem) heightElem.textContent = currentTree.height || '暫無數據';
+
+  // 3. 渲染極簡共用花果期表格
+  const seasonContainer = document.getElementById('modal-season-grid-container');
+  if (seasonContainer) {
+    seasonContainer.innerHTML = renderSeasonGrid(currentTree.bloomMonths, currentTree.fruitMonths);
+  }
+
+  // 4. 備註區塊設定
+  const noteView = document.getElementById('note-view-mode');
+  if (noteView) {
+    noteView.innerHTML = currentTree.userNotes ? currentTree.userNotes : `<span class="text-stone-400 font-normal">（預設空白，點擊編輯備註...）</span>`;
+  }
+  
+  const noteTextarea = document.getElementById('note-textarea');
+  if (noteTextarea) noteTextarea.value = currentTree.userNotes || '';
+
+  // 5. 熱點 (Hotspots) 初始化與按鈕渲染
+  if (currentTree.hotspots && currentTree.hotspots.length > 0) {
     selectHotspot(currentTree.hotspots[0].id);
   } else {
     renderHotspotButtons(null);
+    const detail = document.getElementById('modal-hotspot-detail');
+    if (detail) detail.innerHTML = '<p class="text-xs text-stone-400">尚無部位細節資料</p>';
   }
 
-  document.getElementById('tree-modal').classList.remove('hidden');
+  // 6. 顯示 Modal
+  const modal = document.getElementById('tree-modal');
+  if (modal) modal.classList.remove('hidden');
 }
 
 // 渲染熱點按鈕
@@ -483,7 +573,7 @@ function renderHotspotButtons(activeSpotId) {
   }).join('');
 }
 
-// 選擇熱點
+// 選擇熱點並顯示下方特寫卡片
 function selectHotspot(spotId) {
   renderHotspotButtons(spotId);
 
@@ -493,20 +583,19 @@ function selectHotspot(spotId) {
   const detail = document.getElementById('modal-hotspot-detail');
   if(detail) {
     detail.innerHTML = `
-      <div class="flex items-center justify-between">
-        <span class="bg-[#556B2F] text-white text-[12px] font-black px-2.5 py-0.5 rounded">
+      <div class="flex items-center justify-between mb-2">
+        <span class="bg-[#556B2F] text-white text-[11px] font-black px-2 py-0.5 rounded">
           ${spot.type === 'bark' ? '樹皮部位特寫' : spot.type === 'leaves' ? '葉脈結構特寫' : '花卉果實特寫'}
         </span>
-        <h5 class="font-extrabold text-sm text-[#3E4A24]">${spot.name}</h5>
+        <h5 class="font-extrabold text-xs text-[#3E4A24]">${spot.name}</h5>
       </div>
-      <div class="h-36 w-full bg-stone-300 rounded-lg overflow-hidden border border-stone-200">
+      <div class="h-32 w-full bg-stone-100 rounded-lg overflow-hidden border border-stone-200 mb-2">
         <img src="${spot.img}" class="w-full h-full object-cover">
       </div>
-      <p class="text-xs text-stone-700 leading-relaxed font-medium bg-white p-2.5 rounded-lg border border-stone-100">${spot.desc}</p>
+      <p class="text-xs text-stone-600 leading-relaxed font-normal bg-stone-50 p-2.5 rounded-lg border border-stone-100">${spot.desc}</p>
     `;
   }
 }
-
 function closeTreeModal() {
   document.getElementById('tree-modal').classList.add('hidden');
 }
