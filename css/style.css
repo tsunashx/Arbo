@@ -12,6 +12,7 @@
   width: 0;
   height: 0;
 }
+
 /* 文字截斷（2行） */
 .line-clamp-2 {
   display: -webkit-box;
@@ -20,42 +21,53 @@
   overflow: hidden;
 }
 
-/* 一般關鍵字按鈕（無厚重外框，預設極簡風格） */
+/* 關鍵字按鈕（無邊框、淺橄欖綠底色、圓角膠囊狀） */
 .kw-btn {
-  padding: 0.35rem 0.65rem;
-  border-radius: 0.5rem;
-  background-color: #f5f5f4; /* stone-100 */
-  color: #44403c; /* stone-700 */
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px; /* 全圓角 */
+  background-color: #E2E8D8; /* 淺橄欖綠底色 */
+  color: #3E4A24; /* 深橄欖綠文字 */
   font-size: 0.75rem;
   font-weight: 600;
-  border: none;
+  border: none; /* 移除邊框 */
   transition: all 0.15s ease;
   cursor: pointer;
   user-select: none; /* 避免連續點擊時選取到文字 */
 }
 
 .kw-btn:hover {
-  background-color: #e7e5e4; /* stone-200 */
+  background-color: #D3DEC6; /* 滑鼠懸停時加深淺橄欖綠 */
+}
+
+.kw-btn:active {
+  transform: scale(0.96); /* 按下微縮質感 */
 }
 
 .kw-btn.active {
-  background-color: #556B2F !important;
+  background-color: #556B2F !important; /* 選中時的經典深橄欖綠 */
   color: #ffffff !important;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* 微微的陰影增加質感 */
+  box-shadow: 0 1px 3px 0 rgba(85, 107, 47, 0.25); /* 柔和陰影 */
 }
 
-/* 花色圓形按鈕 */
+/* 花色/果實圓形按鈕 */
 .color-btn {
-  padding: 2px;
+  padding: 3px;
   border-radius: 9999px;
   background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
   transition: all 0.15s ease;
+  display: flex;
+  align-items: center; /* 修正原本寫成 items-center 的 CSS 語法 */
+  justify-content: center;
 }
 
+/* 點擊選中時：直接外擴一圈 #3E4A24 橄欖綠外圈（無白邊） */
 .color-btn.active {
-  /* 選取時：外圍一圈主色框 + 1.5px 白色留白間隙 (更高質感) */
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #556B2F; 
+  box-shadow: 0 0 0 2.5px #3E4A24 !important;
+}
+
+.color-btn.active span {
+  transform: scale(1.05);
 }
