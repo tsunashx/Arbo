@@ -301,10 +301,10 @@ function renderCatalog() {
               ${tree.behavior ? `<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full border ${behaviorClass}">${tree.behavior}</span>` : ''}
             </div>
           </div>
-          <div class="p-4 space-y-2 text-center">
-            <!-- 樹木名稱與拉丁學名置中，學名獨立在下一行 -->
-            <div>
-              <h3 class="font-extrabold text-base text-[#3E4A24]">${tree.name}</h3>
+          <div class="p-3 space-y-1.5 text-center">
+            <!-- 減少容器內距與上下空白，並收緊行距 -->
+            <div class="leading-tight">
+              <h3 class="font-extrabold text-lg sm:text-xl text-[#3E4A24]">${tree.name}</h3>
               ${tree.latinName ? `<p class="text-xs text-stone-400 font-serif italic mt-0.5">${tree.latinName}</p>` : ''}
             </div>
             <p class="text-xs text-stone-600 line-clamp-2 text-left">${tree.description || ''}</p>

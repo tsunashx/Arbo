@@ -254,12 +254,14 @@
 
   </main>
 
-  <div id="tree-modal" class="hidden fixed inset-0 z-50 bg-stone-900/70 backdrop-blur-sm flex items-center justify-center p-3">
+<div id="tree-modal" class="hidden fixed inset-0 z-50 bg-stone-900/70 backdrop-blur-sm flex items-center justify-center p-3">
     <div class="bg-white rounded-2xl max-w-5xl w-full max-h-[92vh] overflow-hidden shadow-2xl border border-stone-200 flex flex-col md:flex-row">
-      <div class="md:w-3/5 bg-stone-900 relative flex items-center justify-center min-h-[280px] md:min-h-0">
+      <!-- 讓圖片容器完全填滿區塊並等比例置中填滿，不留多餘空間 -->
+      <div class="md:w-3/5 relative flex items-center justify-center overflow-hidden bg-stone-900">
+        <!-- 圖片改用 w-full h-full object-cover，確保等比例填滿整個左側版面且無任何空隙 -->
         <img id="modal-main-img" src="" class="w-full h-full object-cover max-h-[45vh] md:max-h-full">
-        <div class="absolute inset-0 bg-black/10"></div>
-        <div class="absolute top-4 left-4 bg-stone-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl text-white">
+        <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+        <div class="absolute top-4 left-4 bg-stone-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl text-white shadow-md">
           <h4 id="modal-tree-name" class="text-base font-black flex items-center space-x-2"></h4>
           <p id="modal-tree-latin" class="text-[11px] text-emerald-200 italic font-serif"></p>
         </div>
