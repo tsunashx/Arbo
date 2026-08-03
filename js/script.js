@@ -369,7 +369,7 @@ function clearCompare() {
   renderCatalog();
 }
 
-// 渲染特徵對比表格（16:9 比例與窄版極簡優化版）
+// 渲染特徵對比表格（手機版圖片完美 Fit 框框優化版）
 function renderCompare() {
   const container = document.getElementById('compare-table-container');
   if (!container) return;
@@ -408,19 +408,19 @@ function renderCompare() {
             </tr>
           </thead>
           <tbody class="divide-y divide-stone-100 text-xs">
-            <!-- 主生態照片 (16:9 比例) -->
+            <!-- 主生態照片 -->
             <tr>
               <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center">主生態照片</td>
               ${compareList.map(t => `
                 <td class="p-3 border-l border-stone-100">
-                  <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60 shadow-xs">
-                    <img src="${t.mainImage}" class="w-full h-full object-cover">
+                  <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60 shadow-xs relative">
+                    <img src="${t.mainImage}" class="absolute inset-0 w-full h-full object-cover">
                   </div>
                 </td>
               `).join('')}
             </tr>
 
-            <!-- 樹幹與樹皮 (16:9 比例) -->
+            <!-- 樹幹與樹皮 -->
             <tr>
               <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center">樹幹與樹皮</td>
               ${compareList.map(t => {
@@ -428,8 +428,8 @@ function renderCompare() {
                 const desc = spot?.description || spot?.desc || t.bark || t.description || '無特徵說明';
                 return `
                   <td class="p-3 border-l border-stone-100 space-y-1">
-                    <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60">
-                      <img src="${spot?.img || t.mainImage}" class="w-full h-full object-cover">
+                    <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60 relative">
+                      <img src="${spot?.img || t.mainImage}" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                     ${spot?.name ? `<p class="font-bold text-[#3E4A24] text-[10px] truncate">${spot.name}</p>` : ''}
                     <p class="text-stone-600 text-[10px] leading-relaxed line-clamp-2">${desc}</p>
@@ -438,7 +438,7 @@ function renderCompare() {
               }).join('')}
             </tr>
 
-            <!-- 葉片與葉脈 (16:9 比例) -->
+            <!-- 葉片與葉脈 -->
             <tr>
               <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center">葉片與葉脈</td>
               ${compareList.map(t => {
@@ -446,8 +446,8 @@ function renderCompare() {
                 const desc = spot?.description || spot?.desc || t.leaves || t.description || '無特徵說明';
                 return `
                   <td class="p-3 border-l border-stone-100 space-y-1">
-                    <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60">
-                      <img src="${spot?.img || t.mainImage}" class="w-full h-full object-cover">
+                    <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60 relative">
+                      <img src="${spot?.img || t.mainImage}" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                     ${spot?.name ? `<p class="font-bold text-[#3E4A24] text-[10px] truncate">${spot.name}</p>` : ''}
                     <p class="text-stone-600 text-[10px] leading-relaxed line-clamp-2">${desc}</p>
@@ -456,7 +456,7 @@ function renderCompare() {
               }).join('')}
             </tr>
 
-            <!-- 花朵與果實 (16:9 比例) -->
+            <!-- 花朵與果實 -->
             <tr>
               <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center">花朵與果實</td>
               ${compareList.map(t => {
@@ -464,8 +464,8 @@ function renderCompare() {
                 const desc = spot?.description || spot?.desc || t.flowers || t.description || '無特徵說明';
                 return `
                   <td class="p-3 border-l border-stone-100 space-y-1">
-                    <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60">
-                      <img src="${spot?.img || t.mainImage}" class="w-full h-full object-cover">
+                    <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60 relative">
+                      <img src="${spot?.img || t.mainImage}" class="absolute inset-0 w-full h-full object-cover">
                     </div>
                     ${spot?.name ? `<p class="font-bold text-[#3E4A24] text-[10px] truncate">${spot.name}</p>` : ''}
                     <p class="text-stone-600 text-[10px] leading-relaxed line-clamp-2">${desc}</p>
