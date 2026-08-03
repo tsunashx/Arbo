@@ -369,7 +369,7 @@ function clearCompare() {
   renderCatalog();
 }
 
-// 渲染特徵對比表格（極簡窄版與圖片等高對齊）
+// 渲染特徵對比表格（16:9 比例與窄版極簡優化版）
 function renderCompare() {
   const container = document.getElementById('compare-table-container');
   if (!container) return;
@@ -408,19 +408,19 @@ function renderCompare() {
             </tr>
           </thead>
           <tbody class="divide-y divide-stone-100 text-xs">
-            <!-- 主生態照片 (固定高度 h-24) -->
+            <!-- 主生態照片 (16:9 比例) -->
             <tr>
               <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center">主生態照片</td>
               ${compareList.map(t => `
                 <td class="p-3 border-l border-stone-100">
-                  <div class="h-24 rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60 shadow-xs">
+                  <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60 shadow-xs">
                     <img src="${t.mainImage}" class="w-full h-full object-cover">
                   </div>
                 </td>
               `).join('')}
             </tr>
 
-            <!-- 樹幹與樹皮 (固定高度 h-24) -->
+            <!-- 樹幹與樹皮 (16:9 比例) -->
             <tr>
               <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center">樹幹與樹皮</td>
               ${compareList.map(t => {
@@ -428,7 +428,7 @@ function renderCompare() {
                 const desc = spot?.description || spot?.desc || t.bark || t.description || '無特徵說明';
                 return `
                   <td class="p-3 border-l border-stone-100 space-y-1">
-                    <div class="h-24 rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60">
+                    <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60">
                       <img src="${spot?.img || t.mainImage}" class="w-full h-full object-cover">
                     </div>
                     ${spot?.name ? `<p class="font-bold text-[#3E4A24] text-[10px] truncate">${spot.name}</p>` : ''}
@@ -438,7 +438,7 @@ function renderCompare() {
               }).join('')}
             </tr>
 
-            <!-- 葉片與葉脈 (固定高度 h-24) -->
+            <!-- 葉片與葉脈 (16:9 比例) -->
             <tr>
               <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center">葉片與葉脈</td>
               ${compareList.map(t => {
@@ -446,7 +446,7 @@ function renderCompare() {
                 const desc = spot?.description || spot?.desc || t.leaves || t.description || '無特徵說明';
                 return `
                   <td class="p-3 border-l border-stone-100 space-y-1">
-                    <div class="h-24 rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60">
+                    <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60">
                       <img src="${spot?.img || t.mainImage}" class="w-full h-full object-cover">
                     </div>
                     ${spot?.name ? `<p class="font-bold text-[#3E4A24] text-[10px] truncate">${spot.name}</p>` : ''}
@@ -456,7 +456,7 @@ function renderCompare() {
               }).join('')}
             </tr>
 
-            <!-- 花朵與果實 (固定高度 h-24) -->
+            <!-- 花朵與果實 (16:9 比例) -->
             <tr>
               <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center">花朵與果實</td>
               ${compareList.map(t => {
@@ -464,7 +464,7 @@ function renderCompare() {
                 const desc = spot?.description || spot?.desc || t.flowers || t.description || '無特徵說明';
                 return `
                   <td class="p-3 border-l border-stone-100 space-y-1">
-                    <div class="h-24 rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60">
+                    <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60">
                       <img src="${spot?.img || t.mainImage}" class="w-full h-full object-cover">
                     </div>
                     ${spot?.name ? `<p class="font-bold text-[#3E4A24] text-[10px] truncate">${spot.name}</p>` : ''}
@@ -507,38 +507,38 @@ function renderCompare() {
   container.innerHTML = html;
 }
 
-// 2. 極簡共用花果期表格渲染函數（響應式縮放版）
+// 2. 極簡共用花果期表格渲染函數（無「月」字版）
 function renderSeasonGrid(bloomMonths = [], fruitMonths = []) {
   const months = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
 
   return `
-    <div class="w-full text-[9px] select-none">
+    <div class="w-full min-w-[150px] text-[9px] select-none" style="white-space: nowrap;">
       <!-- 月份標題列 -->
-      <div class="grid grid-cols-[28px_1fr] items-center mb-1 gap-1">
+      <div class="grid grid-cols-[24px_1fr] items-center mb-1 gap-1">
         <div></div>
         <div class="grid grid-cols-12 text-center text-stone-400 font-medium">
           ${months.map(m => `<div>${m}</div>`).join('')}
         </div>
       </div>
 
-      <!-- 花期列 -->
-      <div class="grid grid-cols-[28px_1fr] items-center gap-1 mb-1.5">
+      <!-- 花期列 (柔和黃綠色高亮) -->
+      <div class="grid grid-cols-[24px_1fr] items-center gap-1 mb-1.5">
         <span class="font-bold text-stone-700 text-xs">花期</span>
         <div class="grid grid-cols-12 border border-stone-200 rounded overflow-hidden bg-stone-50 h-4">
           ${months.map((_, idx) => {
             const isActive = Array.isArray(bloomMonths) && bloomMonths.includes(idx + 1);
-            return `<div class="border-r last:border-r-0 border-stone-200/60 ${isActive ? 'bg-stone-500' : ''}"></div>`;
+            return `<div class="border-r last:border-r-0 border-stone-200/60 ${isActive ? 'bg-[#D4E157]' : ''}"></div>`;
           }).join('')}
         </div>
       </div>
 
-      <!-- 果期列 -->
-      <div class="grid grid-cols-[28px_1fr] items-center gap-1">
+      <!-- 果期列 (清爽亮綠色高亮) -->
+      <div class="grid grid-cols-[24px_1fr] items-center gap-1">
         <span class="font-bold text-stone-700 text-xs">果期</span>
         <div class="grid grid-cols-12 border border-stone-200 rounded overflow-hidden bg-stone-50 h-4">
           ${months.map((_, idx) => {
             const isActive = Array.isArray(fruitMonths) && fruitMonths.includes(idx + 1);
-            return `<div class="border-r last:border-r-0 border-stone-200/60 ${isActive ? 'bg-emerald-600' : ''}"></div>`;
+            return `<div class="border-r last:border-r-0 border-stone-200/60 ${isActive ? 'bg-[#81C784]' : ''}"></div>`;
           }).join('')}
         </div>
       </div>
