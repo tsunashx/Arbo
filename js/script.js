@@ -259,7 +259,7 @@ function renderCatalog() {
     return;
   }
 
-  // 4. 渲染符合條件的卡片 HTML
+// 4. 渲染符合條件的卡片 HTML（名稱與拉丁學名置中、學名分行版）
   grid.innerHTML = filtered.map(tree => {
     const isCompared = compareList.some(c => c.id === tree.id);
 
@@ -301,12 +301,13 @@ function renderCatalog() {
               ${tree.behavior ? `<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full border ${behaviorClass}">${tree.behavior}</span>` : ''}
             </div>
           </div>
-          <div class="p-4 space-y-2">
-            <h3 class="font-extrabold text-base text-[#3E4A24] flex items-center justify-between">
-              <span>${tree.name}</span>
-              <span class="text-xs font-normal text-stone-400 font-serif italic">${tree.latinName || ''}</span>
-            </h3>
-            <p class="text-xs text-stone-600 line-clamp-2">${tree.description || ''}</p>
+          <div class="p-4 space-y-2 text-center">
+            <!-- 樹木名稱與拉丁學名置中，學名獨立在下一行 -->
+            <div>
+              <h3 class="font-extrabold text-base text-[#3E4A24]">${tree.name}</h3>
+              ${tree.latinName ? `<p class="text-xs text-stone-400 font-serif italic mt-0.5">${tree.latinName}</p>` : ''}
+            </div>
+            <p class="text-xs text-stone-600 line-clamp-2 text-left">${tree.description || ''}</p>
           </div>
         </div>
         <div class="p-4 pt-0 flex gap-2">
@@ -369,7 +370,7 @@ function clearCompare() {
   renderCatalog();
 }
 
-// 渲染特徵對比表格（手機版尺寸自適應優化版）
+// 渲染特徵對比表格（左側標題強制不換行、最佳化手機版排版）
 function renderCompare() {
   const container = document.getElementById('compare-table-container');
   if (!container) return;
@@ -388,13 +389,14 @@ function renderCompare() {
   let html = `
     <div class="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
       <div class="overflow-x-auto">
-        <!-- 調整表格最小寬度，適應手機螢幕 -->
-        <table class="w-full text-left border-collapse table-fixed min-w-[500px]">
+        <!-- 稍微拉大表格最小寬度，確保內容舒適展開 -->
+        <table class="w-full text-left border-collapse table-fixed min-w-[650px]">
           <thead>
             <tr class="bg-[#556B2F] text-white text-xs">
-              <th class="p-2.5 w-16 md:w-20 font-bold tracking-wide text-center">對比項目</th>
+              <!-- 左側標題欄固定寬度並強制不換行 -->
+              <th class="p-3 w-28 font-bold tracking-wide text-center whitespace-nowrap">對比項目</th>
               ${compareList.map(t => `
-                <th class="p-2.5 w-[140px] md:w-[170px] border-l border-white/10">
+                <th class="p-3 w-[180px] border-l border-white/10">
                   <div class="flex justify-between items-center">
                     <div class="truncate pr-1">
                       <span class="font-extrabold text-xs block truncate">${t.name}</span>
@@ -411,9 +413,9 @@ function renderCompare() {
           <tbody class="divide-y divide-stone-100 text-xs">
             <!-- 主生態照片 -->
             <tr>
-              <td class="p-2.5 bg-stone-50/80 font-bold text-[#3E4A24] text-center">主生態照片</td>
+              <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center whitespace-nowrap">主生態照片</td>
               ${compareList.map(t => `
-                <td class="p-2.5 border-l border-stone-100">
+                <td class="p-3 border-l border-stone-100">
                   <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60 shadow-xs relative">
                     <img src="${t.mainImage}" class="absolute inset-0 w-full h-full object-cover">
                   </div>
@@ -423,12 +425,12 @@ function renderCompare() {
 
             <!-- 樹幹與樹皮 -->
             <tr>
-              <td class="p-2.5 bg-stone-50/80 font-bold text-[#3E4A24] text-center">樹幹與樹皮</td>
+              <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center whitespace-nowrap">樹幹與樹皮</td>
               ${compareList.map(t => {
                 const spot = t.hotspots?.find(h => h.type === 'bark');
                 const desc = spot?.description || spot?.desc || t.bark || t.description || '無特徵說明';
                 return `
-                  <td class="p-2.5 border-l border-stone-100 space-y-1">
+                  <td class="p-3 border-l border-stone-100 space-y-1">
                     <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60 relative">
                       <img src="${spot?.img || t.mainImage}" class="absolute inset-0 w-full h-full object-cover">
                     </div>
@@ -441,12 +443,12 @@ function renderCompare() {
 
             <!-- 葉片與葉脈 -->
             <tr>
-              <td class="p-2.5 bg-stone-50/80 font-bold text-[#3E4A24] text-center">葉片與葉脈</td>
+              <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center whitespace-nowrap">葉片與葉脈</td>
               ${compareList.map(t => {
                 const spot = t.hotspots?.find(h => h.type === 'leaves');
                 const desc = spot?.description || spot?.desc || t.leaves || t.description || '無特徵說明';
                 return `
-                  <td class="p-2.5 border-l border-stone-100 space-y-1">
+                  <td class="p-3 border-l border-stone-100 space-y-1">
                     <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60 relative">
                       <img src="${spot?.img || t.mainImage}" class="absolute inset-0 w-full h-full object-cover">
                     </div>
@@ -459,12 +461,12 @@ function renderCompare() {
 
             <!-- 花朵與果實 -->
             <tr>
-              <td class="p-2.5 bg-stone-50/80 font-bold text-[#3E4A24] text-center">花朵與果實</td>
+              <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center whitespace-nowrap">花朵與果實</td>
               ${compareList.map(t => {
                 const spot = t.hotspots?.find(h => h.type === 'flowers');
                 const desc = spot?.description || spot?.desc || t.flowers || t.description || '無特徵說明';
                 return `
-                  <td class="p-2.5 border-l border-stone-100 space-y-1">
+                  <td class="p-3 border-l border-stone-100 space-y-1">
                     <div class="w-full aspect-video rounded-lg overflow-hidden bg-stone-100 border border-stone-200/60 relative">
                       <img src="${spot?.img || t.mainImage}" class="absolute inset-0 w-full h-full object-cover">
                     </div>
@@ -477,11 +479,12 @@ function renderCompare() {
 
             <!-- 樹高與季節期 -->
             <tr>
-              <td class="p-2.5 bg-stone-50/80 font-bold text-[#3E4A24] text-center">樹高與季節期</td>
+              <!-- 加上 whitespace-nowrap 確保「樹高與季節期」永遠維持同一行 -->
+              <td class="p-3 bg-stone-50/80 font-bold text-[#3E4A24] text-center whitespace-nowrap">樹高與季節期</td>
               ${compareList.map(t => `
-                <td class="p-2.5 border-l border-stone-100 space-y-2 align-top">
+                <td class="p-3 border-l border-stone-100 space-y-2 align-top">
                   <div class="flex items-center gap-1">
-                    <span class="font-bold text-stone-700 text-xs">樹高</span>
+                    <span class="font-bold text-stone-700 text-xs whitespace-nowrap">樹高</span>
                     <span class="font-bold text-stone-700 text-xs ml-1">${t.height || '暫無數據'}</span>
                   </div>
                   <div>
@@ -493,9 +496,9 @@ function renderCompare() {
 
             <!-- 特別辨識標記 -->
             <tr class="bg-amber-50/20">
-              <td class="p-2.5 bg-amber-50/50 font-bold text-[#3E4A24] text-center">★ 特徵標記</td>
+              <td class="p-3 bg-amber-50/50 font-bold text-[#3E4A24] text-center whitespace-nowrap">★ 特徵標記</td>
               ${compareList.map(t => `
-                <td class="p-2.5 border-l border-stone-200/60 font-medium text-stone-700 text-[11px] leading-relaxed">
+                <td class="p-3 border-l border-stone-200/60 font-medium text-stone-700 text-[11px] leading-relaxed">
                   ${t.special || '無特殊標記'}
                 </td>
               `).join('')}
