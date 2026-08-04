@@ -62,34 +62,34 @@ window.addEventListener('DOMContentLoaded', async () => {
   if (typeof renderNotes === 'function') renderNotes();
 });
 
-// 2. 頁籤切換邏輯
+// 2. 頁籤切換邏輯 (Liquid Glass 風格升級版)
 function switchTab(tabId) {
+  // 切換頁籤內容顯示與隱藏
   document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
   const targetTab = document.getElementById(`tab-${tabId}`);
   if (targetTab) targetTab.classList.remove('hidden');
 
-  document.querySelectorAll('.nav-btn').forEach(btn => {
-    btn.classList.remove('bg-[#556B2F]', 'text-white');
-    btn.classList.add('text-[#C5D0B3]');
-  });
-  const activeNav = document.getElementById(`nav-${tabId}`);
-  if(activeNav) {
-    activeNav.classList.add('bg-[#556B2F]', 'text-white');
-    activeNav.classList.remove('text-[#C5D0B3]');
-  }
+  // 桌面版導覽按鈕樣式切換更新
+document.querySelectorAll('.nav-btn').forEach(btn => {
+  btn.className = "nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all text-[#C5D0B3] hover:text-white hover:bg-white/10";
+});
+const activeNav = document.getElementById(`nav-${tabId}`);
+if (activeNav) {
+  activeNav.className = "nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all bg-white/20 text-white backdrop-blur-md shadow-md border border-white/30";
+}
 
-  document.querySelectorAll('.mob-nav-btn').forEach(btn => {
-    btn.classList.remove('bg-[#556B2F]', 'text-[#EBF0E3]');
-    btn.classList.add('text-[#8F9E75]');
-  });
-  const mobActiveNav = document.getElementById(`mob-nav-${tabId}`);
-  if(mobActiveNav) {
-    mobActiveNav.classList.add('bg-[#556B2F]', 'text-[#EBF0E3]');
-    mobActiveNav.classList.remove('text-[#8F9E75]');
-  }
+ // 手機版底部導覽按鈕樣式切換更新
+document.querySelectorAll('.mob-nav-btn').forEach(btn => {
+  btn.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#556B2F] hover:text-grey hover:bg-white/15 rounded-full transition-all";
+});
+const mobActiveNav = document.getElementById(`mob-nav-${tabId}`);
+if (mobActiveNav) {
+  mobActiveNav.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md border border-white/40 transition-all font-bold";
+}
 
-  if(tabId === 'compare' && typeof renderCompare === 'function') renderCompare();
-  if(tabId === 'quiz' && typeof startQuiz === 'function') startQuiz();
+  // 特定頁籤的額外執行函數
+  if (tabId === 'compare' && typeof renderCompare === 'function') renderCompare();
+  if (tabId === 'quiz' && typeof startQuiz === 'function') startQuiz();
 }
 
 // 3. 科別切換處理函式

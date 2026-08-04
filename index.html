@@ -19,104 +19,102 @@
 
 <body class="bg-[#F4F6F0] text-stone-800 font-sans min-h-screen flex flex-col">
 
-  <header class="sticky top-0 z-40 bg-[#3E4A24] text-[#EBF0E3] shadow-md border-b border-[#2C3519]">
+<header class="sticky top-0 z-40 bg-[#3E4A24] backdrop-blur-2xl text-[#EBF0E3] shadow-lg shadow-stone-950/20 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
+      <div class="flex justify-between md:justify-between items-center h-16 relative">
         
-        <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('catalog')">
-  <!-- 將原本的圖示 div 替換為 img 標籤 -->
-  <img src="app icon-01.png" alt="樹心邊 Icon" class="w-12 h-12 object-contain rounded-lg" />
-  
-  <div>
-    <h1 class="text-xl font-bold tracking-wide">樹心邊</h1>
-    <p class="text-[10px] text-[#8F9E75] font-bold">樹木學習平台</p>
-  </div>
-</div>
-
-        <nav class="hidden md:flex space-x-1">
-          <button onclick="switchTab('catalog')" id="nav-catalog" class="nav-btn flex items-center space-x-1.5 px-3 py-2 rounded-md text-sm font-semibold transition-all bg-[#556B2F] text-white">
-            <i class="fa-solid fa-book-open"></i><span>樹木圖鑑</span>
-          </button>
-          <button onclick="switchTab('knowledge')" id="nav-knowledge" class="nav-btn flex items-center space-x-1.5 px-3 py-2 rounded-md text-sm font-semibold transition-all text-[#C5D0B3] hover:text-white hover:bg-[#4E5D2E]">
-            <i class="fa-solid fa-graduation-cap"></i><span>知識筆記</span>
-          </button>
-          <button onclick="switchTab('compare')" id="nav-compare" class="nav-btn flex items-center space-x-1.5 px-3 py-2 rounded-md text-sm font-semibold transition-all text-[#C5D0B3] hover:text-white hover:bg-[#4E5D2E] relative">
-            <i class="fa-solid fa-layer-group"></i><span>特徵對比</span>
-            <span id="compare-badge-desktop" class="hidden bg-[#D4AF37] text-stone-900 text-xs px-1.5 py-0.2 rounded-full font-bold ml-1">0</span>
-          </button>
-          <button onclick="switchTab('quiz')" id="nav-quiz" class="nav-btn flex items-center space-x-1.5 px-3 py-2 rounded-md text-sm font-semibold transition-all text-[#C5D0B3] hover:text-white hover:bg-[#4E5D2E]">
-            <i class="fa-solid fa-award"></i><span>辨識挑戰</span>
-          </button>
-          <button onclick="switchTab('notes')" id="nav-notes" class="nav-btn flex items-center space-x-1.5 px-3 py-2 rounded-md text-sm font-semibold transition-all text-[#C5D0B3] hover:text-white hover:bg-[#4E5D2E]">
-            <i class="fa-solid fa-location-dot"></i><span>觀測手記</span>
-          </button>
-        </nav>
-
-        <div class="flex items-center space-x-1.5">
-          <label class="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-[#4E5D2E] hover:bg-[#556B2F] text-white text-xs font-bold border border-[#556B2F] cursor-pointer">
-            <i class="fa-solid fa-upload text-amber-300"></i>
-            <span class="hidden sm:inline">匯入 JSON</span>
-            <input type="file" id="json-file-input" accept=".json" class="hidden" onchange="importJson(event)">
-          </label>
-          <button onclick="exportJson()" class="flex items-center space-x-1 px-2.5 py-1.5 rounded-lg bg-[#4E5D2E] hover:bg-[#556B2F] text-white text-xs font-bold border border-[#556B2F]">
-            <i class="fa-solid fa-download text-emerald-300"></i>
-            <span class="hidden sm:inline">匯出 JSON</span>
-          </button>
+        <!-- 左側 Logo 與標題區（手機版絕對置中，桌面版靠左正常對齊） -->
+        <div class="flex items-center space-x-3.5 cursor-pointer group absolute left-1/2 -translate-x-1/2 md:static md:left-auto md:translate-x-0" onclick="switchTab('catalog')">
+          <img src="app icon-01.png" alt="樹心邊 Icon" class="w-11 h-11 object-contain rounded-2xl shadow-md border border-white/25 group-hover:scale-105 transition-transform duration-300" />
+          
+          <div class="flex flex-col justify-center">
+            <h1 class="text-lg font-extrabold tracking-wide text-white drop-shadow-sm whitespace-nowrap">樹心邊</h1>
+            <p class="text-[10px] text-[#C5D0B3] font-bold tracking-widest uppercase opacity-90 whitespace-nowrap">樹木學習平台</p>
+          </div>
         </div>
 
+        <!-- 桌面版導覽列（已將整體外框與內部按鈕全面改為圓角 pill 設計） -->
+<nav class="hidden md:flex space-x-1 bg-white/10 backdrop-blur-md p-1.5 rounded-full border border-white/15 shadow-inner">
+  <button onclick="switchTab('catalog')" id="nav-catalog" class="nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all bg-white/20 text-white backdrop-blur-md shadow-md border border-white/30">
+    <i class="fa-solid fa-book-open"></i><span>樹木圖鑑</span>
+  </button>
+  <button onclick="switchTab('knowledge')" id="nav-knowledge" class="nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all text-[#C5D0B3] hover:text-white hover:bg-white/10">
+    <i class="fa-solid fa-graduation-cap"></i><span>知識筆記</span>
+  </button>
+  <button onclick="switchTab('compare')" id="nav-compare" class="nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all text-[#C5D0B3] hover:text-white hover:bg-white/10 relative">
+    <i class="fa-solid fa-layer-group"></i><span>特徵對比</span>
+    <span id="compare-badge-desktop" class="hidden bg-white/30 text-white backdrop-blur-md border border-white/30 text-[10px] px-1.5 py-0.2 rounded-full font-black ml-1 shadow-sm">0</span>
+  </button>
+  <button onclick="switchTab('quiz')" id="nav-quiz" class="nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all text-[#C5D0B3] hover:text-white hover:bg-white/10">
+    <i class="fa-solid fa-award"></i><span>辨識挑戰</span>
+  </button>
+  <button onclick="switchTab('notes')" id="nav-notes" class="nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all text-[#C5D0B3] hover:text-white hover:bg-white/10">
+    <i class="fa-solid fa-location-dot"></i><span>觀測手記</span>
+  </button>
+</nav>
+
+        <div class="hidden md:block w-10"></div>
+        
       </div>
     </div>
+</header>
 
-    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-[#3E4A24] border-t border-[#2C3519] grid grid-cols-5 z-40 shadow-lg">
-      <button onclick="switchTab('catalog')" id="mob-nav-catalog" class="mob-nav-btn flex flex-col items-center justify-center py-2 text-[#EBF0E3] bg-[#556B2F]">
-        <i class="fa-solid fa-book-open text-lg mb-0.5"></i><span class="text-[10px]">圖鑑</span>
-      </button>
-      <button onclick="switchTab('knowledge')" id="mob-nav-knowledge" class="mob-nav-btn flex flex-col items-center justify-center py-2 text-[#8F9E75]">
-        <i class="fa-solid fa-graduation-cap text-lg mb-0.5"></i><span class="text-[10px]">知識</span>
-      </button>
-      <button onclick="switchTab('compare')" id="mob-nav-compare" class="mob-nav-btn flex flex-col items-center justify-center py-2 text-[#8F9E75] relative">
-        <i class="fa-solid fa-layer-group text-lg mb-0.5"></i><span class="text-[10px]">對比</span>
-        <span id="compare-badge-mobile" class="hidden absolute top-1 right-2 bg-[#D4AF37] text-stone-900 text-[9px] px-1.5 py-0.2 rounded-full font-black shadow">0</span>
-      </button>
-      <button onclick="switchTab('quiz')" id="mob-nav-quiz" class="mob-nav-btn flex flex-col items-center justify-center py-2 text-[#8F9E75]">
-        <i class="fa-solid fa-award text-lg mb-0.5"></i><span class="text-[10px]">挑戰</span>
-      </button>
-      <button onclick="switchTab('notes')" id="mob-nav-notes" class="mob-nav-btn flex flex-col items-center justify-center py-2 text-[#8F9E75]">
-        <i class="fa-solid fa-location-dot text-lg mb-0.5"></i><span class="text-[10px]">手記</span>
-      </button>
-    </div>
-  </header>
+<!-- 手機版懸浮底部 Glass Liquid Navigation Bar（超高通透感、扁平圓形，未選中為深色圖標，選中時為橄欖綠背景與白色文字） -->
+<div class="md:hidden fixed bottom-4 left-4 right-4 z-40 bg-white/5 backdrop-blur-2xl border border-white/15 grid grid-cols-5 px-1.5 py-1 rounded-full shadow-2xl shadow-stone-950/40 ring-1 ring-black/10">
+  
+  <button onclick="switchTab('catalog')" id="mob-nav-catalog" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md border border-white/40 transition-all font-bold">
+    <i class="fa-solid fa-book-open text-xs mb-0.5"></i><span class="text-[9px]">圖鑑</span>
+  </button>
+  
+  <button onclick="switchTab('knowledge')" id="mob-nav-knowledge" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#556B2F] rounded-full transition-all font-semibold">
+    <i class="fa-solid fa-graduation-cap text-xs mb-0.5"></i><span class="text-[9px]">知識</span>
+  </button>
+  
+  <button onclick="switchTab('compare')" id="mob-nav-compare" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#556B2F] rounded-full transition-all font-semibold relative">
+    <i class="fa-solid fa-layer-group text-xs mb-0.5"></i><span class="text-[9px]">對比</span>
+    <span id="compare-badge-mobile" class="hidden absolute top-0.5 right-1.5 bg-[#556B2F] text-white backdrop-blur-md border border-white/30 text-[8px] px-1 py-0 rounded-full font-black shadow">0</span>
+  </button>
+  
+  <button onclick="switchTab('quiz')" id="mob-nav-quiz" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#556B2F] rounded-full transition-all font-semibold">
+    <i class="fa-solid fa-award text-xs mb-0.5"></i><span class="text-[9px]">挑戰</span>
+  </button>
+  
+  <button onclick="switchTab('notes')" id="mob-nav-notes" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#556B2F] rounded-full transition-all font-semibold">
+    <i class="fa-solid fa-location-dot text-xs mb-0.5"></i><span class="text-[9px]">手記</span>
+  </button>
+
+</div>
 
   <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16 md:mb-6">
     
 <section id="tab-catalog" class="tab-content space-y-6">
   
-  <!-- 篩選與搜尋控制面板區塊 -->
-  <div class="bg-white p-4 rounded-2xl shadow-sm border border-stone-200/60 flex flex-col gap-3">
+  <!-- 篩選與搜尋控制面板區塊 (保留原本架構與邊框，微調背景與圓角) -->
+  <div class="bg-white/90 backdrop-blur-2xl p-4 rounded-3xl shadow-md border border-stone-200/80 flex flex-col gap-3">
     
     <!-- 第一行：搜尋框 -->
     <div class="relative w-full">
       <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 text-xs"></i>
-      <input type="text" id="search-input" oninput="renderCatalog()" placeholder="搜尋樹木名稱、科別、特徵..." class="w-full pl-9 pr-4 py-2 rounded-xl bg-stone-50 border border-stone-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#556B2F] text-xs transition-all">
+      <input type="text" id="search-input" oninput="renderCatalog()" placeholder="搜尋樹木名稱、科別、特徵..." class="w-full pl-9 pr-4 py-2 rounded-full bg-stone-50/80 border border-stone-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#556B2F] text-xs transition-all">
     </div>
 
     <!-- 第二行：科別過濾器 -->
-<div class="w-full flex items-center py-1 border-b border-stone-100 pb-1.5 overflow-hidden">
-  
-  <!-- 左側固定的標題區塊 (sticky left-0) -->
-  <div class="sticky left-0 z-10 flex items-center space-x-1.5 bg-white pr-2.5 shrink-0">
-    <i class="fa-solid fa-filter text-stone-400 text-xs"></i>
-    <span class="text-xs text-stone-500 font-bold">科別</span>
-  </div>
+    <div class="w-full flex items-center py-1 border-b border-stone-100 pb-1.5 overflow-hidden">
+      
+      <!-- 左側固定的標題區塊 (sticky left-0) -->
+      <div class="sticky left-0 z-10 flex items-center space-x-1.5 bg-white/90 backdrop-blur-sm pr-2.5 shrink-0">
+        <i class="fa-solid fa-filter text-stone-400 text-xs"></i>
+        <span class="text-xs text-stone-500 font-bold">科別</span>
+      </div>
 
-  <!-- 【關鍵修正】加上 min-w-0 與 flex-1，讓橫向滾動容器能正確被限制在剩餘寬度內 -->
-  <div id="family-filters" class="flex-1 min-w-0 flex items-center space-x-1 overflow-x-auto pl-1"></div>
+      <!-- 橫向滾動容器 -->
+      <div id="family-filters" class="flex-1 min-w-0 flex items-center space-x-1 overflow-x-auto pl-1"></div>
 
-</div>
+    </div>
 
     <!-- 第三行：進階篩選觸發按鈕與重置 -->
     <div class="w-full flex justify-between items-center pt-1">
-      <button onclick="toggleFeatureModal()" class="flex items-center space-x-2 px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-100 hover:bg-[#556B2F] hover:text-white text-stone-700 transition-all shadow-xs">
+      <button onclick="toggleFeatureModal()" class="flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-stone-100 hover:bg-[#556B2F] hover:text-white text-stone-700 transition-all shadow-xs">
         <i class="fa-solid fa-sliders"></i>
         <span>進階特徵篩選</span>
         <span id="feature-count-badge" class="hidden bg-rose-500 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold ml-0.5">0</span>
@@ -134,12 +132,12 @@
 </section>
 
 <section id="tab-knowledge" class="tab-content hidden space-y-6 max-w-5xl mx-auto">
-  <div class="bg-gradient-to-r from-[#3E4A24] to-[#556B2F] text-white p-6 sm:p-8 rounded-2xl shadow-lg space-y-2">
-    <span class="bg-[#D4AF37] text-stone-950 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest inline-block">
+  <div class="bg-gradient-to-r from-[#3E4A24] to-[#556B2F] text-white p-6 sm:p-8 rounded-3xl shadow-lg space-y-2 border border-white/10">
+    <span class="bg-[#D4AF37] text-stone-950 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest inline-block shadow-sm">
       KNOWLEDGE BASE
     </span>
-    <h2 class="text-2xl sm:text-3xl font-extrabold">樹木學與風險管理知識筆記</h2>
-    <p class="text-stone-200 text-xs sm:text-sm leading-relaxed max-w-2xl">
+    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-wide">樹木學與風險管理知識筆記</h2>
+    <p class="text-stone-200 text-xs sm:text-sm leading-relaxed max-w-2xl opacity-90">
       點選下方知識卡片，開啟專屬講堂與詳細文章內容。
     </p>
   </div>
