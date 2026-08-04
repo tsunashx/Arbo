@@ -264,22 +264,22 @@ function renderCatalog() {
     const isCompared = compareList.some(c => c.id === tree.id);
 
     // 原生/外來 標籤（圓角 rounded-full）
-    let speciesClass = 'bg-stone-100 text-stone-700 border border-stone-200';
+    let speciesClass = 'bg-stone-100/80 backdrop-blur-md text-stone-700 border border-stone-200/80';
     if (tree.species) {
       if (tree.species.includes('原生')) {
-        speciesClass = 'bg-sky-100 text-sky-800 border border-sky-200';
+        speciesClass = 'bg-sky-100/80 backdrop-blur-md text-sky-800 border border-sky-200/80';
       } else if (tree.species.includes('外來')) {
-        speciesClass = 'bg-rose-100 text-rose-800 border border-rose-200';
+        speciesClass = 'bg-rose-100/80 backdrop-blur-md text-rose-800 border border-rose-200/80';
       }
     }
 
     // 常綠/落葉 標籤（圓角 rounded-full）
-    let behaviorClass = 'bg-stone-100 text-stone-700 border border-stone-200';
+    let behaviorClass = 'bg-stone-100/80 backdrop-blur-md text-stone-700 border border-stone-200/80';
     if (tree.behavior) {
       if (tree.behavior.includes('常綠')) {
-        behaviorClass = 'bg-emerald-100 text-emerald-800 border border-emerald-200';
+        behaviorClass = 'bg-emerald-100/80 backdrop-blur-md text-emerald-800 border border-emerald-200/80';
       } else if (tree.behavior.includes('落葉')) {
-        behaviorClass = 'bg-[#EBF0E3] text-[#3E4A24] border border-stone-200';
+        behaviorClass = 'bg-[#EBF0E3]/80 backdrop-blur-md text-[#3E4A24] border border-stone-200/80';
       }
     }
 
@@ -610,20 +610,24 @@ function openTreeModal(id) {
   if (modal) modal.classList.remove('hidden');
 }
 
-// 渲染熱點按鈕
+// 渲染熱點按鈕（按下 / 選中後移除邊框，呈現純色亮黃色塊與柔和光暈）
 function renderHotspotButtons(activeSpotId) {
   const hotspotContainer = document.getElementById('modal-hotspots-container');
   if(!hotspotContainer) return;
   
   hotspotContainer.innerHTML = (currentTree?.hotspots || []).map(spot => {
     const isActive = spot.id === activeSpotId;
+    
+    // 選中時：純 #DFF700 填滿、無邊框 (border-transparent)、帶強烈光暈；未選中時：維持半透明毛玻璃與黃色邊框
     const colorStyle = isActive 
-      ? 'bg-red-500 border-red-500 text-white' 
-      : 'bg-white border-red-500 text-red-600';
+      ? 'bg-[#DFF700] border-transparent text-stone-950 shadow-lg shadow-[#DFF700]/50 scale-110' 
+      : 'bg-stone-900/60 backdrop-blur-md border-2 border-[#DFF700]/80 text-[#DFF700] hover:bg-[#DFF700] hover:border-[#DFF700] hover:text-stone-950';
 
     return `
-      <button onclick="selectHotspot('${spot.id}')" style="left:${spot.x}%; top:${spot.y}%;" class="absolute -translate-x-1/2 -translate-y-1/2 z-20 group">
-        <div class="flex items-center justify-center w-7 h-7 rounded-full border-2 ${colorStyle} text-[10px] font-black shadow-lg transition-all duration-300 group-hover:scale-110">
+      <button onclick="selectHotspot('${spot.id}')" style="left:${spot.x}%; top:${spot.y}%;" class="absolute -translate-x-1/2 -translate-y-1/2 z-20 group focus:outline-none">
+        ${!isActive ? `<span class="absolute inset-0 rounded-full bg-[#DFF700]/30 animate-ping pointer-events-none"></span>` : ''}
+        
+        <div class="relative flex items-center justify-center w-7 h-7 rounded-full ${colorStyle} text-[10px] font-black transition-all duration-300 group-hover:scale-110">
           ${spot.type === 'bark' ? '幹' : spot.type === 'leaves' ? '葉' : '花'}
         </div>
       </button>

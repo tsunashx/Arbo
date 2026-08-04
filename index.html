@@ -254,99 +254,120 @@
 
   </main>
 
-<div id="tree-modal" class="hidden fixed inset-0 z-50 bg-stone-900/70 backdrop-blur-sm flex items-center justify-center p-3">
-    <div class="bg-white rounded-2xl max-w-5xl w-full max-h-[92vh] overflow-hidden shadow-2xl border border-stone-200 flex flex-col md:flex-row">
-      <!-- 讓圖片容器完全填滿區塊並等比例置中填滿，不留多餘空間 -->
-      <div class="md:w-3/5 relative flex items-center justify-center overflow-hidden bg-stone-900">
-        <!-- 圖片改用 w-full h-full object-cover，確保等比例填滿整個左側版面且無任何空隙 -->
-        <img id="modal-main-img" src="" class="w-full h-full object-cover max-h-[45vh] md:max-h-full">
-        <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
-        <div class="absolute top-4 left-4 bg-stone-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl text-white shadow-md">
-          <h4 id="modal-tree-name" class="text-base font-black flex items-center space-x-2"></h4>
-          <p id="modal-tree-latin" class="text-[11px] text-emerald-200 italic font-serif"></p>
-        </div>
-        <div id="modal-hotspots-container"></div>
-      </div>
+<div id="tree-modal" class="hidden fixed inset-0 z-50 bg-stone-950/65 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 transition-all">
+    <!-- 彈窗主體：微調最大寬高與比例，讓左右兩欄配置更協調舒適 -->
+    <div class="bg-white/90 backdrop-blur-2xl rounded-3xl max-w-4xl w-full max-h-[88vh] overflow-hidden shadow-2xl shadow-stone-900/20 border border-white/80 flex flex-col md:flex-row relative">
+      
+      <!-- 左側圖片區塊：使用 w-full h-full object-cover 確保等比例填滿整個左側版面，無任何空隙與黑邊 -->
+<div class="md:w-1/2 relative flex items-center justify-center overflow-hidden bg-stone-900">
+  <img id="modal-main-img" src="" class="w-full h-full object-cover max-h-[45vh] md:max-h-full">
+  <div class="absolute inset-0 bg-stone-950/20 pointer-events-none"></div>
 
-      <div class="md:w-2/5 flex flex-col max-h-[50vh] md:max-h-full overflow-y-auto bg-white">
-        <div class="p-4 border-b border-stone-100 flex justify-between items-center bg-stone-50 sticky top-0 z-10">
-          <span class="text-xs font-black text-stone-500 tracking-wider uppercase">樹木考證詳細資訊</span>
-          <button onclick="closeTreeModal()" class="p-1 rounded-full hover:bg-stone-200 text-stone-500">
-            <i class="fa-solid fa-xmark text-lg"></i>
-          </button>
-        </div>
-        <div class="p-5 flex-grow space-y-5">
-          <div class="space-y-1 text-xs">
-            <p id="modal-description" class="text-stone-600 leading-relaxed font-normal bg-stone-50 p-3 rounded-xl border border-stone-100 mt-1"></p>
-          </div>
+  <!-- 左上角樹名標籤：橫向沉浸膠囊風格 -->
+  <div class="absolute top-4 left-4 bg-stone-900/60 backdrop-blur-2xl border border-white/20 px-4 py-2.5 rounded-full shadow-xl flex items-center gap-2.5 z-10">
+    
+    <!-- 微光指示點 -->
+    <span class="w-2 h-2 rounded-full bg-[#DFF700] shadow-[0_0_8px_#DFF700] shrink-0"></span>
+    
+    <!-- 資訊組合 -->
+    <div class="flex items-center gap-2 text-xs whitespace-nowrap">
+      <h4 id="modal-tree-name" class="font-extrabold text-white tracking-wide"></h4>
+      <span class="text-white/30">/</span>
+      <p id="modal-tree-latin" class="text-[9px] text-white/60 font-serif italic tracking-tighter"></p>
+      <span id="modal-tree-family" class="text-[10px] text-[#DFF700] font-bold tracking-wider uppercase"></span>
+    </div>
 
-<!-- 簡化後的樹高與花果期區塊 -->
-<div class="bg-white p-4 rounded-xl border border-stone-200/80 shadow-xs space-y-4">
-  
-  <!-- 樹高：簡潔一橫行 -->
-  <div class="flex items-center justify-between pb-3 border-b border-stone-100">
-    <span class="text-xs font-bold text-stone-600 flex items-center gap-2">
-      <i class="fa-solid fa-ruler-vertical text-[#556B2F]"></i> 樹高
-    </span>
-    <span id="modal-height" class="font-black text-[#3E4A24] text-sm"></span>
   </div>
 
-  <!-- 花果期：共用月份標題的極簡表格 -->
-  <div id="modal-season-grid-container" class="space-y-1">
-    <!-- 由 JS 動態渲染花果期對照表 -->
-  </div>
-
+  <div id="modal-hotspots-container"></div>
 </div>
 
-          <div id="modal-hotspot-detail" class="bg-[#F4F6F0] p-4 rounded-xl border border-stone-200/60 space-y-3"></div>
+      <!-- 右側資訊滾動區塊 -->
+      <div class="md:w-1/2 flex flex-col max-h-[50vh] md:max-h-full overflow-y-auto bg-white/50 backdrop-blur-md">
+        
+        <!-- 頂部標題列 -->
+        <div class="px-5 py-3.5 border-b border-stone-200/60 flex justify-between items-center bg-white/70 backdrop-blur-md sticky top-0 z-10">
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-3.5 bg-[#556B2F] rounded-full"></div>
+            <span class="text-[11px] font-black text-stone-600 tracking-wider uppercase">樹木考證詳細資訊</span>
+          </div>
+          <button onclick="closeTreeModal()" class="w-7 h-7 rounded-full bg-stone-200/50 hover:bg-stone-200 text-stone-500 flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-xmark text-xs"></i>
+          </button>
+        </div>
 
-          <div class="bg-amber-200 p-3 rounded-xl text-xs">
+        <div class="p-4 sm:p-5 flex-grow space-y-4">
+          <div id="modal-hotspot-detail" class="bg-[#F4F6F0]/80 backdrop-blur-sm p-3.5 rounded-2xl border border-stone-200/60 space-y-2.5"></div>
+
+          <div class="bg-amber-100/90 backdrop-blur-sm p-3 rounded-2xl border border-amber-200/60 text-xs shadow-2xs">
             <p id="modal-special" class="text-stone-800 font-bold leading-relaxed"></p>
           </div>
+          <div class="space-y-1 text-xs">
+            <p id="modal-description" class="text-stone-700 leading-relaxed font-normal bg-white/70 backdrop-blur-sm p-3 rounded-2xl border border-stone-200/60 shadow-2xs"></p>
+          </div>
 
-          <div class="pt-3 border-t border-stone-100 space-y-2 bg-stone-50 p-3 rounded-xl border border-stone-200">
+          <!-- 樹高與花果期區塊 -->
+          <div class="bg-white/70 backdrop-blur-sm p-3.5 rounded-2xl border border-stone-200/60 shadow-2xs space-y-3">
+            <div class="flex items-center justify-between pb-2.5 border-b border-stone-200/40">
+              <span class="text-xs font-bold text-stone-600 flex items-center gap-2">
+                <i class="fa-solid fa-ruler-vertical text-[#556B2F]"></i> 樹高
+              </span>
+              <span id="modal-height" class="font-black text-[#3E4A24] text-xs sm:text-sm"></span>
+            </div>
+
+            <div id="modal-season-grid-container" class="space-y-1">
+              <!-- 由 JS 動態渲染花果期對照表 -->
+            </div>
+          </div>
+
+          
+
+          <!-- 個人自訂備註區塊 -->
+          <div class="pt-2 border-t border-stone-200/40 space-y-2 bg-white/70 backdrop-blur-sm p-3.5 rounded-2xl border border-stone-200/60 shadow-2xs">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-[#3E4A24] flex items-center space-x-1">
+              <span class="text-xs font-bold text-[#3E4A24] flex items-center space-x-1.5">
                 <i class="fa-solid fa-tag text-[#556B2F]"></i>
-                <span>個人自訂備註 (自動儲存於本機)</span>
+                <span>個人自訂備註 (自動儲存)</span>
               </span>
               <button onclick="toggleEditNote()" class="text-[10px] text-[#556B2F] font-bold hover:underline">編輯備註</button>
             </div>
             <div id="note-view-mode" class="text-xs text-stone-700 leading-relaxed font-medium italic"></div>
             <div id="note-edit-mode" class="hidden space-y-2">
-              <textarea id="note-textarea" rows="3" class="w-full p-2 text-xs rounded border border-stone-300 focus:outline-none focus:ring-2 focus:ring-[#556B2F] bg-white leading-relaxed" placeholder="在此寫下您的個人觀察備註..."></textarea>
+              <textarea id="note-textarea" rows="2" class="w-full p-2 text-xs rounded-xl border border-stone-300/80 focus:outline-none focus:ring-2 focus:ring-[#556B2F] bg-white/90 leading-relaxed" placeholder="在此寫下您的個人觀察備註..."></textarea>
               <div class="flex justify-end space-x-2">
-                <button onclick="toggleEditNote()" class="px-2.5 py-1 text-[10px] font-bold text-stone-500 bg-stone-200 rounded">取消</button>
-                <button onclick="saveUserNote()" class="px-3 py-1 text-[10px] font-bold text-white bg-[#556B2F] rounded">儲存備註</button>
+                <button onclick="toggleEditNote()" class="px-2.5 py-1 text-[10px] font-bold text-stone-600 bg-stone-200/80 rounded-lg hover:bg-stone-300 transition-colors">取消</button>
+                <button onclick="saveUserNote()" class="px-3 py-1 text-[10px] font-bold text-white bg-[#556B2F] rounded-lg hover:bg-[#3E4A24] transition-colors shadow-xs">儲存</button>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="p-3 border-t border-stone-100 bg-stone-50 flex justify-end">
-          <button onclick="closeTreeModal()" class="bg-stone-200 text-stone-700 px-4 py-1.5 rounded-lg text-xs font-bold">關閉視窗</button>
+        <!-- 底部關閉按鈕列 -->
+        <div class="px-4 py-3 border-t border-stone-200/50 bg-white/70 backdrop-blur-md flex justify-end">
+          <button onclick="closeTreeModal()" class="bg-stone-200/80 hover:bg-stone-300 text-stone-700 px-4 py-1.5 rounded-xl text-xs font-bold transition-colors shadow-2xs">關閉視窗</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="article-modal" class="hidden fixed inset-0 z-50 bg-stone-900/70 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[88vh] overflow-y-auto shadow-2xl border border-stone-200 flex flex-col">
-      <div class="p-5 border-b border-stone-100 flex justify-between items-center bg-[#3E4A24] text-white sticky top-0 z-10">
-        <span id="article-modal-category" class="text-xs font-bold px-2.5 py-0.5 rounded-full"></span>
-        <button onclick="closeArticleModal()" class="p-1 rounded-full hover:bg-white/20 text-white">
+  <!-- 文章閱讀彈窗 (Liquid Glass 風格化) -->
+  <div id="article-modal" class="hidden fixed inset-0 z-50 bg-stone-950/60 backdrop-blur-md flex items-center justify-center p-4 transition-all">
+    <div class="bg-white/85 backdrop-blur-xl rounded-3xl max-w-2xl w-full max-h-[88vh] overflow-y-auto shadow-2xl shadow-stone-900/10 border border-white/60 flex flex-col">
+      <div class="p-5 border-b border-stone-200/50 flex justify-between items-center bg-[#3E4A24]/90 backdrop-blur-md text-white sticky top-0 z-10 shadow-sm">
+        <span id="article-modal-category" class="text-xs font-bold px-3 py-1 rounded-full bg-white/20 backdrop-blur-xs"></span>
+        <button onclick="closeArticleModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
       <div class="p-6 space-y-5">
-        <h2 id="article-modal-title" class="text-xl sm:text-2xl font-extrabold text-[#3E4A24]"></h2>
-        <div class="h-56 w-full bg-stone-100 rounded-xl overflow-hidden border border-stone-200">
+        <h2 id="article-modal-title" class="text-xl sm:text-2xl font-extrabold text-[#3E4A24] tracking-tight"></h2>
+        <div class="h-56 w-full bg-stone-100 rounded-2xl overflow-hidden border border-stone-200/60 shadow-inner">
           <img id="article-modal-img" src="" class="w-full h-full object-cover">
         </div>
-        <div id="article-modal-content" class="text-xs sm:text-sm text-stone-700 leading-relaxed whitespace-pre-line space-y-3 font-normal bg-stone-50 p-4 rounded-xl border border-stone-100"></div>
+        <div id="article-modal-content" class="text-xs sm:text-sm text-stone-700 leading-relaxed whitespace-pre-line space-y-3 font-normal bg-white/60 backdrop-blur-sm p-5 rounded-2xl border border-stone-200/60 shadow-xs"></div>
       </div>
-      <div class="p-4 border-t border-stone-100 bg-stone-50 flex justify-end">
-        <button onclick="closeArticleModal()" class="bg-[#556B2F] hover:bg-[#3E4A24] text-white px-5 py-2 rounded-lg text-xs font-bold">關閉文章</button>
+      <div class="p-4 border-t border-stone-200/50 bg-white/60 backdrop-blur-md flex justify-end">
+        <button onclick="closeArticleModal()" class="bg-[#556B2F] hover:bg-[#3E4A24] text-white px-6 py-2.5 rounded-xl text-xs font-bold transition-all shadow-md shadow-[#556B2F]/20">關閉文章</button>
       </div>
     </div>
   </div>
