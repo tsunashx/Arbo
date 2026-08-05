@@ -61,27 +61,27 @@
     </div>
 </header>
 
-<!-- 手機版懸浮底部 Glass Liquid Navigation Bar（支援淺色底顯示 #C5D0B3，深色底自動切換為白色文字） -->
-<div class="md:hidden fixed bottom-4 left-4 right-4 z-40 bg-[#556B2F]/5 backdrop-blur-2xl border border-white/15 grid grid-cols-5 px-1.5 py-1 rounded-full shadow-2xl shadow-stone-950/40 ring-1 ring-black/10">
+<!-- 手機版懸浮底部 Glass Liquid Navigation Bar -->
+<div class="md:hidden fixed bottom-4 left-4 right-4 z-40 bg-white/5 backdrop-blur-2xl border border-white/15 grid grid-cols-5 px-1.5 py-1 rounded-full shadow-2xl shadow-stone-950/40 ring-1 ring-black/10">
   
-  <button onclick="switchTab('catalog')" id="mob-nav-catalog" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md border border-white/40 transition-all font-bold">
+  <button onclick="switchTab('catalog')" id="mob-nav-catalog" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md transition-all font-bold">
     <i class="fa-solid fa-book-open text-xs mb-0.5"></i><span class="text-[9px]">圖鑑</span>
   </button>
   
-  <button onclick="switchTab('knowledge')" id="mob-nav-knowledge" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#556B2F] dark:text-white transition-all font-semibold">
+  <button onclick="switchTab('knowledge')" id="mob-nav-knowledge" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#A4B38D] transition-all font-semibold">
     <i class="fa-solid fa-graduation-cap text-xs mb-0.5"></i><span class="text-[9px]">知識</span>
   </button>
   
-  <button onclick="switchTab('compare')" id="mob-nav-compare" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#556B2F] dark:text-white transition-all font-semibold relative">
+  <button onclick="switchTab('compare')" id="mob-nav-compare" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#A4B38D] transition-all font-semibold relative">
     <i class="fa-solid fa-layer-group text-xs mb-0.5"></i><span class="text-[9px]">對比</span>
     <span id="compare-badge-mobile" class="hidden absolute top-0.5 right-1.5 bg-[#556B2F] text-white backdrop-blur-md border border-white/30 text-[8px] px-1 py-0 rounded-full font-black shadow">0</span>
   </button>
   
-  <button onclick="switchTab('quiz')" id="mob-nav-quiz" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#556B2F] dark:text-white transition-all font-semibold">
+  <button onclick="switchTab('quiz')" id="mob-nav-quiz" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#A4B38D] transition-all font-semibold">
     <i class="fa-solid fa-award text-xs mb-0.5"></i><span class="text-[9px]">挑戰</span>
   </button>
   
-  <button onclick="switchTab('notes')" id="mob-nav-notes" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#556B2F] dark:text-white transition-all font-semibold">
+  <button onclick="switchTab('notes')" id="mob-nav-notes" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#A4B38D] transition-all font-semibold">
     <i class="fa-solid fa-location-dot text-xs mb-0.5"></i><span class="text-[9px]">手記</span>
   </button>
 

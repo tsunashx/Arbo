@@ -62,37 +62,31 @@ window.addEventListener('DOMContentLoaded', async () => {
   if (typeof renderNotes === 'function') renderNotes();
 });
 
-// 2. 頁籤切換邏輯 (Liquid Glass 風格升級版)
 function switchTab(tabId) {
-  // 切換頁籤內容顯示與隱藏
+  // 1. 切換頁籤內容顯示與隱藏
   document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
   const targetTab = document.getElementById(`tab-${tabId}`);
   if (targetTab) targetTab.classList.remove('hidden');
-  // 切換到深色底時
-document.documentElement.classList.add('dark');
 
-// 切換回白色底時
-document.documentElement.classList.remove('dark');
+  // 2. 桌面版導覽按鈕樣式切換更新
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.className = "nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all text-[#C5D0B3] hover:text-white hover:bg-white/10";
+  });
+  const activeNav = document.getElementById(`nav-${tabId}`);
+  if (activeNav) {
+    activeNav.className = "nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all bg-white/20 text-white backdrop-blur-md shadow-md border border-white/30";
+  }
 
-  // 桌面版導覽按鈕樣式切換更新
-document.querySelectorAll('.nav-btn').forEach(btn => {
-  btn.className = "nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all text-[#C5D0B3] hover:text-white hover:bg-white/10";
-});
-const activeNav = document.getElementById(`nav-${tabId}`);
-if (activeNav) {
-  activeNav.className = "nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all bg-white/20 text-white backdrop-blur-md shadow-md border border-white/30";
-}
+  // 3. 手機版底部導覽按鈕樣式切換更新（未選中使用 #A4B38D，選中時使用 #556B2F 與白邊框）
+  document.querySelectorAll('.mob-nav-btn').forEach(btn => {
+    btn.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#A4B38D] transition-all font-semibold";
+  });
+  const mobActiveNav = document.getElementById(`mob-nav-${tabId}`);
+  if (mobActiveNav) {
+    mobActiveNav.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md border border-white/40 transition-all font-bold";
+  }
 
-// 手機版底部導覽按鈕樣式切換更新
-document.querySelectorAll('.mob-nav-btn').forEach(btn => {
-  btn.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#556B2F] dark:text-white transition-all font-semibold";
-});
-const mobActiveNav = document.getElementById(`mob-nav-${tabId}`);
-if (mobActiveNav) {
-  mobActiveNav.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md border border-white/40 transition-all font-bold";
-}
-
-  // 特定頁籤的額外執行函數
+  // 4. 特定頁籤的額外執行函數
   if (tabId === 'compare' && typeof renderCompare === 'function') renderCompare();
   if (tabId === 'quiz' && typeof startQuiz === 'function') startQuiz();
 }
