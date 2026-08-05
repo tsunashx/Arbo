@@ -77,14 +77,14 @@ function switchTab(tabId) {
     activeNav.className = "nav-btn flex items-center space-x-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all bg-white/20 text-white backdrop-blur-md shadow-md border border-white/30";
   }
 
-  // 3. 手機版底部導覽按鈕樣式切換更新（未選中使用 #A4B38D，選中時使用 #556B2F 與白邊框）
-  document.querySelectorAll('.mob-nav-btn').forEach(btn => {
-    btn.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#A4B38D] transition-all font-semibold";
-  });
-  const mobActiveNav = document.getElementById(`mob-nav-${tabId}`);
-  if (mobActiveNav) {
-    mobActiveNav.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md border border-white/40 transition-all font-bold";
-  }
+// 3. 手機版底部導覽按鈕樣式切換更新
+document.querySelectorAll('.mob-nav-btn').forEach(btn => {
+  btn.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#E2E8D8] transition-all font-semibold relative";
+});
+const mobActiveNav = document.getElementById(`mob-nav-${tabId}`);
+if (mobActiveNav) {
+  mobActiveNav.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md transition-all font-bold relative";
+}
 
   // 4. 特定頁籤的額外執行函數
   if (tabId === 'compare' && typeof renderCompare === 'function') renderCompare();
@@ -334,18 +334,20 @@ function toggleCompare(id) {
     compareList.push(tree);
   }
 
-  // 更新 Badge 數字顯示
+// 更新 Badge 數字顯示
   const desktopBadge = document.getElementById('compare-badge-desktop');
   const mobileBadge = document.getElementById('compare-badge-mobile');
   
   if (compareList.length > 0) {
     if (desktopBadge) {
       desktopBadge.innerText = compareList.length;
-      desktopBadge.classList.remove('hidden');
+      // 【修改處】將文字改為亮黃色 bg-[#DFF700] text-stone-950
+      desktopBadge.className = "bg-[#DFF700] text-stone-950 backdrop-blur-md border border-white/30 text-[10px] px-1.5 py-0.2 rounded-full font-black ml-1 shadow-sm";
     }
     if (mobileBadge) {
       mobileBadge.innerText = compareList.length;
-      mobileBadge.classList.remove('hidden');
+      // 【修改處】將背景改為亮黃色，文字為深色 bg-[#DFF700] text-stone-950
+      mobileBadge.className = "absolute top-0.5 right-1.5 bg-[#DFF700] text-stone-950 backdrop-blur-md border border-white/30 text-[8px] px-1.5 py-0 rounded-full font-black shadow";
     }
   } else {
     if (desktopBadge) desktopBadge.classList.add('hidden');
