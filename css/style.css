@@ -75,30 +75,40 @@
 /* 1. 全局按鈕與導覽列取消點擊高亮與長按選單 */
 button, a, .mob-nav-btn {
   -webkit-tap-highlight-color: transparent !important;
-  -webkit-touch-callout: none;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -webkit-appearance: none !important;
+  user-select: none !important;
   touch-action: manipulation;
-  user-select: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
-/* 2. 未選中的行動導覽按鈕：點擊時維持透明，絕不冒出灰色方塊 */
-.mob-nav-btn:not(.bg-\[\#556B2F\]) {
-  background-color: transparent !important;
+/* 2. 確保按鈕內部的圖標與文字不會干擾點擊穿透 */
+.mob-nav-btn *, .mob-nav-btn i, .mob-nav-btn span {
+  pointer-events: none !important;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
-.mob-nav-btn:not(.bg-\[\#556B2F\]):active, 
+/* 3. 未選中的行動導覽按鈕：點擊時維持透明，絕不冒出灰色方塊 */
+.mob-nav-btn:not(.bg-\[\#556B2F\]),
+.mob-nav-btn:not(.bg-\[\#556B2F\]):hover,
 .mob-nav-btn:not(.bg-\[\#556B2F\]):focus,
-.mob-nav-btn:not(.bg-\[\#556B2F\]):hover {
-  outline: none !important;
+.mob-nav-btn:not(.bg-\[\#556B2F\]):active {
   background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-/* 3. 已選中的行動導覽按鈕：用最高權重強制鎖定深橄欖綠，點擊時絕不閃爍灰色殘影 */
+/* 4. 已選中的行動導覽按鈕：用最高權重強制鎖定深橄欖綠，點擊時絕不閃爍灰色殘影 */
 .mob-nav-btn.bg-\[\#556B2F\],
-.mob-nav-btn.bg-\[\#556B2F\]:active,
+.mob-nav-btn.bg-\[\#556B2F\]:hover,
 .mob-nav-btn.bg-\[\#556B2F\]:focus,
-.mob-nav-btn.bg-\[\#556B2F\]:hover {
+.mob-nav-btn.bg-\[\#556B2F\]:active {
   background-color: #556B2F !important;
   color: #ffffff !important;
   outline: none !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 }
+

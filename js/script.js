@@ -309,12 +309,15 @@ function renderCatalog() {
             <p class="text-xs text-stone-600 line-clamp-2 text-left">${tree.description || ''}</p>
           </div>
         </div>
-        <div class="p-4 pt-0 flex gap-2">
-          <button onclick="openTreeModal('${tree.id}')" class="flex-1 bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-bold py-2 rounded-lg transition-colors">考證詳細</button>
-          <button onclick="toggleCompare('${tree.id}')" class="text-xs font-bold px-3 py-2 rounded-lg transition-all ${compareBtnClass}">
-            ${isCompared ? '✓ 已加對比' : '加入對比'}
-          </button>
-        </div>
+        <div class="p-4 pt-0 flex gap-2.5">
+  <!-- 考證詳細：改為扎實的淺石灰色背景與明顯邊框，確保看得見 -->
+  <button onclick="openTreeModal('${tree.id}')" class="flex-1 bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-bold py-3 px-4 rounded-xl border border-stone-300 shadow-xs transition-all [-webkit-tap-highlight-color:transparent]">考證詳細</button>
+  
+  <!-- 加入對比：動態樣式維持原本邏輯 -->
+  <button onclick="toggleCompare('${tree.id}')" class="text-xs font-bold px-5 py-3 rounded-xl transition-all shadow-xs [-webkit-tap-highlight-color:transparent] ${compareBtnClass}">
+    ${isCompared ? '✓ 已加對比' : '加入對比'}
+  </button>
+</div>
       </div>
     `;
   }).join('');
@@ -378,10 +381,10 @@ function renderCompare() {
 
   if (compareList.length === 0) {
     container.innerHTML = `
-      <div class="bg-white rounded-2xl border border-dashed border-stone-300 py-16 text-center px-4">
-        <i class="fa-solid fa-layer-group text-stone-300 text-4xl mb-3"></i>
-        <p class="text-xs text-stone-400 mb-4">請在樹木圖鑑中點擊「加入對比」。</p>
-        <button onclick="switchTab('catalog')" class="bg-[#556B2F] text-white text-xs font-bold px-4 py-2 rounded-lg">前往樹木圖鑑</button>
+      <div class="bg-white/65 backdrop-blur-2xl rounded-3xl border border-stone-200/95 py-16 text-center px-4 shadow-xl shadow-stone-950/5">
+        <i class="fa-solid fa-layer-group text-[#556B2F]/40 text-4xl mb-3"></i>
+        <p class="text-xs text-stone-600 font-bold mb-4">目前尚未選取對比項目，請在樹木圖鑑中點擊「加入對比」。</p>
+        <button onclick="switchTab('catalog')" class="bg-[#556B2F] hover:bg-[#3E4A24] text-white text-xs font-black px-5 py-2.5 rounded-2xl shadow-md transition-all">前往樹木圖鑑</button>
       </div>
     `;
     return;
@@ -401,7 +404,7 @@ function renderCompare() {
                   <div class="flex justify-between items-center">
                     <div class="truncate pr-1">
                       <span class="font-extrabold text-xs block truncate">${t.name}</span>
-                      <span class="text-[9px] text-[#DFF700]/70 italic font-serif block truncate">${t.latinName || ''}</span>
+                      <span class="text-[9px] text-[#C5D0B3] italic font-serif block truncate">${t.latinName || ''}</span>
                     </div>
                     <button onclick="toggleCompare('${t.id}')" class="w-4 h-4 shrink-0 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
                       <i class="fa-solid fa-xmark text-[9px]"></i>
@@ -679,20 +682,20 @@ function saveUserNote() {
   alert(`已成功儲存「${currentTree.name}」的自訂備註於您的裝置中！`);
 }
 
-// 知識頁面渲染
+// 知識頁面渲染 (Liquid Glass 卡片風格)
 function renderKnowledge() {
   const grid = document.getElementById('knowledge-grid');
   if(!grid) return;
   grid.innerHTML = knowledgeData.map(art => `
-    <div onclick="openArticleModal('${art.id}')" class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between group space-y-3">
-      <div class="space-y-2">
-        <span class="text-[10px] font-black px-2.5 py-0.5 rounded border inline-block ${art.colorStyle}">
+    <div onclick="openArticleModal('${art.id}')" class="bg-white/70 backdrop-blur-xl p-5 rounded-3xl border border-white/80 shadow-lg shadow-stone-950/5 hover:bg-white/90 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between group space-y-3 [-webkit-tap-highlight-color:transparent]">
+      <div class="space-y-2 pointer-events-none">
+        <span class="text-[10px] font-black px-2.5 py-0.5 rounded-full border inline-block ${art.colorStyle}">
           ${art.category}
         </span>
         <h3 class="font-extrabold text-base text-[#3E4A24] group-hover:text-[#556B2F] transition-colors">${art.title}</h3>
         <p class="text-xs text-stone-600 leading-relaxed font-normal line-clamp-2">${art.summary}</p>
       </div>
-      <div class="pt-2 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-[#556B2F]">
+      <div class="pt-2 border-t border-stone-200/40 flex items-center justify-between text-xs font-bold text-[#556B2F] pointer-events-none">
         <span>閱讀完整文章</span>
         <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
       </div>
@@ -704,7 +707,10 @@ function openArticleModal(id) {
   const art = knowledgeData.find(a => a.id === id);
   if(!art) return;
   document.getElementById('article-modal-category').innerText = art.category;
-  document.getElementById('article-modal-category').className = `text-xs font-bold px-2.5 py-0.5 rounded-full ${art.colorStyle}`;
+  
+  // 【Liquid Glass 修改處】加入半透明白底、邊框與微光陰影，讓標籤呈現液態玻璃質感
+  document.getElementById('article-modal-category').className = `text-xs font-bold px-3 py-1 rounded-full border border-white/40 bg-white/20 backdrop-blur-md shadow-sm ${art.colorStyle}`;
+  
   document.getElementById('article-modal-title').innerText = art.title;
   document.getElementById('article-modal-img').src = art.image;
   document.getElementById('article-modal-content').innerText = art.content;
@@ -887,15 +893,15 @@ function startQuiz() {
   const randomGen = questionGenerators[Math.floor(Math.random() * questionGenerators.length)];
   quizCurrent = randomGen();
 
-  // 4. 渲染題目至畫面
+// 方案 A：深色與加粗邊框
   const card = document.getElementById('quiz-card');
   card.innerHTML = `
     <h4 class="text-sm font-black text-stone-800 leading-relaxed">${quizCurrent.title}</h4>
-    <div class="space-y-2 mt-4">
+    <div class="space-y-3 mt-4">
       ${quizCurrent.choices.map(c => `
-        <button onclick="checkQuiz('${c.id}')" class="w-full p-3.5 rounded-xl border border-stone-200 text-left text-xs font-bold hover:bg-stone-50 hover:border-[#556B2F] transition-all flex justify-between items-center group">
-          <span>${c.text}</span>
-          <i class="fa-solid fa-chevron-right text-stone-300 group-hover:text-[#556B2F] text-[10px]"></i>
+        <button onclick="checkQuiz('${c.id}')" class="w-full p-4 rounded-2xl bg-white border-2 border-stone-400 text-left text-xs sm:text-sm font-bold text-stone-800 hover:bg-[#F4F6F0] hover:border-[#556B2F] transition-all flex justify-between items-center shadow-sm [-webkit-tap-highlight-color:transparent]">
+          <span class="pointer-events-none">${c.text}</span>
+          <i class="fa-solid fa-chevron-right text-stone-600 group-hover:text-[#556B2F] text-[10px] pointer-events-none transition-transform group-hover:translate-x-0.5"></i>
         </button>
       `).join('')}
     </div>
