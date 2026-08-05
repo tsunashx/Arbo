@@ -17,22 +17,20 @@
   <!-- 3. 自訂加入主畫面時顯示的網頁標題 -->
   <meta name="apple-mobile-web-app-title" content="樹心邊">
   
-  <!-- 【新增/修改】讓網頁內容向上延伸至動態島與狀態列區域 -->
+  <!-- 【關鍵設定】讓網頁內容向上延伸至動態島與狀態列區域並對齊色彩 -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <!-- 設定行動裝置瀏覽器頂部狀態列／工具列顏色 -->
   <meta name="theme-color" content="#3E4A24">
 </head>
 
 <body class="bg-[#F4F6F0] text-stone-800 font-sans min-h-screen flex flex-col">
 
-<header class="sticky top-0 z-40 bg-[#3E4A24] backdrop-blur-2xl text-[#EBF0E3] shadow-lg shadow-stone-950/20 border-b border-white/10">
+<header class="sticky top-0 z-40 bg-[#3E4A24] backdrop-blur-2xl text-[#EBF0E3] shadow-lg shadow-stone-950/20 border-b border-white/10 pt-safe">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between md:justify-between items-center h-16 relative">
         
-        <!-- 左側 Logo 與標題區（手機版絕對置中，桌面版靠左正常對齊） -->
-        <div class="flex items-center space-x-3.5 cursor-pointer group absolute left-1/2 -translate-x-1/2 md:static md:left-auto md:translate-x-0" onclick="switchTab('catalog')">
+        <!-- 左側 Logo 與標題區 -->
+        <div class="flex items-center space-x-3.5 cursor-pointer group absolute left-1/2 -translate-x-1/2 md:static md:left-auto md:translate-x-0 select-none" onclick="switchTab('catalog')">
           <img src="app icon-01.png" alt="樹心邊 Icon" class="w-11 h-11 object-contain rounded-2xl shadow-md border border-white/25 group-hover:scale-105 transition-transform duration-300" />
           
           <div class="flex flex-col justify-center">
@@ -67,27 +65,26 @@
     </div>
 </header>
 
-<!-- 手機版懸浮底部 Glass Liquid Navigation Bar (未選中文字已調亮) -->
-<div class="md:hidden fixed bottom-4 left-4 right-4 z-40 bg-[#3E4A24]/50 backdrop-blur-2xl border border-white/20 grid grid-cols-5 px-1.5 py-1 rounded-full shadow-2xl shadow-stone-950/40 ring-1 ring-black/10">
-  <button onclick="switchTab('catalog')" id="mob-nav-catalog" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md transition-all font-bold">
+<!-- 手機版懸浮底部 Glass Liquid Navigation Bar (加入 select-none 與殘影防護) -->
+<div class="md:hidden fixed bottom-4 left-4 right-4 z-40 bg-[#3E4A24]/50 backdrop-blur-2xl border border-white/20 grid grid-cols-5 px-1.5 py-1 rounded-full shadow-2xl shadow-stone-950/40 ring-1 ring-black/10 select-none">
+  <button onclick="switchTab('catalog')" id="mob-nav-catalog" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md transition-all font-bold [-webkit-tap-highlight-color:transparent]">
     <i class="fa-solid fa-book-open text-xs mb-0.5"></i><span class="text-[9px]">圖鑑</span>
   </button>
-  <button onclick="switchTab('knowledge')" id="mob-nav-knowledge" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#E2E8D8] hover:text-white transition-all font-semibold relative">
+  <button onclick="switchTab('knowledge')" id="mob-nav-knowledge" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#E2E8D8] hover:text-white transition-all font-semibold relative [-webkit-tap-highlight-color:transparent]">
     <i class="fa-solid fa-graduation-cap text-xs mb-0.5"></i><span class="text-[9px]">知識</span>
   </button>
-  <button onclick="switchTab('compare')" id="mob-nav-compare" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#E2E8D8] hover:text-white transition-all font-semibold relative">
+  <button onclick="switchTab('compare')" id="mob-nav-compare" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#E2E8D8] hover:text-white transition-all font-semibold relative [-webkit-tap-highlight-color:transparent]">
     <i class="fa-solid fa-layer-group text-xs mb-0.5"></i><span class="text-[9px]">對比</span>
     <span id="compare-badge-mobile" class="hidden absolute top-0.5 right-1.5 bg-[#DFF700] text-stone-950 backdrop-blur-md border border-white/30 text-[8px] px-1.5 py-0 rounded-full font-black shadow">0</span>
   </button>
-  <button onclick="switchTab('quiz')" id="mob-nav-quiz" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#E2E8D8] hover:text-white transition-all font-semibold relative">
+  <button onclick="switchTab('quiz')" id="mob-nav-quiz" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#E2E8D8] hover:text-white transition-all font-semibold relative [-webkit-tap-highlight-color:transparent]">
     <i class="fa-solid fa-award text-xs mb-0.5"></i><span class="text-[9px]">挑戰</span>
   </button>
-  <button onclick="switchTab('notes')" id="mob-nav-notes" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#E2E8D8] hover:text-white transition-all font-semibold relative">
+  <button onclick="switchTab('notes')" id="mob-nav-notes" class="mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#E2E8D8] hover:text-white transition-all font-semibold relative [-webkit-tap-highlight-color:transparent]">
     <i class="fa-solid fa-location-dot text-xs mb-0.5"></i><span class="text-[9px]">手記</span>
   </button>
 </div>
 
-<!-- 【修改處】將 py-6 改為 py-3，大幅縮減 Header 與各分頁內容之間的上方留白 -->
 <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-3 mb-24 md:mb-6 bg-[#F4F6F0] flex flex-col space-y-4">
   
   <!-- 1. 樹木圖鑑分頁 -->

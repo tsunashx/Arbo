@@ -79,11 +79,11 @@ function switchTab(tabId) {
 
 // 3. 手機版底部導覽按鈕樣式切換更新
 document.querySelectorAll('.mob-nav-btn').forEach(btn => {
-  btn.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#E2E8D8] transition-all font-semibold relative";
+  btn.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-[#E2E8D8] transition-all font-semibold relative select-none [-webkit-tap-highlight-color:transparent]";
 });
 const mobActiveNav = document.getElementById(`mob-nav-${tabId}`);
 if (mobActiveNav) {
-  mobActiveNav.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md transition-all font-bold relative";
+  mobActiveNav.className = "mob-nav-btn flex flex-col items-center justify-center py-1.5 text-white bg-[#556B2F] backdrop-blur-md rounded-full shadow-md transition-all font-bold relative select-none [-webkit-tap-highlight-color:transparent]";
 }
 
   // 4. 特定頁籤的額外執行函數
@@ -391,7 +391,7 @@ function renderCompare() {
     <div class="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
       <div class="overflow-x-auto">
         <!-- 稍微拉大表格最小寬度，確保內容舒適展開 -->
-        <table class="w-full text-left border-collapse table-fixed min-w-[650px]">
+        <table class="w-full text-left border-collapse table-fixed">
           <thead>
             <tr class="bg-[#556B2F] text-white text-xs">
               <!-- 左側標題欄固定寬度並強制不換行 -->
@@ -401,7 +401,7 @@ function renderCompare() {
                   <div class="flex justify-between items-center">
                     <div class="truncate pr-1">
                       <span class="font-extrabold text-xs block truncate">${t.name}</span>
-                      <span class="text-[9px] text-emerald-200 italic font-serif block truncate">${t.latinName || ''}</span>
+                      <span class="text-[9px] text-[#DFF700]/70 italic font-serif block truncate">${t.latinName || ''}</span>
                     </div>
                     <button onclick="toggleCompare('${t.id}')" class="w-4 h-4 shrink-0 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
                       <i class="fa-solid fa-xmark text-[9px]"></i>
