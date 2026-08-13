@@ -365,143 +365,161 @@
   ]
 },
   {
-    "id": "tree-8",
-    "family": "葉下珠科",
-    "name": "秋楓",
-    "engName": "Java Cedar, Bishop Tree",
-    "latinName": "Bischofia javanica Blume",
-    "species": "原生物種",
-    "behavior": "常綠喬木",
-    "height": "15 - 25 米",
-    "bloomPeriod": "4月 - 5月",
-    "fruitPeriod": "8月 - 10月",
-    "special": "★ 三出複葉及褐色漿果",
-    "keywords": ["秋楓", "茄苳", "三出複葉", "加冬", "重陽木", "葉下珠科", "Bischofia", "bishop tree"],
-    "description": "常綠或半落葉大喬木，生命力強健，樹冠寬廣濃密呈圓頭形，遮蔭良好。其顯著特徵為三出複葉，鋸齒緣，落葉前葉片會轉為鮮紅色。紅褐色樹皮老時呈薄片狀剝落。漿果結實纍纍，是鳥類與哺乳動物重要的冬糧。",
-    "userNotes": "",
-    "mainImage": "images/phyllanthaceae/bischofia javanica/bischofia javanica-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "紅褐色鱗片狀裂皮",
-        "x": 48,
-        "y": 70,
-        "desc": "樹皮呈紅褐色或灰褐色，老樹幹會呈現不規則薄片狀剝落。",
-        "img": "images/phyllanthaceae/bischofia javanica/bischofia javanica-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "三出複葉具鋸齒",
-        "x": 62,
-        "y": 35,
-        "desc": "每組葉柄上長有三片小葉（三出複葉），邊緣有細鋸齒，老葉掉落前變紅。",
-        "img": "images/phyllanthaceae/bischofia javanica/bischofia javanica-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "成串球形漿果",
-        "x": 30,
-        "y": 50,
-        "desc": "果實為球形漿果，成熟時呈淡褐色或黑褐色，成串下垂，深受鳥類喜愛。",
-        "img": "images/phyllanthaceae/bischofia javanica/bischofia javanica-fruit.jpg"
-      }
-    ]
-  },
+  "id": "tree-9",
+  "family": "豆科",
+  "name": "鳳凰木",
+  "engName": "Flame Tree, Flame of the Forest",
+  "latinName": "Delonix regia (Bojer ex Hook.) Raf.",
+  "species": "外來物種",
+  "behavior": "落葉喬木",
+  "height": "10 - 20 米",
+  "bloomMonths": [6, 7],
+  "fruitMonths": [8, 9, 10],
+  "special": "★ 鮮紅傘形花海與刀劍狀大莢果",
+  "keywords": [
+    "鳳凰木", "影樹", "金鳳樹", "Flame Tree", "Flame of the Forest", "Delonix regia",
+    "豆科", "Fabaceae", "鳳凰木屬", "Delonix", "外來物種", "落葉喬木", "外來", "落葉",
+    "二回羽狀", "互生", "橢圓形", "膜質", "全緣", "羽狀脈",
+    "皮孔", "板根", "豆莢", "褐果", "黑果", "紅花", "黃花",
+    "傘形"
+  ],
+  "description": "又稱影樹、金鳳樹，樹冠廣展如傘、枝葉平展，是香港極為常見且具代表性的落葉大喬木。因其樹姿優美、遮蔭效果極佳，被廣泛種植於本港公園、學校、屋邨及街道旁，每逢花期盛開時景色極為壯觀。\n\n它最大的特徵是羽狀複葉與鮮艷奪目的花朵——其葉片為細緻的二回羽狀複葉，質地輕盈，陽光穿透時如羽毛般輕柔；每年初夏，樹冠會開滿鮮紅至橙紅色的花朵，花瓣五枚，其中一枚常帶有黃白相間的班紋（蜜標），遠看宛如火燒雲或飛鳳之羽。\n\n此外，鳳凰木結出的果實為木質化的扁平長條形莢果，成熟時呈深褐色，長可達 50 公分以上，懸掛於枝頭宛如彎刀，隨風碰撞會發出響聲，內含具毒性的種子。\n\n鳳凰木雖然觀賞價值極高且適應力強，能快速提供良好遮蔭，但其木質較脆，在香港颱風季節較易折斷枝條。同時，其龐大的板根與淺根系在生長時容易隆起並擠壓路面，在都市綠化維護上需預留足夠空間並進行定期修剪。",
+  "userNotes": "",
+  "mainImage": "images/fabaceae/delonix regia/delonix regia-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "灰褐平滑樹皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹粗壯，皮孔明顯，老時樹皮呈不規則微裂。",
+      "img": "images/fabaceae/delonix regia/delonix regia-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "羽狀細緻複葉",
+      "x": 65,
+      "y": 30,
+      "desc": "二回羽狀複葉極為細緻，夜晚或陰雨天時小葉會折疊閉合。",
+      "img": "images/fabaceae/delonix regia/delonix regia-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "鮮紅大花與大莢果",
+      "x": 30,
+      "y": 45,
+      "desc": "花朵鮮紅奪目；結出長達50厘米以上的木質黑色刀劍狀莢果。",
+      "img": "images/fabaceae/delonix regia/delonix regia-flowers.jpg"
+    }
+  ]
+},
   {
-    "id": "tree-9",
-    "family": "豆科",
-    "name": "鳳凰木",
-    "engName": "Royal Poinciana, Flame Tree",
-    "latinName": "Delonix regia (Bojer ex Hook.) Raf.",
-    "species": "外來物種",
-    "behavior": "落葉喬木",
-    "height": "10 - 20 米",
-    "bloomPeriod": "5月 - 7月",
-    "fruitPeriod": "8月 - 10月",
-    "special": "★ 鮮紅傘形花海與刀劍狀大莢果",
-    "keywords": ["鳳凰木", "金鳳花", "火樹", "二回羽状複葉", "大莢果", "豆科", "Delonix", "flame tree","紅花"],
-    "description": "著名的觀賞樹種，樹冠寬廣開展呈傘形，極具遮蔭效果。夏季開花時滿樹鮮紅，極為壯觀，常被譽為「世上色彩最鮮艷的樹木之一」。其葉片為細緻的二回羽狀複葉，果實為大型木質化的扁平莢果，垂掛枝頭可歷時很久。",
-    "userNotes": "",
-    "mainImage": "images/fabaceae/delonix regia/delonix regia-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "灰褐平滑樹皮",
-        "x": 45,
-        "y": 75,
-        "desc": "樹幹粗壯，皮孔明顯，老時樹皮呈不規則微裂。",
-        "img": "images/fabaceae/delonix regia/delonix regia-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "羽狀細緻複葉",
-        "x": 65,
-        "y": 30,
-        "desc": "二回羽狀複葉極為細緻，夜晚或陰雨天時小葉會折疊閉合。",
-        "img": "images/fabaceae/delonix regia/delonix regia-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "鮮紅大花與大莢果",
-        "x": 30,
-        "y": 45,
-        "desc": "花朵鮮紅奪目；結出長達50厘米以上的木質黑色刀劍狀莢果。",
-        "img": "images/fabaceae/delonix regia/delonix regia-flowers.jpg"
-      }
-    ]
-  },
+  "id": "tree-9",
+  "family": "豆科",
+  "name": "鳳凰木",
+  "engName": "Flame Tree, Flame of the Forest",
+  "latinName": "Delonix regia (Bojer ex Hook.) Raf.",
+  "species": "外來物種",
+  "behavior": "落葉喬木",
+  "height": "10 - 20 米",
+  "bloomMonths": [6, 7],
+  "fruitMonths": [8, 9, 10],
+  "special": "★ 鮮紅傘形花海與刀劍狀大莢果",
+  "keywords": [
+    "鳳凰木", "影樹", "金鳳樹", "Flame Tree", "Flame of the Forest", "Delonix regia",
+    "豆科", "Fabaceae", "鳳凰木屬", "Delonix", "外來物種", "落葉喬木", "外來", "落葉",
+    "二回羽狀", "互生", "橢圓形", "膜質", "全緣", "羽狀脈",
+    "皮孔", "板根", "豆莢", "褐果", "黑果", "紅花", "黃花",
+    "傘形"
+  ],
+  "description": "又稱影樹、金鳳樹，樹冠廣展如傘、枝葉平展，是香港極為常見且具代表性的落葉大喬木。因其樹姿優美、遮蔭效果極佳，被廣泛種植於本港公園、學校、屋邨及街道旁，每逢花期盛開時景色極為壯觀。\n\n它最大的特徵是羽狀複葉與鮮艷奪目的花朵——其葉片為細緻的二回羽狀複葉，質地輕盈，陽光穿透時如羽毛般輕柔；每年初夏，樹冠會開滿鮮紅至橙紅色的花朵，花瓣五枚，其中一枚常帶有黃白相間的班紋（蜜標），遠看宛如火燒雲或飛鳳之羽。\n\n此外，鳳凰木結出的果實為木質化的扁平長條形莢果，成熟時呈深褐色，長可達 50 公分以上，懸掛於枝頭宛如彎刀，隨風碰撞會發出響聲，內含具毒性的種子。\n\n鳳凰木雖然觀賞價值極高且適應力強，能快速提供良好遮蔭，但其木質較脆，在香港颱風季節較易折斷枝條。同時，其龐大的板根與淺根系在生長時容易隆起並擠壓路面，在都市綠化維護上需預留足夠空間並進行定期修剪。",
+  "userNotes": "",
+  "mainImage": "images/fabaceae/delonix regia/delonix regia-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "灰褐平滑樹皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹粗壯，皮孔明顯，老時樹皮呈不規則微裂。",
+      "img": "images/fabaceae/delonix regia/delonix regia-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "羽狀細緻複葉",
+      "x": 65,
+      "y": 30,
+      "desc": "二回羽狀複葉極為細緻，夜晚或陰雨天時小葉會折疊閉合。",
+      "img": "images/fabaceae/delonix regia/delonix regia-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "鮮紅大花與大莢果",
+      "x": 30,
+      "y": 45,
+      "desc": "花朵鮮紅奪目；結出長達50厘米以上的木質黑色刀劍狀莢果。",
+      "img": "images/fabaceae/delonix regia/delonix regia-flowers.jpg"
+    }
+  ]
+},
   {
-    "id": "tree-10",
-    "family": "豆科",
-    "name": "水黃皮",
-    "engName": "Pongam Oiltree, Indian Beech",
-    "latinName": "Millettia pinnata (L.) Panigrahi",
-    "species": "原生物種",
-    "behavior": "常綠喬木",
-    "height": "8 - 15 米",
-    "bloomPeriod": "5月 - 6月",
-    "fruitPeriod": "8月 - 10月",
-    "special": "★ 抗風耐鹽與木質刀狀莢果",
-    "keywords": ["水黃皮", "九重吹", "水流豆", "羽狀複葉", "耐鹽防風", "豆科", "Millettia", "pongam"],
-    "description": "優良的海岸防風樹種，野生於海岸邊或近海河岸，樹冠呈圓球形，枝葉濃密。奇數羽状複葉革質光滑，富光澤。花朵為淡粉紫色蝶形花。果實為堅硬的木質扁平莢果，能漂浮於水面隨水流傳播。",
-    "userNotes": "",
-    "mainImage": "images/fabaceae/millettia pinnata/millettia pinnata-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "灰褐光滑樹皮",
-        "x": 50,
-        "y": 75,
-        "desc": "樹幹平滑，老時稍微呈淺縱裂，具極強抗風及耐鹽能力。",
-        "img": "images/fabaceae/millettia pinnata/millettia pinnata-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "光亮革質複葉",
-        "x": 60,
-        "y": 35,
-        "desc": "羽狀複葉，葉片表面具光澤，揉碎後常帶有一種特殊的氣味。",
-        "img": "images/fabaceae/millettia pinnata/millettia pinnata-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "粉紫蝶形花束",
-        "x": 35,
-        "y": 45,
-        "desc": "成串的粉紫色蝶形花朵生於葉腋，盛開時帶有淡淡清香。",
-        "img": "images/fabaceae/millettia pinnata/millettia pinnata-flowers.jpg"
-      }
-    ]
-  },
+  "id": "tree-10",
+  "family": "豆科",
+  "name": "水黃皮",
+  "engName": "Wild Bean",
+  "latinName": "Pongamia pinnata (L.) Merr.",
+  "species": "原生物種",
+  "behavior": "常綠喬木",
+  "height": "8 - 15 米",
+  "bloomMonths": [5, 6],
+  "fruitMonths": [8, 9, 10],
+  "special": "★ 抗風耐鹽與木質刀狀莢果",
+  "keywords": [
+    "水黃皮", "九重吹", "水流豆", "Wild Bean", "Pongamia pinnata",
+    "豆科", "Fabaceae", "水黃皮屬", "Pongamia", "原生物種", "常綠喬木", "原生", "常綠",
+    "羽狀複葉", "奇數羽狀", "互生", "卵形", "橢圓形", "革質", "全緣", "羽狀脈", "具香氣/腺點", "濃郁香味",
+    "光滑", "縱裂", "豆莢", "褐果", "紫花", "紅花", "白花",
+    "傘形", "海岸植物", "防風樹"
+  ],
+  "description": "又稱九重吹、水流豆，樹冠呈傘形、葉片墨綠油亮且樹形優美，是香港極具代表性的本土常綠/半常綠喬木。其命名由來是因為葉片與果樹「黃皮」相似且多生於水邊；而學名種加詞 pinnata 則代表其具備典型的羽狀複葉。\n\n水黃皮的原生境多為岸邊、溪邊、塘邊及海邊潮汐可達之處。它具備極深的根系，抗風力強、抗旱且耐鹽耐水濕，對土壤要求不高，因此是沿岸地區極佳的護堤與防風樹種，現時亦廣泛種植於本港公園、海濱長廊與街道作為行道樹及綠化觀賞樹種。\n\n每年春末至夏季，水黃皮會開出鮮豔奪目、奼紫嫣紅的淡紫紅色蝶形花朵；結出的扁平木質莢果極輕且具浮力，能隨水流漂播傳播種子。在藥用價值方面，其種子在中藥學上記為「水流豆」，具備祛風除濕、解毒殺蟲的功效；種子榨出的油脂古時可用於照明，如今亦具備工業與生質能源價值。",
+  "userNotes": "",
+  "mainImage": "images/fabaceae/pongamia pinnata/pongamia pinnata-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "灰褐光滑樹皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹平滑，老時稍微呈淺縱裂，具極強抗風及耐鹽能力。",
+      "img": "images/fabaceae/pongamia pinnata/pongamia pinnata-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "光亮革質複葉",
+      "x": 65,
+      "y": 30,
+      "desc": "羽狀複葉，葉片表面具光澤，揉碎後常帶有一種特殊的氣味。",
+      "img": "images/fabaceae/pongamia pinnata/pongamia pinnata-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "粉紫蝶形花束",
+      "x": 30,
+      "y": 45,
+      "desc": "成串的粉紫色蝶形花朵生於葉腋，盛開時帶有淡淡清香。",
+      "img": "images/fabaceae/pongamia pinnata/pongamia pinnata-flowers.jpg"
+    }
+  ]
+},
   {
     "id": "tree-11",
     "family": "千屈菜科",
