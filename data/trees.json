@@ -727,5 +727,369 @@
       "img": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-flowers.jpg"
     }
   ]
+},
+  {
+  "id": "tree-16",
+  "family": "桃金娘科",
+  "name": "串錢柳",
+  "engName": "Tall Bottle-brush, Weeping Bottlebrush, Drooping Bottlebrush, Creek Bottlebrush, Red Bottlebrush",
+  "latinName": "Callistemon viminalis (Sol. ex Gaertn.) G.Don",
+  "species": "外來物種",
+  "behavior": "常綠喬木",
+  "height": "可達 5 米",
+  "bloomMonths": [3, 4, 5],
+  "fruitMonths": [8],
+  "special": "★ 下垂枝條、紅瓶刷花與串珠狀木質果",
+  "keywords": [
+    "串錢柳", "垂枝瓶刷木", "Tall Bottle-brush", "Weeping Bottlebrush", "Drooping Bottlebrush", "Creek Bottlebrush", "Red Bottlebrush", "Callistemon viminalis",
+    "桃金娘科", "Myrtaceae", "紅瓶刷木屬", "Callistemon", "外來物種", "常綠喬木", "外來", "常綠",
+    "單葉", "互生", "線形", "披針形", "革質", "全緣", "羽狀脈", "具香氣/腺點",
+    "下垂", "縱裂", "粗糙", "蒴果", "褐果", "紅花",
+    "刷狀", "穗狀"
+  ],
+  "description": "又稱垂枝瓶刷木，樹冠垂灑、枝條柔美，是香港極為常見的外來常綠小喬木或大灌木。因其樹姿如柳樹般婀娜，且盛開時景觀熱烈，被廣泛種植於本港公園、海濱長廊、住宅屋邨及河道兩旁作為觀賞樹種。\n\n* 鮮紅瓶刷狀花序：每年春至夏季（約 3–6 月），垂落的枝條上會開滿鮮艷奪目的鮮紅色穗狀花序，密生的雄蕊伸出宛如一支支紅色的洗瓶刷；花蜜豐富，常吸引蜜蜂與鳥類前來採蜜。\n* 木質半球形蒴果：花落後結出的球形木質蒴果會緊密環繞並貼生於枝條上，順著枝條排列宛如一串串古錢幣，因而得名「串錢柳」。果實可在樹上殘留數年不落。\n* 垂枝葉貌與香氣：枝條自然下垂，細長的披針形葉片質地較軟，揉碎後會散發淡淡的芳香精油氣味。\n\n串錢柳喜陽耐旱、耐水濕且對都市空氣污染有較強的抗性，非常適合水岸綠化與公園景觀造景。唯其枝條較為纖細柔弱，在香港颱風季節易受強風吹折，都市維護上需預留足夠空間並注意防風支撐與定期修剪。",
+  "userNotes": "",
+  "mainImage": "images/myrtaceae/callistemon viminalis/callistemon viminalis-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "深褐縱裂粗糙皮",
+      "x": 40,
+      "y": 70,
+      "desc": "主幹樹皮深褐色，具有深縱裂紋，質感較為粗糙。",
+      "img": "images/myrtaceae/callistemon viminalis/callistemon viminalis-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "下垂線狀葉",
+      "x": 65,
+      "y": 30,
+      "desc": "葉片狹長如線形，隨細長柔軟的枝條自然下垂，隨風飄逸。",
+      "img": "images/myrtaceae/callistemon viminalis/callistemon viminalis-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "鮮紅瓶刷與串錢果",
+      "x": 30,
+      "y": 45,
+      "desc": "鮮紅色雄蕊極為醒目；杯狀木質蒴果緊密環繞枝條生長，狀如串錢。",
+      "img": "images/myrtaceae/callistemon viminalis/callistemon viminalis-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-17",
+  "family": "棕櫚科",
+  "name": "大王椰子",
+  "engName": "Royal Palm",
+  "latinName": "Roystonea regia (H.B.K.) O.F.Cook",
+  "species": "外來物種",
+  "behavior": "常綠喬木",
+  "height": "可達 30 米",
+  "bloomMonths": [3, 4],
+  "fruitMonths": [10],
+  "special": "★ 瓶狀膨大樹幹與葉痕環紋",
+  "keywords": [
+    "大王椰子", "皇冠椰子", "王棕", "Royal Palm", "Roystonea regia",
+    "棕櫚科", "Arecaceae", "大王椰子屬", "Roystonea", "外來物種", "常綠喬木", "外來", "常綠",
+    "羽狀複葉", "簇生", "革質", "全緣", "平行脈",
+    "環狀葉痕", "條紋", "圓柱形", "光滑", "核果", "紫果", "黑果", "白花", "黃花",
+    "肉穗花序", "熱帶風情"
+  ],
+  "description": "又稱皇冠椰子、王棕，樹幹通直高聳、樹姿雄偉壯觀，是香港極具代表性的外來常綠大喬木。因其高大挺拔、極具熱帶風情與儀式感，被廣泛種植於本港公園、海濱長廊、政府建築物門前及寬闊大道旁，作為標誌性的景觀與行道樹種。\n\n它最顯著的特徵在於其如水泥圓柱般的樹幹與頂端的羽狀複葉。樹幹基部或中部常呈膨大狀，幹面光滑呈灰白色，並帶有清晰的環狀葉痕；樹冠頂端簇生著長達 3 至 4 米的大型羽狀複葉，葉柄基部緊密包覆樹幹形成一段光滑翠綠的葉鞘筒，老葉凋落時會連同葉鞘整片脫落。盛夏時節，葉鞘基部下方會抽出大型的肉穗花序，開出帶芳香的淡黃白色小花，隨後結出紫黑色的球形小果實，為本港鳥類與果蝠提供食物來源。\n\n大王椰子喜陽耐熱、耐鹽且抗風性佳，極為適應香港的海濱與都市環境。唯其枯老葉片龐大且相當沉重，自然脫落時容易對下方行人或車輛造成安全隱患，因此在都市綠化維護上需要定期進行修剪與防落管理。",
+  "userNotes": "",
+  "mainImage": "images/arecaceae/roystonea regia/roystonea regia-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "膨大灰白樹幹與葉痕",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹呈灰白色，平滑且帶有均勻的環狀葉痕，樹幹常有局部膨大現象。",
+      "img": "images/arecaceae/roystonea regia/roystonea regia-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "大型羽狀複葉",
+      "x": 65,
+      "y": 30,
+      "desc": "葉片巨大，羽狀全裂，四面伸展，基部具光滑濃綠色的圓筒狀葉鞘。",
+      "img": "images/arecaceae/roystonea regia/roystonea regia-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "幹莖下垂肉穗花序",
+      "x": 30,
+      "y": 45,
+      "desc": "花序從綠色葉鞘下方的樹幹直接抽出，分枝多且下垂，結暗紫色近球形核果。",
+      "img": "images/arecaceae/roystonea regia/roystonea regia-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-18",
+  "family": "棕櫚科",
+  "name": "假檳榔",
+  "engName": "Alexandra Palm, King Palm",
+  "latinName": "Archontophoenix alexandrae (F.Muell.) H.Wendl. & Drude",
+  "species": "外來物種",
+  "behavior": "常綠喬木",
+  "height": "可達 20 米",
+  "bloomMonths": [4],
+  "fruitMonths": [4, 5, 6, 7],
+  "special": "★ 纖細樹幹、葉背銀白與鮮紅小核果",
+  "keywords": [
+    "假檳榔", "亞歷山大椰子", "亞歷山大葵", "Alexandra Palm", "King Palm", "Archontophoenix alexandrae",
+    "棕櫚科", "Arecaceae", "假檳榔屬", "Archontophoenix", "外來物種", "常綠喬木", "外來", "常綠",
+    "羽狀複葉", "簇生", "革質", "全緣", "平行脈",
+    "環狀葉痕", "條紋", "圓柱形", "光滑", "核果", "紅果", "白花",
+    "肉穗花序", "熱帶風情"
+  ],
+  "description": "又稱亞歷山大椰子、亞歷山大葵，樹幹通直纖細、樹姿秀麗優雅，是香港極為常見的外來常綠喬木。因其外觀與真正的檳榔極為相似，且樹形比大王椰子更為纖細優雅，被廣泛種植於本港公園、住宅屋邨、庭園及道路兩旁，作為極具熱帶風情的景觀樹種。\n\n它最顯著的辨識特徵在於其光滑單一的樹幹與雙色的羽狀複葉。樹幹呈灰白色，幹面佈滿清晰且環環相扣的葉痕；樹冠頂端簇生著柔軟下垂的羽狀複葉，葉片正面呈濃綠色，羽狀葉背常帶有銀白色粉霜，迎風翻飛時十分美觀。葉柄基部緊密包覆樹幹形成一段光滑翠綠的葉鞘筒，老葉枯韋時會連同葉鞘整片乾脆脫落。盛夏至秋季，綠色葉鞘下方會抽出大型的大分枝肉穗花序，開出帶微香的白色小花，隨後結出成串成對的球形小果實，成熟果實呈鮮艷的紅色，成串垂掛於綠色葉鞘下方，成為本港鳥類的重要食物來源。\n\n假檳榔喜陽喜濕、生長迅速且適應力強，極為適合香港亞熱帶的氣候環境。雖然其枯葉會自行整片脫落，減少了人工修剪的負擔，但成熟掉落的朱紅色果實容易弄髒路面，且老葉脫落時仍具有一定重量，在都市綠化管理與行人通道旁需適時巡查清理。",
+  "userNotes": "",
+  "mainImage": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "纖細環紋樹幹",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹較直且均勻，表面留有密集而平行的環狀葉脫落痕跡。",
+      "img": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "雙色羽狀葉（背銀白）",
+      "x": 65,
+      "y": 30,
+      "desc": "羽狀葉正面濃綠，背面帶有獨特的銀白色微毛或粉霜。",
+      "img": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "成串鮮紅球形核果",
+      "x": 30,
+      "y": 45,
+      "desc": "花序生於光滑綠色葉鞘下方，成熟時結出大量亮紅色的球形小核果。",
+      "img": "images/arecaceae/archontophoenix alexandrae/archontophoenix alexandrae-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-19",
+  "family": "棕櫚科",
+  "name": "蒲葵",
+  "engName": "Chinese Fan-palm",
+  "latinName": "Livistona chinensis (Jacq.) R.Br. ex Mart.",
+  "species": "原生物種",
+  "behavior": "常綠喬木",
+  "height": "可達 20 米",
+  "bloomMonths": [3, 4],
+  "fruitMonths": [5, 6, 7],
+  "special": "★ 掌狀下垂扇葉與古風葵扇原料",
+  "keywords": [
+    "蒲葵", "扇葉葵", "葵樹", "Chinese Fan-palm", "Livistona chinensis",
+    "棕櫚科", "Arecaceae", "蒲葵屬", "Livistona", "原生物種", "常綠喬木", "原生", "常綠",
+    "單葉", "簇生", "掌状葉", "扇形", "革質", "全緣", "掌狀脈",
+    "倒刺", "環狀葉痕", "核果", "藍果", "紫果", "黑果", "黃花",
+    "肉穗花序", "葵扇"
+  ],
+  "description": "又稱扇葉葵、葵樹，樹幹通直、樹冠如巨扇展開，是香港極具代表性的本土原生常綠喬木。因其樹形優美、葉片廣闊且四季常綠，被廣泛種植於本港公園、住宅屋邨、街道旁及海濱長廊，是都市綠化中極常見的觀賞與遮蔭樹種。\n\n它最顯著的特徵在於其大型的掌狀扇形葉與下垂的葉裂片。葉片呈近圓形，直徑可達 1 米以上，掌狀深裂，裂片先端柔弱並顯著向下垂懸，隨風搖曳時極具動感；葉柄長而粗壯，邊緣帶有尖銳的倒刺。樹幹呈灰褐色，表面環繞著密集的環狀葉痕，基部常有棕褐色纖維狀的棕衣包覆。春夏之交，葉叢間會抽出大型的分枝肉穗花序，開出淡黃色小花，隨後結出成串的橢圓形核果，成熟時轉為藍綠色至黑紫色，吸引野生鳥類前來覓食。\n\n蒲葵在中南地區亦具備悠久的傳統實用價值，古時人們常採摘其寬大堅韌的葉片曬乾編製成「蒲葵扇（葵扇）」，或將葉柄纖維用於造紙與編織。植物本身喜陽耐濕、耐鹽抗風，且對都市空氣污染有極佳的適應力，非常適合華南及香港的亞熱帶氣候。都市維護上，只需定期修剪基部老化下垂的枯葉與留意葉柄兩側的尖刺即可。",
+  "userNotes": "",
+  "mainImage": "images/arecaceae/livistona chinensis/livistona chinensis-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "殘留棕衣灰褐幹",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹灰色，常殘留枯死葉柄基部及棕褐色網狀纖維（棕衣）。",
+      "img": "images/arecaceae/livistona chinensis/livistona chinensis-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "掌狀下垂大扇葉",
+      "x": 65,
+      "y": 30,
+      "desc": "葉片呈大型掌狀深裂，裂片先端呈2裂且顯著折垂，葉柄邊緣具倒刺。",
+      "img": "images/arecaceae/livistona chinensis/livistona chinensis-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "藍綠色橢圓核果",
+      "x": 30,
+      "y": 45,
+      "desc": "肉穗花序生於葉柄間；成熟果實為橢圓形核果，呈現暗藍綠色或黑紫色。",
+      "img": "images/arecaceae/livistona chinensis/livistona chinensis-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-20",
+  "family": "使君子科",
+  "name": "欖仁",
+  "engName": "Tropical Almond, Country Almond, Indian Almond",
+  "latinName": "Terminalia catappa L.",
+  "species": "外來物種",
+  "behavior": "落葉喬木",
+  "height": "可達 20 米",
+  "bloomMonths": [3, 4, 5, 6],
+  "fruitMonths": [7, 8, 9],
+  "special": "★ 輪生平展枝條、紅葉與欖仁狀核果",
+  "keywords": [
+    "欖仁", "大葉欖仁", "枇杷樹", "山枇杷", "Tropical Almond", "Country Almond", "Indian Almond", "Terminalia catappa",
+    "使君子科", "Combretaceae", "欖仁樹屬", "Terminalia", "外來物種", "落葉喬木", "外來", "落葉",
+    "單葉", "互生", "簇生", "倒卵形", "革質", "全緣", "羽狀脈", "具腺點",
+    "輪生", "分層", "縱裂", "粗糙", "核果", "黃果", "紫果", "紅果", "白花", "綠花",
+    "穗状花序", "紅葉", "變色葉"
+  ],
+  "description": "又稱大葉欖仁、枇杷樹、山枇杷，樹幹通直、枝條呈獨特的水平輪生輪廓，是香港極具代表性的外來落葉大喬木。因其樹冠廣展如層層疊疊的巨大綠傘，提供極佳的遮蔭效果，被廣泛種植於本港公園、海濱長廊、學校及校園綠地，是都市中極具景觀價值的觀賞樹種。\n\n它最顯著的特徵在於其平展的分層樹姿、大型倒卵形葉片以及季節轉變時的紅葉景觀。主幹枝條呈水平方向層層輪生展開，層次分明；倒卵形的革質大葉簇生於枝端，長可達 20–30 公分，葉柄極短且葉基常帶有一對腺點。每年秋冬至早春落葉前，葉片內的葉綠素分解，轉為鮮艷奪目的紫紅色或紅黃色，為都市帶來濃郁的四季色彩變化。春夏之交，枝頭會抽出細長的穗狀花序，開出白色或淡綠色的小花；隨後結出呈扁平橄欖狀的核果，外果皮含纖維且具浮力，可藉由水流傳播，果仁經烘烤熟化後可食用，味似杏仁（惟都市樹木不建議採食）。\n\n欖仁喜陽耐熱、極度耐鹽抗風且耐旱，對沿海環境適應力極強，是優秀的海濱防風與綠化樹種。唯其秋冬落葉期會產生大量大型落葉，且成熟果實掉落時容易弄髒路面，都市綠化維護上需要注意環境清理與定期的枝條修剪。",
+  "userNotes": "",
+  "mainImage": "images/combretaceae/terminalia catappa/terminalia catappa-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "灰褐粗糙縱裂皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹挺直，樹皮呈灰褐色，老樹幹表面有深淺不一的縱向溝裂。",
+      "img": "images/combretaceae/terminalia catappa/terminalia catappa-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "巨大倒卵形紅變葉",
+      "x": 65,
+      "y": 30,
+      "desc": "革質大葉簇生於枝端，長可達 20–30 公分，葉柄極短且葉片基部帶有一對腺點。每年秋冬至早春落葉前，葉片轉為鮮艷奪目的紫紅色或紅黃色。",
+      "img": "images/combretaceae/terminalia catappa/terminalia catappa-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "欖仁狀扁平核果",
+      "x": 30,
+      "y": 45,
+      "desc": "春夏之交開白色或淡綠色小花；隨後結出呈扁平橄欖狀的核果，邊緣有肋脊，成熟時由黃綠轉為暗紫色，果仁炒熟後可食用。",
+      "img": "images/combretaceae/terminalia catappa/terminalia catappa-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-21",
+  "family": "使君子科",
+  "name": "小葉欖仁",
+  "engName": "Terminalia, Umbrella Tree, Madagascar Almond",
+  "latinName": "Terminalia mantaly H. Perrier",
+  "species": "外來物種",
+  "behavior": "落葉喬木",
+  "height": "可達 15 米以上",
+  "bloomMonths": [3, 4, 5, 6],
+  "fruitMonths": [4, 5, 6, 7, 8, 9],
+  "special": "★ 寶塔狀分層樹姿、極小簇生倒卵形葉、紡錘狀小核果",
+  "keywords": [
+    "小葉欖仁", "細葉欖仁", "非洲欖仁", "錦葉欖仁", "Terminalia", "Umbrella Tree", "Madagascar Almond", "Terminalia mantaly",
+    "使君子科", "Combretaceae", "欖仁樹屬", "Terminalia", "外來物種", "落葉喬木", "外來", "落葉",
+    "單葉", "互生", "簇生", "倒卵形", "紙質", "全緣", "羽狀脈",
+    "輪生", "分層", "寶塔狀", "光滑", "皮孔", "核果", "褐果", "黑果", "綠花", "黃花",
+    "穗狀花序"
+  ],
+  "description": "又稱細葉欖仁、非洲欖仁，樹幹通直高聳、枝條輪生呈水平展開，是香港極受歡迎的外來落葉喬木。因其樹冠分層極為明顯、株型挺拔整齊且具輕盈的美感，被廣泛種植於本港公園、屋邨庭園、商業區及街道旁，是都市綠化中極具現代感與觀賞價值的樹種。\n\n它最顯著的特徵在於其寶塔般的層次樹姿與細小的倒卵形葉片。主幹直立，枝條呈層層水平輪生，樹冠層次分明，整體姿態如寶塔般優美。與同屬的「大葉欖仁（欖仁樹）」相比，小葉欖仁的葉片極為小巧密集，長僅數公分，兩者在葉片大小上差異顯著、非常容易區分。此外，園藝上亦有常見的栽培變種「錦葉欖仁（又稱三色小葉欖仁，Terminalia mantaly 'Tricolour'）」，其葉緣帶有乳白至乳黃色的斑塊，新葉更帶有柔和的粉紅色，極具彩葉觀賞價值。\n\n除了優美外觀，小葉欖仁還具備多種實用價值與特性。其原產於馬達加斯加，是當地的主要造林樹種之一；樹皮與木材富含單寧酸，傳統上可提煉作為天然染料，木材亦可作為燃料使用；亦有科學研究指出其含有抗真菌的功效成分。植物喜陽耐熱、適應力強，在都市中生長迅速且能提供輕盈適度的遮蔭效果。都市綠化管理上，只需留意強風時枝條的防護，以及冬季落葉期對路面環境的清理即可。",
+  "userNotes": "",
+  "mainImage": "images/combretaceae/terminalia mantaly/terminalia mantaly-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "寶塔樹姿與灰白樹皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹細長直立，樹皮相對光滑並帶有細小的白色皮孔；枝條呈層層水平輪生，整體姿態如寶塔般優美。",
+      "img": "images/combretaceae/terminalia mantaly/terminalia mantaly-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "緻密簇生小葉",
+      "x": 65,
+      "y": 30,
+      "desc": "葉片極小（長僅 2–5 厘米），呈倒卵形，數片簇生於枝端，使樹冠呈現透光輕盈感。與同屬的大葉欖仁相比，葉片小很多倍，極易區分。",
+      "img": "images/combretaceae/terminalia mantaly/terminalia mantaly-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "小型紡錘狀核果",
+      "x": 30,
+      "y": 45,
+      "desc": "果實為極小的具微稜紡錘形核果，結實量大，成熟時呈黑褐色。",
+      "img": "images/combretaceae/terminalia mantaly/terminalia mantaly-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-22",
+  "family": "木麻黃科",
+  "name": "木麻黃",
+  "engName": "Horsetail Tree, Beach She-oak, Whistling Pine",
+  "latinName": "Casuarina equisetifolia L.",
+  "species": "外來物種",
+  "behavior": "常綠喬木",
+  "height": "可達 35 米",
+  "bloomMonths": [4, 5],
+  "fruitMonths": [7, 8, 9, 10],
+  "special": "★ 針狀綠色小枝與松果狀木質球果",
+  "keywords": [
+    "木麻黃", "馬尾樹", "牛尾松", "駁骨樹", "Horsetail Tree", "Beach She-oak", "Whistling Pine", "Casuarina equisetifolia",
+    "木麻黃科", "Casuarinaceae", "木麻黃屬", "Casuarina", "外來物種", "常綠喬木", "外來", "常綠",
+    "單葉", "輪生", "鱗片狀", "退化葉", "節狀小枝",
+    "縱裂", "粗糙", "球果狀聚花果", "堅果", "褐果",
+    "防風林", "固氮"
+  ],
+  "description": "又稱馬尾樹、牛尾松、駁骨樹，樹幹通直高聳、樹冠呈輕盈柔美的羽毛狀，是香港極具代表性的外來常綠喬木。其名字由來相當生動，因其下垂的綠色小枝形態宛如牛和馬的尾巴，又會結出像松果一般的果序，故有「牛尾松」與英文名「馬尾樹（Horsetail Tree）」之稱。木麻黃形態甚似松樹，但其實是有花植物，不妨在其花期時細心留意。因其極度耐鹽、耐旱、抗風沙且能阻止沙漠化，被廣泛種植於本港海濱長廊、海岸沙灘防風林及公園綠地，是沿岸及沙漠地區防風林的常見品種。\n\n它最顯著的特徵在於其極度退化的葉片結構與似松針般的綠色小枝。遠看如針葉的部位，實際上是細長分節且富含葉綠素的綠色小枝，承擔了主要的光合作用功能；真正的葉片已退化為極微小的鱗片狀，環包於小枝的節上，能有效減少水分蒸散。樹幹呈黑褐色，老樹皮粗糙且有深縱裂；盛夏時節會結出外觀極似小松果的木質球狀聚花果，成熟時由綠轉為灰褐色並開裂釋放具翅的小堅果。\n\n木麻黃生長迅速、對土壤要求不高，根系廣而深且抓土牢固，其根部能與放線菌共生固氮，即使在養分極度貧瘠的沙地或受鹽霧侵襲的海濱也能茁壯生長。微風吹過枝條時會發出如海浪般的沙沙聲響，為海岸景觀增添獨特韻味。木麻黃的用途甚廣，木材可作船具及建材，亦是優良的薪炭原料；嫩枝可供作牲畜飼料。據《中國植物誌》記載，樹皮含有單寧酸，能作收斂劑，枝葉更有治療慢性支氣管炎之效。唯其枝條較為纖細脆弱，在颱風季節易被強風吹折，且大量掉落的綠色小枝容易堆積，都市維護上需注意定期修剪與清理路面。",
+  "userNotes": "",
+  "mainImage": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "黑褐粗糙縱裂皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹直立，老樹樹皮呈黑褐色，質地粗糙且具縱向深溝裂，易呈薄片狀剝落。",
+      "img": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "節狀綠色小枝與退化鱗葉",
+      "x": 65,
+      "y": 30,
+      "desc": "遠看如松針般的針葉，實際上是細長分節且富含葉綠素的綠色小枝；真正的葉片已退化成極小的鱗片狀環包於節上，長度僅約 1 毫米。",
+      "img": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "球果狀木質聚花果",
+      "x": 30,
+      "y": 45,
+      "desc": "雌雄同株或異株。花極小且不顯眼；結出的果實為木質化的球形聚花果，外觀極似小松果，成熟時由綠轉為灰褐色，開裂釋放具翅的小堅果。",
+      "img": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-flowers.jpg"
+    }
+  ]
 }
 ]
