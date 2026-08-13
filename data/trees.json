@@ -417,58 +417,6 @@
   ]
 },
   {
-  "id": "tree-9",
-  "family": "豆科",
-  "name": "鳳凰木",
-  "engName": "Flame Tree, Flame of the Forest",
-  "latinName": "Delonix regia (Bojer ex Hook.) Raf.",
-  "species": "外來物種",
-  "behavior": "落葉喬木",
-  "height": "10 - 20 米",
-  "bloomMonths": [6, 7],
-  "fruitMonths": [8, 9, 10],
-  "special": "★ 鮮紅傘形花海與刀劍狀大莢果",
-  "keywords": [
-    "鳳凰木", "影樹", "金鳳樹", "Flame Tree", "Flame of the Forest", "Delonix regia",
-    "豆科", "Fabaceae", "鳳凰木屬", "Delonix", "外來物種", "落葉喬木", "外來", "落葉",
-    "二回羽狀", "互生", "橢圓形", "膜質", "全緣", "羽狀脈",
-    "皮孔", "板根", "豆莢", "褐果", "黑果", "紅花", "黃花",
-    "傘形"
-  ],
-  "description": "又稱影樹、金鳳樹，樹冠廣展如傘、枝葉平展，是香港極為常見且具代表性的落葉大喬木。因其樹姿優美、遮蔭效果極佳，被廣泛種植於本港公園、學校、屋邨及街道旁，每逢花期盛開時景色極為壯觀。\n\n它最大的特徵是羽狀複葉與鮮艷奪目的花朵——其葉片為細緻的二回羽狀複葉，質地輕盈，陽光穿透時如羽毛般輕柔；每年初夏，樹冠會開滿鮮紅至橙紅色的花朵，花瓣五枚，其中一枚常帶有黃白相間的班紋（蜜標），遠看宛如火燒雲或飛鳳之羽。\n\n此外，鳳凰木結出的果實為木質化的扁平長條形莢果，成熟時呈深褐色，長可達 50 公分以上，懸掛於枝頭宛如彎刀，隨風碰撞會發出響聲，內含具毒性的種子。\n\n鳳凰木雖然觀賞價值極高且適應力強，能快速提供良好遮蔭，但其木質較脆，在香港颱風季節較易折斷枝條。同時，其龐大的板根與淺根系在生長時容易隆起並擠壓路面，在都市綠化維護上需預留足夠空間並進行定期修剪。",
-  "userNotes": "",
-  "mainImage": "images/fabaceae/delonix regia/delonix regia-main.jpg",
-  "hotspots": [
-    {
-      "id": "hot-bark",
-      "type": "bark",
-      "name": "灰褐平滑樹皮",
-      "x": 40,
-      "y": 70,
-      "desc": "樹幹粗壯，皮孔明顯，老時樹皮呈不規則微裂。",
-      "img": "images/fabaceae/delonix regia/delonix regia-bark.jpg"
-    },
-    {
-      "id": "hot-leaf",
-      "type": "leaves",
-      "name": "羽狀細緻複葉",
-      "x": 65,
-      "y": 30,
-      "desc": "二回羽狀複葉極為細緻，夜晚或陰雨天時小葉會折疊閉合。",
-      "img": "images/fabaceae/delonix regia/delonix regia-leaves.jpg"
-    },
-    {
-      "id": "hot-flower",
-      "type": "flowers",
-      "name": "鮮紅大花與大莢果",
-      "x": 30,
-      "y": 45,
-      "desc": "花朵鮮紅奪目；結出長達50厘米以上的木質黑色刀劍狀莢果。",
-      "img": "images/fabaceae/delonix regia/delonix regia-flowers.jpg"
-    }
-  ]
-},
-  {
   "id": "tree-10",
   "family": "豆科",
   "name": "水黃皮",
