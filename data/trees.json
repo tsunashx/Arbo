@@ -1091,5 +1091,368 @@
       "img": "images/casuarinaceae/casuarina equisetifolia/casuarina equisetifolia-flowers.jpg"
     }
   ]
+  },
+  {
+  "id": "tree-23",
+  "family": "白花菜科",
+  "name": "樹頭菜",
+  "engName": "Spider Tree",
+  "latinName": "Crateva unilocularis Buch.-Ham.",
+  "species": "原生物種",
+  "behavior": "落葉喬木",
+  "height": "可達 15 米",
+  "bloomMonths": [3, 4, 5],
+  "fruitMonths": [8, 9, 10, 11],
+  "special": "★ 白黃雙色花、長紫紅雄蕊、掌狀三出複葉",
+  "keywords": [
+    "樹頭菜", "菜頭樹", "蜘蛛樹", "Spider Tree", "Crateva unilocularis",
+    "白花菜科", "Capparaceae", "魚木屬", "Crateva", "原生物種", "落葉喬木", "原生", "落葉",
+    "三出複葉", "掌狀複葉", "互生", "紙質", "全緣", "羽狀脈",
+    "皮孔", "光滑", "漿果", "褐果", "白花", "黃花",
+    "花海"
+  ],
+  "description": "又稱菜頭樹、蜘蛛樹，樹幹通直、樹冠廣展，是香港極具代表性的落葉喬木。其名字由來相當生動，中文名「樹頭菜」源於《中國植物誌》記錄，在雲南石屏與建水一帶，當地居民會採摘其嫩葉用鹽醃漬作為蔬菜食用；英文名「蜘蛛樹（Spider Tree）」則是形容其盛開時，花朵伸出大量紫紅色且纖幼細長的雄蕊，宛如樹上棲息著一隻隻蜘蛛，極具辨識度。\n\n它最顯著的特徵在於春季極致熱烈的花海景觀與三出複葉。每年 2 月至 4 月期間，樹頭菜會迎來盛花期，滿樹繁花遍佈枝頭，花朵初開時呈乳白色，隨後漸轉為淡黃色，搭配大量突出花冠外的紫紅色細長雄蕊，花繁葉茂、景色十分壯麗，極具觀賞價值，因而常被廣泛種植於本港公園、街道及海濱長廊作為行道樹與景觀樹。花落後會結出球形或橢圓形的漿果，成熟時呈褐色，表面帶有斑點。\n\n除了極高景觀價值外，樹頭菜的用途亦甚廣。其木材質地輕軟，可供製作盤器、樂器及模型等；果皮可提煉作為天然染料。在中藥應用上，其葉莖具清熱解毒、健胃之效，根與樹皮則可用於止痛、祛濕活絡。樹頭菜喜陽耐熱，對都市環境適應力強，惟花期結束後落花與落果量較大，都市綠化維護上需注意路面的清掃與環境衛生。",
+  "userNotes": "",
+  "mainImage": "images/capparaceae/crateva unilocularis/crateva unilocularis-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "灰褐色顯著皮孔",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹平滑，呈灰色或灰褐色，幹皮上散佈著許多橫向或散生的白色小皮孔。",
+      "img": "images/capparaceae/crateva unilocularis/crateva unilocularis-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "掌狀三出複葉",
+      "x": 65,
+      "y": 30,
+      "desc": "每條葉柄頂端長有三片小葉，呈薄紙質，葉背脈絡清晰，是沒開花時重要的辨識依據。",
+      "img": "images/capparaceae/crateva unilocularis/crateva unilocularis-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "長絲紫蕊雙色花與斑點漿果",
+      "x": 30,
+      "y": 45,
+      "desc": "每年 3 月至 5 月盛開，花朵初開時呈乳白色，隨後漸轉為淡黃色，搭配數十條向外噴灑伸展的紫紅色長雄蕊，極具視覺特色；花落後於 8 月至 11 月結出球形或橢圓形的漿果，成熟時呈褐色，表面帶有斑點。",
+      "img": "images/capparaceae/crateva unilocularis/crateva unilocularis-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-24",
+  "family": "紫葳科",
+  "name": "火焰樹",
+  "engName": "African Tulip Tree, Fountain Tree",
+  "latinName": "Spathodea campanulata P.Beauv.",
+  "species": "外來物種",
+  "behavior": "常綠喬木",
+  "height": "可達 12 米",
+  "bloomMonths": [1, 2, 3, 4, 5],
+  "fruitMonths": [3, 4, 5, 6, 7, 8, 9, 10, 11],
+  "special": "★ 鮮紅巨型鐘狀花與舟形木質蒴果、奇數羽狀複葉",
+  "keywords": [
+    "火焰樹", "火燒花", "非洲鬱金香樹", "噴泉樹", "African Tulip Tree", "Fountain Tree", "Spathodea campanulata",
+    "紫葳科", "Bignoniaceae", "火焰樹屬", "Spathodea", "外來物種", "常綠喬木", "外來", "常綠",
+    "羽狀複葉", "奇數羽狀複葉", "對生", "紙質", "全緣", "羽狀脈",
+    "縱裂", "粗糙", "蒴果", "褐果", "黑果", "紅花", "橙花",
+    "鐘狀花", "入侵種"
+  ],
+  "description": "又稱火燒花、非洲鬱金香樹、噴泉樹，樹幹通直高聳，是香港常見的外來觀賞大喬木。中文名「火燒花」形容其橙紅色花序遠觀如火球，盛放時宛如整株著火；未開的花苞內部儲存水液可供旅人解渴，故名「噴泉樹」；花冠呈鐘狀形似鬱金香，因而得名英文「非洲鬱金香樹」。因樹形優雅、花期長且花色鮮豔，廣泛應用於市區綠化與庭園景觀。\n\n其顯著特徵為大型奇數羽狀複葉與鮮艷的花果。葉對生，小葉約 4–9 對；每年 1 至 5 月盛開鮮紅鐘狀花，花苞擠壓會噴水。花落後結出如小舟般的木質蒴果，成熟時直立開裂，釋放具透明薄翅的種子隨風飄散。\n\n火焰樹生長迅速、喜陽耐熱，龐大樹冠遮蔭效果極佳，花蜜亦能吸引鳥類與蜜蜂。但其繁殖力強，已被列為「世界百大入侵種」之一（已入侵夏威夷、斐濟等地）。此外，其木質較脆易被強風吹折，且落花與蒴果容易弄髒路面，都市維護上需注意定期修剪與清掃。",
+  "userNotes": "",
+  "mainImage": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "灰褐色縱裂樹皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹直立，老樹樹皮呈淺灰褐色至暗褐色，表面帶有不規則的淺縱向溝裂。",
+      "img": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "奇數羽狀複葉",
+      "x": 65,
+      "y": 30,
+      "desc": "葉對生，為大型奇數羽狀複葉，小葉約 4–9 對，呈橢圓形或長橢圓形，葉面濃綠，背脈帶有些微絨毛。",
+      "img": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "鮮紅鐘狀花與舟形蒴果",
+      "x": 30,
+      "y": 45,
+      "desc": "花大而艷麗，花冠呈寬鐘狀，邊緣帶黃色波浪褶皺；未開的花苞呈彎曲鐮刀狀，內部儲存水分，擠壓時會噴出水滴（故有「噴泉樹」之稱）。花落後結出長條形、如小舟般的木質蒴果，成熟時呈黑褐色並直立向上開裂，釋放出大量帶有透明薄翅的種子，隨風飄散。",
+      "img": "images/bignoniaceae/spathodea campanulata/spathodea campanulata-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-25",
+  "family": "桑科",
+  "name": "黃葛樹",
+  "engName": "Big-leaved Fig, White Fig",
+  "latinName": "Ficus virens Aiton",
+  "species": "原生物種",
+  "behavior": "落葉喬木",
+  "height": "可達 18 米",
+  "bloomMonths": [4, 5, 6, 7, 8, 9, 10],
+  "fruitMonths": [4, 5, 6, 7, 8, 9, 10],
+  "special": "★ 龐大樹冠、不定時滿樹亮紅新芽、發達板根與牆樹景觀",
+  "keywords": [
+    "黃葛樹", "大葉榕", "大青樹", "黃葛榕", "Big-leaved Fig", "White Fig", "Ficus virens",
+    "桑科", "Moraceae", "榕屬", "Ficus", "原生物種", "落葉喬木", "原生", "落葉", "半落葉",
+    "單葉", "互生", "橢圓形", "革質", "全緣", "羽狀脈",
+    "光滑", "板根", "支柱根", "石牆樹", "隱頭果", "榕果", "紫果", "黃果", "白果",
+    "紅芽"
+  ],
+  "description": "又稱大葉榕、大青樹、黃葛榕，樹幹粗壯通直、樹冠廣展如巨大綠傘，是香港原生且極具代表性的半落葉大喬木。其生命力極度強韌，根系穿透力極強，常附生於石牆、岩壁或建築物縫隙中生長，是構成香港獨特「石牆樹」人文景觀的主力樹種之一。因其樹冠龐大、遮蔭效果極佳，被廣泛分佈於本港郊野公園、舊區街道、古村落及公園綠地。\n\n它最顯著的特徵在於其不定時的換葉習性與滿樹嫩紅的新芽景觀。與一般四季分明的落葉樹不同，黃葛樹的換葉期並不固定；換葉時，舊葉會在短短數天內迅速脫落，緊接著抽出被亮紅色托葉包覆的嫩芽，呈現全樹通紅的壯麗景致，隨後才轉為翠綠色的橢圓形革質大葉。老樹幹基部常發育出顯著的板根與支柱根以穩固樹身；春夏間會結出近球形的隱頭榕果，成熟時由綠轉為紫紅或黃白色，是野生鳥類與果蝠非常喜愛的食物來源。",
+  "userNotes": "",
+  "mainImage": "images/moraceae/ficus virens/ficus virens-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "灰色平滑皮與強韌根系",
+      "x": 40,
+      "y": 70,
+      "desc": "樹皮呈灰色或暗灰色，相對平滑；老樹幹基部常發育出極為發達的板根與支柱根，以穩固龐大的樹身。",
+      "img": "images/moraceae/ficus virens/ficus virens-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "不定時換葉與亮紅新芽",
+      "x": 65,
+      "y": 30,
+      "desc": "與一般四季分明的落葉樹不同，黃葛樹的換葉期不固定（甚至同一株樹的不同枝條可能在不同月份換葉）。換葉時舊葉在數天內迅速脫落，隨後迅速抽出帶有膜質托葉包覆的亮紅色新芽，呈現滿樹嫩紅的壯麗景致，隨後轉為翠綠色的橢圓形革質大葉。",
+      "img": "images/moraceae/ficus virens/ficus virens-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "球形隱頭榕果",
+      "x": 30,
+      "y": 45,
+      "desc": "花朵隱生於肉質花序托內（隱頭花序）；隨後結出近球形的隱頭榕果，無柄或具短柄，成對腋生，成熟時由綠色轉為黃白色、紫紅色或暗紫色，富含果汁，是野生鳥類與果蝠的重要食物來源。",
+      "img": "images/moraceae/ficus virens/ficus virens-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-26",
+  "family": "桑科",
+  "name": "青果榕",
+  "engName": "Common Red-stem Fig",
+  "latinName": "Ficus variegata Blume",
+  "species": "原生物種",
+  "behavior": "常綠喬木",
+  "height": "可達 15 米",
+  "bloomMonths": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  "fruitMonths": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  "special": "★ 幹生花現象與老莖結大榕果、倒卵狀革質大葉、灰褐色具皮孔樹皮",
+  "keywords": [
+    "青果榕", "雜色榕", "Common Red-stem Fig", "Ficus variegata",
+    "桑科", "Moraceae", "榕屬", "Ficus", "原生物種", "常綠喬木", "原生", "常綠",
+    "單葉", "互生", "倒卵形", "橢圓形", "革質", "波浪緣", "全緣", "羽狀脈",
+    "光滑", "皮孔", "幹生花", "老莖生花", "幹生果", "隱頭果", "榕果", "綠果", "黃果", "紅果"
+  ],
+  "description": "又稱雜色榕，樹幹通直高聳、樹冠廣展，是香港極具特色的原生常綠喬木。人們對它的第一印象往往是「物如其名」，常被樹幹上數量極多且密集排列的綠色榕果所震懾，宛如一群青色大軍戍守要塞。雖然初時滿樹青綠，但榕果成熟後會轉為黃色或紅色，故又名「雜色榕」，拉丁學名中的種加詞 variegata 正是意指其「雜色的」榕果特色。\n\n它最顯著且最具特色的特徵在於顯著的「幹生花」與「幹生果」現象（亦稱老莖生花）。大型的榕果並不長在細嫩的新枝上，而是直接密密麻麻地簇生結在主幹與大枝條上，呈扁球形或球形，呈現出獨特的熱帶雨林生態景觀。\n\n青果榕具備極高的生態價值，在本土生態鏈中扮演關鍵角色。它除了為傳粉的榕小蜂提供棲息與繁殖溫床外，亦是紫膠蟲與網絲蛺蝶幼蟲的寄主植物。此外，當榕果成熟變色時，短吻果蝠等野生動物會以其榕果為食糧，並在採食的同時替其傳播種子，是本港郊野公園與林地復育中不可或缺的生態樹種。",
+  "userNotes": "",
+  "mainImage": "images/moraceae/ficus variegata/ficus variegata-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "灰褐色具皮孔樹皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹質感相對平滑，呈灰色或灰褐色，表面帶有許多圓形或縱向的小皮孔。",
+      "img": "images/moraceae/ficus variegata/ficus variegata-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "倒卵狀革質大葉",
+      "x": 65,
+      "y": 30,
+      "desc": "葉片較大，呈現倒卵狀橢圓形，質感厚革質，表面光滑深綠，葉緣帶波浪狀或全緣。",
+      "img": "images/moraceae/ficus variegata/ficus variegata-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "幹生花與密集大榕果",
+      "x": 30,
+      "y": 45,
+      "desc": "最具特色的特徵為顯著的「幹生花」與「幹生果」現象（老莖生花）。大型榕果並不長在細嫩新枝上，而是直接密密麻麻地簇生於主幹及大枝條上，呈現獨特的熱帶雨林生態景觀；榕果體積較大，呈扁球形或球形，成熟時由青綠色轉為黃綠色或淡紅色。",
+      "img": "images/moraceae/ficus variegata/ficus variegata-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-27",
+  "family": "南洋杉科",
+  "name": "柱狀南洋杉",
+  "engName": "Cook Pine, New Caledonia Pine",
+  "latinName": "Araucaria columnaris (Forster) Hook.",
+  "species": "外來物種",
+  "behavior": "常綠喬木",
+  "height": "可達 60 米",
+  "bloomMonths": [2, 3],
+  "fruitMonths": [3, 4, 5],
+  "special": "★ 狹長筆直柱狀樹型、螺旋密生硬鱗葉、木質帶刺大球果",
+  "keywords": [
+    "柱狀南洋杉", "庫克針葉松", "新喀里多尼亞南洋杉", "庫克松", "Cook Pine", "New Caledonia Pine", "Araucaria columnaris",
+    "南洋杉科", "Araucariaceae", "南洋杉屬", "Araucaria", "外來物種", "常綠喬木", "外來", "常綠", "裸子植物", "針葉",
+    "單葉", "螺旋狀", "鱗片狀", "鑽形", "革質",
+    "環狀剝落", "剝落", "球果", "木質", "帶刺", "黃花", "褐花",
+    "柱狀樹姿", "赤道傾斜"
+  ],
+  "description": "又稱庫克針葉松、新喀里多尼亞南洋杉，樹幹高聳直立、樹冠呈極窄的圓柱形，是香港常見的外來常綠針葉大喬木。其名稱由來非常直接，中文名「柱狀南洋杉」與學名中的種加詞 columnaris（意為「柱狀的」）皆反映其老樹樹形狹窄如柱的特徵；英文名「庫克松（Cook Pine）」則是為了紀念在第二次太平洋航行中發現此樹種的英國海軍上校詹姆士·庫克（James Cook）。因其樹姿高拔昂立、形態獨特，常被廣泛栽植於本港公園、學校及海濱長廊作為景觀樹。\n\n它最顯著且有趣的特徵在於樹幹與樹冠形態，以及向赤道傾斜的生長習性。樹皮呈暗褐色，常呈環狀薄片剝落；硬質的鑽形鱗葉呈螺旋狀緊密包覆枝條。柱狀南洋杉常被誤認為同屬近親「異葉南洋杉（Araucaria heterophylla）」，兩者幼樹時樹形幾乎無法區分，但成年後差異逐漸明顯——異葉南洋杉樹冠呈寬廣的圓錐塔形，而柱狀南洋杉則維持極窄的長柱狀。此外，它擁有極為罕見的「朝赤道傾斜」習性：在北半球（如香港）植株會向南方傾斜，在南半球則向北方傾斜，且種植地的緯度越高，傾斜幅度越顯著，研究顯示高達九成的個體皆有此現象，唯其具體生理機制至今仍有待科學界解開。\n\n作為裸子植物，柱狀南洋杉於 11 月至翌年 2 月間進入授粉期（相當於花期），雄球花呈長條狀簇生於枝端；受精後歷時約一年以上，於 12 月至翌年 5 月間結出成熟的木質球果。球果呈卵形或近球形，直徑可達 10–15 公分，表面具尖刺狀鱗片，成熟後會在樹上崩解並釋放帶翅種子隨風飄散。其對鹽風與強風適應力強，極適合沿海環境綠化。",
+  "userNotes": "",
+  "mainImage": "images/araucariaceae/araucaria columnaris/araucaria columnaris-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "暗褐橫向剝落皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹皮呈暗褐色至黑褐色，質感較厚，常呈現環狀或橫向的薄片狀剝落。",
+      "img": "images/araucariaceae/araucaria columnaris/araucaria columnaris-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "螺旋密生硬鱗葉",
+      "x": 65,
+      "y": 30,
+      "desc": "葉片小而呈硬質的鑽形或鱗片狀，緊密且呈螺旋狀包覆著細長的分枝。",
+      "img": "images/araucariaceae/araucaria columnaris/araucaria columnaris-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "木質帶刺大球果",
+      "x": 30,
+      "y": 45,
+      "desc": "作為裸子植物，於 2 月至 3 月間進行授粉（相當於花期）；隨後於 3 月至 5 月間結出成熟木質球果。球果體積較大，呈球形或卵圓形，苞片先端帶有尖刺，成熟時木質化並會在樹上崩解，釋放出帶翅的種子隨風飄散。",
+      "img": "images/araucariaceae/araucaria columnaris/araucaria columnaris-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-28",
+  "family": "大戟科",
+  "name": "白楸",
+  "engName": "Turn-in-the-wind, Panicled Mallotus",
+  "latinName": "Mallotus paniculatus (Lam.) Muell. Arg.",
+  "species": "原生物種",
+  "behavior": "常綠喬木",
+  "height": "5 - 15 米",
+  "bloomMonths": [7, 8, 9, 10],
+  "fruitMonths": [11, 12],
+  "special": "★ 葉背密集白絨毛與帶軟刺蒴果、葉基具蜜腺、灰褐淺裂絨毛皮",
+  "keywords": [
+    "白楸", "白背葉", "白花樹", "Turn-in-the-wind", "Panicled Mallotus", "Mallotus paniculatus",
+    "大戟科", "Euphorbiaceae", "野桐屬", "Mallotus", "原生物種", "常綠喬木", "原生", "常綠",
+    "單葉", "互生", "菱狀卵形", "三裂", "紙質", "微齒", "全緣", "羽狀脈",
+    "蜜腺", "星狀毛", "縱裂", "淺裂", "絨毛", "蒴果", "刺果", "黑果", "褐果", "黃花",
+    "圓錐花序", "共生"
+  ],
+  "description": "又稱白背葉、白花樹，是香港極為常見的原生常綠小喬木或灌木，多生長於低地疏林、山坡及灌木叢中。白楸擁有一個極具詩意的英文名稱「Turn-in-the-wind（迎風翻浪）」，源於其葉片獨特的「兩面色」——葉面為光滑的深綠色，葉底則密生白色的星狀絨毛；每當微風吹過，葉片翻轉露出的白色葉底在陽光下閃爍，宛如海面上波濤湧動的白浪，極具目測觀賞性。其學名亦十分生動，屬名 Mallotus 意為「像羊毛的」，指其植株上密布的絨毛，而種加詞 paniculatus 則代表其圓錐狀的花序形態。\n\n它最顯著的辨識特徵在於葉片結構與特殊的生態腺體。葉互生，多呈菱狀卵形或楔形，頂端長漸尖，邊緣常帶微齒或三淺裂。極具特色的是，其葉片基部近葉柄處有一對顯眼的蜜腺（像一雙小眼睛），能分泌蜜汁吸引螞蟻等昆蟲採食，形成互利共生的保護機制。每年夏季開出淡黃色的單性小花，組合呈密集的頂生圓錐花序；花落後結出球形的大戟科蒴果，表面密生軟刺與白色星狀毛，成熟時開裂釋放出黑色的種子。\n\n白楸在本土生態與都市綠化中皆具備實用價值。其種子富含油脂，可榨取供工業用途；因樹姿優雅且葉色對比鮮明，頗具觀賞價值，常被採植為行道樹或景觀樹（惟需定期修剪以維持良好樹型）。在生態層面，除了基部腺體能吸引昆蟲外，其熟透的種子也是林鳥的重要食物來源，是本港郊野生態鏈中不可或缺的一員。",
+  "userNotes": "",
+  "mainImage": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "灰褐淺裂絨毛皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹皮灰褐色，表面有細淺縱裂；嫩枝與幼芽處密生白色的星狀短絨毛。",
+      "img": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "葉背白毛菱狀葉（含蜜腺）",
+      "x": 65,
+      "y": 30,
+      "desc": "葉互生，呈菱狀卵形（或微 3 裂），葉面深綠，葉背全被白色星狀絨毛覆蓋，對比強烈。葉片基部近葉柄處有一對顯眼的蜜腺（像一雙小眼睛），能分泌蜜汁吸引螞蟻採食，形成互利共生機制。",
+      "img": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "星狀毛刺球蒴果",
+      "x": 30,
+      "y": 45,
+      "desc": "夏季開淡黃色單性小花，組合呈密集的頂生圓錐花序；花落後結出球形的大戟科蒴果，表面密生軟刺與白色星狀絨毛，成熟時開裂釋放出黑色種子。",
+      "img": "images/euphorbiaceae/mallotus paniculatus/mallotus paniculatus-flowers.jpg"
+    }
+  ]
+},
+  {
+  "id": "tree-29",
+  "family": "大戟科",
+  "name": "烏桕",
+  "engName": "Chinese Tallow Tree, Vegetable Tallow",
+  "latinName": "Sapium sebiferum (L.) Roxb.",
+  "species": "原生物種",
+  "behavior": "落葉喬木",
+  "height": "可達 15 米",
+  "bloomMonths": [4, 5, 6, 7, 8],
+  "fruitMonths": [8, 9, 10, 11],
+  "special": "★ 菱形尾尖葉秋季轉紅、梨狀蒴果開裂露出白色蠟質種子",
+  "keywords": [
+    "烏桕", "木梓樹", "鴉桕", "Chinese Tallow Tree", "Vegetable Tallow", "Sapium sebiferum",
+    "大戟科", "Euphorbiaceae", "烏桕屬", "Sapium", "原生物種", "落葉喬木", "原生", "落葉",
+    "單葉", "互生", "菱形", "紙質", "全緣", "羽狀脈",
+    "腺體", "縱裂", "粗糙", "蒴果", "黑果", "褐果", "白果", "白籽", "黃花", "綠花",
+    "紅葉", "有毒植物"
+  ],
+  "description": "又稱木梓樹、鴉桕，是香港本土極具代表性的落葉喬木。烏桕環境適應力強，常作為造林樹種，每逢深秋初冬，其菱形葉片會由綠轉為鮮紅或黃橘色，是郊野與公園賞紅葉的著名樹種之一。\n\n烏桕最顯著的辨識特徵在於其獨特形態與果實。葉片呈典型的菱形（或近梯形），頂端具長尾尖，葉柄細長，微風吹過時極易搖曳。秋末結出梨狀球形的蒴果，成熟時果皮裂開，露出包覆著白色蠟質假種皮的種子，宿存於枝頭宛如點點白雪。\n\n在經濟用途上，烏桕是傳統的重要油脂植物：其種子外層的白色蠟質可提取油脂製造蠟燭及肥皂；種子本體榨取的乾性油（梓油）則是優良的塗料原料，常用於油紙與油傘表面防水；葉片亦可作為黑色染料。\n\n⚠️ 安全提示（具毒性）：\n烏桕全株具中等毒性，包括葉片、枝條、木材、果實、種子及分泌的白色乳汁均含有毒成分，應避免誤食或直接接觸皮膚與眼睛。",
+  "userNotes": "",
+  "mainImage": "images/euphorbiaceae/sapium sebiferum/sapium sebiferum-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "粗糙深縱裂樹皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹皮呈灰色至暗褐色，表面質感較粗糙，隨樹齡增長會形成明顯而深長的縱向裂紋；折斷枝葉或樹皮時會流出白色毒性乳汁。",
+      "img": "images/euphorbiaceae/sapium sebiferum/sapium sebiferum-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "典型菱形尾尖葉",
+      "x": 65,
+      "y": 30,
+      "desc": "葉互生，呈標準菱形（或近梯形），頂端具顯著長尾尖，葉柄細長且頂端具腺體，微風吹過時極易搖曳。秋季降溫時，葉片會轉為鮮豔的紅色或紫紅色。",
+      "img": "images/euphorbiaceae/sapium sebiferum/sapium sebiferum-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "白蠟假種皮黑蒴果",
+      "x": 30,
+      "y": 45,
+      "desc": "夏季開出黃綠色的頂生穗狀花序；秋末結出梨狀球形的黑褐色蒴果。成熟時果皮開裂脫落，露出 3 粒包覆著白色蠟質假種皮的種子，宿存於枝頭宛如點點白雪，極具觀賞性。",
+      "img": "images/euphorbiaceae/sapium sebiferum/sapium sebiferum-flowers.jpg"
+    }
+  ]
 }
 ]
