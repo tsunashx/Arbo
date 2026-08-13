@@ -469,233 +469,263 @@
   ]
 },
   {
-    "id": "tree-11",
-    "family": "千屈菜科",
-    "name": "大花紫薇",
-    "engName": "Queen's Crape Myrtle",
-    "latinName": "Lagerstroemia speciosa (L.) Pers.",
-    "species": "外來物種",
-    "behavior": "落葉喬木",
-    "height": "7 - 15 米",
-    "bloomPeriod": "5月 - 7月",
-    "fruitPeriod": "9月 - 11月",
-    "special": "★ 皺褶紫花與球形木質蒴果",
-    "keywords": ["大花紫薇", "洋紫薇", "百日紅", "波浪花瓣", "木質蒴果", "千屈菜科", "Lagerstroemia", "crape myrtle"],
-    "description": "常見的落葉大喬木，樹冠呈圓頂形，夏季開極其艷麗的紫色大花。花瓣邊緣呈現獨特的波浪皺縮狀。單葉對生，革質，冬季落葉前，葉片會轉為鮮豔的紅黃色，極具季節觀賞價值。花謝後結出堅硬的球形木質蒴果。",
-    "userNotes": "",
-    "mainImage": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "灰褐平滑斑駁樹皮",
-        "x": 48,
-        "y": 70,
-        "desc": "樹皮相對平滑，老時會呈小片狀脫落，露出新皮。",
-        "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "革質大葉與紅葉變色",
-        "x": 62,
-        "y": 35,
-        "desc": "葉片大而厚實，冬季掉落前會由綠轉為亮紅或紅褐色。",
-        "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "波浪紫花與球形果",
-        "x": 30,
-        "y": 50,
-        "desc": "花瓣如皺紙般彎曲，花謝後結出堅硬的球形木質蒴果。",
-        "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-flowers.jpg"
-      }
-    ]
-  },
+  "id": "tree-11",
+  "family": "千屈菜科",
+  "name": "大花紫薇",
+  "engName": "Queen Crape Myrtle, Queen Lagerstroemia, Queen Crape-myrtle",
+  "latinName": "Lagerstroemia speciosa (L.) Pers.",
+  "species": "外來物種",
+  "behavior": "落葉喬木",
+  "height": "可達 20 米",
+  "bloomMonths": [5, 6, 7],
+  "fruitMonths": [10, 11],
+  "special": "★ 皺褶紫花與球形木質蒴果",
+  "keywords": [
+    "大花紫薇", "洋紫薇", "百日紅", "Queen Crape Myrtle", "Queen Lagerstroemia", "Lagerstroemia speciosa",
+    "千屈菜科", "Lythraceae", "紫薇屬", "Lagerstroemia", "外來物種", "落葉喬木", "外來", "落葉",
+    "單葉", "對生", "橢圓形", "長橢圓形", "革質", "全緣", "波浪緣", "羽狀脈",
+    "剝落", "光滑", "蒴果", "褐果", "黑果", "紫花", "紅花",
+    "圓錐形", "紅葉"
+  ],
+  "description": "又稱洋紫薇、百日紅，樹幹通直、樹冠廣展，是香港極為常見的落葉大喬木。因其樹姿優美、花色艷麗且四季景觀變化分明，被廣泛種植於本港公園、住宅屋邨及街道旁，是都市綠化中極具代表性的觀花樹種。\n\n它最大的特徵在於夏季盛開的紫色花海與獨特的花瓣質感——每年盛夏（約 5 至 8 月），枝頭會頂生出大型的總狀花序，開滿鮮艷奪目的紫色至紫紅色大花；其花瓣邊緣呈現獨特的波浪狀皺縮，宛如皺褶的薄紗，極具視覺張力。\n\n除了夏花盛放，大花紫薇亦具備顯著的季節觀賞價值：秋末至冬季落葉前，葉片會隨著氣溫下降逐步轉為鮮豔的紅黃色，為都市帶來濃郁的秋冬色彩；落葉後結出的球形木質蒴果會懸掛於枝頭，成熟開裂後釋放帶翅的種子。\n\n大花紫薇喜陽耐旱、對空氣污染的忍耐力強，能有效適應都市環境並提供良好的遮蔭。唯其枝幹相對較脆，在香港夏季颱風季節需要適當修剪，且秋冬落葉與成熟果實掉落時，需留意路面清潔與維護。",
+  "userNotes": "",
+  "mainImage": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "灰褐平滑斑駁樹皮",
+      "x": 40,
+      "y": 70,
+      "desc": "小枝圓柱狀，樹皮相對平滑，老時會呈小片狀脫落，露出新皮。",
+      "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "革質大葉與紅葉變色",
+      "x": 65,
+      "y": 30,
+      "desc": "葉片大而厚實，冬季掉落前會由綠轉為亮紅或紅褐色。",
+      "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "波浪紫花與球形果",
+      "x": 30,
+      "y": 45,
+      "desc": "花瓣如皺紙般彎曲，花謝後結出堅硬的球形木質蒴果。",
+      "img": "images/lythraceae/lagerstroemia speciosa/lagerstroemia speciosa-flowers.jpg"
+    }
+  ]
+},
   {
-    "id": "tree-12",
-    "family": "錦葵科",
-    "name": "木棉",
-    "engName": "Kapok, Red Cotton Tree",
-    "latinName": "Bombax ceiba L.",
-    "species": "原生物種",
-    "behavior": "落葉喬木",
-    "height": "10 - 25 米",
-    "bloomPeriod": "3月 - 4月 (先花後葉)",
-    "fruitPeriod": "5月 - 6月 (裂開飄棉)",
-    "special": "★ 樹幹瘤刺、英雄紅花與棉絮飄飛",
-    "keywords": ["木棉", "英雄樹", "斑芝樹", "吉貝", "掌狀複葉", "瘤刺", "錦葵科", "Bombax", "kapok"],
-    "description": "又稱「英雄樹」，樹幹高大挺拔，呈明顯圓錐形，分枝輪生平展。春季先開花後長葉，滿樹橙紅色的肉質大花極具震撼力。葉片為5-7片的掌狀複葉。果實成熟開裂後會釋放大量白色棉絮，包裹著種子隨風飄散。",
-    "userNotes": "",
-    "mainImage": "images/malvaceae/bombax ceiba/bombax ceiba-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "防禦性圓椎瘤刺",
-        "x": 50,
-        "y": 75,
-        "desc": "樹幹生有顯著的硬質圓錐狀瘤刺，隨樹齡增長會逐漸平滑。",
-        "img": "images/malvaceae/bombax ceiba/bombax ceiba-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "掌狀複葉",
-        "x": 65,
-        "y": 30,
-        "desc": "花謝後才抽出掌狀複葉，5-7片小葉如掌狀向外放射。",
-        "img": "images/malvaceae/bombax ceiba/bombax ceiba-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "肉質紅花與棉蒴果",
-        "x": 30,
-        "y": 45,
-        "desc": "花朵厚重呈鮮豔橙紅色；果實成熟會裂開並散發大量白色綿毛。",
-        "img": "images/malvaceae/bombax ceiba/bombax ceiba-flowers.jpg"
-      }
-    ]
-  },
+  "id": "tree-12",
+  "family": "錦葵科",
+  "name": "木棉",
+  "engName": "Tree Cotton, Red Kapok Tree",
+  "latinName": "Bombax ceiba L.",
+  "species": "原生物種",
+  "behavior": "落葉喬木",
+  "height": "10 - 25 米",
+  "bloomMonths": [3, 4],
+  "fruitMonths": [5],
+  "special": "★ 樹幹瘤刺、英雄紅花與棉絮飄飛",
+  "keywords": [
+    "木棉", "英雄樹", "紅棉", "斑芝樹", "Tree Cotton", "Red Kapok Tree", "Bombax ceiba",
+    "錦葵科", "Malvaceae", "木棉屬", "Bombax", "原生物種", "落葉喬木", "原生", "落葉",
+    "掌狀複葉", "輪生", "橢圓形", "紙質", "全緣", "掌狀脈",
+    "刺狀", "皮孔", "蒴果", "褐果", "紅花", "黃花",
+    "柱形", "五花茶"
+  ],
+  "description": "又稱英雄樹、紅棉、斑芝樹，樹幹雄偉通直、枝條層次分明（輪生），是香港極具代表性的本土原生落葉大喬木。因其樹姿挺拔昂揚、開花時氣勢磅礡，被廣泛種植於本港公園、學校及道路旁，是都市綠化中極具標誌性的觀賞樹種。\n\n它最大的特徵在於滿樹鮮紅的大型花朵、樹幹上的瘤刺以及秋季飛揚的棉毛：\n* 英雄樹與紅棉：每年春季（約 3 至 4 月），木棉會先開花後發葉。枝頭會開滿橙紅至鮮紅色的肉質大花，花朵大而重，掉落時依然保持挺拔姿態，因而獲譽為「英雄樹」；其盛開景象更是香港春天的標誌性景觀之一。\n* 樹幹與樹皮：幼樹與較年輕的枝幹上佈滿錐狀的硬刺（瘤刺），能起到保護樹幹、防止動物攀爬的作用；隨樹齡增長，老樹幹上的瘤刺會逐漸變平滑。\n* 木棉花蜜與生態：盛開的木棉花富含花蜜，吸引大量本土鳥類（如暗綠繡眼鳥、紅耳鵯）與昆蟲採蜜，是本港春季極為重要的生態食物源。\n\n此外，木棉在傳統文化與日常生活中亦具備豐富實用價值：\n* 清熱解毒的涼茶原料：掉落的木棉花曬乾後，是廣東傳統涼茶「五花茶」的核心原料之一，具備清熱利濕、解毒的功效。\n* 木棉絮（棉毛）：夏季（約 5 至 6 月）果實成熟開裂後，會釋出大量包裹著種子的白色棉毛隨風飄揚（稱為「木棉飛絮」）。古時人們常收集這些棉毛用於填塞枕頭與被褥，保暖且透氣。\n\n木棉喜陽耐旱、生命力極強，且能耐受都市空氣污染。唯夏季果實開裂時形成的「木棉飛絮」可能對部分呼吸道敏感的市民造成不便，且肉質花朵掉落路面時若未及時清理容易引起滑倒，因此在都市綠化管理上需特別注意適時清理與維護。",
+  "userNotes": "",
+  "mainImage": "images/malvaceae/bombax ceiba/bombax ceiba-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "防禦性圓椎瘤刺",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹生有顯著的硬質圓錐狀瘤刺，隨樹齡增長會逐漸平滑。",
+      "img": "images/malvaceae/bombax ceiba/bombax ceiba-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "掌狀複葉",
+      "x": 65,
+      "y": 30,
+      "desc": "花謝後才抽出掌狀複葉，5-7片小葉如掌狀向外放射。",
+      "img": "images/malvaceae/bombax ceiba/bombax ceiba-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "肉質紅花與棉蒴果",
+      "x": 30,
+      "y": 45,
+      "desc": "花朵厚重呈鮮艷橙紅色；果實成熟會裂開並散發大量白色綿毛。",
+      "img": "images/malvaceae/bombax ceiba/bombax ceiba-flowers.jpg"
+    }
+  ]
+},
   {
-    "id": "tree-13",
-    "family": "錦葵科",
-    "name": "黃槿",
-    "engName": "Sea Hibiscus, Coast Hibiscus",
-    "latinName": "Hibiscus tiliaceus",
-    "species": "原生物種",
-    "behavior": "常綠喬木",
-    "height": "4 - 10 米",
-    "bloomPeriod": "7月 - 8月 (常年有花)",
-    "fruitPeriod": "8月 - 12月",
-    "special": "★ 心形葉片與一日變色黃花",
-    "keywords": ["黃槿", "糕仔葉", "海麻", "心形葉", "一日花", "錦葵科", "Hibiscus", "sea hibiscus"],
-    "description": "常見的海岸防風與護岸樹種，極為耐鹽抗風，樹冠開展。其心形的大型革質葉片，背面密生灰白色星狀毛，民間常被用作蒸糕點的墊底材料（俗稱「糕仔葉」）。花朵朝開黃色（花心深紫紅），暮謝轉為橙紅並凋謝。",
-    "userNotes": "",
-    "mainImage": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "多纖維灰褐樹皮",
-        "x": 48,
-        "y": 70,
-        "desc": "樹皮韌皮纖維發達，古時可用於編織繩索。",
-        "img": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "掌狀脈大心形葉",
-        "x": 60,
-        "y": 35,
-        "desc": "葉片呈顯著的大心形，葉背密布白色茸毛，觸感厚實。",
-        "img": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "紫心黃花與卵形蒴果",
-        "x": 35,
-        "y": 45,
-        "desc": "鮮黃色花朵中心具暗紫紅色斑塊；果實為木質絨毛卵形蒴果。",
-        "img": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-flowers.jpg"
-      }
-    ]
-  },
+  "id": "tree-13",
+  "family": "錦葵科",
+  "name": "黃槿",
+  "engName": "Cuban Bast, Sea Hibiscus",
+  "latinName": "Hibiscus tiliaceus L.",
+  "species": "原生物種",
+  "behavior": "常綠喬木",
+  "height": "可達 7 米",
+  "bloomMonths": [7, 8],
+  "fruitMonths": [9, 10, 11],
+  "special": "★ 心形葉片與一日變色黃花",
+  "keywords": [
+    "黃槿", "海麻", "朴仔", "茶果葉", "Cuban Bast", "Sea Hibiscus", "Hibiscus tiliaceus",
+    "錦葵科", "Malvaceae", "木槿屬", "Hibiscus", "原生物種", "常綠喬木", "原生", "常綠",
+    "單葉", "互生", "心形", "圓形", "革質", "全緣", "鈍鋸齒緣", "掌狀脈", "毛質/絨毛",
+    "光滑", "皮孔", "蒴果", "褐果", "黃花", "紅花", "紫花",
+    "傘形", "海岸植物", "防風樹", "茶果"
+  ],
+  "description": "又稱海麻、朴仔，樹冠廣展、枝葉茂密，是香港極具代表性的本土半常綠小喬木或大灌木。因其極佳的抗風、耐鹽與耐水濕能力，常天然生長於本港沿岸、沙灘及紅樹林邊緣，亦被廣泛種植於公園與海濱長廊作為遮蔭與綠化樹種。\n\n* 心形葉片與炊事用途：葉片大而呈典型的近圓心形，革質且背面密生灰白色短柔毛。古時新界鄉村常採摘其葉片墊於糕點（如客家茶果）下蒸煮，既防沾黏又帶有清香，故俗稱「茶果葉」。\n* 黃花變色現象：每年春夏花期，會開出鮮黃色的鐘狀花，花心呈深紫紅色；花朵壽命極短，常於午後至傍晚轉為橙紅色後凋謝掉落。\n* 生態與護岸價值：根系發達且耐鹽鹼，是優秀的防風固沙與護岸樹種；樹皮纖維堅韌，昔日常用於編織繩索或造紙。\n\n黃槿適應力極強且極少病蟲害，非常適合都市海濱綠化。唯其生長迅速且分枝較低，用於行道樹或路邊綠化時需經常修剪以維持行人通行的空間。",
+  "userNotes": "",
+  "mainImage": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "多纖維灰褐樹皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹皮韌皮纖維發達，古時可用於編織繩索。",
+      "img": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "掌狀脈大心形葉",
+      "x": 65,
+      "y": 30,
+      "desc": "葉片呈顯著的大心形，葉背密布白色茸毛，觸感厚實。",
+      "img": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "紫心黃花與卵形蒴果",
+      "x": 30,
+      "y": 45,
+      "desc": "鮮黃色花朵中心具暗紫紅色斑塊；果實為木質絨毛卵形蒴果。",
+      "img": "images/malvaceae/hibiscus tiliaceus/hibiscus tiliaceus-flowers.jpg"
+    }
+  ]
+},
   {
-    "id": "tree-14",
-    "family": "錦葵科",
-    "name": "假蘋婆",
-    "engName": "Scarlet Sterculia",
-    "latinName": "Sterculia lanceolata Cav.",
-    "species": "原生物種",
-    "behavior": "常綠喬木",
-    "height": "5 - 15 米",
-    "bloomPeriod": "4月 - 6月",
-    "fruitPeriod": "7月 - 9月",
-    "special": "★ 鮮紅蓇葖果與鳳眼狀黑籽",
-    "keywords": ["假蘋婆", "七姐果", "雞冠木", "星狀裂果", "蓇葖果", "錦葵科", "Sterculia", "scarlet sterculia"],
-    "description": "原生常綠小至中喬木，樹冠圓球形，樹皮灰色平滑。單葉互生呈長圓狀披針形。夏季結出鮮紅色的星狀蓇葖果，成熟時裂開露出如黑珍珠般的漆黑種子，掛在紅色的果皮內，對比鮮明，極具觀賞價值。",
-    "userNotes": "",
-    "mainImage": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "灰色平滑樹皮",
-        "x": 48,
-        "y": 75,
-        "desc": "樹幹質地平滑，呈灰色，分枝多且細長。",
-        "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "披針形革質葉",
-        "x": 62,
-        "y": 30,
-        "desc": "葉片呈長披針形，葉端漸尖，邊緣平滑，質感革質。",
-        "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "鮮紅星狀裂果與黑籽",
-        "x": 30,
-        "y": 50,
-        "desc": "果實成熟時呈鮮豔朱紅色星狀開裂，內部顯露出漆黑有光澤的種子。",
-        "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-fruit.jpg"
-      }
-    ]
-  },
+  "id": "tree-14",
+  "family": "錦葵科",
+  "name": "假蘋婆",
+  "engName": "Lance-leaved Sterculia, Scarlet Sterculia",
+  "latinName": "Sterculia lanceolata Cav.",
+  "species": "原生物種",
+  "behavior": "常綠喬木",
+  "height": "可達 20 米",
+  "bloomMonths": [4, 5],
+  "fruitMonths": [8, 9],
+  "special": "★ 鮮紅蓇葖果與鳳眼狀黑籽",
+  "keywords": [
+    "假蘋婆", "七姐果", "山鳳眼樹", "Lance-leaved Sterculia", "Scarlet Sterculia", "Sterculia lanceolata",
+    "錦葵科", "Malvaceae", "蘋婆屬", "Sterculia", "原生物種", "常綠喬木", "原生", "常綠",
+    "單葉", "互生", "披針形", "長橢圓形", "革質", "全緣", "羽狀脈",
+    "光滑", "蓇葖果", "紅果", "黑果", "粉紅花", "白花", "綠花",
+    "傘形"
+  ],
+  "description": "又稱七姐果、山鳳眼樹，樹冠廣展、枝葉茂密，是香港極具代表性的本土原生常綠喬木。廣泛分佈於本港郊野公園、山谷及溪邊，亦常用於都市公園與街道綠化。\n\n* 鮮紅蓇葖果與黑色種子：夏季（約 7–8 月）果實成熟時，鮮紅色的革質蓇葖果會裂開呈星狀，內含漆黑光亮的小種子，掛於樹上宛如紅鳳眼，極具觀賞價值。\n* 淡粉紅小花：春季開出淡粉紅色或奶白色的星狀小花，無花瓣，萼片呈星狀展開。\n* 傳統用途與生態價值：種子可炒熟食用（味如花生或栗子）；樹皮纖維堅韌，昔日常用於編織繩索。果實亦為本港野生鳥類與松鼠提供食物。\n\n假蘋婆適應力強、耐貧瘠且抗風，非常適合香港本土綠化，生長過程中僅需適度修剪低矮分枝即可。",
+  "userNotes": "",
+  "mainImage": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "灰色平滑樹皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹幹質地平滑，呈灰色，分枝多且細長。",
+      "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "披針形革質葉",
+      "x": 65,
+      "y": 30,
+      "desc": "葉片呈長披針形，葉端漸尖，邊緣平滑，質感革質。",
+      "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "鮮紅星狀裂果與黑籽",
+      "x": 30,
+      "y": 45,
+      "desc": "果實成熟時呈鮮豔朱紅色星狀開裂，內部顯露出漆黑有光澤的種子。",
+      "img": "images/malvaceae/sterculia lanceolata/sterculia lanceolata-flowers.jpg"
+    }
+  ]
+},
   {
-    "id": "tree-15",
-    "family": "桃金娘科",
-    "name": "白千層",
-    "engName": "Cajeput Tree, Paperbark",
-    "latinName": "Melaleuca cajuputi subsp. cumingiana",
-    "species": "外來物種",
-    "behavior": "常綠喬木",
-    "height": "10 - 20 米",
-    "bloomPeriod": "11月 - 次年1月",
-    "fruitPeriod": "次年3月 - 5月",
-    "special": "★ 層狀海綿樹皮與瓶刷狀白花",
-    "keywords": ["白千層", "脫皮樹", "千層皮", "瓶刷花", "平行脈", "桃金娘科", "Melaleuca", "paperbark"],
-    "description": "極具特色的常綠樹種，樹冠呈狹圓錐形。其樹皮灰白色、多層且鬆軟如海綿，可輕易一層層剝下。披針形葉片具3-7條平行主脈，富含精油，揉碎後散發獨特香氣。花朵密集生於枝頂，形如白色的洗瓶刷。",
-    "userNotes": "",
-    "mainImage": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-main.jpg",
-    "hotspots": [
-      {
-        "id": "hot-bark",
-        "type": "bark",
-        "name": "海綿狀千層樹皮",
-        "x": 50,
-        "y": 75,
-        "desc": "樹皮灰白色，鬆軟富有彈性，由許多海綿狀薄層重疊組成，可剝落。",
-        "img": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-bark.jpg"
-      },
-      {
-        "id": "hot-leaf",
-        "type": "leaves",
-        "name": "縱脈芳香葉",
-        "x": 65,
-        "y": 30,
-        "desc": "葉片呈披針形，具有數條極為顯著的縱向平行主脈，富含桉樹油香氣。",
-        "img": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-leaves.jpg"
-      },
-      {
-        "id": "hot-flower",
-        "type": "flowers",
-        "name": "瓶刷狀穗狀花序",
-        "x": 30,
-        "y": 45,
-        "desc": "花序生於枝頂，白色雄蕊伸長形成如洗瓶刷般的造型，花後枝條繼續生長。",
-        "img": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-flowers.jpg"
-      }
-    ]
-  }
+  "id": "tree-15",
+  "family": "桃金娘科",
+  "name": "白千層",
+  "engName": "Paper-bark Tree, Cajeput-tree",
+  "latinName": "Melaleuca cajuputi subsp. cumingiana",
+  "species": "外來物種",
+  "behavior": "常綠喬木",
+  "height": "可達 18 米",
+  "bloomMonths": [3, 4, 5, 9, 10, 11],
+  "fruitMonths": [3, 4, 5, 9, 10, 11],
+  "special": "★ 層狀海綿樹皮與瓶刷狀白花",
+  "keywords": [
+    "白千層", "脫皮樹", "瓶刷木", "Paper-bark Tree", "Cajeput-tree", "Melaleuca cajuputi",
+    "桃金娘科", "Myrtaceae", "白千層屬", "Melaleuca", "外來物種", "常綠喬木", "外來", "常綠",
+    "單葉", "互生", "披針形", "革質", "全緣", "平行脈", "縱脈", "具香氣/腺點", "濃郁香味",
+    "海綿狀/千層皮", "剝落", "縱裂", "蒴果", "褐果", "白花", "黃花",
+    "刷狀", "穗狀", "城門水塘"
+  ],
+  "description": "又稱脫皮樹、瓶刷木，樹幹通直、樹冠狹長，是香港極具代表性的外來常綠大喬木。因其極佳的耐水濕、耐貧瘠與抗風能力，廣泛種植於本港水塘周邊（如城門水塘）、公園、行道旁及海濱長廊，是都市綠化與水土保持的重要樹種。\n\n層層海綿狀樹皮：最顯著的辨識特徵為其灰白色的木栓質樹皮，鬆軟如海綿且層層相疊，可輕易如紙張般剝落，故名「白千層」。這種特殊樹皮能保護樹幹免受火災害與極端環境傷害。\n\n瓶刷狀花序與精油香氣：夏秋季開出白色或奶黃色的穗狀花序，密生於枝頭宛如洗瓶刷；葉片呈狹披針形，揉碎後會散發濃郁的精油香氣，是提煉「白千層精油（Cajuput oil）」及萬金油等藥用鎮痛產品的重要原料。\n\n城門水塘「水水白千層」：香港城門水塘著名的「白千層林」每逢豐水期，樹幹基部浸泡於清澈水面中，形成極具特色的水上森林景觀，吸引大批遊客前往觀賞與攝影。\n\n白千層生長迅速、適應力極強且極少病蟲害。唯其老舊樹皮易積聚並脫落，且木質在強風下較脆，都市綠化維護上需定期清理樹皮碎屑並修剪過密枝條。",
+  "userNotes": "",
+  "mainImage": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-main.jpg",
+  "hotspots": [
+    {
+      "id": "hot-bark",
+      "type": "bark",
+      "name": "海綿狀千層樹皮",
+      "x": 40,
+      "y": 70,
+      "desc": "樹皮灰白色，鬆軟富有彈性，由許多海綿狀薄層重疊組成，可剝落。",
+      "img": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-bark.jpg"
+    },
+    {
+      "id": "hot-leaf",
+      "type": "leaves",
+      "name": "縱脈芳香葉",
+      "x": 65,
+      "y": 30,
+      "desc": "葉片呈披針形，具有數條極為顯著的縱向平行主脈，富含桉樹油香氣。",
+      "img": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-leaves.jpg"
+    },
+    {
+      "id": "hot-flower",
+      "type": "flowers",
+      "name": "瓶刷狀穗狀花序",
+      "x": 30,
+      "y": 45,
+      "desc": "花序生於枝頂，白色雄蕊伸長形成如洗瓶刷般的造型，花後枝條繼續生長。",
+      "img": "images/myrtaceae/melaleuca cajuputi/melaleuca cajuputi-flowers.jpg"
+    }
+  ]
+}
 ]
